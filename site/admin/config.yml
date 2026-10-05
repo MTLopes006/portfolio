@@ -945,7 +945,7 @@
                   "default": "editorial",
                   "options": [
                     {
-                      "label": "Pôster — capa sangrada com o nome por cima",
+                      "label": "Pôster — foto de abertura sangrada + galeria assimétrica",
                       "value": "poster"
                     },
                     {
@@ -961,8 +961,8 @@
                       "value": "editorial"
                     },
                     {
-                      "label": "Sequência — uma foto por tela",
-                      "value": "sequence"
+                      "label": "Mosaico — grade densa, fotos lado a lado",
+                      "value": "mosaic"
                     }
                   ]
                 },

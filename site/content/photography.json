@@ -221,7 +221,7 @@
           "pick": false
         }
       ],
-      "layout": "sequence",
+      "layout": "mosaic",
       "accent": "#765BA7",
       "cover": ""
     }

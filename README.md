@@ -53,6 +53,7 @@ portfolio/
 ├── README.md                 Este guia
 └── site/                     ← tudo o que vai para o ar
     ├── index.html            Home: nome + crachá, projetos, fotografia, sobre
+    ├── projetos.html         Índice dos projetos de design (uma linha por projeto)
     ├── projeto.html          Modelo das páginas de projeto (?p=<endereço>)
     ├── fotografia.html       Índice das séries de fotografia (uma linha por banda)
     ├── foto.html             Página de cada série (?s=<endereço>), com layout próprio
@@ -183,7 +184,9 @@ e-mail, WhatsApp, LinkedIn, Instagram, localização e disponibilidade.
 
 ### 5.2 Projetos de design (Lado A)
 
-A lista de projetos aparece na home na mesma ordem do painel. **Arraste para reordenar.**
+A lista de projetos aparece na home e no índice (`projetos.html`, link **Ver projetos** ao lado
+do título da seção) na mesma ordem do painel. **Arraste para reordenar.** O menu "Projetos"
+rola até a seção na home.
 
 Campos de cada projeto:
 
@@ -193,7 +196,7 @@ Campos de cada projeto:
 | Endereço | Parte da URL (`projeto.html?p=endereco`). Só minúsculas, números e hífen. **Evite mudar** depois de publicado, porque links antigos param de funcionar |
 | Ano | Aparece na lista. Vazio mostra "—" |
 | Cliente, Papel, Disciplinas | Ficha no topo da página. Disciplinas separadas por vírgula |
-| Resumo curto | Reservado para descrições curtas |
+| Resumo curto | Aparece no índice de projetos, abaixo do título |
 | Capa | Imagem que aparece ao passar o mouse na lista e no topo da página |
 | Proporção da capa | Formato da capa (ver seção 6) |
 | Cor de apoio | Cor do espaço reservado enquanto não há capa |
@@ -244,15 +247,15 @@ A fotografia tem três níveis:
 
 | Layout | Como fica | Funciona melhor com |
 |---|---|---|
-| **Pôster** | Primeira foto sangrada em tela cheia, com o nome da banda por cima; depois fotos grandes alternando largura | Uma foto de abertura muito forte, palco e luz |
+| **Pôster** | Primeira foto sangrada em tela cheia; depois galeria assimétrica com 2 e 3 fotos lado a lado | Uma foto de abertura muito forte, palco e luz |
 | **Folha de contato** | A foto escolhida ampliada, presa com fita; abaixo, tira de filme com todos os quadros numerados e os destaques circulados a lápis | Cobertura de show com muitas fotos |
 | **Zine** | Colagem com fotos em moldura de papel, levemente giradas, com fita adesiva e carimbo | Ensaios de banda, bastidores, clima DIY |
 | **Editorial** | Grade assimétrica com números grandes na cor da série | Séries variadas, horizontais e verticais |
-| **Sequência** | Uma foto por tela, com contador fixo (03/12) | Retrato noturno, séries curtas e cinematográficas |
+| **Mosaico** | Grade densa: horizontais ocupam o dobro da largura, verticais ficam lado a lado | Séries grandes e variadas, retrato noturno |
 
 Configuração atual: Blessthefall → Pôster (azul) · Memphis May Fire → Folha de contato
 (vermelho) · Chão de Taco → Zine (verde) · Bad Luv → Editorial (rosa) · Julieta Social →
-Sequência (roxo). Dá para trocar a qualquer momento pelo painel.
+Mosaico (roxo). Dá para trocar a qualquer momento pelo painel.
 
 ### 5.4 Sobre
 

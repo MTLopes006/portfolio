@@ -28,7 +28,7 @@
   sysDark.addEventListener?.("change", (e) => { if (!store.get("ml-theme")) applyTheme(e.matches ? "dark" : "light"); });
 
   const page = document.body.dataset.page;
-  const folio = { home: 1, project: 2, photo: 3, series: 3, about: 4, contact: 5 }[page] || 1;
+  const folio = { home: 1, work: 2, project: 2, photo: 3, series: 3, about: 4, contact: 5 }[page] || 1;
 
   /* ---------- snippets ---------- */
   const arr = '<span class="arr" aria-hidden="true">→</span>';
@@ -48,7 +48,7 @@
   /* ---------- header / footer ---------- */
   const nav = [["index.html#projetos", "nav.work", "home"], ["index.html#fotografia", "nav.photo", "photo"], ["sobre.html", "nav.about", "about"], ["contato.html", "nav.contact", "contact"]];
   function renderChrome() {
-    const navLinks = nav.map(([h, k, p]) => `<a href="${h}"${(p === page || (p === "photo" && page === "series")) && p !== "home" ? ' aria-current="page"' : ""}>${ui(k)}</a>`).join("");
+    const navLinks = nav.map(([h, k, p]) => `<a href="${h}"${((p === page && p !== "home") || (p === "photo" && page === "series") || (p === "home" && (page === "work" || page === "project"))) ? ' aria-current="page"' : ""}>${ui(k)}</a>`).join("");
     const dark = root.getAttribute("data-theme") === "dark";
     const header = document.querySelector(".site-header");
     header.innerHTML = `
@@ -131,7 +131,7 @@
         <div class="wrap">
           <div class="sec-head" data-reveal>
             <div><div class="sec-label label"><span class="pink">${ui("sideA")}</span>${regmark}</div><h2 class="sec-title">${ui("work.title")}</h2></div>
-            <span class="label muted">${pad(projects.length)} ${ui("work.count")}</span>
+            <a class="link-arrow" href="projetos.html">${ui("work.see")} ${arr}</a>
           </div>
           <div class="track-head label"><span>Nº</span><span>${ui("work.col.title")}</span><span>${ui("work.col.tags")}</span><span style="text-align:right">${ui("work.col.year")}</span><span></span></div>
           <ol class="tracklist">
@@ -200,6 +200,33 @@
     });
   }
 
+  /* ---------- WORK INDEX ---------- */
+  function renderWork() {
+    document.querySelector("main").innerHTML = `
+      <div class="wrap" id="top">
+        <header class="page-head">
+          <div class="sec-label label"><span class="pink">${ui("sideA")}</span>${regmark}</div>
+          <h1 class="page-title riso" data-text="${esc(ui("work.title"))}">${ui("work.title")}</h1>
+          <p class="page-lead">${ui("work.lead")}</p>
+        </header>
+        <ol class="series-index">
+          ${projects.map((p, i) => `
+            <li class="series-row" style="--acc:${esc(p.tone || "var(--magenta)")}">
+              <a href="projeto.html?p=${esc(p.slug)}">
+                <div class="cover crop"><span class="tape" aria-hidden="true"></span>${media(p.cover, "3/2", p.title, { tone: p.tone })}</div>
+                <div class="info" data-reveal>
+                  <span class="n label">${pad(i + 1)} / ${pad(projects.length)}</span>
+                  <h2>${esc(p.title)}</h2>
+                  <div class="meta label">${esc(t(p.client))} · ${esc(p.year || "—")}</div>
+                  ${t(p.summary) ? `<p class="sub">${esc(t(p.summary))}</p>` : ""}
+                  <span class="go">${ui("work.open")} ${arr}</span>
+                </div>
+              </a>
+            </li>`).join("")}
+        </ol>
+      </div>`;
+  }
+
   /* ---------- PROJECT ---------- */
   function contrast(hex) {
     const h = String(hex).replace("#", ""); const n = parseInt(h.length === 3 ? h.replace(/./g, "$&$&") : h, 16) || 0;
@@ -231,7 +258,7 @@
     document.title = `${p.title} — ${P.name}`;
     el.innerHTML = `
       <article class="wrap" id="top">
-        <div class="proj-top label"><a href="index.html#projetos">← ${ui("project.back")}</a><span>${ui("project.track")} ${pad(idx + 1)}/${pad(projects.length)}</span></div>
+        <div class="proj-top label"><a href="projetos.html">← ${ui("project.back")}</a><span>${ui("project.track")} ${pad(idx + 1)}/${pad(projects.length)}</span></div>
         <h1 class="proj-title riso" data-text="${esc(p.title)}">${esc(p.title)}</h1>
         <dl class="proj-meta" data-reveal>
           <div><dt class="label">${ui("project.client")}</dt><dd>${esc(t(p.client))}</dd></div>
@@ -308,13 +335,13 @@
     const prev = series[(idx - 1 + series.length) % series.length], next = series[(idx + 1) % series.length];
     const photos = s.photos || [];
     const fig = (ph, k, o = {}) => `<figure data-src="${esc(ph.src || "")}" ${o.attrs || ""}>${o.before || ""}${media(ph.src, o.ratio || ph.ratio, `${s.band} ${pad(k + 1)}`, { parallax: o.parallax, crop: o.crop, tone: o.tone })}${ph.caption && !o.noCap ? `<figcaption>${esc(ph.caption)}</figcaption>` : ""}</figure>`;
-    const layout = s.layout || "editorial";
+    const layout = s.layout === "sequence" ? "mosaic" : (s.layout || "editorial");
     let body = "";
     if (layout === "poster") {
       const [first, ...rest] = photos;
       body = `
-        <div class="poster-hero" data-src="${esc(first?.src || "")}">${media(first?.src, "16/9", s.band, { parallax: true, reveal: false, tone: s.accent })}<div class="over">${esc(s.band).split(" ").map((w) => `<span>${w}</span>`).join("")}</div></div>
-        <div class="poster-flow">${rest.map((ph, k) => `<div ${stagger(0)}>${fig(ph, k + 1)}</div>`).join("")}</div>`;
+        <div class="poster-hero">${first ? fig(first, 0, { ratio: "16/9", parallax: true, tone: s.accent, noCap: true }) : ""}</div>
+        <div class="poster-flow">${rest.map((ph, k) => `<div ${stagger(k % 3, 0.1)}>${fig(ph, k + 1)}</div>`).join("")}</div>`;
     } else if (layout === "contact") {
       const picks = photos.map((ph, k) => ph.pick || (!photos.some((x) => x.pick) && k < 2));
       const hero = photos[picks.indexOf(true)] || photos[0];
@@ -323,8 +350,9 @@
         <div class="film"><div class="frames">${photos.map((ph, k) => `<div class="frame${picks[k] ? " picked" : ""}" data-reveal ${stagger(k, 0.04)}>${fig(ph, k, { ratio: "3/2", noCap: true })}<div class="no"><b>${k + 1}A</b><span>▸ ${pad(k + 1)}</span></div></div>`).join("")}</div></div>`;
     } else if (layout === "zine") {
       body = `<div class="collage sheet-free"><span class="stamp" aria-hidden="true">${esc(t(s.kind) || s.band)}</span>${photos.map((ph, k) => fig(ph, k, { before: k % 2 === 0 ? '<span class="tape" aria-hidden="true"></span>' : "" })).join("")}</div>`;
-    } else if (layout === "sequence") {
-      body = `<div class="seq"><div class="counter" aria-hidden="true"><span class="cur">01</span><small>/ ${pad(photos.length)}</small></div>${photos.map((ph, k) => `<section class="slide" data-k="${k}">${fig(ph, k)}</section>`).join("")}</div>`;
+    } else if (layout === "mosaic") {
+      const shape = (r) => { const [w, h] = String(r || "3/2").split("/").map(Number); const q = w / (h || 1); return q > 1.2 ? "land" : q < 0.85 ? "port" : "sq"; };
+      body = `<div class="mosaic">${photos.map((ph, k) => fig(ph, k, { attrs: `class="${shape(ph.ratio)}" data-reveal ${stagger(k % 4, 0.06)}`, before: `<span class="n" aria-hidden="true">${pad(k + 1)}</span>` })).join("")}</div>`;
     } else {
       body = `<div class="ed">${photos.map((ph, k) => fig(ph, k, { before: `<span class="big-n" aria-hidden="true">${pad(k + 1)}</span>`, parallax: k % 4 === 0 })).join("")}</div>`;
     }
@@ -348,11 +376,6 @@
         </nav>
       </article>`;
     initLightbox(el);
-    if (layout === "sequence") {
-      const cur = el.querySelector(".counter .cur");
-      const io2 = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) cur.textContent = pad(+e.target.dataset.k + 1); }), { threshold: 0.55 });
-      el.querySelectorAll(".slide").forEach((n) => io2.observe(n));
-    }
   }
 
   /* ---------- ABOUT ---------- */
@@ -442,7 +465,7 @@
   /* ---------- boot ---------- */
   function renderAll() {
     renderChrome();
-    ({ home: renderHome, project: renderProject, photo: renderPhoto, series: renderSeries, about: renderAbout, contact: renderContact })[page]?.();
+    ({ home: renderHome, project: renderProject, work: renderWork, photo: renderPhoto, series: renderSeries, about: renderAbout, contact: renderContact })[page]?.();
     initEffects();
   }
   renderAll();
