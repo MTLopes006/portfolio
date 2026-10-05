@@ -146,13 +146,13 @@
           <div class="track-head label"><span>Nº</span><span>${ui("work.col.title")}</span><span>${ui("work.col.tags")}</span><span style="text-align:right">${ui("work.col.year")}</span><span></span></div>
           <ol class="tracklist">
             ${grouped().map((g) => `<li class="track-group label" data-reveal>${ui("cat." + g.c)}</li>` + g.items.map(({ p, i }) => `
-              <li class="track" data-reveal ${stagger(i % 6)}><a href="projeto.html?p=${esc(p.slug)}" data-cover="${esc(p.thumb || p.cover || "")}" data-tone="${esc(p.tone || "")}" data-title="${esc(p.title)}">
+              <li class="track" data-reveal ${stagger(i % 6)}><a href="projeto.html?p=${esc(p.slug)}" data-cover="${esc(p.thumb || p.cover || "")}" data-tone="${esc(p.tone || "")}" data-title="${esc(t(p.title))}">
                 <span class="track-no">${pad(i + 1)}</span>
-                <span class="track-title">${esc(p.title)}</span>
+                <span class="track-title">${esc(t(p.title))}</span>
                 <span class="track-tags">${esc(t(p.tags))}</span>
                 <span class="track-year">${esc(p.year || "—")}</span>
                 <span class="track-arr" aria-hidden="true">→</span>
-                <span class="track-thumb">${media(p.thumb || p.cover, "16/10", p.title, { tone: p.tone, reveal: false })}</span>
+                <span class="track-thumb">${media(p.thumb || p.cover, "16/10", t(p.title), { tone: p.tone, reveal: false })}</span>
               </a></li>`).join("")).join("")}
           </ol>
         </div>
@@ -249,10 +249,10 @@
           ${g.items.map(({ p, i }) => `
             <li class="series-row" style="--acc:${esc(p.tone || "var(--magenta)")}">
               <a href="projeto.html?p=${esc(p.slug)}">
-                <div class="cover crop"><span class="tape" aria-hidden="true"></span>${media(p.thumb || p.cover, THUMB, p.title, { tone: p.tone })}</div>
+                <div class="cover crop"><span class="tape" aria-hidden="true"></span>${media(p.thumb || p.cover, THUMB, t(p.title), { tone: p.tone })}</div>
                 <div class="info" data-reveal>
                   <span class="n label">${pad(i + 1)} / ${pad(projects.length)}</span>
-                  <h2>${esc(p.title)}</h2>
+                  <h2>${esc(t(p.title))}</h2>
                   <div class="meta label">${esc(t(p.client))} · ${esc(p.year || "—")}</div>
                   ${t(p.summary) ? `<p class="sub">${esc(t(p.summary))}</p>` : ""}
                   <span class="go">${ui("work.open")} ${arr}</span>
@@ -323,11 +323,11 @@
     const p = projects[i < 0 ? 0 : i], idx = i < 0 ? 0 : i;
     if (!p) { el.innerHTML = `<div class="wrap page-head"><p>${ui("notfound")}</p></div>`; return; }
     const next = projects[(idx + 1) % projects.length];
-    document.title = `${p.title} — ${P.name}`;
+    document.title = `${t(p.title)} — ${P.name}`;
     el.innerHTML = `
       <article class="wrap" id="top">
         <div class="proj-top label"><a href="projetos.html">← ${ui("project.back")}</a><span>${ui("project.track")} ${pad(idx + 1)}/${pad(projects.length)}</span></div>
-        <h1 class="proj-title riso" data-text="${esc(p.title)}">${esc(p.title)}</h1>
+        <h1 class="proj-title riso" data-text="${esc(t(p.title))}">${esc(t(p.title))}</h1>
         <dl class="proj-meta" data-reveal>
           <div><dt class="label">${ui("project.client")}</dt><dd>${esc(t(p.client))}</dd></div>
           <div><dt class="label">${ui("project.year")}</dt><dd>${esc(p.year || "—")}</dd></div>
@@ -336,7 +336,7 @@
         </dl>
         <div class="proj-cover">${media(p.cover, p.coverRatio || "16/9", "Capa / Cover", { tone: p.tone, crop: true })}</div>
         <div class="proj-body">${(p.blocks || []).map(renderBlock).join("")}</div>
-        <nav class="next-proj" data-reveal><a href="projeto.html?p=${esc(next.slug)}"><div><div class="label muted" style="margin-bottom:14px">${ui("project.next")} — ${pad(((idx + 1) % projects.length) + 1)}</div><div class="t">${esc(next.title)}</div></div><span class="arr">→</span></a></nav>
+        <nav class="next-proj" data-reveal><a href="projeto.html?p=${esc(next.slug)}"><div><div class="label muted" style="margin-bottom:14px">${ui("project.next")} — ${pad(((idx + 1) % projects.length) + 1)}</div><div class="t">${esc(t(next.title))}</div></div><span class="arr">→</span></a></nav>
       </article>`;
     initLightbox(el, ".proj-cover .media img, .proj-body .media img");
   }

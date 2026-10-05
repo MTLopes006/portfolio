@@ -176,7 +176,10 @@
       },
       "thumb": "assets/img/thumbs/semana-do-gospel.jpg",
       "cover": "assets/img/projetos/semana-do-gospel/kv-violonista.jpg",
-      "title": "Semana do Gospel",
+      "title": {
+        "pt": "Semana do Gospel",
+        "en": "Gospel Week"
+      },
       "tags": {
         "pt": "Campanha · Identidade visual · Direção de arte",
         "en": "Campaign · Visual identity · Art direction"
@@ -359,7 +362,10 @@
       },
       "thumb": "assets/img/thumbs/semana-do-coreano.jpg",
       "cover": "assets/img/projetos/semana-do-coreano/destaque-desktop.jpg",
-      "title": "Semana do Coreano",
+      "title": {
+        "pt": "Semana do Coreano",
+        "en": "Korean Week"
+      },
       "tags": {
         "pt": "Campanha · Identidade visual · Colagem",
         "en": "Campaign · Visual identity · Collage"
@@ -485,7 +491,10 @@
       },
       "thumb": "assets/img/thumbs/download-do-app.jpg",
       "cover": "assets/img/projetos/download-do-app/key-visual.jpg",
-      "title": "Aplicativo Cifra Club",
+      "title": {
+        "pt": "Aplicativo Cifra Club",
+        "en": "Cifra Club App"
+      },
       "tags": {
         "pt": "Campanha · Mockups · House ads",
         "en": "Campaign · Mockups · House ads"
@@ -717,7 +726,10 @@
       },
       "thumb": "assets/img/thumbs/destaques.jpg",
       "cover": "assets/img/projetos/destaques/cifra-tua-graca-desktop.jpg",
-      "title": "Destaques",
+      "title": {
+        "pt": "Destaques",
+        "en": "Featured Banners"
+      },
       "tags": {
         "pt": "Banner · Direção de arte · Multiplataforma",
         "en": "Banner · Art direction · Multi-platform"
@@ -841,7 +853,10 @@
       },
       "thumb": "assets/img/thumbs/dia-da-lideranca.jpg",
       "cover": "assets/img/projetos/dia-da-lideranca/ilustracao-vitrola.jpg",
-      "title": "Dia da Liderança",
+      "title": {
+        "pt": "Dia da Liderança",
+        "en": "Leadership Day"
+      },
       "tags": {
         "pt": "Impresso · Ilustração · Endomarketing",
         "en": "Print · Illustration · Internal comms"
@@ -958,7 +973,10 @@
       },
       "thumb": "assets/img/thumbs/com-studio-sol-letras.jpg",
       "cover": "assets/img/projetos/com-studio-sol-letras/banner.jpg",
-      "title": "Com Studio Sol + Letras",
+      "title": {
+        "pt": "Com Studio Sol + Letras",
+        "en": "Com Studio Sol + Letras"
+      },
       "tags": {
         "pt": "Identidade visual · Sistema de cor · Multiformato",
         "en": "Visual identity · Colour system · Multi-format"
@@ -1242,7 +1260,10 @@
       },
       "thumb": "assets/img/thumbs/pantanal-aromas.jpg",
       "cover": "assets/img/projetos/pantanal-aromas/capa.webp",
-      "title": "Pantanal Aromas",
+      "title": {
+        "pt": "Pantanal Aromas",
+        "en": "Pantanal Aromas"
+      },
       "tags": {
         "pt": "Social media · Imagens de produto · Ponto de venda",
         "en": "Social media · Product imagery · Point of sale"
@@ -1414,7 +1435,10 @@
       },
       "thumb": "assets/img/thumbs/rebranding-vizzela.jpg",
       "cover": "assets/img/projetos/rebranding-vizzela/capa.jpg",
-      "title": "Rebranding Vizzela",
+      "title": {
+        "pt": "Rebranding Vizzela",
+        "en": "Vizzela Rebrand"
+      },
       "tags": {
         "pt": "Rebranding · Embalagem · Direção de arte",
         "en": "Rebranding · Packaging · Art direction"
@@ -1673,7 +1697,10 @@
       },
       "thumb": "assets/img/thumbs/cafe-soseki.jpg",
       "cover": "assets/img/projetos/cafe-soseki/pecas.jpg",
-      "title": "Café Sōseki",
+      "title": {
+        "pt": "Café Sōseki",
+        "en": "Café Sōseki"
+      },
       "tags": {
         "pt": "Editorial · Impresso · Identidade visual",
         "en": "Editorial · Print · Visual identity"
@@ -1798,7 +1825,10 @@
       },
       "thumb": "assets/img/thumbs/fanzine-nothing-but-thieves.jpg",
       "cover": "assets/img/projetos/fanzine-nothing-but-thieves/spread-gods.jpg",
-      "title": "Fanzine — Nothing but Thieves",
+      "title": {
+        "pt": "Fanzine — Nothing but Thieves",
+        "en": "Fanzine — Nothing But Thieves"
+      },
       "tags": {
         "pt": "Editorial · Colagem · Impresso",
         "en": "Editorial · Collage · Print"

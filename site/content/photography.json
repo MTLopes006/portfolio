@@ -1,7 +1,7 @@
 {
   "intro": {
-    "pt": "Fotografo shows e produtos como segunda frente de trabalho. No palco, o interesse é o mesmo do design: registrar a cena independente de perto.",
-    "en": "I photograph shows and products as a second line of work. On stage, the interest is the same as in design: documenting the independent scene up close."
+    "pt": "Fotografia de shows, ensaios de banda e produtos, com foco na cena musical independente.",
+    "en": "Live music, band and product photography, focused on the independent music scene."
   },
   "series": [
     {
@@ -485,8 +485,8 @@
       ],
       "layout": "mosaic",
       "accent": "#FF665E",
-      "cover": "assets/img/fotografia/memphis-may-fire/01.jpg",
-      "thumb": "assets/img/thumbs/foto-memphis-may-fire.jpg"
+      "cover": "assets/img/fotografia/memphis-may-fire/10.jpg",
+      "thumb": "assets/img/thumbs/foto-memphis-may-fire-10.jpg"
     },
     {
       "slug": "chao-de-taco",
@@ -649,8 +649,8 @@
       ],
       "layout": "mosaic",
       "accent": "#00A95C",
-      "cover": "assets/img/fotografia/chao-de-taco/01.jpg",
-      "thumb": "assets/img/thumbs/foto-chao-de-taco.jpg"
+      "cover": "assets/img/fotografia/chao-de-taco/05.jpg",
+      "thumb": "assets/img/thumbs/foto-chao-de-taco-05.jpg"
     },
     {
       "slug": "bad-luv",
@@ -1080,8 +1080,8 @@
     }
   ],
   "process": {
-    "pt": "Seleção e edição no Lightroom, em lote por cena, com exportações para cada destino (rede social, imprensa, cliente) e prazos combinados com a banda ou o evento.",
-    "en": "Culling and editing in Lightroom, batched by scene, with exports for each destination (social, press, client) and deadlines agreed with the band or event."
+    "pt": "Seleção e tratamento no Lightroom, com entregas adaptadas a cada uso (redes sociais, imprensa e cliente) e prazos definidos com a banda ou a produção.",
+    "en": "Culling and editing in Lightroom, with deliveries tailored to each use (social media, press and client) and deadlines set with the band or production team."
   },
   "gear": "Sony A7 III · Tamron 28-75mm f/2.8 · Godox TT685II"
 }

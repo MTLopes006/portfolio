@@ -183,12 +183,26 @@
               "name": "projects",
               "label": "Projetos (arraste para reordenar)",
               "widget": "list",
-              "summary": "{{fields.year}} — {{fields.title}}",
+              "summary": "{{fields.year}} — {{fields.title.pt}}",
               "fields": [
                 {
                   "name": "title",
                   "label": "Título",
-                  "widget": "string"
+                  "widget": "object",
+                  "collapsed": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
                 },
                 {
                   "name": "slug",
