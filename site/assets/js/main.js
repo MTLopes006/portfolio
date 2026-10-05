@@ -549,7 +549,7 @@
     </div>`;
   function initCarousels() {
     document.querySelectorAll("[data-carousel]").forEach((c) => {
-      const track = c.querySelector(".al-track"), step = () => (track.querySelector(".al-item")?.getBoundingClientRect().width || 240) + 20;
+      const track = c.querySelector(".al-track"), step = () => ("page" in c.dataset ? 2 * ((track.children[2]?.offsetLeft ?? 0) - (track.children[0]?.offsetLeft ?? 0)) || track.clientWidth : (track.querySelector(".al-item")?.getBoundingClientRect().width || 240) + 20);
       const sync = () => { c.querySelector(".al-prev").disabled = track.scrollLeft < 4; c.querySelector(".al-next").disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 4; };
       c.querySelector(".al-prev").onclick = () => track.scrollBy({ left: -step(), behavior: "smooth" });
       c.querySelector(".al-next").onclick = () => track.scrollBy({ left: step(), behavior: "smooth" });
@@ -558,7 +558,8 @@
   }
   const pinsHTML = (artists) => {
     const list = (Array.isArray(artists) ? artists : lines(artists).map((n) => ({ name: n })));
-    return `<ul class="pins">${list.map((a) => { const [bg, fg] = inkOf(a.name); return `<li class="pin${a.photo ? " has-photo" : ""}" style="--bg:${bg};--fg:${fg}">${a.photo ? `<img src="${esc(a.photo)}" alt="${esc(a.name)}" loading="lazy">` : ""}<span>${esc(a.name)}</span></li>`; }).join("")}</ul>`;
+    return `<div class="pin-carousel" data-carousel data-page><ul class="pins al-track">${list.map((a) => { const [bg, fg] = inkOf(a.name); return `<li class="pin${a.photo ? " has-photo" : ""}" style="--bg:${bg};--fg:${fg}">${a.photo ? `<img src="${esc(a.photo)}" alt="${esc(a.name)}" loading="lazy">` : ""}<span>${esc(a.name)}</span></li>`; }).join("")}</ul>
+      <div class="al-nav"><button type="button" class="al-prev" aria-label="${ui("pl.prev")}">←</button><button type="button" class="al-next" aria-label="${ui("pl.next")}">→</button></div></div>`;
   };
 
   function offClock(O) {

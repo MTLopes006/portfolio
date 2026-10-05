@@ -253,67 +253,11 @@
         "link": "https://music.apple.com/br/album/brand-new-eyes/604800411"
       },
       {
-        "title": "What Did You Think When You Made Me This Way?",
-        "artist": "Nothing But Thieves",
-        "year": "2018",
-        "cover": "assets/img/sobre/discos/what-did-you-think.jpg",
-        "link": "https://music.apple.com/br/album/what-did-you-think-when-you-made-me-this-way-ep/1433956952"
-      },
-      {
-        "title": "Continuar",
-        "artist": "ana paia",
-        "year": "2025",
-        "cover": "assets/img/sobre/discos/continuar.jpg",
-        "link": "https://music.apple.com/br/album/continuar/1843568422"
-      },
-      {
-        "title": "That's the Spirit",
-        "artist": "Bring Me The Horizon",
-        "year": "2015",
-        "cover": "assets/img/sobre/discos/thats-the-spirit.jpg",
-        "link": "https://music.apple.com/br/album/thats-the-spirit/1022197503"
-      },
-      {
-        "title": "The 1975",
-        "artist": "The 1975",
-        "year": "2013",
-        "cover": "assets/img/sobre/discos/the-1975.jpg",
-        "link": "https://music.apple.com/br/album/the-1975/1440818989"
-      },
-      {
-        "title": "fever",
-        "artist": "Against The Current",
-        "year": "2021",
-        "cover": "assets/img/sobre/discos/fever.jpg",
-        "link": "https://music.apple.com/br/album/fever/1573232687"
-      },
-      {
-        "title": "Humbug",
-        "artist": "Arctic Monkeys",
-        "year": "2009",
-        "cover": "assets/img/sobre/discos/humbug.jpg",
-        "link": "https://music.apple.com/br/album/humbug-bonus-track-version/330283015"
-      },
-      {
-        "title": "American Beauty / American Psycho",
-        "artist": "Fall Out Boy",
-        "year": "2015",
-        "cover": "assets/img/sobre/discos/american-beauty.jpg",
-        "link": "https://music.apple.com/br/album/american-beauty-american-psycho/1440826504"
-      },
-      {
-        "title": "Torches",
-        "artist": "Foster the People",
-        "year": "2011",
-        "cover": "assets/img/sobre/discos/torches.jpg",
-        "link": "https://music.apple.com/br/album/torches/435761204"
-      },
-      {
-        "title": "Wiped Out!",
-        "artist": "The Neighbourhood",
-        "year": "2015",
-        "cover": "assets/img/sobre/discos/wiped-out.jpg",
-        "link": "https://music.apple.com/br/album/wiped-out/1030115907"
+        "title": "Ainda nem doeu",
+        "artist": "Morro Fuji",
+        "year": "2026",
+        "cover": "assets/img/sobre/discos/ainda-nem-doeu.jpg",
+        "link": "https://music.apple.com/br/album/ainda-nem-doeu/6769138690"
       },
       {
         "title": "Three Cheers for Sweet Revenge",
@@ -323,6 +267,20 @@
         "link": "https://music.apple.com/br/album/three-cheers-for-sweet-revenge/1156311431"
       },
       {
+        "title": "Torches",
+        "artist": "Foster the People",
+        "year": "2011",
+        "cover": "assets/img/sobre/discos/torches.jpg",
+        "link": "https://music.apple.com/br/album/torches/435761204"
+      },
+      {
+        "title": "O Que Existe Dentro de Mim",
+        "artist": "Adorável Clichê",
+        "year": "2018",
+        "cover": "assets/img/sobre/discos/o-que-existe.jpg",
+        "link": "https://music.apple.com/br/album/o-que-existe-dentro-de-mim/1433553621"
+      },
+      {
         "title": "Misadventures",
         "artist": "Pierce the Veil",
         "year": "2016",
@@ -330,41 +288,147 @@
         "link": "https://music.apple.com/br/album/misadventures/1440950410"
       },
       {
+        "title": "fever",
+        "artist": "Against The Current",
+        "year": "2021",
+        "cover": "assets/img/sobre/discos/fever.jpg",
+        "link": "https://music.apple.com/br/album/fever/1573232687"
+      },
+      {
+        "title": "difícil",
+        "artist": "Chão de Taco",
+        "year": "2023",
+        "cover": "assets/img/sobre/discos/dificil.jpg",
+        "link": "https://music.apple.com/br/album/dif%C3%ADcil/1716658458"
+      },
+      {
+        "title": "That's the Spirit",
+        "artist": "Bring Me The Horizon",
+        "year": "2015",
+        "cover": "assets/img/sobre/discos/thats-the-spirit.jpg",
+        "link": "https://music.apple.com/br/album/thats-the-spirit/1022197503"
+      },
+      {
+        "title": "What Did You Think When You Made Me This Way?",
+        "artist": "Nothing But Thieves",
+        "year": "2018",
+        "cover": "assets/img/sobre/discos/what-did-you-think.jpg",
+        "link": "https://music.apple.com/br/album/what-did-you-think-when-you-made-me-this-way-ep/1433956952"
+      },
+      {
+        "title": "The 1975",
+        "artist": "The 1975",
+        "year": "2013",
+        "cover": "assets/img/sobre/discos/the-1975.jpg",
+        "link": "https://music.apple.com/br/album/the-1975/1440818989"
+      },
+      {
+        "title": "pior que eu tava tão de boa que esqueci até que eu tava aqui",
+        "artist": "Rolimã",
+        "year": "2026",
+        "cover": "assets/img/sobre/discos/pior-que-eu-tava.jpg",
+        "link": "https://music.apple.com/br/album/pior-que-eu-tava-t%C3%A3o-de-boa-que-esqueci-at%C3%A9-que-eu-tava-aqui/1862969416"
+      },
+      {
         "title": "Vessel",
         "artist": "twenty one pilots",
         "year": "2013",
         "cover": "assets/img/sobre/discos/vessel.jpg",
         "link": "https://music.apple.com/br/album/vessel/585128397"
+      },
+      {
+        "title": "Wiped Out!",
+        "artist": "The Neighbourhood",
+        "year": "2015",
+        "cover": "assets/img/sobre/discos/wiped-out.jpg",
+        "link": "https://music.apple.com/br/album/wiped-out/1030115907"
+      },
+      {
+        "title": "Continuar",
+        "artist": "ana paia",
+        "year": "2025",
+        "cover": "assets/img/sobre/discos/continuar.jpg",
+        "link": "https://music.apple.com/br/album/continuar/1843568422"
+      },
+      {
+        "title": "American Beauty / American Psycho",
+        "artist": "Fall Out Boy",
+        "year": "2015",
+        "cover": "assets/img/sobre/discos/american-beauty.jpg",
+        "link": "https://music.apple.com/br/album/american-beauty-american-psycho/1440826504"
+      },
+      {
+        "title": "Humbug",
+        "artist": "Arctic Monkeys",
+        "year": "2009",
+        "cover": "assets/img/sobre/discos/humbug.jpg",
+        "link": "https://music.apple.com/br/album/humbug-bonus-track-version/330283015"
       }
     ],
     "artists": [
       {
-        "name": "Paramore",
-        "photo": "assets/img/sobre/artistas/paramore.jpg"
+        "name": "Bad Omens",
+        "photo": "assets/img/sobre/artistas/bad-omens.jpg"
       },
       {
-        "name": "Nothing But Thieves",
-        "photo": "assets/img/sobre/artistas/nothing-but-thieves.jpg"
+        "name": "Against The Current",
+        "photo": "assets/img/sobre/artistas/against-the-current.jpg"
       },
       {
-        "name": "Bring Me The Horizon",
-        "photo": "assets/img/sobre/artistas/bring-me-the-horizon.jpg"
-      },
-      {
-        "name": "Twenty One Pilots",
-        "photo": "assets/img/sobre/artistas/twenty-one-pilots.jpg"
-      },
-      {
-        "name": "Arctic Monkeys",
-        "photo": "assets/img/sobre/artistas/arctic-monkeys.jpg"
+        "name": "Morro Fuji",
+        "photo": "assets/img/sobre/artistas/morro-fuji.jpg"
       },
       {
         "name": "My Chemical Romance",
         "photo": "assets/img/sobre/artistas/my-chemical-romance.jpg"
       },
       {
+        "name": "Nothing But Thieves",
+        "photo": "assets/img/sobre/artistas/nothing-but-thieves.jpg"
+      },
+      {
+        "name": "Chão de Taco",
+        "photo": "assets/img/sobre/artistas/chao-de-taco.jpg"
+      },
+      {
         "name": "Pierce The Veil",
         "photo": "assets/img/sobre/artistas/pierce-the-veil.jpg"
+      },
+      {
+        "name": "Arctic Monkeys",
+        "photo": "assets/img/sobre/artistas/arctic-monkeys.jpg"
+      },
+      {
+        "name": "ana paia",
+        "photo": "assets/img/sobre/artistas/ana-paia.jpg"
+      },
+      {
+        "name": "Twenty One Pilots",
+        "photo": "assets/img/sobre/artistas/twenty-one-pilots.jpg"
+      },
+      {
+        "name": "Avenged Sevenfold",
+        "photo": "assets/img/sobre/artistas/avenged-sevenfold.jpg"
+      },
+      {
+        "name": "Rolimã",
+        "photo": "assets/img/sobre/artistas/rolima.jpg"
+      },
+      {
+        "name": "Bring Me The Horizon",
+        "photo": "assets/img/sobre/artistas/bring-me-the-horizon.jpg"
+      },
+      {
+        "name": "Paramore",
+        "photo": "assets/img/sobre/artistas/paramore.jpg"
+      },
+      {
+        "name": "Adorável Clichê",
+        "photo": "assets/img/sobre/artistas/adoravel-cliche.jpg"
+      },
+      {
+        "name": "The 1975",
+        "photo": "assets/img/sobre/artistas/the-1975.jpg"
       }
     ],
     "hobbies": "Violão e Guitarra\nAmante de música ao vivo\nGamer\nCozinha por hobby\nFotógrafo\nAnimes",
