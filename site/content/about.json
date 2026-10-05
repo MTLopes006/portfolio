@@ -1,7 +1,7 @@
 {
   "bio": {
-    "pt": "Sou Matheus Lopes, designer gráfico de 24 anos, nascido em São Paulo e radicado em Belo Horizonte. Trabalho como Visual Designer na Studio Sol, onde crio a comunicação do Cifra Club, do Palco MP3 e do Letras.mus.br.\n\nComecei no design pela via da comunicação visual e fui encontrando nela um jeito de ficar perto do que mais me interessa: música, cultura independente e a forma como as pessoas se reúnem em torno delas.\n\nDesde 2023 estou na Studio Sol. Entrei como estagiário e fui efetivado em 2025. Ali aprendi a transformar briefings em campanhas que se desdobram em dezenas de formatos, a manter três identidades distintas coerentes entre si e a trabalhar lado a lado com marketing, conteúdo, produto e tecnologia, em plataformas usadas por milhões de pessoas que tocam, cantam e escutam música.\n\nFora da Studio Sol, atendo agências de marketing digital em projetos de tecnologia, arquitetura, mercado imobiliário e beleza, do criativo de mídia paga ao expositor de ponto de venda. Também fotografo shows e produtos, o que me mantém perto das bandas e do palco.\n\nNa universidade, meu interesse é a cultura independente vista pelo design. Publiquei um artigo sobre acessibilidade em jogos digitais e hoje desenvolvo meu TCC sobre a cena DIY e os festivais de banda de casinha. Quero seguir pesquisando no mestrado, sem deixar a prática profissional.",
-    "en": "I'm Matheus Lopes, a 24-year-old graphic designer, born in São Paulo and based in Belo Horizonte. I work as a Visual Designer at Studio Sol, creating communication for Cifra Club, Palco MP3 and Letras.mus.br.\n\nI came to design through visual communication and found in it a way to stay close to what interests me most: music, independent culture and the way people gather around them.\n\nI've been at Studio Sol since 2023. I joined as an intern and was hired full-time in 2025. There I learned to turn briefs into campaigns that unfold into dozens of formats, to keep three distinct identities consistent with each other, and to work side by side with marketing, content, product and engineering on platforms used by millions of people who play, sing and listen to music.\n\nOutside Studio Sol, I work with digital marketing agencies on tech, architecture, real estate and beauty projects, from paid-media creatives to point-of-sale displays. I also photograph shows and products, which keeps me close to bands and the stage.\n\nAt university, my interest is independent culture seen through design. I published a paper on accessibility in video games and I'm now writing my thesis on the DIY scene and Belo Horizonte's house-show festivals. I want to keep researching in a master's degree without leaving practice behind."
+    "pt": "Sou Matheus Lopes, designer gráfico de 24 anos, nascido em São Paulo e vivento atualmente em Belo Horizonte. Trabalho como Visual Designer na Studio Sol, onde desenvolvo a comunicação do Cifra Club, do Palco MP3 e do Letras.mus.br.\n\nComecei no design pela via da comunicação visual e fui encontrando nela um jeito de ficar perto do que mais me interessa: música, entretenimento, cultura independente e a forma como as pessoas se reúnem em torno delas.\n\nDesde 2023 estou na Studio Sol. Entrei como estagiário e fui efetivado em 2025. Ali aprendi a transformar briefings em campanhas que se desdobram em dezenas de formatos, a manter três identidades distintas coerentes entre si e a trabalhar lado a lado com marketing, conteúdo, produto e tecnologia, em plataformas usadas por milhões de pessoas que tocam, cantam e escutam música.\n\nFora da Studio Sol, atendo agências de marketing digital em projetos de tecnologia, arquitetura, mercado imobiliário e beleza, do criativo de mídia paga ao expositor de ponto de venda. \n\nTambém atuo profissionalmente como fotografo com atuação em shows e ensaios para bandas, o que me mantém próximo das produções dos mais diversos tipos de eventos.\n\nNa universidade, meu interesse é a cultura independente vista pelo design. Também publiquei um artigo sobre acessibilidade em jogos digitais e hoje desenvolvo meu TCC sobre a cena independente.",
+    "en": "I’m Matheus Lopes, a 24-year-old graphic designer born in São Paulo and currently based in Belo Horizonte. I work as a Visual Designer at Studio Sol, where I develop visual communication for Cifra Club, Palco MP3, and Letras.mus.br.\n\nI first got into design through visual communication, and over time I found in it a way to stay close to what interests me most: music, entertainment, independent culture, and the ways people come together around them.\n\nI have been working at Studio Sol since 2023. I joined as an intern and became a full-time designer in 2025. During this time, I learned how to turn briefs into campaigns that unfold across dozens of formats, maintain consistency across three distinct brand identities, and work closely with marketing, content, product, and technology teams on platforms used by millions of people who play, sing, and listen to music.\n\nOutside Studio Sol, I work with digital marketing agencies on projects across technology, architecture, real estate, and beauty, creating everything from paid media assets to point-of-sale displays.\n\nI also work professionally as a photographer, focusing on live concerts and photo shoots for bands. This keeps me closely connected to the production of a wide range of events and to the independent music scene.\n\nAt university, my main area of interest is independent culture viewed through the lens of design. I have also published an academic article on accessibility in digital games, and I am currently developing my undergraduate thesis on the independent scene."
   },
   "lists": [
     {
@@ -9,14 +9,14 @@
         "pt": "Fora do expediente",
         "en": "Off the clock"
       },
-      "items": "Toco violão e guitarra\nFrequento shows com regularidade\nLeio poesia e jornalismo musical independente\nEstudo capas de disco"
+      "items": "Toco violão e guitarra\nFrequento shows com regularidade\nSou gamer\nGosto de cozinhar"
     },
     {
       "title": {
         "pt": "Ferramentas",
         "en": "Tools"
       },
-      "items": "Figma\nPhotoshop, Illustrator, InDesign\nAfter Effects e Rive (básico)\nLightroom\nMagnific, Google Flow"
+      "items": "Figma\nPhotoshop, Illustrator, InDesign\nAfter Effects e Rive\nLightroom\nChat GPT, Claude, Magnific e Google Flow"
     },
     {
       "title": {
@@ -30,7 +30,7 @@
         "pt": "Idiomas",
         "en": "Languages"
       },
-      "items": "Português — nativo\nInglês — avançado"
+      "items": "Português — nativo\nInglês — intermediário"
     }
   ],
   "experience": [
@@ -121,12 +121,12 @@
         "en": "Thesis · in progress"
       },
       "title": {
-        "pt": "A cena DIY e os festivais de banda de casinha",
-        "en": "The DIY scene and house-show festivals"
+        "pt": "O design na construção da identidade, da comunidade e da experiência em festivais independentes de música no Brasil: um estudo sobre a cena alternativa brasileira, tomando o festival banda de casinha como estudo de caso",
+        "en": "Design in the Construction of Identity, Community, and Experience at Independent Music Festivals in Brazil: A Study of the Brazilian Alternative Scene, Using the Banda de Casinha Festival as a Case Study"
       },
       "text": {
-        "pt": "Projeto-ensaio que trata a cena musical DIY e os festivais de banda de casinha de Belo Horizonte como objeto de análise, usando as lentes do design gráfico e do design de serviços para entender como esses eventos se organizam, se comunicam e criam comunidade.",
-        "en": "An essay-project that takes Belo Horizonte's DIY music scene and house-show festivals as its subject, using graphic design and service design to understand how these events organise, communicate and build community."
+        "pt": "Projeto-ensaio que trata a cena musical independente e os festivais de banda de casinha de Belo Horizonte como objeto de análise, usando as lentes do design gráfico e do design de serviços para entender como esses eventos se organizam, se comunicam e criam comunidade.",
+        "en": "An essay-project that takes Belo Horizonte's independent music scene and house-show festivals as its subject, using graphic design and service design to understand how these events organise, communicate and build community."
       },
       "link": ""
     },
@@ -143,22 +143,15 @@
         "pt": "Com Larissa Zanetti Alves, Pedro Henrique Cristofori Simões Izelle e Priscilla Maria Cardoso Garone, a partir da pesquisa no LaDIJ/UFES. O artigo compara recursos de acessibilidade visual em jogos e identifica uma tendência crescente de adotá-los, como modos para daltonismo, alto contraste, HUD personalizável e elementos ampliados.",
         "en": "With Larissa Zanetti Alves, Pedro Henrique Cristofori Simões Izelle and Priscilla Maria Cardoso Garone, from research at LaDIJ/UFES. The paper compares visual accessibility features in games and finds a growing trend toward them, such as colour-blind modes, high contrast, customisable HUDs and enlarged elements."
       },
-      "link": ""
+      "link": "https://periodicos.ufam.edu.br/index.php/dcae/article/view/12069"
     }
   ],
   "timeline": [
     {
-      "period": "2027",
-      "text": {
-        "pt": "Conclusão do Design na UFMG (previsão); mestrado e volta a São Paulo",
-        "en": "Design degree at UFMG (expected); master's and move back to São Paulo"
-      }
-    },
-    {
       "period": "2026",
       "text": {
-        "pt": "TCC sobre a cena DIY; primeiros trabalhos como fotógrafo de shows",
-        "en": "Thesis on the DIY scene; first jobs as a live music photographer"
+        "pt": "Trabalhos como fotógrafo de shows",
+        "en": "Jobs as a live music photographer"
       }
     },
     {
@@ -194,6 +187,13 @@
       "text": {
         "pt": "Transferência para a UFMG, em Belo Horizonte",
         "en": "Transfer to UFMG, Belo Horizonte"
+      }
+    },
+    {
+      "period": "03/2022",
+      "text": {
+        "pt": "Entrada como Diretor Político do Centro Acadêmico de Design (UFES)",
+        "en": "Joined as Political Director of the Design Student Association (UFES)"
       }
     },
     {
