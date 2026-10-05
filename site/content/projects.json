@@ -220,6 +220,17 @@
           }
         },
         {
+          "type": "text",
+          "title": {
+            "pt": "Colagem como linguagem",
+            "en": "Collage as a language"
+          },
+          "text": {
+            "pt": "Elementos de Seul (a N Seoul Tower, placas de rua, soju) recortados e aplicados sobre lilás, rosa e azul, com a personagem como fio condutor entre as peças. Assets gerados no Google Flow e finalizados no Photoshop.",
+            "en": "Seoul elements (N Seoul Tower, street signs, soju) cut out and laid over lilac, pink and blue, with the character as the thread between pieces. Assets generated in Google Flow and finished in Photoshop."
+          }
+        },
+        {
           "type": "columns",
           "cols": [
             {
@@ -276,12 +287,57 @@
         {
           "type": "text",
           "title": {
-            "pt": "Colagem como linguagem",
-            "en": "Collage as a language"
+            "pt": "House ads multiformato",
+            "en": "Multi-format house ads"
           },
           "text": {
-            "pt": "Elementos de Seul (a N Seoul Tower, placas de rua, soju) recortados e aplicados sobre lilás, rosa e azul, com a personagem como fio condutor entre as peças. Assets gerados no Google Flow e finalizados no Photoshop.",
-            "en": "Seoul elements (N Seoul Tower, street signs, soju) cut out and laid over lilac, pink and blue, with the character as the thread between pieces. Assets generated in Google Flow and finished in Photoshop."
+            "pt": "Peças veiculadas no site do Letras, em espaços de mídia display, para quem chega pelas letras de K-pop. Quatro formatos (970×250, 970×90, 300×250 e 320×100), animados em dois quadros: a provocação \"Canta em coreano mas não entende nada?\" e o convite \"Aprenda com os cursos do Letras\", com o botão Comece agora.",
+            "en": "Placements on the Letras website, in display ad slots, for people arriving through K-pop lyrics. Four formats (970×250, 970×90, 300×250 and 320×100), animated in two frames: the hook \"You sing in Korean but don't understand a thing?\" and the invite \"Learn with Letras courses\", with a Start now button."
+          }
+        },
+        {
+          "type": "ads",
+          "items": [
+            {
+              "img": "assets/img/projetos/semana-do-coreano/houseads/970x250.webp",
+              "w": 970,
+              "h": 250,
+              "label": {
+                "pt": "Billboard",
+                "en": "Billboard"
+              }
+            },
+            {
+              "img": "assets/img/projetos/semana-do-coreano/houseads/970x90.webp",
+              "w": 970,
+              "h": 90,
+              "label": {
+                "pt": "Super leaderboard",
+                "en": "Super leaderboard"
+              }
+            },
+            {
+              "img": "assets/img/projetos/semana-do-coreano/houseads/300x250.webp",
+              "w": 300,
+              "h": 250,
+              "label": {
+                "pt": "Retângulo médio",
+                "en": "Medium rectangle"
+              }
+            },
+            {
+              "img": "assets/img/projetos/semana-do-coreano/houseads/320x100.webp",
+              "w": 320,
+              "h": 100,
+              "label": {
+                "pt": "Mobile banner grande",
+                "en": "Large mobile banner"
+              }
+            }
+          ],
+          "caption": {
+            "pt": "House ads animados · tamanho real",
+            "en": "Animated house ads · actual size"
           }
         },
         {
@@ -380,6 +436,62 @@
           }
         },
         {
+          "type": "text",
+          "title": {
+            "pt": "House ads multiformato",
+            "en": "Multi-format house ads"
+          },
+          "text": {
+            "pt": "Peças veiculadas no próprio site do Cifra Club, em espaços de mídia display, falando com quem já usa a versão web. São quatro formatos padrão (970×250, 970×90, 300×250 e 320×50), todos animados em dois quadros: primeiro a promessa, \"Aprenda mais rápido e organize seu repertório\"; depois a chamada \"Baixe o app e evolua todos os dias\", com o selo da App Store.",
+            "en": "Placements on Cifra Club's own website, in display ad slots, speaking to people who already use the web version. Four standard formats (970×250, 970×90, 300×250 and 320×50), each animated in two frames: first the promise, \"Learn faster and organise your setlist\"; then the call \"Download the app and improve every day\", with the App Store badge."
+          }
+        },
+        {
+          "type": "ads",
+          "items": [
+            {
+              "img": "assets/img/projetos/download-do-app/houseads/970x250.webp",
+              "w": 970,
+              "h": 250,
+              "label": {
+                "pt": "Billboard",
+                "en": "Billboard"
+              }
+            },
+            {
+              "img": "assets/img/projetos/download-do-app/houseads/970x90.webp",
+              "w": 970,
+              "h": 90,
+              "label": {
+                "pt": "Super leaderboard",
+                "en": "Super leaderboard"
+              }
+            },
+            {
+              "img": "assets/img/projetos/download-do-app/houseads/300x250.webp",
+              "w": 300,
+              "h": 250,
+              "label": {
+                "pt": "Retângulo médio",
+                "en": "Medium rectangle"
+              }
+            },
+            {
+              "img": "assets/img/projetos/download-do-app/houseads/320x50.webp",
+              "w": 320,
+              "h": 50,
+              "label": {
+                "pt": "Mobile banner",
+                "en": "Mobile banner"
+              }
+            }
+          ],
+          "caption": {
+            "pt": "House ads animados · tamanho real · campanha iOS",
+            "en": "Animated house ads · actual size · iOS campaign"
+          }
+        },
+        {
           "type": "specs",
           "title": {
             "pt": "Entregas",
@@ -402,8 +514,8 @@
                 "en": "Formats"
               },
               "value": {
-                "pt": "Mockups e banners multiformato (Android e iOS)",
-                "en": "Mockups & multi-format banners (Android & iOS)"
+                "pt": "House ads 970×250, 970×90, 300×250 e 320×50, animados em 2 quadros",
+                "en": "House ads 970×250, 970×90, 300×250 & 320×50, animated in 2 frames"
               }
             },
             {

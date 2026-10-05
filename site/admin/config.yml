@@ -652,6 +652,30 @@
                           "value_type": "int",
                           "min": 30,
                           "max": 100
+                        },
+                        {
+                          "name": "span",
+                          "label": "Encaixe na grade",
+                          "widget": "select",
+                          "required": false,
+                          "options": [
+                            {
+                              "label": "Largura total",
+                              "value": "full"
+                            },
+                            {
+                              "label": "Larga (colunas 2–11)",
+                              "value": "wide"
+                            },
+                            {
+                              "label": "Centro (colunas 3–10)",
+                              "value": "center"
+                            },
+                            {
+                              "label": "Coluna de texto (6–12)",
+                              "value": "content"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -738,6 +762,30 @@
                           "value_type": "int",
                           "min": 30,
                           "max": 100
+                        },
+                        {
+                          "name": "span",
+                          "label": "Encaixe na grade",
+                          "widget": "select",
+                          "required": false,
+                          "options": [
+                            {
+                              "label": "Largura total",
+                              "value": "full"
+                            },
+                            {
+                              "label": "Larga (colunas 2–11)",
+                              "value": "wide"
+                            },
+                            {
+                              "label": "Centro (colunas 3–10)",
+                              "value": "center"
+                            },
+                            {
+                              "label": "Coluna de texto (6–12)",
+                              "value": "content"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -964,6 +1012,80 @@
                                   "required": false
                                 }
                               ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ads",
+                      "label": "House ads / banners em tamanho real (GIF ou WebP animado)",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "items",
+                          "label": "Formatos",
+                          "widget": "list",
+                          "fields": [
+                            {
+                              "name": "img",
+                              "label": "Arquivo (GIF ou WebP animado, PNG/JPG estático)",
+                              "widget": "image",
+                              "choose_url": false
+                            },
+                            {
+                              "name": "w",
+                              "label": "Largura em px (ex.: 970)",
+                              "widget": "number",
+                              "value_type": "int"
+                            },
+                            {
+                              "name": "h",
+                              "label": "Altura em px (ex.: 250)",
+                              "widget": "number",
+                              "value_type": "int"
+                            },
+                            {
+                              "name": "label",
+                              "label": "Nome do formato (ex.: Billboard)",
+                              "widget": "object",
+                              "collapsed": false,
+                              "required": false,
+                              "fields": [
+                                {
+                                  "name": "pt",
+                                  "label": "Português",
+                                  "widget": "string",
+                                  "required": false
+                                },
+                                {
+                                  "name": "en",
+                                  "label": "English",
+                                  "widget": "string",
+                                  "required": false
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "caption",
+                          "label": "Legenda",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "string",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "string",
+                              "required": false
                             }
                           ]
                         }

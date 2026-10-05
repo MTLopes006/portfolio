@@ -214,6 +214,7 @@ Campos de cada projeto:
 | Imagem + texto | Imagem com marcas de corte e texto ao lado (escolha o lado da imagem) |
 | **Linhas de imagens** | Cada linha mostra as imagens lado a lado **com a mesma altura e sem corte**: a largura de cada uma segue a proporção. Ideal para desktop + mobile, posts e telas de app. Aceita rótulo por linha e largura do bloco em % |
 | **Colunas de imagens** | Colagem em colunas de larguras relativas, com imagens empilhadas (como uma prancha do Figma) |
+| **House ads / banners** | Prancha de mídia em **tamanho real** (nunca ampliada): formatos largos empilhados e os pequenos lado a lado, com a medida de cada um. Aceita **GIF ou WebP animado**. Informe largura e altura em px |
 | Duas imagens | Par assimétrico (a segunda fica mais alta) |
 | Três imagens | Trio escalonado em alturas diferentes |
 | Paleta de cores | Faixas de cor com nome e código hex |
@@ -221,8 +222,14 @@ Campos de cada projeto:
 | Frase de destaque | Citação centralizada |
 | Ficha técnica / créditos | Lista rótulo → valor (entregas, papéis, ferramentas, créditos) |
 
-**Dica de ritmo:** abra com *Texto de abertura*, alterne imagem e texto e feche com
-*Ficha técnica*. Evite duas *Imagens sangradas* seguidas.
+**Grade e ritmo:** as páginas seguem uma grade de 12 colunas. Títulos de seção ficam nas colunas 1–4;
+textos, abertura e fichas começam na coluna 6. Linhas e colunas de imagens têm o campo **Encaixe
+na grade**: largura total, larga (2–11), centro (3–10) ou coluna de texto (6–12).
+Um *Título + texto* fica colado às imagens que vêm logo depois dele (ele as apresenta); entre
+seções o espaço é maior. Abra com *Texto de abertura* e feche com *Ficha técnica*.
+
+**GIFs de dois quadros:** se tiver os quadros separados (ex.: `970x250_1.png` e `970x250_2.png`),
+peça ao Claude para montar o WebP animado. Ele fica até 4× menor que um GIF e com cores fiéis.
 
 ### 5.3 Fotografia (Lado B)
 

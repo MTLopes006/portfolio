@@ -268,6 +268,9 @@
     const h = String(hex).replace("#", ""); const n = parseInt(h.length === 3 ? h.replace(/./g, "$&$&") : h, 16) || 0;
     return (0.299 * (n >> 16 & 255) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) / 255 > 0.55 ? "#18171A" : "#F5F3EE";
   }
+  // image blocks snap to the 12-col grid: full · wide (2–11) · center (3–10) · content (6–12)
+  const spanOf = (b) => b.span || (!b.width ? "full" : b.width >= 85 ? "wide" : b.width >= 60 ? "center" : "content");
+  const onGrid = (b, html) => `<div class="b-grid span-${spanOf(b)}">${html}</div>`;
   function renderBlock(b) {
     const imgs = (b.imgs || []);
     switch (b.type) {
@@ -278,10 +281,16 @@
       case "pair": return `<figure class="b-pair" style="margin:0"><div class="grid">${imgs.map((m, i) => `<div ${stagger(i, 0.12)}>${media(m.img, m.ratio)}</div>`).join("")}</div>${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
       case "rows": {
         const num = (r) => { const [w, h] = String(r || "1/1").split("/").map(Number); return (w / (h || 1)) || 1; };
-        return `<figure class="b-rows" style="margin:0 auto;${b.width ? `width:min(100%, ${Number(b.width)}%)` : ""}">${(b.rows || []).map((row) => `${t(row.label) ? `<div class="row-label label">${esc(t(row.label))}</div>` : ""}<div class="row${(row.imgs || []).length > 2 ? " many" : ""}">${(row.imgs || []).map((m, i) => `<div style="flex:${num(m.ratio).toFixed(4)} 1 0" ${stagger(i, 0.1)}>${media(m.img, m.ratio, null, { round: m.round, frame: m.frame })}</div>`).join("")}</div>`).join("")}${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
+        return onGrid(b, `<figure class="b-rows" style="margin:0">${(b.rows || []).map((row) => `${t(row.label) ? `<div class="row-label label">${esc(t(row.label))}</div>` : ""}<div class="row${(row.imgs || []).length > 2 ? " many" : ""}">${(row.imgs || []).map((m, i) => `<div style="flex:${num(m.ratio).toFixed(4)} 1 0" ${stagger(i, 0.1)}>${media(m.img, m.ratio, null, { round: m.round, frame: m.frame })}</div>`).join("")}</div>`).join("")}${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`);
       }
       case "columns":
-        return `<figure class="b-cols" style="margin:0 auto;${b.width ? `width:min(100%, ${Number(b.width)}%)` : ""}"><div class="cols">${(b.cols || []).map((c, k) => `<div class="col" style="flex:${Number(c.width) || 1} 1 0">${(c.imgs || []).map((m, i) => `<div ${stagger(k + i, 0.08)}>${media(m.img, m.ratio, null, { round: m.round, frame: m.frame })}</div>`).join("")}</div>`).join("")}</div>${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
+        return onGrid(b, `<figure class="b-cols" style="margin:0"><div class="cols">${(b.cols || []).map((c, k) => `<div class="col" style="flex:${Number(c.width) || 1} 1 0">${(c.imgs || []).map((m, i) => `<div ${stagger(k + i, 0.08)}>${media(m.img, m.ratio, null, { round: m.round, frame: m.frame })}</div>`).join("")}</div>`).join("")}</div>${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`);
+      case "ads": {
+        // house ads shown at their real pixel size (never upscaled); animated WebP/GIF play on their own
+        const ad = (a) => `<figure class="ad" style="width:${Number(a.w) || 300}px"><img src="${esc(a.img)}" width="${Number(a.w) || 300}" height="${Number(a.h) || 250}" alt="${esc(a.w)}×${esc(a.h)}" loading="lazy"><figcaption class="label"><b>${esc(a.w)} × ${esc(a.h)}</b><span>${esc(t(a.label) || "")}</span></figcaption></figure>`;
+        const items = b.items || [], wide = items.filter((a) => Number(a.w) >= 600), small = items.filter((a) => Number(a.w) < 600);
+        return `<figure class="b-ads" data-reveal><div class="board crop"><div class="col-a">${wide.map(ad).join("")}</div><div class="col-b">${small.map(ad).join("")}</div></div>${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
+      }
       case "trio": return `<section class="b-trio">${imgs.map((m, i) => `<div ${stagger(i, 0.12)}>${media(m.img, m.ratio)}</div>`).join("")}</section>`;
       case "palette": return `<section class="b-palette" data-reveal><div class="blk-label label">${ui("project.palette")}</div><div class="row">${(b.colors || []).map((c) => `<div class="sw label" style="background:${esc(c.hex)};color:${contrast(c.hex)}"><span>${esc(c.name)}</span><span>${esc(c.hex)}</span></div>`).join("")}</div></section>`;
       case "type": return `<section class="b-type" data-reveal><div class="blk-label label">${ui("project.type")}</div><div class="spec"><div><div style="font-family:'${esc(b.family)}';font-size:28px;font-weight:600">${esc(b.family)}</div><div class="label muted" style="margin-top:6px">${esc(b.weights || "")}</div></div><div class="big" style="font-family:'${esc(b.family)}'">${esc(b.sample || "Aa")}</div></div></section>`;
