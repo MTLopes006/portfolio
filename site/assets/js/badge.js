@@ -25,7 +25,7 @@
         <div class="badge-face front">
           <div class="badge-hole"></div>
           <div class="badge-head"><span class="badge-access">${ui("badge.access")}</span><span class="badge-mark">M<i>/</i>L</span></div>
-          <div class="badge-meta"><span>Portfólio · 2026</span><span>${P.badgeId}</span></div>
+          <div class="badge-meta"><span>${ui("badge.edition")}</span><span>${P.badgeId}</span></div>
           <div class="badge-photo"><img src="${P.photo}" alt="${P.name}" draggable="false"><svg class="badge-reg" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="5.5" fill="none" stroke="currentColor"/><path d="M10 0v20M0 10h20" stroke="currentColor"/></svg></div>
           <div class="badge-name">${P.name}</div>
           <div class="badge-fields">

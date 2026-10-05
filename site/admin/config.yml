@@ -1400,7 +1400,23 @@
                 {
                   "name": "items",
                   "label": "Itens (um por linha)",
-                  "widget": "text"
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "text",
+                      "required": false
+                    }
+                  ]
                 }
               ]
             },
@@ -1600,7 +1616,23 @@
                 {
                   "name": "hobbies",
                   "label": "Adesivos / hobbies (um por linha)",
-                  "widget": "text"
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "text",
+                      "required": false
+                    }
+                  ]
                 }
               ]
             },

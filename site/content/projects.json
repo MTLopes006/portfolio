@@ -707,7 +707,7 @@
       "slug": "destaques",
       "client": {
         "pt": "Cifra Club e Letras · Studio Sol",
-        "en": "Cifra Club e Letras · Studio Sol"
+        "en": "Cifra Club & Letras · Studio Sol"
       },
       "tone": "#E8711C",
       "coverRatio": "2000/494",
@@ -831,7 +831,7 @@
       "slug": "dia-da-lideranca",
       "client": {
         "pt": "Studio Sol + Letras · Comunicação interna",
-        "en": "Studio Sol + Letras · Comunicação interna"
+        "en": "Studio Sol + Letras · Internal comms"
       },
       "tone": "#E9D3B4",
       "coverRatio": "1472/704",
@@ -948,7 +948,7 @@
       "slug": "com-studio-sol-letras",
       "client": {
         "pt": "Studio Sol + Letras · Comunicação interna",
-        "en": "Studio Sol + Letras · Comunicação interna"
+        "en": "Studio Sol + Letras · Internal comms"
       },
       "tone": "#F4F4F2",
       "coverRatio": "2400/900",
@@ -1458,7 +1458,7 @@
       "slug": "rebranding-vizzela",
       "client": {
         "pt": "Projeto acadêmico · UFMG",
-        "en": "Projeto acadêmico · UFMG"
+        "en": "Academic project · UFMG"
       },
       "tone": "#051E18",
       "coverRatio": "1920/1080",
@@ -1717,7 +1717,7 @@
       "slug": "cafe-soseki",
       "client": {
         "pt": "Projeto acadêmico · UFMG",
-        "en": "Projeto acadêmico · UFMG"
+        "en": "Academic project · UFMG"
       },
       "tone": "#FCB543",
       "coverRatio": "1400/1015",
@@ -1842,7 +1842,7 @@
       "slug": "fanzine-nothing-but-thieves",
       "client": {
         "pt": "Projeto pessoal",
-        "en": "Projeto pessoal"
+        "en": "Personal project"
       },
       "tone": "#C8321E",
       "coverRatio": "1308/923",

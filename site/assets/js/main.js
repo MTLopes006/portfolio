@@ -60,7 +60,7 @@
         <nav class="nav">${navLinks}</nav>
         <div class="controls">
           <button class="ctrl lang-btn" type="button" aria-label="Idioma / Language"><span class="${lang === "pt" ? "on" : ""}">PT</span> / <span class="${lang === "en" ? "on" : ""}">EN</span></button>
-          <button class="ctrl theme-btn" type="button"><span class="${dark ? "" : "on"}">${ui("theme.light")}</span> / <span class="${dark ? "on" : ""}">${ui("theme.dark")}</span></button>
+          <span class="ctrl theme-btn"><button type="button" data-th="light" class="${dark ? "" : "on"}" aria-pressed="${!dark}">${ui("theme.light")}</button> / <button type="button" data-th="dark" class="${dark ? "on" : ""}" aria-pressed="${dark}">${ui("theme.dark")}</button></span>
           <button class="ctrl menu-btn" type="button" aria-expanded="false"><span class="on">${ui("menu")}</span></button>
         </div>
       </div>`;
@@ -68,10 +68,14 @@
     if (!mnav) { mnav = document.createElement("nav"); mnav.className = "mobile-nav"; document.body.appendChild(mnav); }
     mnav.innerHTML = navLinks;
     header.querySelector(".lang-btn").onclick = () => { lang = lang === "pt" ? "en" : "pt"; store.set("ml-lang", lang); renderAll(); };
-    header.querySelector(".theme-btn").onclick = () => {
-      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      applyTheme(next); store.set("ml-theme", next); renderChrome();
-    };
+    // each word sets its own theme; the swap is instant (no half-faded colours), with a crossfade where supported
+    header.querySelectorAll(".theme-btn [data-th]").forEach((b) => (b.onclick = () => {
+      const next = b.dataset.th;
+      if (next === root.getAttribute("data-theme")) return;
+      store.set("ml-theme", next);
+      const swap = () => { root.classList.add("theme-swap"); applyTheme(next); renderChrome(); void root.offsetWidth; requestAnimationFrame(() => root.classList.remove("theme-swap")); };
+      if (document.startViewTransition && !document.hidden && !matchMedia("(prefers-reduced-motion: reduce)").matches) { const vt = document.startViewTransition(swap); vt.ready.catch(() => {}); vt.finished.catch(() => {}); } else swap();
+    }));
     const mb = header.querySelector(".menu-btn");
     mb.onclick = () => {
       const open = !mnav.classList.contains("open");
@@ -112,7 +116,6 @@
     const name = homeRendered
       ? `<span class="line riso" data-text="${esc(P.firstName)}">${esc(P.firstName)}</span><span class="line riso" data-text="${esc(P.lastName)}">${esc(P.lastName)}</span>`
       : `<span class="line riso" data-text="${esc(P.firstName)}">${split(P.firstName, 0.15)}</span><span class="line riso" data-text="${esc(P.lastName)}">${split(P.lastName, 0.35)}</span>`;
-    const stripSeries = [0, 1, 2].map((k) => series[k % Math.max(series.length, 1)]).filter(Boolean);
     el.innerHTML = `
       <section class="hero" id="top">
         <div class="wrap hero-grid">
@@ -161,7 +164,6 @@
           </div>
           <div class="sideb-grid">
             <div class="sideb-left">
-              <p class="sideb-lead" data-reveal>${esc(t(PH.intro))}</p>
               ${series.length ? `<a class="sideb-preview" href="foto.html?s=${esc(series[0].slug)}" data-reveal>
                 <div class="crop"><span class="tape" aria-hidden="true"></span>${media(series[0].thumb || coverOf(series[0]), THUMB, series[0].band, { tone: series[0].accent, reveal: false })}</div>
                 <div class="cap label"><span class="n">01</span><span class="t">${esc(series[0].band)}</span><span class="m">${seriesMeta(series[0])}</span></div>
@@ -170,9 +172,6 @@
             <ul class="setlist">
               ${series.map((s, i) => `<li data-reveal ${stagger(i)}><a href="foto.html?s=${esc(s.slug)}" data-i="${i}"><span class="n label">${pad(i + 1)}</span><span class="t">${esc(s.band)}</span><span class="c label">${pad(s.photos.length)} ${ui("photo.photos")}</span></a></li>`).join("")}
             </ul>
-          </div>
-          <div class="sideb-strip">
-            ${stripSeries.map((s, k) => `<a href="foto.html?s=${esc(s.slug)}" ${stagger(k, 0.12)} aria-label="${esc(s.band)}">${media(coverOf(s), k === 1 ? "3/4" : k === 0 ? "4/3" : "4/5", s.band, { parallax: k !== 1, crop: k === 0, tone: s.accent })}</a>`).join("")}
           </div>
         </div>
       </section>
@@ -557,7 +556,7 @@
 
   function offClock(O) {
     if (!O) return "";
-    const games = gamesOf(O), hobbies = lines(O.hobbies), playing = asItem(O.playing);
+    const games = gamesOf(O), hobbies = lines(t(O.hobbies)), playing = asItem(O.playing);
     const hasArtists = Array.isArray(O.artists) ? O.artists.length : lines(O.artists).length;
     return `
       <section class="offclock">
@@ -579,7 +578,7 @@
     const intro = `<p class="ho-intro" data-reveal>${ui("about.teaser").replace("{company}", esc(P.company))}</p>`;
     if (!O) return `<section class="section home-off"><div class="wrap">${intro}<a class="link-arrow" href="sobre.html">${ui("about.more")} ${arr}</a></div></section>`;
     const fav = O.favoriteGame && O.favoriteGame.title ? [{ ...O.favoriteGame, fav: true }] : [];
-    const games = [...fav, ...gamesOf(O).filter((g) => !fav.length || g.title !== fav[0].title)].slice(0, 4), playing = asItem(O.playing), hobbies = lines(O.hobbies);
+    const games = [...fav, ...gamesOf(O).filter((g) => !fav.length || g.title !== fav[0].title)].slice(0, 4), playing = asItem(O.playing), hobbies = lines(t(O.hobbies));
     return `
       <section class="section home-off">
         <div class="wrap">
@@ -610,7 +609,7 @@
         </div>
         ${offClock(AB.offclock)}
         <div class="about-lists" data-reveal>
-          ${(AB.lists || []).map((l) => `<div><h3 class="label">${esc(t(l.title))}</h3><ul>${lines(l.items).map((it) => `<li>${esc(it)}</li>`).join("")}</ul></div>`).join("")}
+          ${(AB.lists || []).map((l) => `<div><h3 class="label">${esc(t(l.title))}</h3><ul>${lines(t(l.items)).map((it) => `<li>${esc(it)}</li>`).join("")}</ul></div>`).join("")}
         </div>
         <div class="cv"><h2 data-reveal>${ui("about.exp")}</h2>${cvRows(AB.experience || [])}</div>
         ${(AB.education || []).length ? `<div class="cv"><h2 data-reveal>${ui("about.edu")}</h2>${cvRows(AB.education)}</div>` : ""}
