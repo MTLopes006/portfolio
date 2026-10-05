@@ -177,14 +177,7 @@
         </div>
       </section>
 
-      ${offClockTeaser(AB.offclock)}
-
-      <section class="section">
-        <div class="wrap about-teaser" data-reveal>
-          <p>${ui("about.teaser").replace("{company}", esc(P.company))}</p>
-          <a class="link-arrow" href="sobre.html">${ui("about.more")} ${arr}</a>
-        </div>
-      </section>`;
+      ${offClockTeaser(AB.offclock, P)}`;
     homeRendered = true;
     initSeriesPreview();
     initPlayers(AB.offclock && AB.offclock.playlist);
@@ -581,14 +574,17 @@
       </section>`;
   }
   // compact version for the home page
-  function offClockTeaser(O) {
-    if (!O) return "";
+  // home "about" block: one heading, the intro line, then the off-clock cards and hobby tags
+  function offClockTeaser(O, P) {
+    const intro = `<p class="ho-intro" data-reveal>${ui("about.teaser").replace("{company}", esc(P.company))}</p>`;
+    if (!O) return `<section class="section home-off"><div class="wrap">${intro}<a class="link-arrow" href="sobre.html">${ui("about.more")} ${arr}</a></div></section>`;
     const fav = O.favoriteGame && O.favoriteGame.title ? [{ ...O.favoriteGame, fav: true }] : [];
     const games = [...fav, ...gamesOf(O).filter((g) => !fav.length || g.title !== fav[0].title)].slice(0, 4), playing = asItem(O.playing), hobbies = lines(O.hobbies);
     return `
       <section class="section home-off">
         <div class="wrap">
           <div class="sec-head" data-reveal><div><div class="sec-label label">${regmark}</div><h2 class="sec-title">${ui("off.title")}</h2></div><a class="link-arrow" href="sobre.html">${ui("about.more")} ${arr}</a></div>
+          ${intro}
           <div class="home-off-grid">
             <article class="card ho-games" data-reveal><span class="tape" aria-hidden="true"></span><div class="card-label label">${ui("off.games")}</div><ul class="game-grid">${games.map((g) => `<li${g.fav ? ' class="is-fav"' : ""}>${boxArt(g)}${g.fav ? `<span class="fav-tag label">${ui("off.fav")}</span>` : ""}<span class="g-name">${esc(g.title)}</span></li>`).join("")}</ul>${playing.title ? `<div class="fav-playing"><div class="card-label label"><span class="live" aria-hidden="true"></span>${ui("off.playing")}</div><div class="now-game">${boxArt(playing, "mini")}<h3>${esc(playing.title)}</h3></div></div>` : ""}</article>
             ${O.playlist && (O.playlist.tracks || []).length ? `<article class="card ho-song" data-reveal><div class="card-label label">${ui("off.song")}</div>${playerHTML(O.playlist)}</article>` : ""}
