@@ -185,8 +185,8 @@ e-mail, WhatsApp, LinkedIn, Instagram, localização e disponibilidade.
 ### 5.2 Projetos de design (Lado A)
 
 A lista de projetos aparece na home e no índice (`projetos.html`, link **Ver projetos** ao lado
-do título da seção) na mesma ordem do painel. **Arraste para reordenar.** O menu "Projetos"
-rola até a seção na home.
+do título da seção) na mesma ordem do painel. **Arraste para reordenar.** O menu **Design**
+leva ao índice.
 
 Campos de cada projeto:
 
@@ -198,7 +198,8 @@ Campos de cada projeto:
 | Categoria | Agrupa os projetos na home e no índice: Campanhas, Produto e site, Comunicação interna, Clientes e freelas, Acadêmico e pessoal |
 | Cliente, Papel, Disciplinas | Ficha no topo da página. Disciplinas separadas por vírgula |
 | Resumo curto | Aparece no índice de projetos, abaixo do título |
-| Capa | Imagem que aparece ao passar o mouse na lista e no topo da página |
+| Miniatura 16:10 | Imagem do índice e da prévia ao passar o mouse na home. Sempre 16:10 (ex.: 1600×1000) para manter o padrão |
+| Capa | Imagem do topo da página do projeto, na proporção original |
 | Proporção da capa | Formato da capa (ver seção 6) |
 | Cor de apoio | Cor do espaço reservado enquanto não há capa |
 | **Blocos da página** | O conteúdo da página, montado em sequência |
@@ -227,8 +228,8 @@ Campos de cada projeto:
 
 A fotografia tem três níveis:
 
-1. **Home:** o link "Fotografia" do menu rola até a seção Lado B, com a lista das bandas.
-   O link **Ver fotografia**, ao lado do título, leva ao índice.
+1. **Home:** a seção Lado B lista as séries. O menu **Fotografia** e o link **Ver fotografia**
+   levam ao índice. Séries sem nenhuma foto ficam escondidas do site até receberem fotos.
 2. **Índice** (`fotografia.html`): uma linha por banda, com capa, tipo, local e número de fotos.
 3. **Página da série** (`foto.html?s=bad-luv`): página própria, com layout e cor de tinta
    escolhidos para a banda, navegação para a série anterior e a próxima, e fotos em tela
@@ -243,7 +244,8 @@ A fotografia tem três níveis:
 | Local, Ano, Descrição | Opcionais |
 | **Layout da página** | Ver tabela abaixo |
 | **Cor de tinta** | Cor de risografia usada nos detalhes da página (números, carimbo, desalinhamento do título, marcação de lápis) |
-| Capa | Imagem do índice e da home. Se vazia, usa a primeira foto |
+| Miniatura 16:10 | Imagem do índice de fotografia (1600×1000) |
+| Capa | Se não houver miniatura, usa a capa ou a primeira foto |
 | Fotos | Foto, proporção, legenda e **Destaque** (usado na folha de contato) |
 
 **Layouts disponíveis**, um por banda para cada página ter cara própria:
@@ -257,8 +259,7 @@ A fotografia tem três níveis:
 | **Mosaico** | Grade densa: horizontais ocupam o dobro da largura, verticais ficam lado a lado | Séries grandes e variadas, retrato noturno |
 
 Configuração atual: Blessthefall → Pôster (azul) · Memphis May Fire → Folha de contato
-(vermelho) · Chão de Taco → Zine (verde) · Bad Luv → Editorial (rosa) · Julieta Social →
-Mosaico (roxo). Dá para trocar a qualquer momento pelo painel.
+(vermelho) · Chão de Taco → Zine (verde) · Bad Luv → Editorial (rosa) · Distô → Mosaico (laranja). Dá para trocar a qualquer momento pelo painel.
 
 ### 5.4 Sobre
 
@@ -289,6 +290,8 @@ Toda publicação vira um commit no GitHub. Para voltar atrás, abra o repositó
 - **Exporte já no tamanho certo.** Do Lightroom: *Redimensionar para caber → Borda
   longa 2000 px, Qualidade 80*. Do Figma/Photoshop: *Export JPG 80%*.
   Para comprimir: https://squoosh.app.
+- **Metadados:** as fotos exportadas para o site ficam sem EXIF (localização GPS, câmera). Pelo
+  painel, exporte do Lightroom com *Metadados → Somente copyright*.
 - **Nome dos arquivos:** sem espaços nem acentos (`bad-luv-01.jpg`, não `Bad Luv (1).JPG`).
 - **Proporção:** escreva o tamanho real da imagem em pixels, como `largura/altura` (ex.: `2400/1350`).
   Assim ela aparece inteira, sem corte. Se a proporção não bater com a imagem, ela é cortada para caber.

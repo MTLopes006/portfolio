@@ -318,6 +318,14 @@
                   ]
                 },
                 {
+                  "name": "thumb",
+                  "label": "Miniatura 16:10 (índice e prévia da home)",
+                  "widget": "image",
+                  "required": false,
+                  "choose_url": false,
+                  "hint": "Imagem em 16:10, ex.: 1600×1000 px. Usada no índice e ao passar o mouse na lista da home."
+                },
+                {
                   "name": "cover",
                   "label": "Capa (aparece na lista e no topo)",
                   "widget": "image",
@@ -1157,6 +1165,14 @@
                       "value": "#FFE800"
                     }
                   ]
+                },
+                {
+                  "name": "thumb",
+                  "label": "Miniatura 16:10 (índice de fotografia)",
+                  "widget": "image",
+                  "required": false,
+                  "choose_url": false,
+                  "hint": "Imagem em 16:10, ex.: 1600×1000 px. Usada no índice e ao passar o mouse na lista da home."
                 },
                 {
                   "name": "cover",

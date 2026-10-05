@@ -11,47 +11,90 @@
         "pt": "Show ao vivo",
         "en": "Live show"
       },
-      "venue": "",
-      "year": "",
+      "venue": "Liberation",
+      "year": "2026",
       "desc": {
-        "pt": "Cobertura para a Liberation, produtora oficial do evento.",
-        "en": "Coverage for Liberation, the event's official promoter."
+        "pt": "Cobertura para a Liberation, produtora oficial do show, em agosto de 2026.",
+        "en": "Coverage for Liberation, the show's official promoter, in August 2026."
       },
       "photos": [
         {
-          "src": "",
-          "ratio": "3/2",
+          "src": "assets/img/fotografia/blessthefall/01.jpg",
+          "ratio": "2000/1333",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "2/3",
+          "src": "assets/img/fotografia/blessthefall/02.jpg",
+          "ratio": "1500/2000",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "4/5",
+          "src": "assets/img/fotografia/blessthefall/03.jpg",
+          "ratio": "1500/2000",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "3/2",
+          "src": "assets/img/fotografia/blessthefall/04.jpg",
+          "ratio": "1333/2000",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "2/3",
+          "src": "assets/img/fotografia/blessthefall/05.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/blessthefall/06.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/blessthefall/07.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/blessthefall/08.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/blessthefall/09.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/blessthefall/10.jpg",
+          "ratio": "2000/1333",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/blessthefall/11.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/blessthefall/12.jpg",
+          "ratio": "1500/2000",
           "caption": "",
           "pick": false
         }
       ],
       "layout": "poster",
       "accent": "#0078BF",
-      "cover": ""
+      "cover": "assets/img/fotografia/blessthefall/01.jpg",
+      "thumb": "assets/img/thumbs/foto-blessthefall.jpg"
     },
     {
       "slug": "memphis-may-fire",
@@ -60,127 +103,396 @@
         "pt": "Show ao vivo",
         "en": "Live show"
       },
-      "venue": "",
-      "year": "",
+      "venue": "Liberation",
+      "year": "2026",
       "desc": {
-        "pt": "Cobertura para a Liberation, produtora oficial do evento.",
-        "en": "Coverage for Liberation, the event's official promoter."
+        "pt": "Cobertura para a Liberation, produtora oficial do show. No primeiro trabalho profissional foram cerca de 1.500 fotos em uma noite; aqui está a seleção.",
+        "en": "Coverage for Liberation, the show's official promoter. My first professional job meant around 1,500 photos in one night; this is the edit."
       },
       "photos": [
         {
-          "src": "",
-          "ratio": "2/3",
+          "src": "assets/img/fotografia/memphis-may-fire/01.jpg",
+          "ratio": "2000/1333",
+          "caption": "",
+          "pick": true
+        },
+        {
+          "src": "assets/img/fotografia/memphis-may-fire/02.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": true
+        },
+        {
+          "src": "assets/img/fotografia/memphis-may-fire/03.jpg",
+          "ratio": "1333/2000",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "3/2",
+          "src": "assets/img/fotografia/memphis-may-fire/04.jpg",
+          "ratio": "1333/2000",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "4/5",
+          "src": "assets/img/fotografia/memphis-may-fire/05.jpg",
+          "ratio": "1500/2000",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "2/3",
+          "src": "assets/img/fotografia/memphis-may-fire/06.jpg",
+          "ratio": "2000/1333",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/memphis-may-fire/07.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": true
+        },
+        {
+          "src": "assets/img/fotografia/memphis-may-fire/08.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/memphis-may-fire/09.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/memphis-may-fire/10.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/memphis-may-fire/11.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/memphis-may-fire/12.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/memphis-may-fire/13.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/memphis-may-fire/14.jpg",
+          "ratio": "1333/2000",
           "caption": "",
           "pick": false
         }
       ],
       "layout": "contact",
       "accent": "#FF665E",
-      "cover": ""
+      "cover": "assets/img/fotografia/memphis-may-fire/01.jpg",
+      "thumb": "assets/img/thumbs/foto-memphis-may-fire.jpg"
     },
     {
       "slug": "chao-de-taco",
       "band": "Chão de Taco",
       "kind": {
-        "pt": "",
-        "en": ""
+        "pt": "Show ao vivo",
+        "en": "Live show"
       },
-      "venue": "",
-      "year": "",
+      "venue": "No Spim Festival",
+      "year": "2026",
       "desc": {
-        "pt": "",
-        "en": ""
+        "pt": "Show no No Spim Festival, festival de banda de casinha da cena DIY de Belo Horizonte: palco baixo, pôsteres na parede e a banda a um passo do público.",
+        "en": "A set at No Spim Festival, a house-show festival in Belo Horizonte's DIY scene: low stage, posters on the wall and the band one step from the crowd."
       },
       "photos": [
         {
-          "src": "",
-          "ratio": "4/5",
+          "src": "assets/img/fotografia/chao-de-taco/01.jpg",
+          "ratio": "2000/1333",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "3/2",
+          "src": "assets/img/fotografia/chao-de-taco/02.jpg",
+          "ratio": "1500/2000",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "2/3",
+          "src": "assets/img/fotografia/chao-de-taco/03.jpg",
+          "ratio": "1500/2000",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "4/5",
+          "src": "assets/img/fotografia/chao-de-taco/04.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco/05.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco/06.jpg",
+          "ratio": "2000/1333",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco/07.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco/08.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco/09.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco/10.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco/11.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco/12.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco/13.jpg",
+          "ratio": "1500/2000",
           "caption": "",
           "pick": false
         }
       ],
       "layout": "zine",
       "accent": "#00A95C",
-      "cover": ""
+      "cover": "assets/img/fotografia/chao-de-taco/01.jpg",
+      "thumb": "assets/img/thumbs/foto-chao-de-taco.jpg"
     },
     {
       "slug": "bad-luv",
       "band": "Bad Luv",
       "kind": {
-        "pt": "",
-        "en": ""
+        "pt": "Show ao vivo",
+        "en": "Live show"
       },
-      "venue": "",
-      "year": "",
+      "venue": "No Spim Festival",
+      "year": "2026",
       "desc": {
-        "pt": "",
-        "en": ""
+        "pt": "Show no No Spim Festival. Depois da cobertura, planejei o cronograma de posts da banda no Instagram, sincronizado com o lançamento do próximo álbum.",
+        "en": "A set at No Spim Festival. After the coverage I planned the band's Instagram post schedule, synced with their upcoming album release."
       },
       "photos": [
         {
-          "src": "",
-          "ratio": "3/2",
+          "src": "assets/img/fotografia/bad-luv/01.jpg",
+          "ratio": "2000/1333",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "4/5",
+          "src": "assets/img/fotografia/bad-luv/02.jpg",
+          "ratio": "1435/2000",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "2/3",
+          "src": "assets/img/fotografia/bad-luv/03.jpg",
+          "ratio": "1500/2000",
           "caption": "",
           "pick": false
         },
         {
-          "src": "",
-          "ratio": "3/2",
+          "src": "assets/img/fotografia/bad-luv/04.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/bad-luv/05.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/bad-luv/06.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/bad-luv/07.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/bad-luv/08.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/bad-luv/09.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/bad-luv/10.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/bad-luv/11.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/bad-luv/12.jpg",
+          "ratio": "1500/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/bad-luv/13.jpg",
+          "ratio": "1500/2000",
           "caption": "",
           "pick": false
         }
       ],
       "layout": "editorial",
       "accent": "#FF48B0",
-      "cover": ""
+      "cover": "assets/img/fotografia/bad-luv/01.jpg",
+      "thumb": "assets/img/thumbs/foto-bad-luv.jpg"
+    },
+    {
+      "slug": "disto",
+      "band": "Distô",
+      "kind": {
+        "pt": "Ensaio de banda",
+        "en": "Band photoshoot"
+      },
+      "venue": "Parque Guanabara, BH",
+      "year": "2026",
+      "layout": "mosaic",
+      "accent": "#FF6C2F",
+      "cover": "assets/img/fotografia/disto/01.jpg",
+      "desc": {
+        "pt": "Primeiro ensaio noturno com flash: a banda no parque de diversões, entre luzes de carrossel, neon e algodão-doce. Retratos individuais e de grupo para divulgação.",
+        "en": "My first night shoot with flash: the band at an amusement park, among carousel lights, neon and candy floss. Individual and group portraits for press."
+      },
+      "photos": [
+        {
+          "src": "assets/img/fotografia/disto/01.jpg",
+          "ratio": "2000/1333",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/02.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/03.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/04.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/05.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/06.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/07.jpg",
+          "ratio": "2000/1333",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/08.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/09.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/10.jpg",
+          "ratio": "2000/1333",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/11.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/12.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/disto/13.jpg",
+          "ratio": "1333/2000",
+          "caption": "",
+          "pick": false
+        }
+      ],
+      "thumb": "assets/img/thumbs/foto-disto.jpg"
     },
     {
       "slug": "julieta-social",
@@ -223,7 +535,8 @@
       ],
       "layout": "mosaic",
       "accent": "#765BA7",
-      "cover": ""
+      "cover": "",
+      "thumb": ""
     }
   ],
   "process": {

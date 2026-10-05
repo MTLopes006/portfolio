@@ -9,7 +9,7 @@
   const load = (f) => fetch(`content/${f}.json`, { cache: "no-cache" }).then((r) => r.json());
   const [P, PJ, PH, AB] = await Promise.all(["profile", "projects", "photography", "about"].map(load));
   const projects = PJ.projects || [];
-  const series = PH.series || [];
+  const series = (PH.series || []).filter((x) => (x.photos || []).some((f) => f.src));
 
   /* ---------- language ---------- */
   let lang = store.get("ml-lang") || ((navigator.language || "pt").toLowerCase().startsWith("pt") ? "pt" : "en");
@@ -48,9 +48,9 @@
   const grouped = () => CATS.map((c) => ({ c, items: projects.map((p, i) => ({ p, i })).filter(({ p }) => (p.category || "outros") === c) })).filter((g) => g.items.length);
 
   /* ---------- header / footer ---------- */
-  const nav = [["index.html#projetos", "nav.work", "home"], ["index.html#fotografia", "nav.photo", "photo"], ["sobre.html", "nav.about", "about"], ["contato.html", "nav.contact", "contact"]];
+  const nav = [["projetos.html", "nav.work", "work"], ["fotografia.html", "nav.photo", "photo"], ["sobre.html", "nav.about", "about"], ["contato.html", "nav.contact", "contact"]];
   function renderChrome() {
-    const navLinks = nav.map(([h, k, p]) => `<a href="${h}"${((p === page && p !== "home") || (p === "photo" && page === "series") || (p === "home" && (page === "work" || page === "project"))) ? ' aria-current="page"' : ""}>${ui(k)}</a>`).join("");
+    const navLinks = nav.map(([h, k, p]) => `<a href="${h}"${(p === page || (p === "photo" && page === "series") || (p === "work" && page === "project")) ? ' aria-current="page"' : ""}>${ui(k)}</a>`).join("");
     const dark = root.getAttribute("data-theme") === "dark";
     const header = document.querySelector(".site-header");
     header.innerHTML = `
@@ -138,13 +138,13 @@
           <div class="track-head label"><span>Nº</span><span>${ui("work.col.title")}</span><span>${ui("work.col.tags")}</span><span style="text-align:right">${ui("work.col.year")}</span><span></span></div>
           <ol class="tracklist">
             ${grouped().map((g) => `<li class="track-group label" data-reveal>${ui("cat." + g.c)}</li>` + g.items.map(({ p, i }) => `
-              <li class="track" data-reveal ${stagger(i % 6)}><a href="projeto.html?p=${esc(p.slug)}" data-cover="${esc(p.cover || "")}" data-tone="${esc(p.tone || "")}" data-title="${esc(p.title)}">
+              <li class="track" data-reveal ${stagger(i % 6)}><a href="projeto.html?p=${esc(p.slug)}" data-cover="${esc(p.thumb || p.cover || "")}" data-tone="${esc(p.tone || "")}" data-title="${esc(p.title)}">
                 <span class="track-no">${pad(i + 1)}</span>
                 <span class="track-title">${esc(p.title)}</span>
                 <span class="track-tags">${esc(t(p.tags))}</span>
                 <span class="track-year">${esc(p.year || "—")}</span>
                 <span class="track-arr" aria-hidden="true">→</span>
-                <span class="track-thumb">${media(p.cover, p.coverRatio || "16/9", p.title, { tone: p.tone, reveal: false })}</span>
+                <span class="track-thumb">${media(p.thumb || p.cover, "16/10", p.title, { tone: p.tone, reveal: false })}</span>
               </a></li>`).join("")).join("")}
           </ol>
         </div>
@@ -217,7 +217,7 @@
           ${g.items.map(({ p, i }) => `
             <li class="series-row" style="--acc:${esc(p.tone || "var(--magenta)")}">
               <a href="projeto.html?p=${esc(p.slug)}">
-                <div class="cover crop"><span class="tape" aria-hidden="true"></span>${media(p.cover, p.coverRatio || "3/2", p.title, { tone: p.tone })}</div>
+                <div class="cover crop"><span class="tape" aria-hidden="true"></span>${media(p.thumb || p.cover, THUMB, p.title, { tone: p.tone })}</div>
                 <div class="info" data-reveal>
                   <span class="n label">${pad(i + 1)} / ${pad(projects.length)}</span>
                   <h2>${esc(p.title)}</h2>
@@ -284,6 +284,7 @@
 
   /* ---------- PHOTOGRAPHY ---------- */
   const coverOf = (s) => s.cover || (s.photos.find((x) => x.src) || {}).src || "";
+  const THUMB = "16/10";
   const seriesMeta = (s) => [t(s.kind), s.venue, s.year].filter(Boolean).map(esc).join(" · ");
 
   // Index: one editorial row per series, each linking to its own page.
@@ -301,7 +302,7 @@
           ${series.map((s, i) => `
             <li class="series-row" style="--acc:${esc(s.accent || "var(--magenta)")}">
               <a href="foto.html?s=${esc(s.slug)}">
-                <div class="cover crop"><span class="tape" aria-hidden="true"></span>${media(coverOf(s), "3/2", s.band, { tone: s.accent })}</div>
+                <div class="cover crop"><span class="tape" aria-hidden="true"></span>${media(s.thumb || coverOf(s), THUMB, s.band, { tone: s.accent })}</div>
                 <div class="info" data-reveal>
                   <span class="n label">${pad(i + 1)} / ${pad(series.length)}</span>
                   <h2>${esc(s.band)}</h2>

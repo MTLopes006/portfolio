@@ -185,7 +185,8 @@
           ]
         }
       ],
-      "category": "campanhas"
+      "category": "campanhas",
+      "thumb": "assets/img/thumbs/semana-do-gospel.jpg"
     },
     {
       "slug": "semana-do-coreano",
@@ -333,7 +334,8 @@
           ]
         }
       ],
-      "category": "campanhas"
+      "category": "campanhas",
+      "thumb": "assets/img/thumbs/semana-do-coreano.jpg"
     },
     {
       "slug": "download-do-app",
@@ -417,7 +419,8 @@
           ]
         }
       ],
-      "category": "campanhas"
+      "category": "campanhas",
+      "thumb": "assets/img/thumbs/download-do-app.jpg"
     },
     {
       "slug": "destaques",
@@ -648,7 +651,8 @@
           ]
         }
       ],
-      "category": "produto"
+      "category": "produto",
+      "thumb": "assets/img/thumbs/destaques.jpg"
     },
     {
       "slug": "palco-mp3",
@@ -718,7 +722,8 @@
           ]
         }
       ],
-      "category": "produto"
+      "category": "produto",
+      "thumb": ""
     },
     {
       "slug": "dia-da-lideranca",
@@ -845,7 +850,8 @@
           ]
         }
       ],
-      "category": "interna"
+      "category": "interna",
+      "thumb": "assets/img/thumbs/dia-da-lideranca.jpg"
     },
     {
       "slug": "com-studio-sol-letras",
@@ -962,7 +968,8 @@
           ]
         }
       ],
-      "category": "interna"
+      "category": "interna",
+      "thumb": "assets/img/thumbs/com-studio-sol-letras.jpg"
     },
     {
       "slug": "pantanal-aromas",
@@ -1057,7 +1064,8 @@
           ]
         }
       ],
-      "category": "clientes"
+      "category": "clientes",
+      "thumb": ""
     },
     {
       "slug": "rebranding-vizzela",
@@ -1197,7 +1205,8 @@
           ]
         }
       ],
-      "category": "academico"
+      "category": "academico",
+      "thumb": ""
     },
     {
       "slug": "cafe-soseki",
@@ -1341,7 +1350,8 @@
           ]
         }
       ],
-      "category": "academico"
+      "category": "academico",
+      "thumb": ""
     },
     {
       "slug": "design-vernacular",
@@ -1402,7 +1412,8 @@
           }
         }
       ],
-      "category": "academico"
+      "category": "academico",
+      "thumb": ""
     },
     {
       "slug": "fanzine-nothing-but-thieves",
@@ -1455,7 +1466,8 @@
           ]
         }
       ],
-      "category": "academico"
+      "category": "academico",
+      "thumb": ""
     },
     {
       "slug": "lorem-ipsum",
@@ -1516,7 +1528,8 @@
           }
         }
       ],
-      "category": "academico"
+      "category": "academico",
+      "thumb": ""
     }
   ]
 }
