@@ -379,17 +379,6 @@
         {
           "type": "text",
           "title": {
-            "pt": "Conceito",
-            "en": "Concept"
-          },
-          "text": {
-            "pt": "A promessa é simples: aprender mais rápido e organizar o repertório. Os ícones de afinador, metrônomo e Academy flutuam em torno dos aparelhos para mostrar o que o app oferece além da cifra.",
-            "en": "The promise is simple: learn faster and organise your setlist. Tuner, metronome and Academy icons float around the devices to show what the app offers beyond chords."
-          }
-        },
-        {
-          "type": "text",
-          "title": {
             "pt": "House ads multiformato",
             "en": "Multi-format house ads"
           },
@@ -928,7 +917,7 @@
         "pt": "Impresso, Ilustração, Endomarketing",
         "en": "Print, Illustration, Internal comms"
       },
-      "year": "",
+      "year": 2026,
       "category": "interna"
     },
     {
