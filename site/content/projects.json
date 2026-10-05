@@ -160,8 +160,8 @@
         }
       ],
       "summary": {
-        "pt": "Campanha sazonal que levou o público gospel às cifras na semana da música gospel.",
-        "en": "A seasonal campaign bringing gospel players to the chords during Gospel Music week."
+        "pt": "Campanha para aumentar o acesso a cifras gospel na semana do Dia da Música Gospel.",
+        "en": "A campaign to increase gospel chord views during Gospel Music Day week."
       },
       "slug": "semana-do-gospel",
       "client": {
@@ -199,12 +199,12 @@
         {
           "type": "text",
           "title": {
-            "pt": "Colagem como linguagem",
-            "en": "Collage as a language"
+            "pt": "Colagem",
+            "en": "Collage"
           },
           "text": {
-            "pt": "Elementos de Seul (a N Seoul Tower, placas de rua, soju) recortados e aplicados sobre lilás, rosa e azul, com a personagem como fio condutor entre as peças. Assets gerados no Google Flow e finalizados no Photoshop.",
-            "en": "Seoul elements (N Seoul Tower, street signs, soju) cut out and laid over lilac, pink and blue, with the character as the thread between pieces. Assets generated in Google Flow and finished in Photoshop."
+            "pt": "Elementos de Seul (N Seoul Tower, placas de rua, soju) recortados e aplicados sobre lilás, rosa e azul. A mesma personagem aparece em todas as peças. Assets gerados no Google Flow e finalizados no Photoshop.",
+            "en": "Seoul elements (N Seoul Tower, street signs, soju) cut out and laid over lilac, pink and blue. The same character appears in every piece. Assets generated in Google Flow and finished in Photoshop."
           }
         },
         {
@@ -773,12 +773,12 @@
             "en": "A6 card and gift label"
           },
           "sideTitle": {
-            "pt": "Liderança é como café",
-            "en": "Leadership is like coffee"
+            "pt": "Conceito",
+            "en": "Concept"
           },
           "sideText": {
-            "pt": "Quanto mais se compartilha, mais rica fica a experiência. A metáfora guiou as ilustrações: mesa, vitrola, café passado e folhas de outono, em tons de papel kraft. Ilustração com apoio do Recraft (IA) e arte-final no Figma.",
-            "en": "The more it's shared, the richer the experience. The metaphor guided the illustrations: a table, a record player, fresh coffee and autumn leaves in kraft-paper tones. Illustration assisted by Recraft (AI), artwork finished in Figma."
+            "pt": "O conceito parte da frase “liderança é como café: quanto mais se compartilha, melhor”. As ilustrações mostram mesa, vitrola, café coado e folhas de outono, em tons de papel kraft. Ilustração com apoio do Recraft (IA) e arte-final no Figma.",
+            "en": "The concept comes from the line “leadership is like coffee: the more it's shared, the better”. The illustrations show a table, a record player, filter coffee and autumn leaves in kraft-paper tones. Illustration assisted by Recraft (AI), artwork finished in Figma."
           }
         },
         {
@@ -876,12 +876,12 @@
         {
           "type": "text",
           "title": {
-            "pt": "Duas cores, duas empresas",
-            "en": "Two colours, two companies"
+            "pt": "Sistema de cor",
+            "en": "Colour system"
           },
           "text": {
-            "pt": "O sistema de cor indica a participação de ambas as empresas em temas pertinentes a todos os produtos. As linhas soltas dão ritmo e mantêm a série reconhecível em qualquer formato.",
-            "en": "The colour system signals that both companies take part in topics relevant to every product. Loose lines add rhythm and keep the series recognisable in any format."
+            "pt": "Cada empresa tem uma cor, e as duas aparecem juntas quando o tema envolve todos os produtos. As linhas soltas se repetem em todos os formatos para identificar a série.",
+            "en": "Each company has its own colour, and both appear together when a topic involves every product. The loose lines repeat across all formats to identify the series."
           }
         },
         {
@@ -989,8 +989,8 @@
         {
           "type": "lead",
           "text": {
-            "pt": "Perfumaria de ambientes atendida como freelancer pela Válore: social media, conteúdo educativo, imagens de produto e material de ponto de venda, com a mesma atmosfera de casa aconchegante em todas as peças.",
-            "en": "A home-fragrance brand I serve as a freelancer through Válore: social media, educational content, product imagery and point-of-sale material, with the same cosy-home atmosphere across every piece."
+            "pt": "Perfumaria de ambientes atendida como freelancer pela Válore: social media, conteúdo educativo, imagens de produto e material de ponto de venda, com luz quente e cenários domésticos em todas as peças.",
+            "en": "A home-fragrance brand I serve as a freelancer through Válore: social media, educational content, product imagery and point-of-sale material, with warm light and home settings across every piece."
           }
         },
         {
@@ -1022,8 +1022,8 @@
             "en": "Social media"
           },
           "sideText": {
-            "pt": "Posts de produto, conteúdo educativo e interação com a comunidade. Cada fragrância ganha uma cena própria, com luz quente e elementos naturais que traduzem o aroma.",
-            "en": "Product posts, educational content and community engagement. Each fragrance gets its own scene, with warm light and natural elements that translate the scent."
+            "pt": "Posts de produto, conteúdo educativo e interação com a comunidade. Cada fragrância tem uma cena própria, com luz quente e elementos ligados ao aroma, como frutas, folhas e especiarias.",
+            "en": "Product posts, educational content and community engagement. Each fragrance has its own scene, with warm light and elements tied to the scent, such as fruit, leaves and spices."
           }
         },
         {
@@ -1244,8 +1244,8 @@
         }
       ],
       "summary": {
-        "pt": "Comunicação de uma perfumaria de ambientes, do feed ao expositor.",
-        "en": "Communication for a home-fragrance brand, from feed to in-store display."
+        "pt": "Social media, imagens de produto e expositor para uma perfumaria de ambientes.",
+        "en": "Social media, product imagery and a display stand for a home-fragrance brand."
       },
       "slug": "pantanal-aromas",
       "client": {
@@ -1276,8 +1276,8 @@
         {
           "type": "lead",
           "text": {
-            "pt": "Rebranding acadêmico de uma marca de cosméticos, desenvolvido em trio na disciplina de Design Gráfico da UFMG: da análise da marca à nova identidade, às embalagens e ao site.",
-            "en": "An academic rebrand of a cosmetics company, developed as a trio in UFMG's Graphic Design course: from brand analysis to the new identity, packaging and website."
+            "pt": "Rebranding acadêmico de uma marca de cosméticos, desenvolvido em trio na disciplina de Design Gráfico da UFMG: análise da marca, nova identidade e embalagens.",
+            "en": "An academic rebrand of a cosmetics company, developed as a trio in UFMG's Graphic Design course: brand analysis, new identity and packaging."
           }
         },
         {
@@ -1419,8 +1419,8 @@
         }
       ],
       "summary": {
-        "pt": "Rebranding de uma marca de cosméticos, da identidade às embalagens.",
-        "en": "A cosmetics rebrand, from identity to packaging."
+        "pt": "Rebranding acadêmico de uma marca de cosméticos, com nova identidade e embalagens.",
+        "en": "An academic cosmetics rebrand, with a new identity and packaging."
       },
       "slug": "rebranding-vizzela",
       "client": {
@@ -1462,8 +1462,8 @@
             "en": "Concept"
           },
           "text": {
-            "pt": "A proposta gastronômica mescla elementos tradicionais japoneses com sabores que remetem a aconchego e simplicidade. O menu acompanha: papel de algodão, ilustrações do gato e caligrafia japonesa ao fundo.",
-            "en": "The food concept blends traditional Japanese elements with flavours of comfort and simplicity. The menu follows suit: cotton paper, cat illustrations and Japanese calligraphy in the background."
+            "pt": "O cardápio mistura pratos tradicionais japoneses com receitas simples e caseiras. O menu segue a mesma linha: papel de algodão, ilustrações do gato e caligrafia japonesa ao fundo.",
+            "en": "The food mixes traditional Japanese dishes with simple, home-style recipes. The menu follows the same line: cotton paper, cat illustrations and Japanese calligraphy in the background."
           }
         },
         {
@@ -1593,8 +1593,8 @@
             "en": "Paper & finish"
           },
           "sideText": {
-            "pt": "Miolo em Conqueror Connoisseur 100% algodão e luva em Curious Translucents. A luva translúcida revela o menu aos poucos, como uma página virando.",
-            "en": "Conqueror Connoisseur 100% cotton for the menu and a Curious Translucents sleeve. The translucent sleeve reveals the menu gradually, like a turning page."
+            "pt": "Miolo em Conqueror Connoisseur 100% algodão e luva em Curious Translucents. A luva translúcida deixa o menu parcialmente visível antes de ser aberto.",
+            "en": "Conqueror Connoisseur 100% cotton for the menu and a Curious Translucents sleeve. The translucent sleeve leaves the menu partly visible before it is opened."
           }
         },
         {
@@ -1749,8 +1749,8 @@
             "en": "Collage & paper"
           },
           "text": {
-            "pt": "Vermelho, papel envelhecido e recortes de imagens religiosas e anatômicas. Trechos das letras ganham destaque em marca-texto e anotações à mão, como numa revista feita em casa.",
-            "en": "Red, aged paper and cut-outs of religious and anatomical imagery. Lyric excerpts are highlighted and annotated by hand, like a homemade zine."
+            "pt": "Vermelho, papel envelhecido e recortes de imagens religiosas e anatômicas. Trechos das letras aparecem destacados com marca-texto e anotações à mão.",
+            "en": "Red, aged paper and cut-outs of religious and anatomical imagery. Lyric excerpts are highlighted with marker and handwritten notes."
           }
         },
         {

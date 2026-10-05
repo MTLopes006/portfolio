@@ -501,7 +501,6 @@
         <button type="button" class="pl-next" aria-label="${ui("pl.next")}">⏭</button>
         <label class="pl-vol"><span class="label">${ui("pl.vol")}</span><input type="range" min="0" max="100" step="1" value="10" aria-label="${ui("pl.vol")}"><output class="label">10%</output></label>
       </div>
-      <p class="pl-note label muted">${ui("pl.note")}</p>
       ${PL.spotify ? `<iframe class="pl-spotify" src="${esc(PL.spotify.replace("open.spotify.com/", "open.spotify.com/embed/"))}" loading="lazy" allow="encrypted-media" title="Spotify"></iframe>` : ""}
     </div>`;
   };
