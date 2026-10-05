@@ -159,9 +159,15 @@
             <a class="link-arrow" href="fotografia.html">${ui("photo.see")} ${arr}</a>
           </div>
           <div class="sideb-grid">
-            <p class="sideb-lead" data-reveal>${esc(t(PH.intro))}</p>
+            <div class="sideb-left">
+              <p class="sideb-lead" data-reveal>${esc(t(PH.intro))}</p>
+              ${series.length ? `<a class="sideb-preview" href="foto.html?s=${esc(series[0].slug)}" data-reveal>
+                <div class="crop"><span class="tape" aria-hidden="true"></span>${media(series[0].thumb || coverOf(series[0]), THUMB, series[0].band, { tone: series[0].accent, reveal: false })}</div>
+                <div class="cap label"><span class="n">01</span><span class="t">${esc(series[0].band)}</span><span class="m">${seriesMeta(series[0])}</span></div>
+              </a>` : ""}
+            </div>
             <ul class="setlist">
-              ${series.map((s, i) => `<li data-reveal ${stagger(i)}><a href="foto.html?s=${esc(s.slug)}"><span class="n label">${pad(i + 1)}</span><span class="t">${esc(s.band)}</span><span class="c label">${pad(s.photos.length)} ${ui("photo.photos")}</span></a></li>`).join("")}
+              ${series.map((s, i) => `<li data-reveal ${stagger(i)}><a href="foto.html?s=${esc(s.slug)}" data-i="${i}"><span class="n label">${pad(i + 1)}</span><span class="t">${esc(s.band)}</span><span class="c label">${pad(s.photos.length)} ${ui("photo.photos")}</span></a></li>`).join("")}
             </ul>
           </div>
           <div class="sideb-strip">
@@ -177,8 +183,34 @@
         </div>
       </section>`;
     homeRendered = true;
+    initSeriesPreview();
     if (window.Badge) window.Badge.mount(document.getElementById("badge-stage"), { P, t, ui });
     initCursorPreview();
+  }
+
+  // Lado B: hovering a band in the setlist swaps the preview on the left
+  function initSeriesPreview() {
+    const box = document.querySelector(".sideb-preview");
+    if (!box) return;
+    const img = () => box.querySelector(".media img, .media .ph");
+    const show = (i) => {
+      const s = series[i]; if (!s) return;
+      box.href = `foto.html?s=${s.slug}`;
+      box.querySelector(".n").textContent = pad(i + 1);
+      box.querySelector(".t").textContent = s.band;
+      box.querySelector(".m").innerHTML = seriesMeta(s);
+      const src = s.thumb || coverOf(s), cur = img();
+      if (src && cur && cur.tagName === "IMG" && !cur.src.endsWith(src)) {
+        cur.style.opacity = 0;
+        const pre = new Image(); pre.onload = () => { cur.src = src; cur.alt = s.band; cur.style.opacity = 1; }; pre.src = src;
+      }
+      document.querySelectorAll(".setlist a").forEach((a) => a.classList.toggle("on", +a.dataset.i === i));
+    };
+    document.querySelectorAll(".setlist a").forEach((a) => {
+      a.addEventListener("mouseenter", () => show(+a.dataset.i));
+      a.addEventListener("focus", () => show(+a.dataset.i));
+    });
+    show(0);
   }
 
   function initCursorPreview() {
