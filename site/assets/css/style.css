@@ -850,7 +850,7 @@ p, dd, li, figcaption, .series-row .sub { text-wrap: pretty; orphans: 2; widows:
 .pl-vol { display: flex; align-items: center; gap: 10px; }
 .pl-vol .label { color: var(--muted); }
 .pl-vol output { min-width: 3.2em; text-align: right; color: var(--muted); }
-.pl-vol input[type=range] { --v: 20%; flex: 1; -webkit-appearance: none; appearance: none; height: 3px; background: linear-gradient(90deg, var(--magenta) var(--v), var(--rule) var(--v)); outline: none; cursor: pointer; }
+.pl-vol input[type=range] { --v: 10%; flex: 1; -webkit-appearance: none; appearance: none; height: 3px; background: linear-gradient(90deg, var(--magenta) var(--v), var(--rule) var(--v)); outline: none; cursor: pointer; }
 .pl-vol input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%; background: var(--ink); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--ink); }
 .pl-vol input[type=range]::-moz-range-thumb { width: 12px; height: 12px; border-radius: 50%; background: var(--ink); border: 2px solid var(--paper); }
 .pl-vol input[type=range]:focus-visible { outline: 2px solid var(--magenta); outline-offset: 6px; }
@@ -892,7 +892,8 @@ p, dd, li, figcaption, .series-row .sub { text-wrap: pretty; orphans: 2; widows:
 @keyframes k7-spin-r { from { transform: translate(210px, 108px) rotate(0); } to { transform: translate(210px, 108px) rotate(360deg); } }
 .k7-reel { transform-box: view-box; transform-origin: 0 0; }
 
-.pl-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); align-self: stretch; }
+.pl-list { list-style: none; margin: 0; padding: 0 6px 0 0; border-top: 1px solid var(--rule); align-self: stretch; position: relative; max-height: 246px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--magenta) transparent; }
+.pl-list::-webkit-scrollbar { width: 4px; } .pl-list::-webkit-scrollbar-thumb { background: var(--magenta); }
 .pl-list button { display: grid; grid-template-columns: 34px 1fr 18px; gap: 10px; align-items: center; width: 100%; padding: 7px 4px; text-align: left; border-bottom: 1px solid var(--rule); transition: background-color .2s; }
 .pl-list button:hover { background: color-mix(in srgb, var(--magenta) 10%, transparent); }
 .pl-list img { width: 34px; height: 34px; object-fit: cover; }

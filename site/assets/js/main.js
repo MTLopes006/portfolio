@@ -503,7 +503,7 @@
         <button type="button" class="pl-prev" aria-label="${ui("pl.prev")}">⏮</button>
         <button type="button" class="pl-play" aria-label="${ui("pl.play")}"><span class="i-play">▶</span><span class="i-pause">❚❚</span></button>
         <button type="button" class="pl-next" aria-label="${ui("pl.next")}">⏭</button>
-        <label class="pl-vol"><span class="label">${ui("pl.vol")}</span><input type="range" min="0" max="100" step="1" value="20" aria-label="${ui("pl.vol")}"><output class="label">20%</output></label>
+        <label class="pl-vol"><span class="label">${ui("pl.vol")}</span><input type="range" min="0" max="100" step="1" value="10" aria-label="${ui("pl.vol")}"><output class="label">10%</output></label>
       </div>
       <p class="pl-note label muted">${ui("pl.note")}</p>
       ${PL.spotify ? `<iframe class="pl-spotify" src="${esc(PL.spotify.replace("open.spotify.com/", "open.spotify.com/embed/"))}" loading="lazy" allow="encrypted-media" title="Spotify"></iframe>` : ""}
@@ -513,8 +513,8 @@
   function initPlayers(PL) {
     const tr = (PL && PL.tracks) || [];
     if (!tr.length) return;
-    // never autoplays: sound only starts on the visitor's click, always at 20% volume
-    audio = audio || new Audio(); audio.preload = "none"; audio.autoplay = false; audio.volume = 0.2;
+    // never autoplays: sound only starts on the visitor's click, always at 10% volume
+    audio = audio || new Audio(); audio.preload = "none"; audio.autoplay = false; audio.volume = 0.1;
     let i = 0;
     const els = [...document.querySelectorAll("[data-player]")];
     const paint = () => els.forEach((el) => {
@@ -522,6 +522,9 @@
       el.querySelector(".pl-title").textContent = x.title; el.querySelector(".pl-artist").textContent = x.artist;
       el.querySelector(".k7-title").textContent = x.title; el.querySelector(".pl-link").href = x.link || "#";
       el.querySelectorAll(".pl-list button").forEach((b) => b.classList.toggle("on", +b.dataset.i === i));
+      // keep the current track visible inside the scrolling list (without moving the page)
+      const list = el.querySelector(".pl-list"), on = list.querySelector("button.on");
+      if (on) { const li = on.parentElement, top = li.offsetTop - list.offsetTop; if (top < list.scrollTop || top + li.offsetHeight > list.scrollTop + list.clientHeight) list.scrollTo({ top: top - list.clientHeight / 2 + li.offsetHeight / 2, behavior: "smooth" }); }
     });
     const load = (k, play) => { i = (k + tr.length) % tr.length; audio.src = tr[i].preview; if (play) audio.play().catch(() => {}); paint(); };
     els.forEach((el) => {
