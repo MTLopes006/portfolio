@@ -436,6 +436,20 @@
       "spotify": "",
       "tracks": [
         {
+          "title": "Centuries",
+          "artist": "Fall Out Boy",
+          "cover": "assets/img/sobre/discos/american-beauty.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/23/d3/9923d3ac-5cac-79d1-4a77-ec8fb7499b2b/mzaf_9922251089879156208.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/centuries/1440826504?i=1440826614"
+        },
+        {
+          "title": "Houdini",
+          "artist": "Foster the People",
+          "cover": "assets/img/sobre/discos/torches.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/28/00/1528001e-8677-b907-b9e9-74eca3071f65/mzaf_17450470823147718766.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/houdini/435761204?i=435761289"
+        },
+        {
           "title": "Misguided Ghosts",
           "artist": "Paramore",
           "cover": "assets/img/sobre/discos/brand-new-eyes.jpg",
@@ -443,11 +457,39 @@
           "link": "https://music.apple.com/br/album/misguided-ghosts/604800411?i=604800423"
         },
         {
-          "title": "Brick By Boring Brick",
-          "artist": "Paramore",
-          "cover": "assets/img/sobre/discos/brand-new-eyes.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/23/34/5e2334cd-37a8-52bb-1cf4-70e40ac54c46/mzaf_1898679347951407669.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/brick-by-boring-brick/604800411?i=604800417"
+          "title": "Helena",
+          "artist": "My Chemical Romance",
+          "cover": "assets/img/sobre/discos/three-cheers.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0c/99/77/0c99772f-b8e0-e2c2-9e9c-df202e06d08e/mzaf_18362908824438910741.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/helena/1156311431?i=1156311432"
+        },
+        {
+          "title": "Circles",
+          "artist": "Pierce the Veil",
+          "cover": "assets/img/sobre/discos/misadventures.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/51/9c/9c519c64-e529-a774-050f-8e049e6c501d/mzaf_8027222497638650163.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/circles/1440950410?i=1440950620"
+        },
+        {
+          "title": "boca",
+          "artist": "Chão de Taco",
+          "cover": "assets/img/sobre/discos/dificil.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/93/15/70/931570a8-ce93-5f73-6ab5-5858bc00c590/mzaf_8140489967494441204.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/boca/1716658458?i=1716658461"
+        },
+        {
+          "title": "Daddy Issues",
+          "artist": "The Neighbourhood",
+          "cover": "assets/img/sobre/discos/wiped-out.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ef/6c/e0/ef6ce010-7ccf-6cd6-7840-73997a29b276/mzaf_3568417204394617953.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/daddy-issues/1030115907?i=1030116019"
+        },
+        {
+          "title": "capim-limão",
+          "artist": "Rolimã",
+          "cover": "assets/img/sobre/discos/pior-que-eu-tava.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/e0/7d/b7e07db4-019a-4552-b306-672f6e262464/mzaf_4199859732175505319.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/capim-lim%C3%A3o/1862969416?i=1862969418"
         },
         {
           "title": "Gods",
@@ -457,18 +499,18 @@
           "link": "https://music.apple.com/br/album/gods/1433956952?i=1433957104"
         },
         {
-          "title": "Take This Lonely Heart",
-          "artist": "Nothing But Thieves",
-          "cover": "assets/img/sobre/discos/what-did-you-think.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/11/51/f411519c-ad28-eaf8-b28d-f65a6cb2f8e6/mzaf_16665450634136802317.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/take-this-lonely-heart/1433956952?i=1433957261"
+          "title": "I'm Not Okay (I Promise)",
+          "artist": "My Chemical Romance",
+          "cover": "assets/img/sobre/discos/three-cheers.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/86/77/c68677cb-8be1-9729-5b7c-2d3cfe056f8a/mzaf_16051311890134056334.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/im-not-okay-i-promise/1156311431?i=1156311437"
         },
         {
-          "title": "Eu Continuo Aqui",
-          "artist": "ana paia",
-          "cover": "assets/img/sobre/discos/continuar.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d4/15/f4/d415f477-8aaa-8f98-aa4c-33e78b3512d0/mzaf_17637880747053767021.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/eu-continuo-aqui/1843568422?i=1843568423"
+          "title": "Prey",
+          "artist": "The Neighbourhood",
+          "cover": "assets/img/sobre/discos/wiped-out.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/a0/e0/97a0e005-5588-da79-9f30-d3db4852f419/mzaf_5395915338050175623.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/prey/1030115907?i=1030116010"
         },
         {
           "title": "Sosseguei",
@@ -476,27 +518,6 @@
           "cover": "assets/img/sobre/discos/continuar.jpg",
           "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ac/b9/c0/acb9c03e-0276-e541-93ee-e0c5c05eae5a/mzaf_13025672689595751116.plus.aac.p.m4a",
           "link": "https://music.apple.com/br/album/sosseguei/1843568422?i=1843568426"
-        },
-        {
-          "title": "Throne",
-          "artist": "Bring Me The Horizon",
-          "cover": "assets/img/sobre/discos/thats-the-spirit.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0e/7b/b5/0e7bb52b-a7ef-c1a5-792b-bc505d55ceea/mzaf_17392033085003750336.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/throne/1022197503?i=1022197806"
-        },
-        {
-          "title": "Drown",
-          "artist": "Bring Me The Horizon",
-          "cover": "assets/img/sobre/discos/thats-the-spirit.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0f/95/8a/0f958afd-70f6-4d0a-568c-25f926008fec/mzaf_17596204406125825209.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/drown-new/1022197503?i=1022197816"
-        },
-        {
-          "title": "Robbers",
-          "artist": "The 1975",
-          "cover": "assets/img/sobre/discos/the-1975.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/65/39/73/653973c2-449b-a3c8-dbd0-af97100545a7/mzaf_15794401609046687284.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/robbers/1440818989?i=1440819287"
         },
         {
           "title": "Chocolate",
@@ -513,11 +534,25 @@
           "link": "https://music.apple.com/br/album/that-wont-save-us/1573232687?i=1573232688"
         },
         {
-          "title": "again&again",
-          "artist": "Against The Current & guardin",
-          "cover": "assets/img/sobre/discos/fever.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/88/6e/8d886e99-f701-c79e-cd8e-a343a7383249/mzaf_7126559151943648624.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/again-again/1573232687?i=1573232690"
+          "title": "Cornerstone",
+          "artist": "Arctic Monkeys",
+          "cover": "assets/img/sobre/discos/humbug.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/99/b6/1599b64c-35c2-6d48-a6cc-a1f661cf484a/mzaf_12405874309739748945.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/cornerstone/330283015?i=330283361"
+        },
+        {
+          "title": "Take This Lonely Heart",
+          "artist": "Nothing But Thieves",
+          "cover": "assets/img/sobre/discos/what-did-you-think.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/11/51/f411519c-ad28-eaf8-b28d-f65a6cb2f8e6/mzaf_16665450634136802317.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/take-this-lonely-heart/1433956952?i=1433957261"
+        },
+        {
+          "title": "Brick By Boring Brick",
+          "artist": "Paramore",
+          "cover": "assets/img/sobre/discos/brand-new-eyes.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/23/34/5e2334cd-37a8-52bb-1cf4-70e40ac54c46/mzaf_1898679347951407669.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/brick-by-boring-brick/604800411?i=604800417"
         },
         {
           "title": "Crying Lightning",
@@ -527,83 +562,6 @@
           "link": "https://music.apple.com/br/album/crying-lightning/330283015?i=330283278"
         },
         {
-          "title": "Cornerstone",
-          "artist": "Arctic Monkeys",
-          "cover": "assets/img/sobre/discos/humbug.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/99/b6/1599b64c-35c2-6d48-a6cc-a1f661cf484a/mzaf_12405874309739748945.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/cornerstone/330283015?i=330283361"
-        },
-        {
-          "title": "Centuries",
-          "artist": "Fall Out Boy",
-          "cover": "assets/img/sobre/discos/american-beauty.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/23/d3/9923d3ac-5cac-79d1-4a77-ec8fb7499b2b/mzaf_9922251089879156208.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/centuries/1440826504?i=1440826614"
-        },
-        {
-          "title": "Uma Thurman",
-          "artist": "Fall Out Boy",
-          "cover": "assets/img/sobre/discos/american-beauty.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/1c/d6/521cd633-27e8-bd34-93d5-d0077db04391/mzaf_1163157119606369853.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/uma-thurman/1440826504?i=1440826718"
-        },
-        {
-          "title": "Pumped Up Kicks",
-          "artist": "Foster the People",
-          "cover": "assets/img/sobre/discos/torches.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/06/5b/df/065bdfe1-4d16-53c9-f24d-f1ad16983f92/mzaf_15283020811004936626.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/pumped-up-kicks/435761204?i=435761212"
-        },
-        {
-          "title": "Houdini",
-          "artist": "Foster the People",
-          "cover": "assets/img/sobre/discos/torches.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/28/00/1528001e-8677-b907-b9e9-74eca3071f65/mzaf_17450470823147718766.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/houdini/435761204?i=435761289"
-        },
-        {
-          "title": "Prey",
-          "artist": "The Neighbourhood",
-          "cover": "assets/img/sobre/discos/wiped-out.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/a0/e0/97a0e005-5588-da79-9f30-d3db4852f419/mzaf_5395915338050175623.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/prey/1030115907?i=1030116010"
-        },
-        {
-          "title": "Daddy Issues",
-          "artist": "The Neighbourhood",
-          "cover": "assets/img/sobre/discos/wiped-out.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ef/6c/e0/ef6ce010-7ccf-6cd6-7840-73997a29b276/mzaf_3568417204394617953.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/daddy-issues/1030115907?i=1030116019"
-        },
-        {
-          "title": "Helena",
-          "artist": "My Chemical Romance",
-          "cover": "assets/img/sobre/discos/three-cheers.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0c/99/77/0c99772f-b8e0-e2c2-9e9c-df202e06d08e/mzaf_18362908824438910741.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/helena/1156311431?i=1156311432"
-        },
-        {
-          "title": "I'm Not Okay (I Promise)",
-          "artist": "My Chemical Romance",
-          "cover": "assets/img/sobre/discos/three-cheers.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/86/77/c68677cb-8be1-9729-5b7c-2d3cfe056f8a/mzaf_16051311890134056334.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/im-not-okay-i-promise/1156311431?i=1156311437"
-        },
-        {
-          "title": "Circles",
-          "artist": "Pierce the Veil",
-          "cover": "assets/img/sobre/discos/misadventures.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/51/9c/9c519c64-e529-a774-050f-8e049e6c501d/mzaf_8027222497638650163.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/circles/1440950410?i=1440950620"
-        },
-        {
-          "title": "Texas Is Forever",
-          "artist": "Pierce the Veil",
-          "cover": "assets/img/sobre/discos/misadventures.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/a8/b6/fba8b6b2-b766-1d1a-273d-b8489c233a6a/mzaf_13872849547552452797.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/texas-is-forever/1440950410?i=1440950604"
-        },
-        {
           "title": "Car Radio",
           "artist": "twenty one pilots",
           "cover": "assets/img/sobre/discos/vessel.jpg",
@@ -611,53 +569,18 @@
           "link": "https://music.apple.com/br/album/car-radio/585128397?i=585128671"
         },
         {
-          "title": "Holding On To You",
-          "artist": "twenty one pilots",
-          "cover": "assets/img/sobre/discos/vessel.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/09/9d/51/099d5159-bba2-f1c8-8476-2b8d2e6b6eed/mzaf_11858233020590662931.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/holding-on-to-you/585128397?i=585128668"
+          "title": "Falsa Valsa",
+          "artist": "Adorável Clichê",
+          "cover": "assets/img/sobre/discos/o-que-existe.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5a/55/f1/5a55f19f-83e1-e74b-30f5-4a72a8a61413/mzaf_7781348527432478442.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/falsa-valsa/1433553621?i=1433553635"
         },
         {
-          "title": "boca",
-          "artist": "Chão de Taco",
-          "cover": "assets/img/sobre/discos/dificil.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/93/15/70/931570a8-ce93-5f73-6ab5-5858bc00c590/mzaf_8140489967494441204.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/boca/1716658458?i=1716658461"
-        },
-        {
-          "title": "a gente nunca mais se vê",
-          "artist": "Chão de Taco",
-          "cover": "assets/img/sobre/discos/dificil.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/0c/e3/78/0ce3784d-83af-1c6f-187b-cbed2bce5aae/mzaf_5625376192564403916.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/a-gente-nunca-mais-se-v%C3%AA/1716658458?i=1716658464"
-        },
-        {
-          "title": "Brisa",
-          "artist": "Morro Fuji",
-          "cover": "assets/img/sobre/discos/ainda-nem-doeu.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/87/a0/fb87a008-817d-5244-4489-6bef183ab248/mzaf_5799863382676668373.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/brisa/6769138690?i=6769138692"
-        },
-        {
-          "title": "Agridoce",
-          "artist": "Morro Fuji",
-          "cover": "assets/img/sobre/discos/ainda-nem-doeu.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/09/37/7a/09377a1e-3359-19fc-a89f-9ae0ac906b9d/mzaf_14039628416455162765.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/agridoce/6769138690?i=6769138693"
-        },
-        {
-          "title": "capim-limão",
-          "artist": "Rolimã",
-          "cover": "assets/img/sobre/discos/pior-que-eu-tava.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/e0/7d/b7e07db4-019a-4552-b306-672f6e262464/mzaf_4199859732175505319.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/capim-lim%C3%A3o/1862969416?i=1862969418"
-        },
-        {
-          "title": "tendinite",
-          "artist": "Rolimã",
-          "cover": "assets/img/sobre/discos/pior-que-eu-tava.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3b/2c/bf/3b2cbfc9-3a50-0703-1d2a-4a52cd66d478/mzaf_9638435249638013263.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/tendinite/1862969416?i=1862969429"
+          "title": "Drown",
+          "artist": "Bring Me The Horizon",
+          "cover": "assets/img/sobre/discos/thats-the-spirit.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0f/95/8a/0f958afd-70f6-4d0a-568c-25f926008fec/mzaf_17596204406125825209.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/drown-new/1022197503?i=1022197816"
         },
         {
           "title": "Naquele Inverno",
@@ -667,11 +590,88 @@
           "link": "https://music.apple.com/br/album/naquele-inverno/1433553621?i=1433553636"
         },
         {
-          "title": "Falsa Valsa",
-          "artist": "Adorável Clichê",
-          "cover": "assets/img/sobre/discos/o-que-existe.jpg",
-          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5a/55/f1/5a55f19f-83e1-e74b-30f5-4a72a8a61413/mzaf_7781348527432478442.plus.aac.p.m4a",
-          "link": "https://music.apple.com/br/album/falsa-valsa/1433553621?i=1433553635"
+          "title": "tendinite",
+          "artist": "Rolimã",
+          "cover": "assets/img/sobre/discos/pior-que-eu-tava.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3b/2c/bf/3b2cbfc9-3a50-0703-1d2a-4a52cd66d478/mzaf_9638435249638013263.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/tendinite/1862969416?i=1862969429"
+        },
+        {
+          "title": "Brisa",
+          "artist": "Morro Fuji",
+          "cover": "assets/img/sobre/discos/ainda-nem-doeu.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/87/a0/fb87a008-817d-5244-4489-6bef183ab248/mzaf_5799863382676668373.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/brisa/6769138690?i=6769138692"
+        },
+        {
+          "title": "Throne",
+          "artist": "Bring Me The Horizon",
+          "cover": "assets/img/sobre/discos/thats-the-spirit.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0e/7b/b5/0e7bb52b-a7ef-c1a5-792b-bc505d55ceea/mzaf_17392033085003750336.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/throne/1022197503?i=1022197806"
+        },
+        {
+          "title": "a gente nunca mais se vê",
+          "artist": "Chão de Taco",
+          "cover": "assets/img/sobre/discos/dificil.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/0c/e3/78/0ce3784d-83af-1c6f-187b-cbed2bce5aae/mzaf_5625376192564403916.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/a-gente-nunca-mais-se-v%C3%AA/1716658458?i=1716658464"
+        },
+        {
+          "title": "Holding On To You",
+          "artist": "twenty one pilots",
+          "cover": "assets/img/sobre/discos/vessel.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/09/9d/51/099d5159-bba2-f1c8-8476-2b8d2e6b6eed/mzaf_11858233020590662931.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/holding-on-to-you/585128397?i=585128668"
+        },
+        {
+          "title": "Texas Is Forever",
+          "artist": "Pierce the Veil",
+          "cover": "assets/img/sobre/discos/misadventures.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/a8/b6/fba8b6b2-b766-1d1a-273d-b8489c233a6a/mzaf_13872849547552452797.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/texas-is-forever/1440950410?i=1440950604"
+        },
+        {
+          "title": "Robbers",
+          "artist": "The 1975",
+          "cover": "assets/img/sobre/discos/the-1975.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/65/39/73/653973c2-449b-a3c8-dbd0-af97100545a7/mzaf_15794401609046687284.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/robbers/1440818989?i=1440819287"
+        },
+        {
+          "title": "Eu Continuo Aqui",
+          "artist": "ana paia",
+          "cover": "assets/img/sobre/discos/continuar.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d4/15/f4/d415f477-8aaa-8f98-aa4c-33e78b3512d0/mzaf_17637880747053767021.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/eu-continuo-aqui/1843568422?i=1843568423"
+        },
+        {
+          "title": "again&again",
+          "artist": "Against The Current & guardin",
+          "cover": "assets/img/sobre/discos/fever.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/88/6e/8d886e99-f701-c79e-cd8e-a343a7383249/mzaf_7126559151943648624.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/again-again/1573232687?i=1573232690"
+        },
+        {
+          "title": "Agridoce",
+          "artist": "Morro Fuji",
+          "cover": "assets/img/sobre/discos/ainda-nem-doeu.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/09/37/7a/09377a1e-3359-19fc-a89f-9ae0ac906b9d/mzaf_14039628416455162765.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/agridoce/6769138690?i=6769138693"
+        },
+        {
+          "title": "Pumped Up Kicks",
+          "artist": "Foster the People",
+          "cover": "assets/img/sobre/discos/torches.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/06/5b/df/065bdfe1-4d16-53c9-f24d-f1ad16983f92/mzaf_15283020811004936626.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/pumped-up-kicks/435761204?i=435761212"
+        },
+        {
+          "title": "Uma Thurman",
+          "artist": "Fall Out Boy",
+          "cover": "assets/img/sobre/discos/american-beauty.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/1c/d6/521cd633-27e8-bd34-93d5-d0077db04391/mzaf_1163157119606369853.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/uma-thurman/1440826504?i=1440826718"
         }
       ]
     }

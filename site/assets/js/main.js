@@ -483,7 +483,7 @@
       <rect x="146" y="168" width="28" height="14" rx="2" class="k7-hole"/>
     </svg>`;
   const playerHTML = (PL) => {
-    const tr = shuffleTracks(PL);
+    const tr = (PL && PL.tracks) || [];
     if (!tr.length) return "";
     return `<div class="player" data-player>
       <div class="pl-top">
@@ -503,22 +503,8 @@
     </div>`;
   };
   let audio;
-  // the playlist is shuffled once per visit (same order in every player on the page)
-  let shuffled;
-  const shuffleTracks = (PL) => {
-    if (!shuffled) {
-      const src = (PL && PL.tracks) || [];
-      // a few tries so two songs by the same artist don't land side by side
-      for (let tries = 0; tries < 60; tries++) {
-        shuffled = [...src];
-        for (let k = shuffled.length - 1; k > 0; k--) { const j = Math.floor(Math.random() * (k + 1)); [shuffled[k], shuffled[j]] = [shuffled[j], shuffled[k]]; }
-        if (shuffled.every((x, k) => !k || x.artist !== shuffled[k - 1].artist)) break;
-      }
-    }
-    return shuffled;
-  };
   function initPlayers(PL) {
-    const tr = shuffleTracks(PL);
+    const tr = (PL && PL.tracks) || [];
     if (!tr.length) return;
     // never autoplays: sound only starts on the visitor's click, always at 10% volume
     audio = audio || new Audio(); audio.preload = "none"; audio.autoplay = false; audio.volume = 0.1;
