@@ -340,27 +340,31 @@
     "artists": [
       {
         "name": "Paramore",
-        "photo": "assets/img/sobre/artistas/paramore.jpg",
-        "credit": "Raph_PH · CC BY 2.0",
-        "creditUrl": "https://commons.wikimedia.org/wiki/File:Paramore_2023.jpg"
+        "photo": "assets/img/sobre/artistas/paramore.jpg"
       },
       {
         "name": "Nothing But Thieves",
-        "photo": "assets/img/sobre/artistas/nothing-but-thieves.jpg",
-        "credit": "Dannyjd12 · CC BY 4.0",
-        "creditUrl": "https://commons.wikimedia.org/wiki/File:Nothing_But_Thieves_Nova_Rock_2023.jpg"
+        "photo": "assets/img/sobre/artistas/nothing-but-thieves.jpg"
       },
       {
         "name": "Bring Me The Horizon",
-        "photo": "assets/img/sobre/artistas/bring-me-the-horizon.jpg",
-        "credit": "Birgit Fostervold · CC BY-SA 4.0",
-        "creditUrl": "https://commons.wikimedia.org/wiki/File:Bring_Me_The_Horizon_Tons_of_Rock_2026.jpg"
+        "photo": "assets/img/sobre/artistas/bring-me-the-horizon.jpg"
       },
       {
         "name": "Twenty One Pilots",
-        "photo": "assets/img/sobre/artistas/twenty-one-pilots.jpg",
-        "credit": "Nnunghi · CC0",
-        "creditUrl": "https://commons.wikimedia.org/wiki/File:Twenty_One_Pilots_from_Clancy_Tour_in_Dublin_(landscape_crop).jpg"
+        "photo": "assets/img/sobre/artistas/twenty-one-pilots.jpg"
+      },
+      {
+        "name": "Arctic Monkeys",
+        "photo": "assets/img/sobre/artistas/arctic-monkeys.jpg"
+      },
+      {
+        "name": "My Chemical Romance",
+        "photo": "assets/img/sobre/artistas/my-chemical-romance.jpg"
+      },
+      {
+        "name": "Pierce The Veil",
+        "photo": "assets/img/sobre/artistas/pierce-the-veil.jpg"
       }
     ],
     "hobbies": "Violão e Guitarra\nAmante de música ao vivo\nGamer\nCozinha por hobby\nFotógrafo\nAnimes",

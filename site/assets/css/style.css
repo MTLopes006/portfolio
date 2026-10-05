@@ -940,8 +940,6 @@ p, dd, li, figcaption, .series-row .sub { text-wrap: pretty; orphans: 2; widows:
 .pin.has-photo span { position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%) rotate(-3deg); white-space: nowrap; padding: 3px 9px; background: var(--bg); color: var(--fg); font-size: 11px; box-shadow: 2px 2px 0 rgba(0,0,0,.25); z-index: 1; }
 .card-artists .pins { gap: 26px 18px; justify-content: flex-start; }
 .card-artists .pin { width: clamp(104px, 9vw, 132px); }
-.pin-credits { margin: 22px 0 0; font-size: 10px; line-height: 1.6; }
-.pin-credits a:hover { color: var(--ink); }
 
 /* photo series: justified rows — every photo shown whole */
 .lay-mosaic .mosaic.justified { display: flex; flex-wrap: wrap; gap: 10px; }

@@ -555,9 +555,7 @@
   }
   const pinsHTML = (artists) => {
     const list = (Array.isArray(artists) ? artists : lines(artists).map((n) => ({ name: n })));
-    const credits = list.filter((a) => a.credit);
-    return `<ul class="pins">${list.map((a) => { const [bg, fg] = inkOf(a.name); return `<li class="pin${a.photo ? " has-photo" : ""}" style="--bg:${bg};--fg:${fg}">${a.photo ? `<img src="${esc(a.photo)}" alt="${esc(a.name)}" loading="lazy">` : ""}<span>${esc(a.name)}</span></li>`; }).join("")}</ul>
-      ${credits.length ? `<p class="pin-credits label muted">${ui("off.photos")}: ${credits.map((a) => `<a href="${esc(a.creditUrl || "#")}" target="_blank" rel="noopener">${esc(a.name)} — ${esc(a.credit)}</a>`).join(" · ")}</p>` : ""}`;
+    return `<ul class="pins">${list.map((a) => { const [bg, fg] = inkOf(a.name); return `<li class="pin${a.photo ? " has-photo" : ""}" style="--bg:${bg};--fg:${fg}">${a.photo ? `<img src="${esc(a.photo)}" alt="${esc(a.name)}" loading="lazy">` : ""}<span>${esc(a.name)}</span></li>`; }).join("")}</ul>`;
   };
 
   function offClock(O) {

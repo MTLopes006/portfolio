@@ -1594,18 +1594,6 @@
                       "widget": "image",
                       "required": false,
                       "choose_url": false
-                    },
-                    {
-                      "name": "credit",
-                      "label": "Crédito da foto (autor · licença)",
-                      "widget": "string",
-                      "required": false
-                    },
-                    {
-                      "name": "creditUrl",
-                      "label": "Link do crédito",
-                      "widget": "string",
-                      "required": false
                     }
                   ]
                 },
