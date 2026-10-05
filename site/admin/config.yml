@@ -1,0 +1,1265 @@
+# Decap CMS — JSON é YAML válido. O campo backend.repo aponta para o seu repositório no GitHub.
+{
+  "backend": {
+    "name": "github",
+    "repo": "MTLopes006/portfolio",
+    "branch": "main",
+    "commit_messages": {
+      "update": "Atualiza {{slug}} pelo CMS",
+      "uploadMedia": "Envia {{path}} pelo CMS"
+    }
+  },
+  "locale": "pt",
+  "media_folder": "site/assets/img/uploads",
+  "public_folder": "assets/img/uploads",
+  "collections": [
+    {
+      "name": "conteudo",
+      "label": "Conteúdo do site",
+      "editor": {
+        "preview": false
+      },
+      "files": [
+        {
+          "name": "profile",
+          "label": "Perfil e crachá",
+          "file": "site/content/profile.json",
+          "fields": [
+            {
+              "name": "name",
+              "label": "Nome completo",
+              "widget": "string"
+            },
+            {
+              "name": "firstName",
+              "label": "Primeiro nome (linha 1 da home)",
+              "widget": "string"
+            },
+            {
+              "name": "lastName",
+              "label": "Sobrenome (linha 2 da home)",
+              "widget": "string"
+            },
+            {
+              "name": "photo",
+              "label": "Foto do crachá",
+              "widget": "image",
+              "choose_url": false
+            },
+            {
+              "name": "role",
+              "label": "Cargo",
+              "widget": "object",
+              "collapsed": false,
+              "required": false,
+              "fields": [
+                {
+                  "name": "pt",
+                  "label": "Português",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "name": "company",
+              "label": "Empresa atual",
+              "widget": "string"
+            },
+            {
+              "name": "badgeId",
+              "label": "Código do crachá",
+              "widget": "string"
+            },
+            {
+              "name": "heroLead",
+              "label": "Frase da home",
+              "widget": "object",
+              "collapsed": false,
+              "required": false,
+              "fields": [
+                {
+                  "name": "pt",
+                  "label": "Português",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "text",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "name": "email",
+              "label": "E-mail",
+              "widget": "string"
+            },
+            {
+              "name": "whatsapp",
+              "label": "Link do WhatsApp",
+              "widget": "string"
+            },
+            {
+              "name": "whatsappLabel",
+              "label": "WhatsApp (texto exibido)",
+              "widget": "string"
+            },
+            {
+              "name": "linkedin",
+              "label": "Link do LinkedIn",
+              "widget": "string"
+            },
+            {
+              "name": "linkedinLabel",
+              "label": "LinkedIn (texto exibido)",
+              "widget": "string"
+            },
+            {
+              "name": "instagram",
+              "label": "Link do Instagram (opcional)",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "location",
+              "label": "Localização",
+              "widget": "object",
+              "collapsed": false,
+              "required": false,
+              "fields": [
+                {
+                  "name": "pt",
+                  "label": "Português",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "name": "available",
+              "label": "Disponibilidade",
+              "widget": "object",
+              "collapsed": false,
+              "required": false,
+              "fields": [
+                {
+                  "name": "pt",
+                  "label": "Português",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "projects",
+          "label": "Projetos de design (Lado A)",
+          "file": "site/content/projects.json",
+          "fields": [
+            {
+              "name": "projects",
+              "label": "Projetos (arraste para reordenar)",
+              "widget": "list",
+              "summary": "{{fields.year}} — {{fields.title}}",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Título",
+                  "widget": "string"
+                },
+                {
+                  "name": "slug",
+                  "label": "Endereço (sem espaços, ex.: meu-projeto)",
+                  "widget": "string",
+                  "pattern": [
+                    "^[a-z0-9-]+$",
+                    "Use só letras minúsculas, números e hífen"
+                  ]
+                },
+                {
+                  "name": "year",
+                  "label": "Ano",
+                  "widget": "number",
+                  "value_type": "int",
+                  "required": false
+                },
+                {
+                  "name": "client",
+                  "label": "Cliente",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "role",
+                  "label": "Papel",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "tags",
+                  "label": "Disciplinas (separadas por vírgula)",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "summary",
+                  "label": "Resumo curto",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "cover",
+                  "label": "Capa (aparece na lista e no topo)",
+                  "widget": "image",
+                  "required": false,
+                  "choose_url": false
+                },
+                {
+                  "name": "coverRatio",
+                  "label": "Proporção",
+                  "widget": "select",
+                  "options": [
+                    "16/9",
+                    "16/8",
+                    "4/3",
+                    "3/2",
+                    "1/1",
+                    "4/5",
+                    "3/4",
+                    "2/3",
+                    "9/16"
+                  ],
+                  "default": "16/9",
+                  "required": false
+                },
+                {
+                  "name": "tone",
+                  "label": "Cor de apoio (quando não há capa)",
+                  "widget": "color",
+                  "required": false
+                },
+                {
+                  "name": "blocks",
+                  "label": "Blocos da página",
+                  "widget": "list",
+                  "typeKey": "type",
+                  "types": [
+                    {
+                      "name": "lead",
+                      "label": "Texto de abertura",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "text",
+                          "label": "Texto",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "text",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "text",
+                              "required": false
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "text",
+                      "label": "Título + texto",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "title",
+                          "label": "Título",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "string",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "string",
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "label": "Texto",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "text",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "text",
+                              "required": false
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "full",
+                      "label": "Imagem sangrada (tela inteira)",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "img",
+                          "label": "Imagem",
+                          "widget": "image",
+                          "required": false,
+                          "choose_url": false
+                        },
+                        {
+                          "name": "ratio",
+                          "label": "Proporção",
+                          "widget": "select",
+                          "options": [
+                            "16/9",
+                            "16/8",
+                            "4/3",
+                            "3/2",
+                            "1/1",
+                            "4/5",
+                            "3/4",
+                            "2/3",
+                            "9/16"
+                          ],
+                          "default": "16/8",
+                          "required": false
+                        },
+                        {
+                          "name": "caption",
+                          "label": "Legenda",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "string",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "string",
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
+                          "name": "parallax",
+                          "label": "Parallax",
+                          "widget": "boolean",
+                          "default": true,
+                          "required": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "split",
+                      "label": "Imagem + texto",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "img",
+                          "label": "Imagem",
+                          "widget": "image",
+                          "required": false,
+                          "choose_url": false
+                        },
+                        {
+                          "name": "ratio",
+                          "label": "Proporção",
+                          "widget": "select",
+                          "options": [
+                            "16/9",
+                            "16/8",
+                            "4/3",
+                            "3/2",
+                            "1/1",
+                            "4/5",
+                            "3/4",
+                            "2/3",
+                            "9/16"
+                          ],
+                          "default": "4/5",
+                          "required": false
+                        },
+                        {
+                          "name": "side",
+                          "label": "Lado da imagem",
+                          "widget": "select",
+                          "options": [
+                            {
+                              "label": "Esquerda",
+                              "value": "left"
+                            },
+                            {
+                              "label": "Direita",
+                              "value": "right"
+                            }
+                          ],
+                          "default": "left"
+                        },
+                        {
+                          "name": "title",
+                          "label": "Título",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "string",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "string",
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "label": "Texto",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "text",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "text",
+                              "required": false
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "pair",
+                      "label": "Duas imagens",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "imgs",
+                          "label": "Imagens",
+                          "widget": "list",
+                          "fields": [
+                            {
+                              "name": "img",
+                              "label": "Imagem",
+                              "widget": "image",
+                              "required": false,
+                              "choose_url": false
+                            },
+                            {
+                              "name": "ratio",
+                              "label": "Proporção",
+                              "widget": "select",
+                              "options": [
+                                "16/9",
+                                "16/8",
+                                "4/3",
+                                "3/2",
+                                "1/1",
+                                "4/5",
+                                "3/4",
+                                "2/3",
+                                "9/16"
+                              ],
+                              "default": "4/3",
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
+                          "name": "caption",
+                          "label": "Legenda",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "string",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "string",
+                              "required": false
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "trio",
+                      "label": "Três imagens",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "imgs",
+                          "label": "Imagens",
+                          "widget": "list",
+                          "fields": [
+                            {
+                              "name": "img",
+                              "label": "Imagem",
+                              "widget": "image",
+                              "required": false,
+                              "choose_url": false
+                            },
+                            {
+                              "name": "ratio",
+                              "label": "Proporção",
+                              "widget": "select",
+                              "options": [
+                                "16/9",
+                                "16/8",
+                                "4/3",
+                                "3/2",
+                                "1/1",
+                                "4/5",
+                                "3/4",
+                                "2/3",
+                                "9/16"
+                              ],
+                              "default": "4/3",
+                              "required": false
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "palette",
+                      "label": "Paleta de cores",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "colors",
+                          "label": "Cores",
+                          "widget": "list",
+                          "fields": [
+                            {
+                              "name": "hex",
+                              "label": "Cor",
+                              "widget": "color"
+                            },
+                            {
+                              "name": "name",
+                              "label": "Nome",
+                              "widget": "string"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "type",
+                      "label": "Amostra tipográfica",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "family",
+                          "label": "Fonte",
+                          "widget": "string"
+                        },
+                        {
+                          "name": "weights",
+                          "label": "Pesos",
+                          "widget": "string",
+                          "required": false
+                        },
+                        {
+                          "name": "sample",
+                          "label": "Amostra",
+                          "widget": "string",
+                          "default": "Aa Bb Cc 0123"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "quote",
+                      "label": "Frase de destaque",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "text",
+                          "label": "Frase",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "text",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "text",
+                              "required": false
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "specs",
+                      "label": "Ficha técnica / créditos",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "title",
+                          "label": "Título",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "string",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "string",
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
+                          "name": "items",
+                          "label": "Itens",
+                          "widget": "list",
+                          "fields": [
+                            {
+                              "name": "label",
+                              "label": "Rótulo",
+                              "widget": "object",
+                              "collapsed": false,
+                              "required": false,
+                              "fields": [
+                                {
+                                  "name": "pt",
+                                  "label": "Português",
+                                  "widget": "string",
+                                  "required": false
+                                },
+                                {
+                                  "name": "en",
+                                  "label": "English",
+                                  "widget": "string",
+                                  "required": false
+                                }
+                              ]
+                            },
+                            {
+                              "name": "value",
+                              "label": "Valor",
+                              "widget": "object",
+                              "collapsed": false,
+                              "required": false,
+                              "fields": [
+                                {
+                                  "name": "pt",
+                                  "label": "Português",
+                                  "widget": "string",
+                                  "required": false
+                                },
+                                {
+                                  "name": "en",
+                                  "label": "English",
+                                  "widget": "string",
+                                  "required": false
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "photography",
+          "label": "Fotografia (Lado B)",
+          "file": "site/content/photography.json",
+          "fields": [
+            {
+              "name": "intro",
+              "label": "Texto de abertura",
+              "widget": "object",
+              "collapsed": false,
+              "required": false,
+              "fields": [
+                {
+                  "name": "pt",
+                  "label": "Português",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "text",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "name": "process",
+              "label": "Como trabalho",
+              "widget": "object",
+              "collapsed": false,
+              "required": false,
+              "fields": [
+                {
+                  "name": "pt",
+                  "label": "Português",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "text",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "name": "gear",
+              "label": "Equipamento",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "series",
+              "label": "Bandas",
+              "widget": "list",
+              "summary": "{{fields.band}}",
+              "fields": [
+                {
+                  "name": "band",
+                  "label": "Banda",
+                  "widget": "string"
+                },
+                {
+                  "name": "slug",
+                  "label": "Endereço (ex.: bad-luv)",
+                  "widget": "string",
+                  "pattern": [
+                    "^[a-z0-9-]+$",
+                    "Use só letras minúsculas, números e hífen"
+                  ]
+                },
+                {
+                  "name": "kind",
+                  "label": "Tipo (ex.: Show ao vivo, Retrato de banda, Retrato noturno)",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "venue",
+                  "label": "Local",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "year",
+                  "label": "Ano",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "desc",
+                  "label": "Descrição",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "text",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "photos",
+                  "label": "Fotos",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "src",
+                      "label": "Foto",
+                      "widget": "image",
+                      "required": false,
+                      "choose_url": false
+                    },
+                    {
+                      "name": "ratio",
+                      "label": "Proporção",
+                      "widget": "select",
+                      "options": [
+                        "16/9",
+                        "16/8",
+                        "4/3",
+                        "3/2",
+                        "1/1",
+                        "4/5",
+                        "3/4",
+                        "2/3",
+                        "9/16"
+                      ],
+                      "default": "3/2",
+                      "required": false
+                    },
+                    {
+                      "name": "caption",
+                      "label": "Legenda",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "about",
+          "label": "Sobre",
+          "file": "site/content/about.json",
+          "fields": [
+            {
+              "name": "bio",
+              "label": "Bio (deixe uma linha em branco entre parágrafos)",
+              "widget": "object",
+              "collapsed": false,
+              "required": false,
+              "fields": [
+                {
+                  "name": "pt",
+                  "label": "Português",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "text",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "name": "lists",
+              "label": "Listas pessoais",
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Título",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "items",
+                  "label": "Itens (um por linha)",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "experience",
+              "label": "Experiência",
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "period",
+                  "label": "Período",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "role",
+                  "label": "Cargo",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "place",
+                  "label": "Empresa",
+                  "widget": "string"
+                }
+              ]
+            },
+            {
+              "name": "education",
+              "label": "Formação",
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "period",
+                  "label": "Período",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "role",
+                  "label": "Curso",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "place",
+                  "label": "Instituição",
+                  "widget": "string"
+                }
+              ]
+            },
+            {
+              "name": "research",
+              "label": "Pesquisa (TCC, artigos)",
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "kind",
+                  "label": "Tipo (ex.: Artigo · Revista, ano)",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "title",
+                  "label": "Título",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "text",
+                  "label": "Resumo",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "text",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "link",
+                  "label": "Link (opcional)",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "name": "timeline",
+              "label": "Trajetória (linha do tempo)",
+              "widget": "list",
+              "summary": "{{fields.period}}",
+              "fields": [
+                {
+                  "name": "period",
+                  "label": "Data",
+                  "widget": "string"
+                },
+                {
+                  "name": "text",
+                  "label": "Marco",
+                  "widget": "object",
+                  "collapsed": false,
+                  "required": false,
+                  "fields": [
+                    {
+                      "name": "pt",
+                      "label": "Português",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

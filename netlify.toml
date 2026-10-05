@@ -1,0 +1,17 @@
+# Netlify: publica a pasta site/ sem etapa de build.
+[build]
+  publish = "site"
+  command = ""
+
+# O painel do CMS não deve ser indexado nem cacheado.
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    Cache-Control = "no-cache"
+
+# Conteúdo sempre atualizado depois de editar pelo CMS.
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "no-cache"

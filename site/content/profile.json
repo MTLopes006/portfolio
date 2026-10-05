@@ -1,0 +1,30 @@
+{
+  "name": "Matheus Lopes",
+  "firstName": "Matheus",
+  "lastName": "Lopes",
+  "photo": "assets/img/matheus.jpg",
+  "role": {
+    "pt": "Designer Gráfico",
+    "en": "Graphic Designer"
+  },
+  "company": "Cifra Club + Letras.mus",
+  "badgeId": "ML—016",
+  "email": "matheusaugusto2002@gmail.com",
+  "whatsapp": "https://wa.me/5511950424425",
+  "whatsappLabel": "+55 11 95042-4425",
+  "linkedin": "https://www.linkedin.com/in/matheuslopes16",
+  "linkedinLabel": "linkedin.com/in/matheuslopes16",
+  "instagram": "",
+  "location": {
+    "pt": "Belo Horizonte, MG",
+    "en": "Belo Horizonte, Brazil"
+  },
+  "available": {
+    "pt": "Aberto a projetos freelance",
+    "en": "Open to freelance work"
+  },
+  "heroLead": {
+    "pt": "Designer gráfico em Belo Horizonte, criando para marcas de música e pesquisando a cena independente brasileira.",
+    "en": "Graphic designer in Belo Horizonte, making work for music brands and researching Brazil's independent scene."
+  }
+}

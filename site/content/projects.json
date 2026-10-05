@@ -1,0 +1,1239 @@
+{
+  "projects": [
+    {
+      "slug": "semana-do-gospel",
+      "title": "Semana do Gospel",
+      "year": 2026,
+      "client": {
+        "pt": "Cifra Club · Studio Sol",
+        "en": "Cifra Club · Studio Sol"
+      },
+      "role": {
+        "pt": "Identidade visual e conceito fotográfico",
+        "en": "Visual identity & photographic concept"
+      },
+      "tags": {
+        "pt": "Campanha sazonal, Identidade visual, In-app",
+        "en": "Seasonal campaign, Visual identity, In-app"
+      },
+      "summary": {
+        "pt": "Campanha para incentivar o acesso de cifras gospel na semana do dia da música gospel.",
+        "en": "A campaign driving gospel chord views during Gospel Music Day week."
+      },
+      "cover": "assets/img/projetos/semana-do-gospel/capa.jpg",
+      "coverRatio": "1768/434",
+      "tone": "#904C18",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Campanha para incentivar o acesso de cifras gospel na plataforma durante a semana do dia da música gospel (9 de junho). A decisão veio da grande adesão do público religioso ao uso da plataforma para aprender músicas e planejar repertório.",
+            "en": "A campaign to drive gospel chord views on the platform during Gospel Music Day week (June 9). It came from the strong uptake among religious users, who rely on the platform to learn songs and plan setlists."
+          }
+        },
+        {
+          "type": "pair",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/semana-do-gospel/violao-1.jpg",
+              "ratio": "800/450"
+            },
+            {
+              "img": "assets/img/projetos/semana-do-gospel/violao-2.jpg",
+              "ratio": "940/584"
+            }
+          ],
+          "caption": {
+            "pt": "Prancha de conceito: três cenas, um mesmo calor de luz",
+            "en": "Concept board: three scenes, one warm light"
+          }
+        },
+        {
+          "type": "palette",
+          "colors": [
+            {
+              "hex": "#FCDA9A",
+              "name": "Soft Peach"
+            },
+            {
+              "hex": "#FBC77D",
+              "name": "Apricot Cream"
+            },
+            {
+              "hex": "#904C18",
+              "name": "Chocolate Brown"
+            }
+          ]
+        },
+        {
+          "type": "split",
+          "img": "assets/img/projetos/semana-do-gospel/noturno.jpg",
+          "ratio": "800/448",
+          "side": "left",
+          "title": {
+            "pt": "Conceito fotográfico",
+            "en": "Photographic concept"
+          },
+          "text": {
+            "pt": "Músicos tocando em igrejas e casas, sempre com luz quente de fim de tarde ou de abajur. Os assets foram explorados com IA generativa (ChatGPT e Magnific) e finalizados no Photoshop, com curadoria e acabamento meus.",
+            "en": "Musicians playing in churches and homes, always under warm late-afternoon or lamp light. Assets were explored with generative AI (ChatGPT and Magnific) and finished in Photoshop, with my own curation and retouching."
+          }
+        },
+        {
+          "type": "trio",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/semana-do-gospel/app-1.jpg",
+              "ratio": "526/1030"
+            },
+            {
+              "img": "assets/img/projetos/semana-do-gospel/app-2.jpg",
+              "ratio": "526/1030"
+            },
+            {
+              "img": "assets/img/projetos/semana-do-gospel/app-3.jpg",
+              "ratio": "526/1030"
+            }
+          ]
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Entregas",
+            "en": "Deliverables"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Identidade",
+                "en": "Identity"
+              },
+              "value": {
+                "pt": "Logotipo da campanha e paleta",
+                "en": "Campaign logotype & palette"
+              }
+            },
+            {
+              "label": {
+                "pt": "Conceito",
+                "en": "Concept"
+              },
+              "value": {
+                "pt": "Prancha de conceito fotográfico",
+                "en": "Photographic concept board"
+              }
+            },
+            {
+              "label": {
+                "pt": "Produto",
+                "en": "Product"
+              },
+              "value": {
+                "pt": "In-app, interstitials e destaques",
+                "en": "In-app, interstitials & highlights"
+              }
+            },
+            {
+              "label": {
+                "pt": "Ferramentas",
+                "en": "Tools"
+              },
+              "value": {
+                "pt": "ChatGPT, Magnific, Photoshop e Figma",
+                "en": "ChatGPT, Magnific, Photoshop & Figma"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "semana-do-coreano",
+      "title": "Semana do Coreano",
+      "year": "",
+      "client": {
+        "pt": "Letras · Studio Sol",
+        "en": "Letras · Studio Sol"
+      },
+      "role": {
+        "pt": "Identidade visual e direção de arte",
+        "en": "Visual identity & art direction"
+      },
+      "tags": {
+        "pt": "Campanha, Identidade visual, Colagem",
+        "en": "Campaign, Visual identity, Collage"
+      },
+      "summary": {
+        "pt": "Campanha para o curso de coreano da plataforma de ensino do Letras.",
+        "en": "A campaign for Letras' Korean language course."
+      },
+      "cover": "assets/img/projetos/semana-do-coreano/capa.jpg",
+      "coverRatio": "1768/532",
+      "tone": "#B79CF0",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Campanha para incentivar o acesso ao curso de língua coreana da plataforma de ensino do Letras. A decisão veio do crescente acesso a letras de K-pop no site.",
+            "en": "A campaign driving sign-ups to the Korean language course on Letras' learning platform, prompted by the growing traffic to K-pop lyrics on the site."
+          }
+        },
+        {
+          "type": "full",
+          "img": "assets/img/projetos/semana-do-coreano/grid.jpg",
+          "ratio": "1768/1292",
+          "caption": {
+            "pt": "Prancha de conceito: colagem com recortes, retícula e cores de papelaria",
+            "en": "Concept board: cut-out collage, halftone and stationery colours"
+          },
+          "parallax": false
+        },
+        {
+          "type": "split",
+          "img": "assets/img/projetos/semana-do-coreano/personagem.jpg",
+          "ratio": "530/588",
+          "side": "right",
+          "title": {
+            "pt": "Colagem como linguagem",
+            "en": "Collage as a language"
+          },
+          "text": {
+            "pt": "Elementos de Seul (a N Seoul Tower, placas de rua, soju) recortados e aplicados sobre lilás, rosa e lima, com a personagem como fio condutor entre as peças. Assets gerados no Google Flow e finalizados no Photoshop.",
+            "en": "Seoul elements (N Seoul Tower, street signs, soju) cut out and laid over lilac, pink and lime, with the character as the thread between pieces. Assets generated in Google Flow and finished in Photoshop."
+          }
+        },
+        {
+          "type": "pair",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/semana-do-coreano/soju.jpg",
+              "ratio": "450/504"
+            },
+            {
+              "img": "assets/img/projetos/semana-do-coreano/placa.jpg",
+              "ratio": "450/732"
+            }
+          ]
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Entregas",
+            "en": "Deliverables"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Identidade",
+                "en": "Identity"
+              },
+              "value": {
+                "pt": "Logotipo e prancha de conceito",
+                "en": "Logotype & concept board"
+              }
+            },
+            {
+              "label": {
+                "pt": "Produto",
+                "en": "Product"
+              },
+              "value": {
+                "pt": "In-app, destaques e house ads",
+                "en": "In-app, highlights & house ads"
+              }
+            },
+            {
+              "label": {
+                "pt": "Ferramentas",
+                "en": "Tools"
+              },
+              "value": {
+                "pt": "Google Flow, Photoshop e Figma",
+                "en": "Google Flow, Photoshop & Figma"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dia-da-lideranca",
+      "title": "Dia da Liderança",
+      "year": "",
+      "client": {
+        "pt": "Studio Sol + Letras · comunicação interna",
+        "en": "Studio Sol + Letras · internal comms"
+      },
+      "role": {
+        "pt": "Conceito, ilustração e arte-final",
+        "en": "Concept, illustration & print artwork"
+      },
+      "tags": {
+        "pt": "Impresso, Ilustração, Endomarketing",
+        "en": "Print, Illustration, Internal comms"
+      },
+      "summary": {
+        "pt": "Rótulos e cartão ilustrados para os presentes da data.",
+        "en": "Illustrated labels and card for the day's gifts."
+      },
+      "cover": "assets/img/projetos/dia-da-lideranca/capa.jpg",
+      "coverRatio": "1168/558",
+      "tone": "#E9D3B4",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Peças impressas ilustradas para a data comemorativa: rótulos personalizados para os presentes selecionados (café e castanhas) e um cartão A6 com mensagem.",
+            "en": "Illustrated printed pieces for the occasion: custom labels for the chosen gifts (coffee and nuts) and an A6 card with a message."
+          }
+        },
+        {
+          "type": "full",
+          "img": "assets/img/projetos/dia-da-lideranca/grid.jpg",
+          "ratio": "1768/954",
+          "caption": {
+            "pt": "Rótulos e cartão",
+            "en": "Labels and card"
+          },
+          "parallax": true
+        },
+        {
+          "type": "split",
+          "img": "assets/img/projetos/dia-da-lideranca/cartao.jpg",
+          "ratio": "572/954",
+          "side": "left",
+          "title": {
+            "pt": "Liderança é como café",
+            "en": "Leadership is like coffee"
+          },
+          "text": {
+            "pt": "Quanto mais se compartilha, mais rica fica a experiência. A metáfora guiou as ilustrações: mesa, vitrola, café passado e folhas de outono, em tons de papel kraft. Ilustração com apoio do Recraft (IA) e arte-final no Figma.",
+            "en": "The more it's shared, the richer the experience. The metaphor guided the illustrations: a table, a record player, fresh coffee and autumn leaves in kraft-paper tones. Illustration assisted by Recraft (AI), artwork finished in Figma."
+          }
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Entregas",
+            "en": "Deliverables"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Impressos",
+                "en": "Print"
+              },
+              "value": {
+                "pt": "Rótulos de café e castanhas, cartão A6",
+                "en": "Coffee & nut labels, A6 card"
+              }
+            },
+            {
+              "label": {
+                "pt": "Ferramentas",
+                "en": "Tools"
+              },
+              "value": {
+                "pt": "Recraft (IA) e Figma",
+                "en": "Recraft (AI) & Figma"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "com-studio-sol-letras",
+      "title": "Com Studio Sol + Letras",
+      "year": 2025,
+      "client": {
+        "pt": "Studio Sol + Letras · comunicação interna",
+        "en": "Studio Sol + Letras · internal comms"
+      },
+      "role": {
+        "pt": "Identidade visual e sistema de cor",
+        "en": "Visual identity & colour system"
+      },
+      "tags": {
+        "pt": "Identidade visual, Sistema de cor, Multiformato",
+        "en": "Visual identity, Colour system, Multi-format"
+      },
+      "summary": {
+        "pt": "Identidade de uma série de talks internas entre as duas empresas.",
+        "en": "Identity for an internal talk series shared by both companies."
+      },
+      "cover": "assets/img/projetos/com-studio-sol-letras/capa.jpg",
+      "coverRatio": "1768/662",
+      "tone": "#F4F4F2",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Identidade de uma série de talks internas, usada para divulgar tema, data e link nas plataformas da empresa.",
+            "en": "Identity for a series of internal talks, used to announce topic, date and link across the company's channels."
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Duas cores, duas empresas",
+            "en": "Two colours, two companies"
+          },
+          "text": {
+            "pt": "O laranja vem da Studio Sol e o verde-limão vem do Letras. Quando os dois aparecem juntos, o tema da talk interessa a todos os produtos. As linhas soltas dão ritmo e mantêm a série reconhecível em qualquer formato.",
+            "en": "Orange comes from Studio Sol and lime green from Letras. When both appear together, the talk's topic matters to every product. Loose lines add rhythm and keep the series recognisable in any format."
+          }
+        },
+        {
+          "type": "trio",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/com-studio-sol-letras/post-1.jpg",
+              "ratio": "636/632"
+            },
+            {
+              "img": "assets/img/projetos/com-studio-sol-letras/post-2.jpg",
+              "ratio": "636/632"
+            },
+            {
+              "img": "assets/img/projetos/com-studio-sol-letras/post-3.jpg",
+              "ratio": "448/632"
+            }
+          ]
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Entregas",
+            "en": "Deliverables"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Sistema",
+                "en": "System"
+              },
+              "value": {
+                "pt": "Identidade visual e sistema de cor",
+                "en": "Visual identity & colour system"
+              }
+            },
+            {
+              "label": {
+                "pt": "Formatos",
+                "en": "Formats"
+              },
+              "value": {
+                "pt": "Convites, posts, agradecimentos",
+                "en": "Invites, posts, thank-you notes"
+              }
+            },
+            {
+              "label": {
+                "pt": "Ferramentas",
+                "en": "Tools"
+              },
+              "value": {
+                "pt": "Illustrator e Figma",
+                "en": "Illustrator & Figma"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "download-do-app",
+      "title": "Download do App",
+      "year": "",
+      "client": {
+        "pt": "Cifra Club · Studio Sol",
+        "en": "Cifra Club · Studio Sol"
+      },
+      "role": {
+        "pt": "Identidade visual, mockups e banners",
+        "en": "Visual identity, mockups & banners"
+      },
+      "tags": {
+        "pt": "Campanha, Mockups, Multiformato",
+        "en": "Campaign, Mockups, Multi-format"
+      },
+      "summary": {
+        "pt": "Campanha de incentivo ao download do app para quem já usava a versão web.",
+        "en": "A campaign nudging web users to download the app."
+      },
+      "cover": "assets/img/projetos/download-do-app/capa.jpg",
+      "coverRatio": "1768/994",
+      "tone": "#FF8A3D",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Campanha de incentivo ao download do app via mídia interna, direcionada a quem já usava a plataforma web. Um conceito adaptado a mockups e banners de Android e iOS.",
+            "en": "A campaign encouraging app downloads through in-house media, aimed at people already using the web platform. One concept adapted to Android and iOS mockups and banners."
+          }
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Entregas",
+            "en": "Deliverables"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Identidade",
+                "en": "Identity"
+              },
+              "value": {
+                "pt": "Conceito e assets",
+                "en": "Concept & assets"
+              }
+            },
+            {
+              "label": {
+                "pt": "Formatos",
+                "en": "Formats"
+              },
+              "value": {
+                "pt": "Mockups e banners multiformato (Android e iOS)",
+                "en": "Mockups & multi-format banners (Android & iOS)"
+              }
+            },
+            {
+              "label": {
+                "pt": "Ferramentas",
+                "en": "Tools"
+              },
+              "value": {
+                "pt": "Photoshop e Figma",
+                "en": "Photoshop & Figma"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "destaques",
+      "title": "Destaques",
+      "year": "",
+      "client": {
+        "pt": "Cifra Club e Letras · Studio Sol",
+        "en": "Cifra Club e Letras · Studio Sol"
+      },
+      "role": {
+        "pt": "Adaptação de identidade e formatos multiplataforma",
+        "en": "Identity adaptation & multi-platform formats"
+      },
+      "tags": {
+        "pt": "Banner, Direção de arte, Recorrente",
+        "en": "Banner, Art direction, Recurring"
+      },
+      "summary": {
+        "pt": "Banners principais dos sites, atualizados de forma recorrente.",
+        "en": "Homepage hero banners, refreshed on a recurring basis."
+      },
+      "cover": "assets/img/projetos/destaques-cifra-club/capa.jpg",
+      "coverRatio": "1400/344",
+      "tone": "#E8711C",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "O banner principal é a primeira coisa que milhões de pessoas veem ao abrir o Cifra Club e o Letras. São duas lógicas diferentes para o mesmo espaço, em versões para desktop e mobile.",
+            "en": "The hero banner is the first thing millions of people see when they open Cifra Club and Letras. Two different logics for the same slot, in desktop and mobile versions."
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Cifra Club",
+            "en": "Cifra Club"
+          },
+          "text": {
+            "pt": "Banner de artista em destaque para levar o usuário a cifras específicas. A identidade editorial é fixa e o conteúdo muda de forma recorrente.",
+            "en": "A featured-artist banner that takes users to specific chord sheets. The editorial identity is fixed while the content rotates."
+          }
+        },
+        {
+          "type": "full",
+          "img": "assets/img/projetos/destaques-cifra-club/banners.jpg",
+          "ratio": "1768/1548",
+          "caption": {
+            "pt": "Cifra Club: versões desktop e mobile",
+            "en": "Cifra Club: desktop and mobile versions"
+          },
+          "parallax": false
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Letras",
+            "en": "Letras"
+          },
+          "text": {
+            "pt": "Banner de músicas em destaque para páginas de letras e traduções. A identidade parte da divulgação do artista e é reconstruída para a identidade do produto.",
+            "en": "Featured-song banners for lyrics and translation pages. Each starts from the artist's own campaign and is rebuilt into the product's identity."
+          }
+        },
+        {
+          "type": "full",
+          "img": "assets/img/projetos/destaques-letras/banners.jpg",
+          "ratio": "1768/1626",
+          "caption": {
+            "pt": "Letras: cada lançamento ganha uma adaptação própria",
+            "en": "Letras: each release gets its own adaptation"
+          },
+          "parallax": false
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Entregas",
+            "en": "Deliverables"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Formatos",
+                "en": "Formats"
+              },
+              "value": {
+                "pt": "Desktop e mobile",
+                "en": "Desktop & mobile"
+              }
+            },
+            {
+              "label": {
+                "pt": "Ferramentas",
+                "en": "Tools"
+              },
+              "value": {
+                "pt": "ChatGPT, Magnific e Photoshop",
+                "en": "ChatGPT, Magnific & Photoshop"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "pantanal-aromas",
+      "title": "Pantanal Aromas",
+      "year": 2026,
+      "client": {
+        "pt": "Pantanal Aromas · via Válore",
+        "en": "Pantanal Aromas · via Válore"
+      },
+      "role": {
+        "pt": "Design gráfico, social media e fotografia de produto",
+        "en": "Graphic design, social media & product photography"
+      },
+      "tags": {
+        "pt": "Design Gráfico, Social Media, Fotografia",
+        "en": "Graphic Design, Social Media, Photography"
+      },
+      "summary": {
+        "pt": "Design gráfico, social media e fotografia de produto para uma marca de perfumaria.",
+        "en": "Graphic design, social media and product photography for a fragrance brand."
+      },
+      "cover": "",
+      "coverRatio": "16/9",
+      "tone": "#C9A46A",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Perfumaria de ambientes atendida como freelancer — social media, conteúdo educativo, impressos e material comercial.",
+            "en": "A home fragrance brand I serve as a freelancer — social media, educational content, printed matter and sales collateral."
+          }
+        },
+        {
+          "type": "full",
+          "img": "",
+          "ratio": "16/8",
+          "parallax": true
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Conteúdo educativo",
+            "en": "Educational content"
+          },
+          "text": {
+            "pt": "Explique como o conteúdo ajuda o cliente a entender e escolher as fragrâncias.",
+            "en": "Explain how the content helps customers understand and choose fragrances."
+          }
+        },
+        {
+          "type": "pair",
+          "imgs": [
+            {
+              "img": "",
+              "ratio": "4/5"
+            },
+            {
+              "img": "",
+              "ratio": "1/1"
+            }
+          ]
+        },
+        {
+          "type": "split",
+          "img": "",
+          "ratio": "4/5",
+          "side": "right",
+          "title": {
+            "pt": "Impressos e material comercial",
+            "en": "Print & sales collateral"
+          },
+          "text": {
+            "pt": "Catálogos, etiquetas e peças de ponto de venda.",
+            "en": "Catalogues, labels and point-of-sale pieces."
+          }
+        },
+        {
+          "type": "trio",
+          "imgs": [
+            {
+              "img": "",
+              "ratio": "3/4"
+            },
+            {
+              "img": "",
+              "ratio": "3/4"
+            },
+            {
+              "img": "",
+              "ratio": "3/4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "rebranding-vizzela",
+      "title": "Rebranding Vizzela",
+      "year": 2025,
+      "client": {
+        "pt": "Projeto acadêmico · UFMG",
+        "en": "Academic project · UFMG"
+      },
+      "role": {
+        "pt": "Direção de fotografia, mockups e embalagens",
+        "en": "Photo direction, mockups & packaging"
+      },
+      "tags": {
+        "pt": "Rebranding, Embalagem, Direção de arte",
+        "en": "Rebranding, Packaging, Art direction"
+      },
+      "summary": {
+        "pt": "Rebranding acadêmico de uma marca de cosméticos.",
+        "en": "Academic rebranding of a cosmetics brand."
+      },
+      "cover": "",
+      "coverRatio": "16/9",
+      "tone": "#D98BA8",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Rebranding acadêmico de uma marca de cosméticos, desenvolvido em trio na disciplina de Design Gráfico da Universidade Federal de Minas Gerais.",
+            "en": "An academic rebranding of a cosmetics brand, developed as a trio in the Graphic Design course at the Federal University of Minas Gerais."
+          }
+        },
+        {
+          "type": "full",
+          "img": "",
+          "ratio": "16/8",
+          "parallax": true
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Créditos",
+            "en": "Credits"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Direção de fotografia, mockups e embalagens",
+                "en": "Photo direction, mockups & packaging"
+              },
+              "value": {
+                "pt": "Matheus Lopes",
+                "en": "Matheus Lopes"
+              }
+            },
+            {
+              "label": {
+                "pt": "Interfaces digitais",
+                "en": "Digital interfaces"
+              },
+              "value": {
+                "pt": "Mikaela Aleixo",
+                "en": "Mikaela Aleixo"
+              }
+            },
+            {
+              "label": {
+                "pt": "Identidade verbal, logo e paleta",
+                "en": "Verbal identity, logo & palette"
+              },
+              "value": {
+                "pt": "Matheus Lopes, Mikaela Aleixo e Rafaela Rodríguez",
+                "en": "Matheus Lopes, Mikaela Aleixo & Rafaela Rodríguez"
+              }
+            }
+          ]
+        },
+        {
+          "type": "pair",
+          "imgs": [
+            {
+              "img": "",
+              "ratio": "1/1"
+            },
+            {
+              "img": "",
+              "ratio": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "palette",
+          "colors": [
+            {
+              "hex": "#1B1B1F",
+              "name": "Ink"
+            },
+            {
+              "hex": "#D98BA8",
+              "name": "Rosa"
+            },
+            {
+              "hex": "#F4EEE8",
+              "name": "Off"
+            }
+          ]
+        },
+        {
+          "type": "split",
+          "img": "",
+          "ratio": "4/5",
+          "side": "right",
+          "title": {
+            "pt": "Embalagens",
+            "en": "Packaging"
+          },
+          "text": {
+            "pt": "Descreva o sistema de embalagens e as decisões de materiais.",
+            "en": "Describe the packaging system and material choices."
+          }
+        },
+        {
+          "type": "trio",
+          "imgs": [
+            {
+              "img": "",
+              "ratio": "3/4"
+            },
+            {
+              "img": "",
+              "ratio": "3/4"
+            },
+            {
+              "img": "",
+              "ratio": "3/4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cafe-soseki",
+      "title": "Café Sōseki",
+      "year": 2025,
+      "client": {
+        "pt": "TCC · Design UFMG",
+        "en": "Graduation project · Design UFMG"
+      },
+      "role": {
+        "pt": "Projeto gráfico e diagramação do menu",
+        "en": "Menu design & layout"
+      },
+      "tags": {
+        "pt": "Editorial, Impresso, Identidade",
+        "en": "Editorial, Print, Identity"
+      },
+      "summary": {
+        "pt": "Menu conceito para uma cafeteria inspirada em Eu Sou um Gato.",
+        "en": "Concept menu for a café inspired by I Am a Cat."
+      },
+      "cover": "",
+      "coverRatio": "16/9",
+      "tone": "#7A8B6F",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Uma cafeteria inspirada no romance Eu Sou um Gato, de Natsume Sōseki. O projeto é o desenvolvimento gráfico e a diagramação de um menu personalizado.",
+            "en": "A café inspired by Natsume Sōseki's novel I Am a Cat. The project covers the graphic development and layout of a bespoke menu."
+          }
+        },
+        {
+          "type": "full",
+          "img": "",
+          "ratio": "16/8",
+          "parallax": true
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Proposta",
+            "en": "Concept"
+          },
+          "text": {
+            "pt": "A proposta gastronômica mescla elementos tradicionais japoneses com sabores que remetem a aconchego e simplicidade, criando uma experiência alinhada à identidade do espaço.",
+            "en": "The food concept blends traditional Japanese elements with flavours of comfort and simplicity, creating an experience aligned with the space's identity."
+          }
+        },
+        {
+          "type": "pair",
+          "imgs": [
+            {
+              "img": "",
+              "ratio": "4/5"
+            },
+            {
+              "img": "",
+              "ratio": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Ficha de produção",
+            "en": "Production specs"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Impressão",
+                "en": "Printing"
+              },
+              "value": {
+                "pt": "Offset",
+                "en": "Offset"
+              }
+            },
+            {
+              "label": {
+                "pt": "Menu",
+                "en": "Menu"
+              },
+              "value": {
+                "pt": "Conqueror Connoisseur Neutral 100% algodão, 160 g/m²",
+                "en": "Conqueror Connoisseur Neutral 100% cotton, 160 gsm"
+              }
+            },
+            {
+              "label": {
+                "pt": "Luva",
+                "en": "Sleeve"
+              },
+              "value": {
+                "pt": "Curious Collection Translucents Clear, 112 g/m²",
+                "en": "Curious Collection Translucents Clear, 112 gsm"
+              }
+            },
+            {
+              "label": {
+                "pt": "Orientação",
+                "en": "Advisor"
+              },
+              "value": {
+                "pt": "Emerson Eller",
+                "en": "Emerson Eller"
+              }
+            }
+          ]
+        },
+        {
+          "type": "split",
+          "img": "",
+          "ratio": "3/4",
+          "side": "right",
+          "title": {
+            "pt": "Papel e acabamento",
+            "en": "Paper & finish"
+          },
+          "text": {
+            "pt": "A luva translúcida revela o menu aos poucos, como uma página virando.",
+            "en": "The translucent sleeve reveals the menu gradually, like a turning page."
+          }
+        },
+        {
+          "type": "trio",
+          "imgs": [
+            {
+              "img": "",
+              "ratio": "3/4"
+            },
+            {
+              "img": "",
+              "ratio": "3/4"
+            },
+            {
+              "img": "",
+              "ratio": "3/4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "palco-mp3",
+      "title": "Palco MP3",
+      "year": 2024,
+      "client": {
+        "pt": "Palco MP3 · Studio Sol",
+        "en": "Palco MP3 · Studio Sol"
+      },
+      "role": {
+        "pt": "Design gráfico",
+        "en": "Graphic design"
+      },
+      "tags": {
+        "pt": "Design Gráfico, Social Media",
+        "en": "Graphic Design, Social Media"
+      },
+      "summary": {
+        "pt": "Seleção de peças gráficas criadas para o Palco MP3 durante o estágio.",
+        "en": "Graphic pieces made for Palco MP3 during my internship."
+      },
+      "cover": "",
+      "coverRatio": "16/9",
+      "tone": "#6FA8DC",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Seleção de peças gráficas criadas para o Palco MP3 durante o estágio na Studio Sol: posts, carrosséis e peças de mídia paga.",
+            "en": "A selection of graphic pieces made for Palco MP3 during my internship at Studio Sol: posts, carousels and paid-media pieces."
+          }
+        },
+        {
+          "type": "trio",
+          "imgs": [
+            {
+              "img": "",
+              "ratio": "1/1"
+            },
+            {
+              "img": "",
+              "ratio": "1/1"
+            },
+            {
+              "img": "",
+              "ratio": "1/1"
+            }
+          ]
+        },
+        {
+          "type": "full",
+          "img": "",
+          "ratio": "16/8",
+          "parallax": true
+        },
+        {
+          "type": "pair",
+          "imgs": [
+            {
+              "img": "",
+              "ratio": "4/5"
+            },
+            {
+              "img": "",
+              "ratio": "4/5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "design-vernacular",
+      "title": "Design Vernacular",
+      "year": 2023,
+      "client": {
+        "pt": "Projeto acadêmico · UFMG",
+        "en": "Academic project · UFMG"
+      },
+      "role": {
+        "pt": "Pesquisa e diagramação",
+        "en": "Research & layout"
+      },
+      "tags": {
+        "pt": "Editorial, Apresentação",
+        "en": "Editorial, Presentation"
+      },
+      "summary": {
+        "pt": "Apresentação sobre design vernacular, diagramada como peça editorial.",
+        "en": "A presentation on vernacular design, laid out as an editorial piece."
+      },
+      "cover": "",
+      "coverRatio": "16/9",
+      "tone": "#E07A5F",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Apresentação sobre design vernacular, diagramada como peça editorial.",
+            "en": "A presentation on vernacular design, laid out as an editorial piece."
+          }
+        },
+        {
+          "type": "full",
+          "img": "",
+          "ratio": "16/8",
+          "caption": {
+            "pt": "",
+            "en": ""
+          },
+          "parallax": true
+        },
+        {
+          "type": "pair",
+          "imgs": [
+            {
+              "img": "",
+              "ratio": "4/5"
+            },
+            {
+              "img": "",
+              "ratio": "4/5"
+            }
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fanzine-nothing-but-thieves",
+      "title": "Fanzine — Nothing but Thieves",
+      "year": 2022,
+      "client": {
+        "pt": "Projeto pessoal",
+        "en": "Personal project"
+      },
+      "role": {
+        "pt": "Design editorial e pôster",
+        "en": "Editorial & poster design"
+      },
+      "tags": {
+        "pt": "Editorial, Pôster, Impresso",
+        "en": "Editorial, Poster, Print"
+      },
+      "summary": {
+        "pt": "Fanzine e pôsteres dedicados à banda.",
+        "en": "A fanzine and posters dedicated to the band."
+      },
+      "cover": "",
+      "coverRatio": "16/9",
+      "tone": "#B23A48",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Fanzine e pôsteres dedicados ao Nothing but Thieves. Conte aqui o que motivou o projeto.",
+            "en": "A fanzine and posters dedicated to Nothing but Thieves. Tell what sparked the project."
+          }
+        },
+        {
+          "type": "full",
+          "img": "",
+          "ratio": "16/8",
+          "parallax": true
+        },
+        {
+          "type": "pair",
+          "imgs": [
+            {
+              "img": "",
+              "ratio": "3/4"
+            },
+            {
+              "img": "",
+              "ratio": "3/4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lorem-ipsum",
+      "title": "Lorem Ipsum",
+      "year": 2022,
+      "client": {
+        "pt": "Projeto acadêmico · UFES",
+        "en": "Academic project · UFES"
+      },
+      "role": {
+        "pt": "Tipografia e diagramação",
+        "en": "Typography & layout"
+      },
+      "tags": {
+        "pt": "Tipografia, Editorial",
+        "en": "Typography, Editorial"
+      },
+      "summary": {
+        "pt": "Exercício editorial de tipografia e diagramação.",
+        "en": "An editorial exercise in typography and layout."
+      },
+      "cover": "",
+      "coverRatio": "16/9",
+      "tone": "#9AA5B1",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Exercício editorial de tipografia e diagramação.",
+            "en": "An editorial exercise in typography and layout."
+          }
+        },
+        {
+          "type": "full",
+          "img": "",
+          "ratio": "16/8",
+          "caption": {
+            "pt": "",
+            "en": ""
+          },
+          "parallax": true
+        },
+        {
+          "type": "pair",
+          "imgs": [
+            {
+              "img": "",
+              "ratio": "4/5"
+            },
+            {
+              "img": "",
+              "ratio": "4/5"
+            }
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
+          }
+        }
+      ]
+    }
+  ]
+}

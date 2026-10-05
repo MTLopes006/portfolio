@@ -1,0 +1,198 @@
+{
+  "intro": {
+    "pt": "Fotografo shows e produtos como segunda frente de trabalho. No palco, o interesse é o mesmo do design: registrar a cena independente de perto.",
+    "en": "I photograph shows and products as a second line of work. On stage, the interest is the same as in design: documenting the independent scene up close."
+  },
+  "series": [
+    {
+      "slug": "blessthefall",
+      "band": "Blessthefall",
+      "kind": {
+        "pt": "Show ao vivo",
+        "en": "Live show"
+      },
+      "venue": "",
+      "year": "",
+      "desc": {
+        "pt": "Cobertura para a Liberation, produtora oficial do evento.",
+        "en": "Coverage for Liberation, the event's official promoter."
+      },
+      "photos": [
+        {
+          "src": "",
+          "ratio": "3/2",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "2/3",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "4/5",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "3/2",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "2/3",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "slug": "memphis-may-fire",
+      "band": "Memphis May Fire",
+      "kind": {
+        "pt": "Show ao vivo",
+        "en": "Live show"
+      },
+      "venue": "",
+      "year": "",
+      "desc": {
+        "pt": "Cobertura para a Liberation, produtora oficial do evento.",
+        "en": "Coverage for Liberation, the event's official promoter."
+      },
+      "photos": [
+        {
+          "src": "",
+          "ratio": "2/3",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "3/2",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "4/5",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "2/3",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "slug": "chao-de-taco",
+      "band": "Chão de Taco",
+      "kind": {
+        "pt": "",
+        "en": ""
+      },
+      "venue": "",
+      "year": "",
+      "desc": {
+        "pt": "",
+        "en": ""
+      },
+      "photos": [
+        {
+          "src": "",
+          "ratio": "4/5",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "3/2",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "2/3",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "4/5",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "slug": "bad-luv",
+      "band": "Bad Luv",
+      "kind": {
+        "pt": "",
+        "en": ""
+      },
+      "venue": "",
+      "year": "",
+      "desc": {
+        "pt": "",
+        "en": ""
+      },
+      "photos": [
+        {
+          "src": "",
+          "ratio": "3/2",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "4/5",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "2/3",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "3/2",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "slug": "julieta-social",
+      "band": "Julieta Social",
+      "kind": {
+        "pt": "",
+        "en": ""
+      },
+      "venue": "",
+      "year": "",
+      "desc": {
+        "pt": "",
+        "en": ""
+      },
+      "photos": [
+        {
+          "src": "",
+          "ratio": "2/3",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "4/5",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "3/2",
+          "caption": ""
+        },
+        {
+          "src": "",
+          "ratio": "4/5",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "process": {
+    "pt": "Seleção e edição no Lightroom, em lote por cena, com exportações para cada destino (rede social, imprensa, cliente) e prazos combinados com a banda ou o evento.",
+    "en": "Culling and editing in Lightroom, batched by scene, with exports for each destination (social, press, client) and deadlines agreed with the band or event."
+  },
+  "gear": "Sony A7 III · Tamron 28-75mm f/2.8 · Godox TT685II"
+}

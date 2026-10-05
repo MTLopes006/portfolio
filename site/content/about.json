@@ -1,0 +1,207 @@
+{
+  "bio": {
+    "pt": "Sou Matheus Lopes, designer gráfico de 24 anos, nascido em São Paulo e radicado em Belo Horizonte. Trabalho como Visual Designer na Studio Sol, onde crio a comunicação do Cifra Club, do Palco MP3 e do Letras.mus.br.\n\nComecei no design pela via da comunicação visual e fui encontrando nela um jeito de ficar perto do que mais me interessa: música, cultura independente e a forma como as pessoas se reúnem em torno delas.\n\nDesde 2023 estou na Studio Sol. Entrei como estagiário e fui efetivado em 2025. Ali aprendi a transformar briefings em campanhas que se desdobram em dezenas de formatos, a manter três identidades distintas coerentes entre si e a trabalhar lado a lado com marketing, conteúdo, produto e tecnologia, em plataformas usadas por milhões de pessoas que tocam, cantam e escutam música.\n\nFora da Studio Sol, atendo agências de marketing digital em projetos de tecnologia, arquitetura, mercado imobiliário e beleza, do criativo de mídia paga ao expositor de ponto de venda. Também fotografo shows e produtos, o que me mantém perto das bandas e do palco.\n\nNa universidade, meu interesse é a cultura independente vista pelo design. Publiquei um artigo sobre acessibilidade em jogos digitais e hoje desenvolvo meu TCC sobre a cena DIY e os festivais de banda de casinha. Quero seguir pesquisando no mestrado, sem deixar a prática profissional.",
+    "en": "I'm Matheus Lopes, a 24-year-old graphic designer, born in São Paulo and based in Belo Horizonte. I work as a Visual Designer at Studio Sol, creating communication for Cifra Club, Palco MP3 and Letras.mus.br.\n\nI came to design through visual communication and found in it a way to stay close to what interests me most: music, independent culture and the way people gather around them.\n\nI've been at Studio Sol since 2023. I joined as an intern and was hired full-time in 2025. There I learned to turn briefs into campaigns that unfold into dozens of formats, to keep three distinct identities consistent with each other, and to work side by side with marketing, content, product and engineering on platforms used by millions of people who play, sing and listen to music.\n\nOutside Studio Sol, I work with digital marketing agencies on tech, architecture, real estate and beauty projects, from paid-media creatives to point-of-sale displays. I also photograph shows and products, which keeps me close to bands and the stage.\n\nAt university, my interest is independent culture seen through design. I published a paper on accessibility in video games and I'm now writing my thesis on the DIY scene and Belo Horizonte's house-show festivals. I want to keep researching in a master's degree without leaving practice behind."
+  },
+  "lists": [
+    {
+      "title": {
+        "pt": "Fora do expediente",
+        "en": "Off the clock"
+      },
+      "items": "Toco violão e guitarra\nFrequento shows com regularidade\nLeio poesia e jornalismo musical independente\nEstudo capas de disco"
+    },
+    {
+      "title": {
+        "pt": "Ferramentas",
+        "en": "Tools"
+      },
+      "items": "Figma\nPhotoshop, Illustrator, InDesign\nAfter Effects e Rive (básico)\nLightroom\nMagnific, Google Flow"
+    },
+    {
+      "title": {
+        "pt": "Equipamento",
+        "en": "Gear"
+      },
+      "items": "Sony A7 III\nTamron 28-75mm f/2.8\nFlash Godox TT685II\nBastão de LED RGB\nLED Ulanzi VL49"
+    },
+    {
+      "title": {
+        "pt": "Idiomas",
+        "en": "Languages"
+      },
+      "items": "Português — nativo\nInglês — avançado"
+    }
+  ],
+  "experience": [
+    {
+      "period": {
+        "pt": "10/2025 — atual",
+        "en": "10/2025 — now"
+      },
+      "role": {
+        "pt": "Visual Designer",
+        "en": "Visual Designer"
+      },
+      "place": "Studio Sol · Cifra Club, Palco MP3, Letras.mus.br"
+    },
+    {
+      "period": {
+        "pt": "04/2024 — atual",
+        "en": "04/2024 — now"
+      },
+      "role": {
+        "pt": "Designer gráfico freelancer",
+        "en": "Freelance graphic designer"
+      },
+      "place": "Allma Marketing e Válore"
+    },
+    {
+      "period": {
+        "pt": "11/2023 — 10/2025",
+        "en": "11/2023 — 10/2025"
+      },
+      "role": {
+        "pt": "Estagiário de Visual Design",
+        "en": "Visual Design intern"
+      },
+      "place": "Studio Sol"
+    },
+    {
+      "period": {
+        "pt": "06/2023 — 11/2023",
+        "en": "06/2023 — 11/2023"
+      },
+      "role": {
+        "pt": "Designer Projetista",
+        "en": "Product Designer"
+      },
+      "place": "TRAMA JR. · empresa júnior da UFMG"
+    },
+    {
+      "period": {
+        "pt": "10/2022 — 03/2023",
+        "en": "10/2022 — 03/2023"
+      },
+      "role": {
+        "pt": "Monitor",
+        "en": "Teaching assistant"
+      },
+      "place": "Laboratório de Impressão 3D · UFES"
+    }
+  ],
+  "education": [
+    {
+      "period": {
+        "pt": "04/2023 — 07/2027 (previsão)",
+        "en": "04/2023 — 07/2027 (expected)"
+      },
+      "role": {
+        "pt": "Bacharelado em Design",
+        "en": "BA in Design"
+      },
+      "place": "UFMG · Escola de Arquitetura"
+    },
+    {
+      "period": {
+        "pt": "11/2021 — 02/2023",
+        "en": "11/2021 — 02/2023"
+      },
+      "role": {
+        "pt": "Bacharelado em Design (transferido)",
+        "en": "BA in Design (transferred)"
+      },
+      "place": "UFES · Vitória"
+    }
+  ],
+  "research": [
+    {
+      "kind": {
+        "pt": "TCC · em andamento",
+        "en": "Thesis · in progress"
+      },
+      "title": {
+        "pt": "A cena DIY e os festivais de banda de casinha",
+        "en": "The DIY scene and house-show festivals"
+      },
+      "text": {
+        "pt": "Projeto-ensaio que trata a cena musical DIY e os festivais de banda de casinha de Belo Horizonte como objeto de análise, usando as lentes do design gráfico e do design de serviços para entender como esses eventos se organizam, se comunicam e criam comunidade.",
+        "en": "An essay-project that takes Belo Horizonte's DIY music scene and house-show festivals as its subject, using graphic design and service design to understand how these events organise, communicate and build community."
+      },
+      "link": ""
+    },
+    {
+      "kind": {
+        "pt": "Artigo · AEC&D, UFAM, 2023",
+        "en": "Paper · AEC&D, UFAM, 2023"
+      },
+      "title": {
+        "pt": "Acessibilidade em jogos digitais: análise de recursos para pessoas com baixa visão",
+        "en": "Accessibility in video games: features for people with low vision"
+      },
+      "text": {
+        "pt": "Com Larissa Zanetti Alves, Pedro Henrique Cristofori Simões Izelle e Priscilla Maria Cardoso Garone, a partir da pesquisa no LaDIJ/UFES. O artigo compara recursos de acessibilidade visual em jogos e identifica uma tendência crescente de adotá-los, como modos para daltonismo, alto contraste, HUD personalizável e elementos ampliados.",
+        "en": "With Larissa Zanetti Alves, Pedro Henrique Cristofori Simões Izelle and Priscilla Maria Cardoso Garone, from research at LaDIJ/UFES. The paper compares visual accessibility features in games and finds a growing trend toward them, such as colour-blind modes, high contrast, customisable HUDs and enlarged elements."
+      },
+      "link": ""
+    }
+  ],
+  "timeline": [
+    {
+      "period": "2027",
+      "text": {
+        "pt": "Conclusão do Design na UFMG (previsão); mestrado e volta a São Paulo",
+        "en": "Design degree at UFMG (expected); master's and move back to São Paulo"
+      }
+    },
+    {
+      "period": "2026",
+      "text": {
+        "pt": "TCC sobre a cena DIY; primeiros trabalhos como fotógrafo de shows",
+        "en": "Thesis on the DIY scene; first jobs as a live music photographer"
+      }
+    },
+    {
+      "period": "10/2025",
+      "text": {
+        "pt": "Efetivado como Visual Designer na Studio Sol",
+        "en": "Hired as Visual Designer at Studio Sol"
+      }
+    },
+    {
+      "period": "04/2024",
+      "text": {
+        "pt": "Início dos freelances para Allma Marketing e Válore",
+        "en": "Freelance work begins for Allma Marketing and Válore"
+      }
+    },
+    {
+      "period": "11/2023",
+      "text": {
+        "pt": "Entrada na Studio Sol como estagiário",
+        "en": "Joins Studio Sol as an intern"
+      }
+    },
+    {
+      "period": "07/2023",
+      "text": {
+        "pt": "Artigo publicado na AEC&D (UFAM)",
+        "en": "Paper published in AEC&D (UFAM)"
+      }
+    },
+    {
+      "period": "04/2023",
+      "text": {
+        "pt": "Transferência para a UFMG, em Belo Horizonte",
+        "en": "Transfer to UFMG, Belo Horizonte"
+      }
+    },
+    {
+      "period": "11/2021",
+      "text": {
+        "pt": "Ingresso em Design na UFES, em Vitória",
+        "en": "Starts Design at UFES, Vitória"
+      }
+    }
+  ]
+}
