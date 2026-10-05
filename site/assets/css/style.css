@@ -301,7 +301,7 @@ main > .section:last-child { padding-bottom: 0; }
 .proj-body > .b-lead + .b-text { margin-top: clamp(56px, 6vw, 88px); }
 @media (max-width: 760px) { .proj-meta { grid-template-columns: 1fr 1fr; } }
 .b-lead { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
-.b-lead p { grid-column: 6 / 13; margin: 0; max-width: 24em; font-family: var(--f-display); font-weight: 500; font-size: clamp(20px, 2.46vw, 34px); line-height: 1.15; letter-spacing: -.025em; }
+.b-lead p { grid-column: 1 / 11; margin: 0; max-width: 30em; font-family: var(--f-display); font-weight: 500; font-size: clamp(20px, 2.46vw, 34px); line-height: 1.15; letter-spacing: -.025em; }
 .b-text { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
 .b-text h3, .b-split h3 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(20px, 1.84vw, 26px); letter-spacing: -.02em; }
 .b-text h3 { grid-column: 1 / 5; }
@@ -327,7 +327,7 @@ main > .section:last-child { padding-bottom: 0; }
 .b-palette .sw { padding: 16px; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; }
 .b-type .spec { display: grid; grid-template-columns: 1fr 2fr; gap: var(--gutter); align-items: end; padding: 32px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .b-type .big { font-size: clamp(46px, 8.64vw, 144px); line-height: .85; letter-spacing: -.04em; font-weight: 700; }
-.b-quote blockquote { margin: 0 auto; max-width: 18em; text-align: center; font-family: var(--f-display); font-weight: 700; font-stretch: 108%; font-size: clamp(22px, 3.31vw, 49px); line-height: 1.02; letter-spacing: -.04em; }
+.b-quote blockquote { margin: 0; max-width: 18em; text-align: left; font-family: var(--f-display); font-weight: 700; font-stretch: 108%; font-size: clamp(22px, 3.31vw, 49px); line-height: 1.02; letter-spacing: -.04em; }
 .b-quote blockquote::before { content: "“"; display: block; color: var(--magenta); }
 .b-specs { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
 .b-specs h3 { grid-column: 1 / 5; margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(20px, 1.84vw, 26px); letter-spacing: -.02em; }
@@ -365,7 +365,7 @@ main > .section:last-child { padding-bottom: 0; }
 .series { padding: clamp(72px, 10vw, 140px) 0 0; scroll-margin-top: 72px; }
 .series-head { display: grid; grid-template-columns: 56px 1fr auto; gap: var(--gutter); align-items: end; padding-bottom: 22px; margin-bottom: 48px; border-bottom: 2px solid var(--ink); }
 .series-head h2 { margin: 0; font-family: var(--f-display); font-weight: 800; font-stretch: 112%; font-size: clamp(29px, 4.32vw, 69px); line-height: .9; letter-spacing: -.045em; }
-.series-meta { text-align: right; color: var(--muted); }
+.series-meta { color: var(--muted); }
 .series-desc { max-width: 32em; margin: -24px 0 40px 0; color: var(--muted); }
 .photo-flow { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); align-items: start; }
 .photo-flow figure { margin: 0; cursor: zoom-in; }
@@ -620,13 +620,14 @@ main > .section.sheet:last-child { padding-bottom: clamp(80px, 10vw, 140px); }
 }
 
 /* índice de projetos agrupado por categoria */
-.cat-head { display: flex; align-items: baseline; gap: 16px; padding: clamp(48px, 7vw, 96px) 0 0; }
+.cat-head { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); align-items: baseline; padding: clamp(48px, 7vw, 96px) 0 0; }
+.cat-head > div { grid-column: 1 / 6; display: flex; gap: 16px; align-items: baseline; }
 .cat-head:first-child { padding-top: 0; }
 .cat-head h2 { margin: 0; font-family: var(--f-display); font-weight: 700; font-stretch: 105%; font-size: clamp(20px, 1.9vw, 28px); letter-spacing: -.02em; }
 .cat-head .label { color: var(--magenta-ink); }
-.cat-head p { margin: 0 0 0 auto; color: var(--muted); max-width: 30em; text-align: right; font-size: 15px; }
+.cat-head p { grid-column: 6 / 13; margin: 0; color: var(--muted); max-width: 34em; font-size: 15px; }
 .track-group { padding: 22px 0 8px; color: var(--magenta-ink); border-bottom: 1px solid var(--rule); }
-@media (max-width: 760px) { .cat-head { flex-wrap: wrap; } .cat-head p { margin: 4px 0 0; text-align: left; } }
+@media (max-width: 760px) { .cat-head > div, .cat-head p { grid-column: 1 / -1; } .cat-head p { margin-top: 6px; } }
 
 /* Lado B: series preview in the left column */
 .sideb-preview { display: block; transform: rotate(-1.2deg); transition: transform .5s var(--ease); }
@@ -637,7 +638,8 @@ main > .section.sheet:last-child { padding-bottom: clamp(80px, 10vw, 140px); }
 .sideb-preview .cap { display: flex; gap: 14px; align-items: baseline; margin-top: 16px; }
 .sideb-preview .cap .n { color: var(--magenta-ink); }
 .sideb-preview .cap .t { color: var(--ink); }
-.sideb-preview .cap .m { margin-left: auto; color: var(--muted); text-align: right; }
+.sideb-preview .cap { flex-wrap: wrap; }
+.sideb-preview .cap .m { flex-basis: 100%; color: var(--muted); }
 @media (max-width: 860px) { .sideb-preview { display: none; } }
 
 /* image blocks snap to the grid: full (1–12), wide (2–11) or content (6–12) */
@@ -647,18 +649,32 @@ main > .section.sheet:last-child { padding-bottom: clamp(80px, 10vw, 140px); }
 .b-grid.span-content > figure { grid-column: 6 / 13; }
 .b-grid.span-center > figure { grid-column: 3 / 11; }
 
-/* house ads: real-size spec board, animated WebP */
+/* house ads: rows of equal height, frames swapped by one shared clock */
 .b-ads { margin: 0; }
-.b-ads .board { display: flex; flex-direction: column; gap: clamp(20px, 2.4vw, 36px); padding: clamp(20px, 3vw, 44px); background: var(--sheet); position: relative; }
-.b-ads .col-a { display: flex; flex-direction: column; gap: clamp(20px, 2.4vw, 36px); }
-.b-ads .col-b { display: flex; flex-wrap: wrap; gap: clamp(20px, 2.4vw, 36px); align-items: flex-end; }
-.b-ads .ad { margin: 0; max-width: 100%; }
-.b-ads .ad img { display: block; width: 100%; height: auto; box-shadow: 0 12px 26px -16px rgba(0,0,0,.4); }
-.b-ads .ad figcaption { display: flex; justify-content: space-between; gap: 16px; margin-top: 8px; color: var(--muted); }
-.b-ads .ad figcaption b { color: var(--ink); font-weight: 600; }
+.b-ads .board { display: flex; flex-direction: column; gap: clamp(12px, 1.4vw, 20px); padding: clamp(18px, 2.6vw, 40px); background: var(--sheet); position: relative; }
+.b-ads .ads-row { display: flex; gap: clamp(12px, 1.4vw, 20px); align-items: flex-start; }
+.b-ads .ad { position: relative; min-width: 0; box-shadow: 0 12px 26px -16px rgba(0,0,0,.4); }
+.b-ads .ad img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.b-ads .ad img.f2 { opacity: 0; }
+html.ad-f2 .b-ads .ad img.f1 { opacity: 0; }
+html.ad-f2 .b-ads .ad img.f2 { opacity: 1; }
 .b-ads > figcaption { margin-top: 12px; color: var(--muted); }
+
+/* text beside the images it introduces: copy 1–4, images 6–12 */
+.b-side { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); align-items: start; }
+.b-side .copy { grid-column: 1 / 5; position: sticky; top: 96px; }
+.b-side .copy h3 { margin: 0 0 14px; font-family: var(--f-display); font-weight: 700; font-size: clamp(20px, 1.84vw, 26px); letter-spacing: -.02em; }
+.b-side .copy p { margin: 0; font-size: clamp(16px, 1.2vw, 17px); }
+.b-side > figure { grid-column: 6 / 13; margin: 0; min-width: 0; }
+
 @media (max-width: 760px) {
+  .b-side .copy, .b-side > figure { grid-column: 1 / -1; position: static; }
+  .b-ads .ads-row { flex-direction: column; }
+  .b-ads .ad { width: 100%; flex: none !important; }
   .b-lead p, .b-grid > figure, .b-grid.span-wide > figure, .b-grid.span-content > figure, .b-grid.span-center > figure, .b-pair .grid > :nth-child(n) { grid-column: 1 / -1; }
   .b-specs dt, .b-specs dd { grid-column: 1 / -1; }
-  .b-ads .col-b { flex-direction: column; align-items: flex-start; }
 }
+
+/* typography: balanced headings, no widows/orphans in running text */
+h1, h2, h3, .sec-title, .page-title, .proj-title, .sp-title, .foot-cta, .about-teaser p, .b-lead p, .b-quote blockquote { text-wrap: balance; }
+p, dd, li, figcaption, .series-row .sub { text-wrap: pretty; orphans: 2; widows: 2; }

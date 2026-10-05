@@ -212,9 +212,9 @@ Campos de cada projeto:
 | Título + texto | Título à esquerda e texto em coluna à direita |
 | Imagem sangrada | Imagem de ponta a ponta da tela, com legenda e parallax opcionais |
 | Imagem + texto | Imagem com marcas de corte e texto ao lado (escolha o lado da imagem) |
-| **Linhas de imagens** | Cada linha mostra as imagens lado a lado **com a mesma altura e sem corte**: a largura de cada uma segue a proporção. Ideal para desktop + mobile, posts e telas de app. Aceita rótulo por linha e largura do bloco em % |
+| **Linhas de imagens** | Cada linha mostra as imagens lado a lado **com a mesma altura e sem corte**: a largura de cada uma segue a proporção. Ideal para desktop + mobile, posts e telas de app. Com **Texto ao lado** preenchido, o texto fica nas colunas 1–4 e as imagens na 6–12 |
 | **Colunas de imagens** | Colagem em colunas de larguras relativas, com imagens empilhadas (como uma prancha do Figma) |
-| **House ads / banners** | Prancha de mídia em **tamanho real** (nunca ampliada): formatos largos empilhados e os pequenos lado a lado, com a medida de cada um. Aceita **GIF ou WebP animado**. Informe largura e altura em px |
+| **House ads / banners** | Prancha de mídia: 970×250 ao lado do 300×250 e, embaixo, o 970×90 (e o banner mobile, se houver), cada linha com a mesma altura. Envie **os 2 quadros** de cada formato: todos os banners da página trocam de quadro juntos, a cada 2 s. Informe a largura e a altura originais em px |
 | Duas imagens | Par assimétrico (a segunda fica mais alta) |
 | Três imagens | Trio escalonado em alturas diferentes |
 | Paleta de cores | Faixas de cor com nome e código hex |
@@ -223,13 +223,14 @@ Campos de cada projeto:
 | Ficha técnica / créditos | Lista rótulo → valor (entregas, papéis, ferramentas, créditos) |
 
 **Grade e ritmo:** as páginas seguem uma grade de 12 colunas. Títulos de seção ficam nas colunas 1–4;
-textos, abertura e fichas começam na coluna 6. Linhas e colunas de imagens têm o campo **Encaixe
-na grade**: largura total, larga (2–11), centro (3–10) ou coluna de texto (6–12).
+textos, abertura e fichas começam na coluna 6. Blocos de imagem ocupam a largura total ou, com *Texto ao lado*, a coluna 6–12, sem faixas vazias
+nas laterais. Os textos são alinhados à esquerda e o site evita viúvas e órfãs automaticamente
+(palavras curtas como "de", "e" e "com" ficam presas à palavra seguinte).
 Um *Título + texto* fica colado às imagens que vêm logo depois dele (ele as apresenta); entre
 seções o espaço é maior. Abra com *Texto de abertura* e feche com *Ficha técnica*.
 
-**GIFs de dois quadros:** se tiver os quadros separados (ex.: `970x250_1.png` e `970x250_2.png`),
-peça ao Claude para montar o WebP animado. Ele fica até 4× menor que um GIF e com cores fiéis.
+**Banners de dois quadros:** use os quadros separados (ex.: `970x250_1.png` e `970x250_2.png`) no
+bloco *House ads*. O site alterna todos ao mesmo tempo, a cada 2 segundos.
 
 ### 5.3 Fotografia (Lado B)
 

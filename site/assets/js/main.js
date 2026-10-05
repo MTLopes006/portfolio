@@ -244,7 +244,7 @@
           <p class="page-lead">${ui("work.lead")}</p>
         </header>
         ${grouped().map((g) => `
-        <div class="cat-head" data-reveal><span class="label">${pad(CATS.indexOf(g.c) + 1)}</span><h2>${ui("cat." + g.c)}</h2><p>${ui("cat." + g.c + ".d")}</p></div>
+        <div class="cat-head" data-reveal><div><span class="label">${pad(CATS.indexOf(g.c) + 1)}</span><h2>${ui("cat." + g.c)}</h2></div><p>${ui("cat." + g.c + ".d")}</p></div>
         <ol class="series-index">
           ${g.items.map(({ p, i }) => `
             <li class="series-row" style="--acc:${esc(p.tone || "var(--magenta)")}">
@@ -281,15 +281,23 @@
       case "pair": return `<figure class="b-pair" style="margin:0"><div class="grid">${imgs.map((m, i) => `<div ${stagger(i, 0.12)}>${media(m.img, m.ratio)}</div>`).join("")}</div>${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
       case "rows": {
         const num = (r) => { const [w, h] = String(r || "1/1").split("/").map(Number); return (w / (h || 1)) || 1; };
-        return onGrid(b, `<figure class="b-rows" style="margin:0">${(b.rows || []).map((row) => `${t(row.label) ? `<div class="row-label label">${esc(t(row.label))}</div>` : ""}<div class="row${(row.imgs || []).length > 2 ? " many" : ""}">${(row.imgs || []).map((m, i) => `<div style="flex:${num(m.ratio).toFixed(4)} 1 0" ${stagger(i, 0.1)}>${media(m.img, m.ratio, null, { round: m.round, frame: m.frame })}</div>`).join("")}</div>`).join("")}${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`);
+        const fig = `<figure class="b-rows" style="margin:0">${(b.rows || []).map((row) => `${t(row.label) ? `<div class="row-label label">${esc(t(row.label))}</div>` : ""}<div class="row${(row.imgs || []).length > 2 ? " many" : ""}">${(row.imgs || []).map((m, i) => `<div style="flex:${num(m.ratio).toFixed(4)} 1 0" ${stagger(i, 0.1)}>${media(m.img, m.ratio, null, { round: m.round, frame: m.frame })}</div>`).join("")}</div>`).join("")}${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
+        if (t(b.sideTitle) || t(b.sideText)) return `<section class="b-side"><div class="copy" data-reveal>${t(b.sideTitle) ? `<h3>${esc(t(b.sideTitle))}</h3>` : ""}${t(b.sideText) ? `<p>${esc(t(b.sideText))}</p>` : ""}</div>${fig}</section>`;
+        return onGrid(b, fig);
       }
       case "columns":
         return onGrid(b, `<figure class="b-cols" style="margin:0"><div class="cols">${(b.cols || []).map((c, k) => `<div class="col" style="flex:${Number(c.width) || 1} 1 0">${(c.imgs || []).map((m, i) => `<div ${stagger(k + i, 0.08)}>${media(m.img, m.ratio, null, { round: m.round, frame: m.frame })}</div>`).join("")}</div>`).join("")}</div>${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`);
       case "ads": {
-        // house ads shown at their real pixel size (never upscaled); animated WebP/GIF play on their own
-        const ad = (a) => `<figure class="ad" style="width:${Number(a.w) || 300}px"><img src="${esc(a.img)}" width="${Number(a.w) || 300}" height="${Number(a.h) || 250}" alt="${esc(a.w)}×${esc(a.h)}" loading="lazy"><figcaption class="label"><b>${esc(a.w)} × ${esc(a.h)}</b><span>${esc(t(a.label) || "")}</span></figcaption></figure>`;
-        const items = b.items || [], wide = items.filter((a) => Number(a.w) >= 600), small = items.filter((a) => Number(a.w) < 600);
-        return `<figure class="b-ads" data-reveal><div class="board crop"><div class="col-a">${wide.map(ad).join("")}</div><div class="col-b">${small.map(ad).join("")}</div></div>${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
+        const items = b.items || [];
+        const W = (a) => Number(a.w) || 300, H = (a) => Number(a.h) || 250;
+        const big = items.filter((a) => W(a) >= 600 && H(a) >= 150), lead = items.filter((a) => W(a) >= 600 && H(a) < 150);
+        const rect = items.filter((a) => W(a) < 600 && H(a) >= 150), mob = items.filter((a) => W(a) < 600 && H(a) < 150);
+        const ad = (a) => {
+          const fr = (a.frames && a.frames.length ? a.frames : [a.img]).filter(Boolean);
+          return `<div class="ad" style="flex:${(W(a) / H(a)).toFixed(4)} 1 0;aspect-ratio:${W(a)}/${H(a)}">${fr.map((src, k) => `<img class="f${k + 1}" src="${esc(src)}" alt="${k ? "" : esc(`${W(a)}×${H(a)}`)}" loading="lazy">`).join("")}</div>`;
+        };
+        const row = (arr) => arr.length ? `<div class="ads-row">${arr.map(ad).join("")}</div>` : "";
+        return `<figure class="b-ads" data-reveal><div class="board crop">${row([...big, ...rect])}${row([...lead, ...mob])}</div>${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
       }
       case "trio": return `<section class="b-trio">${imgs.map((m, i) => `<div ${stagger(i, 0.12)}>${media(m.img, m.ratio)}</div>`).join("")}</section>`;
       case "palette": return `<section class="b-palette" data-reveal><div class="blk-label label">${ui("project.palette")}</div><div class="row">${(b.colors || []).map((c) => `<div class="sw label" style="background:${esc(c.hex)};color:${contrast(c.hex)}"><span>${esc(c.name)}</span><span>${esc(c.hex)}</span></div>`).join("")}</div></section>`;
@@ -514,11 +522,32 @@
   });
   addEventListener("pageshow", () => document.body.classList.remove("is-leaving"));
 
+  /* ---------- house ads: one clock, every ad swaps frames together (2 s each) ---------- */
+  let adClock = 0;
+  function startAdClock() {
+    if (adClock || !document.querySelector(".b-ads .ad img.f2") || reduce) return;
+    adClock = setInterval(() => root.classList.toggle("ad-f2"), 2000);
+  }
+
+  /* ---------- typography: keep short words with the next one, last word with the previous ---------- */
+  const SHORT = /(^|\s)(a|à|ao|as|às|e|é|o|os|um|uma|de|da|das|do|dos|em|na|nas|no|nos|com|por|para|que|se|of|the|an|and|to|in|on|at|by|for|with|is)\s/gi;
+  function noWidows(scope) {
+    scope.querySelectorAll("p, h1, h2, h3, dd, li, figcaption, blockquote, .sub").forEach((el) => {
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach((n) => { n.nodeValue = n.nodeValue.replace(SHORT, (m, pre, w) => `${pre}${w}\u00a0`); });
+      const last = nodes.reverse().find((n) => /\S\s+\S+\s*$/.test(n.nodeValue));
+      if (last && el.textContent.length > 28) last.nodeValue = last.nodeValue.replace(/\s+(\S{1,14})\s*$/, "\u00a0$1");
+    });
+  }
+
   /* ---------- boot ---------- */
   function renderAll() {
     renderChrome();
     ({ home: renderHome, project: renderProject, work: renderWork, photo: renderPhoto, series: renderSeries, about: renderAbout, contact: renderContact })[page]?.();
     initEffects();
+    noWidows(document.querySelector("main")); noWidows(document.querySelector(".site-footer"));
+    startAdClock();
   }
   renderAll();
   requestAnimationFrame(() => document.body.classList.remove("is-entering"));

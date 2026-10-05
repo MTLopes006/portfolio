@@ -561,6 +561,48 @@
                       "widget": "object",
                       "fields": [
                         {
+                          "name": "sideTitle",
+                          "label": "Texto ao lado — título (opcional; imagens vão para a coluna da direita)",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "string",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "string",
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
+                          "name": "sideText",
+                          "label": "Texto ao lado — texto",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "text",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "text",
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
                           "name": "rows",
                           "label": "Linhas",
                           "widget": "list",
@@ -645,15 +687,6 @@
                           ]
                         },
                         {
-                          "name": "width",
-                          "label": "Largura do bloco em % (vazio = largura total)",
-                          "widget": "number",
-                          "required": false,
-                          "value_type": "int",
-                          "min": 30,
-                          "max": 100
-                        },
-                        {
                           "name": "span",
                           "label": "Encaixe na grade",
                           "widget": "select",
@@ -662,14 +695,6 @@
                             {
                               "label": "Largura total",
                               "value": "full"
-                            },
-                            {
-                              "label": "Larga (colunas 2–11)",
-                              "value": "wide"
-                            },
-                            {
-                              "label": "Centro (colunas 3–10)",
-                              "value": "center"
                             },
                             {
                               "label": "Coluna de texto (6–12)",
@@ -755,15 +780,6 @@
                           ]
                         },
                         {
-                          "name": "width",
-                          "label": "Largura do bloco em % (vazio = largura total)",
-                          "widget": "number",
-                          "required": false,
-                          "value_type": "int",
-                          "min": 30,
-                          "max": 100
-                        },
-                        {
                           "name": "span",
                           "label": "Encaixe na grade",
                           "widget": "select",
@@ -772,14 +788,6 @@
                             {
                               "label": "Largura total",
                               "value": "full"
-                            },
-                            {
-                              "label": "Larga (colunas 2–11)",
-                              "value": "wide"
-                            },
-                            {
-                              "label": "Centro (colunas 3–10)",
-                              "value": "center"
                             },
                             {
                               "label": "Coluna de texto (6–12)",
@@ -1019,7 +1027,7 @@
                     },
                     {
                       "name": "ads",
-                      "label": "House ads / banners em tamanho real (GIF ou WebP animado)",
+                      "label": "House ads / banners (quadros sincronizados a cada 2 s)",
                       "widget": "object",
                       "fields": [
                         {
@@ -1028,43 +1036,27 @@
                           "widget": "list",
                           "fields": [
                             {
-                              "name": "img",
-                              "label": "Arquivo (GIF ou WebP animado, PNG/JPG estático)",
-                              "widget": "image",
-                              "choose_url": false
+                              "name": "frames",
+                              "label": "Quadros (1 ou 2 imagens, na ordem)",
+                              "widget": "list",
+                              "field": {
+                                "name": "src",
+                                "label": "Quadro",
+                                "widget": "image",
+                                "choose_url": false
+                              }
                             },
                             {
                               "name": "w",
-                              "label": "Largura em px (ex.: 970)",
+                              "label": "Largura original em px (ex.: 970)",
                               "widget": "number",
                               "value_type": "int"
                             },
                             {
                               "name": "h",
-                              "label": "Altura em px (ex.: 250)",
+                              "label": "Altura original em px (ex.: 250)",
                               "widget": "number",
                               "value_type": "int"
-                            },
-                            {
-                              "name": "label",
-                              "label": "Nome do formato (ex.: Billboard)",
-                              "widget": "object",
-                              "collapsed": false,
-                              "required": false,
-                              "fields": [
-                                {
-                                  "name": "pt",
-                                  "label": "Português",
-                                  "widget": "string",
-                                  "required": false
-                                },
-                                {
-                                  "name": "en",
-                                  "label": "English",
-                                  "widget": "string",
-                                  "required": false
-                                }
-                              ]
                             }
                           ]
                         },

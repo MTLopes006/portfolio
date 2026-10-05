@@ -95,17 +95,6 @@
           "parallax": false
         },
         {
-          "type": "text",
-          "title": {
-            "pt": "In-app e interstitials",
-            "en": "In-app & interstitials"
-          },
-          "text": {
-            "pt": "No app, a campanha aparece como interstitial com chamada para o curso de violão gospel do Cifra Club Academy, em três variações de cena e de texto.",
-            "en": "In the app, the campaign appears as an interstitial pointing to Cifra Club Academy's gospel guitar course, in three variations of scene and copy."
-          }
-        },
-        {
           "type": "rows",
           "rows": [
             {
@@ -133,7 +122,14 @@
             "pt": "Interstitials no app · 3 variações",
             "en": "App interstitials · 3 variations"
           },
-          "width": 78
+          "sideTitle": {
+            "pt": "In-app e interstitials",
+            "en": "In-app & interstitials"
+          },
+          "sideText": {
+            "pt": "No app, a campanha aparece como interstitial com chamada para o curso de violão gospel do Cifra Club Academy, em três variações de cena e de texto.",
+            "en": "In the app, the campaign appears as an interstitial pointing to Cifra Club Academy's gospel guitar course, in three variations of scene and copy."
+          }
         },
         {
           "type": "specs",
@@ -291,64 +287,42 @@
             "en": "Multi-format house ads"
           },
           "text": {
-            "pt": "Peças veiculadas no site do Letras, em espaços de mídia display, para quem chega pelas letras de K-pop. Quatro formatos (970×250, 970×90, 300×250 e 320×100), animados em dois quadros: a provocação \"Canta em coreano mas não entende nada?\" e o convite \"Aprenda com os cursos do Letras\", com o botão Comece agora.",
-            "en": "Placements on the Letras website, in display ad slots, for people arriving through K-pop lyrics. Four formats (970×250, 970×90, 300×250 and 320×100), animated in two frames: the hook \"You sing in Korean but don't understand a thing?\" and the invite \"Learn with Letras courses\", with a Start now button."
+            "pt": "Peças veiculadas no site do Letras, em espaços de mídia display, para quem chega pelas letras de K-pop. Três formatos (970×250, 300×250 e 970×90), animados em dois quadros: a provocação \"Canta em coreano mas não entende nada?\" e o convite \"Aprenda com os cursos do Letras\", com o botão Comece agora.",
+            "en": "Placements on the Letras website, in display ad slots, for people arriving through K-pop lyrics. Three formats (970×250, 300×250 and 970×90), animated in two frames: the hook \"You sing in Korean but don't understand a thing?\" and the invite \"Learn with Letras courses\", with a Start now button."
           }
         },
         {
           "type": "ads",
           "items": [
             {
-              "img": "assets/img/projetos/semana-do-coreano/houseads/970x250.webp",
+              "frames": [
+                "assets/img/projetos/semana-do-coreano/houseads/970x250_1.webp",
+                "assets/img/projetos/semana-do-coreano/houseads/970x250_2.webp"
+              ],
               "w": 970,
-              "h": 250,
-              "label": {
-                "pt": "Billboard",
-                "en": "Billboard"
-              }
+              "h": 250
             },
             {
-              "img": "assets/img/projetos/semana-do-coreano/houseads/970x90.webp",
-              "w": 970,
-              "h": 90,
-              "label": {
-                "pt": "Super leaderboard",
-                "en": "Super leaderboard"
-              }
-            },
-            {
-              "img": "assets/img/projetos/semana-do-coreano/houseads/300x250.webp",
+              "frames": [
+                "assets/img/projetos/semana-do-coreano/houseads/300x250_1.webp",
+                "assets/img/projetos/semana-do-coreano/houseads/300x250_2.webp"
+              ],
               "w": 300,
-              "h": 250,
-              "label": {
-                "pt": "Retângulo médio",
-                "en": "Medium rectangle"
-              }
+              "h": 250
             },
             {
-              "img": "assets/img/projetos/semana-do-coreano/houseads/320x100.webp",
-              "w": 320,
-              "h": 100,
-              "label": {
-                "pt": "Mobile banner grande",
-                "en": "Large mobile banner"
-              }
+              "frames": [
+                "assets/img/projetos/semana-do-coreano/houseads/970x90_1.webp",
+                "assets/img/projetos/semana-do-coreano/houseads/970x90_2.webp"
+              ],
+              "w": 970,
+              "h": 90
             }
           ],
           "caption": {
-            "pt": "House ads animados · tamanho real",
-            "en": "Animated house ads · actual size"
+            "pt": "House ads animados em dois quadros",
+            "en": "House ads animated in two frames"
           }
-        },
-        {
-          "type": "full",
-          "img": "assets/img/projetos/semana-do-coreano/destaque-desktop.jpg",
-          "ratio": "2400/725",
-          "caption": {
-            "pt": "Destaque no site · desktop",
-            "en": "Site highlight · desktop"
-          },
-          "parallax": false
         },
         {
           "type": "specs",
@@ -450,45 +424,41 @@
           "type": "ads",
           "items": [
             {
-              "img": "assets/img/projetos/download-do-app/houseads/970x250.webp",
+              "frames": [
+                "assets/img/projetos/download-do-app/houseads/970x250_1.webp",
+                "assets/img/projetos/download-do-app/houseads/970x250_2.webp"
+              ],
               "w": 970,
-              "h": 250,
-              "label": {
-                "pt": "Billboard",
-                "en": "Billboard"
-              }
+              "h": 250
             },
             {
-              "img": "assets/img/projetos/download-do-app/houseads/970x90.webp",
-              "w": 970,
-              "h": 90,
-              "label": {
-                "pt": "Super leaderboard",
-                "en": "Super leaderboard"
-              }
-            },
-            {
-              "img": "assets/img/projetos/download-do-app/houseads/300x250.webp",
+              "frames": [
+                "assets/img/projetos/download-do-app/houseads/300x250_1.webp",
+                "assets/img/projetos/download-do-app/houseads/300x250_2.webp"
+              ],
               "w": 300,
-              "h": 250,
-              "label": {
-                "pt": "Retângulo médio",
-                "en": "Medium rectangle"
-              }
+              "h": 250
             },
             {
-              "img": "assets/img/projetos/download-do-app/houseads/320x50.webp",
+              "frames": [
+                "assets/img/projetos/download-do-app/houseads/970x90_1.webp",
+                "assets/img/projetos/download-do-app/houseads/970x90_2.webp"
+              ],
+              "w": 970,
+              "h": 90
+            },
+            {
+              "frames": [
+                "assets/img/projetos/download-do-app/houseads/320x50_1.webp",
+                "assets/img/projetos/download-do-app/houseads/320x50_2.webp"
+              ],
               "w": 320,
-              "h": 50,
-              "label": {
-                "pt": "Mobile banner",
-                "en": "Mobile banner"
-              }
+              "h": 50
             }
           ],
           "caption": {
-            "pt": "House ads animados · tamanho real · campanha iOS",
-            "en": "Animated house ads · actual size · iOS campaign"
+            "pt": "House ads animados em dois quadros",
+            "en": "House ads animated in two frames"
           }
         },
         {
@@ -894,15 +864,11 @@
             "pt": "Cartão A6 e rótulo dos presentes",
             "en": "A6 card and gift label"
           },
-          "width": 62
-        },
-        {
-          "type": "text",
-          "title": {
+          "sideTitle": {
             "pt": "Liderança é como café",
             "en": "Leadership is like coffee"
           },
-          "text": {
+          "sideText": {
             "pt": "Quanto mais se compartilha, mais rica fica a experiência. A metáfora guiou as ilustrações: mesa, vitrola, café passado e folhas de outono, em tons de papel kraft. Ilustração com apoio do Recraft (IA) e arte-final no Figma.",
             "en": "The more it's shared, the richer the experience. The metaphor guided the illustrations: a table, a record player, fresh coffee and autumn leaves in kraft-paper tones. Illustration assisted by Recraft (AI), artwork finished in Figma."
           }
@@ -1037,8 +1003,7 @@
           "caption": {
             "pt": "Convite da talk, abertura de inscrições e agradecimento aos palestrantes",
             "en": "Talk invite, sign-up call and thank-you note to speakers"
-          },
-          "width": 92
+          }
         },
         {
           "type": "specs",
