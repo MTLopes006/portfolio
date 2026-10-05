@@ -195,6 +195,7 @@ Campos de cada projeto:
 | Título | Nome na lista e na página |
 | Endereço | Parte da URL (`projeto.html?p=endereco`). Só minúsculas, números e hífen. **Evite mudar** depois de publicado, porque links antigos param de funcionar |
 | Ano | Aparece na lista. Vazio mostra "—" |
+| Categoria | Agrupa os projetos na home e no índice: Campanhas, Produto e site, Comunicação interna, Clientes e freelas, Acadêmico e pessoal |
 | Cliente, Papel, Disciplinas | Ficha no topo da página. Disciplinas separadas por vírgula |
 | Resumo curto | Aparece no índice de projetos, abaixo do título |
 | Capa | Imagem que aparece ao passar o mouse na lista e no topo da página |
@@ -210,6 +211,8 @@ Campos de cada projeto:
 | Título + texto | Título à esquerda e texto em coluna à direita |
 | Imagem sangrada | Imagem de ponta a ponta da tela, com legenda e parallax opcionais |
 | Imagem + texto | Imagem com marcas de corte e texto ao lado (escolha o lado da imagem) |
+| **Linhas de imagens** | Cada linha mostra as imagens lado a lado **com a mesma altura e sem corte**: a largura de cada uma segue a proporção. Ideal para desktop + mobile, posts e telas de app. Aceita rótulo por linha e largura do bloco em % |
+| **Colunas de imagens** | Colagem em colunas de larguras relativas, com imagens empilhadas (como uma prancha do Figma) |
 | Duas imagens | Par assimétrico (a segunda fica mais alta) |
 | Três imagens | Trio escalonado em alturas diferentes |
 | Paleta de cores | Faixas de cor com nome e código hex |
@@ -287,7 +290,8 @@ Toda publicação vira um commit no GitHub. Para voltar atrás, abra o repositó
   longa 2000 px, Qualidade 80*. Do Figma/Photoshop: *Export JPG 80%*.
   Para comprimir: https://squoosh.app.
 - **Nome dos arquivos:** sem espaços nem acentos (`bad-luv-01.jpg`, não `Bad Luv (1).JPG`).
-- **Proporção:** a imagem é cortada para caber na proporção escolhida no painel.
+- **Proporção:** escreva o tamanho real da imagem em pixels, como `largura/altura` (ex.: `2400/1350`).
+  Assim ela aparece inteira, sem corte. Se a proporção não bater com a imagem, ela é cortada para caber.
 
 | Proporção | Uso típico |
 |---|---|
@@ -299,8 +303,8 @@ Toda publicação vira um commit no GitHub. Para voltar atrás, abra o repositó
 | 2/3 | Fotos verticais de câmera |
 | 9/16 | Stories e telas de celular |
 
-> Pelo chat ou à mão, dá para usar a proporção exata da imagem (ex.: `"1768/434"`).
-> O painel oferece só a lista acima, e editar ali troca pela opção escolhida.
+> Imagens exportadas do Figma ficam em `site/assets/img/projetos/<projeto>/`, já com a proporção
+> original registrada no conteúdo.
 
 ---
 

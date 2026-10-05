@@ -206,6 +206,34 @@
                   "required": false
                 },
                 {
+                  "name": "category",
+                  "label": "Categoria",
+                  "widget": "select",
+                  "default": "campanhas",
+                  "options": [
+                    {
+                      "label": "Campanhas",
+                      "value": "campanhas"
+                    },
+                    {
+                      "label": "Produto e site",
+                      "value": "produto"
+                    },
+                    {
+                      "label": "Comunicação interna",
+                      "value": "interna"
+                    },
+                    {
+                      "label": "Clientes e freelas",
+                      "value": "clientes"
+                    },
+                    {
+                      "label": "Acadêmico e pessoal",
+                      "value": "academico"
+                    }
+                  ]
+                },
+                {
                   "name": "client",
                   "label": "Cliente",
                   "widget": "object",
@@ -298,21 +326,11 @@
                 },
                 {
                   "name": "coverRatio",
-                  "label": "Proporção",
-                  "widget": "select",
-                  "options": [
-                    "16/9",
-                    "16/8",
-                    "4/3",
-                    "3/2",
-                    "1/1",
-                    "4/5",
-                    "3/4",
-                    "2/3",
-                    "9/16"
-                  ],
+                  "label": "Proporção da capa (largura/altura em pixels)",
+                  "widget": "string",
                   "default": "16/9",
-                  "required": false
+                  "required": false,
+                  "hint": "Ex.: 2400/1350"
                 },
                 {
                   "name": "tone",
@@ -417,20 +435,8 @@
                         },
                         {
                           "name": "ratio",
-                          "label": "Proporção",
-                          "widget": "select",
-                          "options": [
-                            "16/9",
-                            "16/8",
-                            "4/3",
-                            "3/2",
-                            "1/1",
-                            "4/5",
-                            "3/4",
-                            "2/3",
-                            "9/16"
-                          ],
-                          "default": "16/8",
+                          "label": "Proporção (largura/altura em pixels)",
+                          "widget": "string",
                           "required": false
                         },
                         {
@@ -477,20 +483,8 @@
                         },
                         {
                           "name": "ratio",
-                          "label": "Proporção",
-                          "widget": "select",
-                          "options": [
-                            "16/9",
-                            "16/8",
-                            "4/3",
-                            "3/2",
-                            "1/1",
-                            "4/5",
-                            "3/4",
-                            "2/3",
-                            "9/16"
-                          ],
-                          "default": "4/5",
+                          "label": "Proporção (largura/altura em pixels)",
+                          "widget": "string",
                           "required": false
                         },
                         {
@@ -554,6 +548,192 @@
                       ]
                     },
                     {
+                      "name": "rows",
+                      "label": "Linhas de imagens (mesma altura, sem corte)",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "rows",
+                          "label": "Linhas",
+                          "widget": "list",
+                          "fields": [
+                            {
+                              "name": "label",
+                              "label": "Rótulo da linha (opcional)",
+                              "widget": "object",
+                              "collapsed": false,
+                              "required": false,
+                              "fields": [
+                                {
+                                  "name": "pt",
+                                  "label": "Português",
+                                  "widget": "string",
+                                  "required": false
+                                },
+                                {
+                                  "name": "en",
+                                  "label": "English",
+                                  "widget": "string",
+                                  "required": false
+                                }
+                              ]
+                            },
+                            {
+                              "name": "imgs",
+                              "label": "Imagens da linha",
+                              "widget": "list",
+                              "fields": [
+                                {
+                                  "name": "img",
+                                  "label": "Imagem",
+                                  "widget": "image",
+                                  "required": false,
+                                  "choose_url": false
+                                },
+                                {
+                                  "name": "ratio",
+                                  "label": "Proporção (largura/altura em pixels, ex.: 1920/1080)",
+                                  "widget": "string",
+                                  "required": false,
+                                  "hint": "Use o tamanho real da imagem para ela não ser cortada."
+                                },
+                                {
+                                  "name": "round",
+                                  "label": "Cantos arredondados",
+                                  "widget": "boolean",
+                                  "default": false,
+                                  "required": false
+                                },
+                                {
+                                  "name": "frame",
+                                  "label": "Sombra de papel (impressos e posts)",
+                                  "widget": "boolean",
+                                  "default": false,
+                                  "required": false
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "caption",
+                          "label": "Legenda",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "string",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "string",
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
+                          "name": "width",
+                          "label": "Largura do bloco em % (vazio = largura total)",
+                          "widget": "number",
+                          "required": false,
+                          "value_type": "int",
+                          "min": 30,
+                          "max": 100
+                        }
+                      ]
+                    },
+                    {
+                      "name": "columns",
+                      "label": "Colunas de imagens (colagem)",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "cols",
+                          "label": "Colunas",
+                          "widget": "list",
+                          "fields": [
+                            {
+                              "name": "width",
+                              "label": "Largura relativa da coluna",
+                              "widget": "number",
+                              "default": 1,
+                              "value_type": "float"
+                            },
+                            {
+                              "name": "imgs",
+                              "label": "Imagens (de cima para baixo)",
+                              "widget": "list",
+                              "fields": [
+                                {
+                                  "name": "img",
+                                  "label": "Imagem",
+                                  "widget": "image",
+                                  "required": false,
+                                  "choose_url": false
+                                },
+                                {
+                                  "name": "ratio",
+                                  "label": "Proporção (largura/altura em pixels, ex.: 1920/1080)",
+                                  "widget": "string",
+                                  "required": false,
+                                  "hint": "Use o tamanho real da imagem para ela não ser cortada."
+                                },
+                                {
+                                  "name": "round",
+                                  "label": "Cantos arredondados",
+                                  "widget": "boolean",
+                                  "default": false,
+                                  "required": false
+                                },
+                                {
+                                  "name": "frame",
+                                  "label": "Sombra de papel (impressos e posts)",
+                                  "widget": "boolean",
+                                  "default": false,
+                                  "required": false
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "caption",
+                          "label": "Legenda",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "string",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "string",
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
+                          "name": "width",
+                          "label": "Largura do bloco em % (vazio = largura total)",
+                          "widget": "number",
+                          "required": false,
+                          "value_type": "int",
+                          "min": 30,
+                          "max": 100
+                        }
+                      ]
+                    },
+                    {
                       "name": "pair",
                       "label": "Duas imagens",
                       "widget": "object",
@@ -572,20 +752,8 @@
                             },
                             {
                               "name": "ratio",
-                              "label": "Proporção",
-                              "widget": "select",
-                              "options": [
-                                "16/9",
-                                "16/8",
-                                "4/3",
-                                "3/2",
-                                "1/1",
-                                "4/5",
-                                "3/4",
-                                "2/3",
-                                "9/16"
-                              ],
-                              "default": "4/3",
+                              "label": "Proporção (largura/altura em pixels)",
+                              "widget": "string",
                               "required": false
                             }
                           ]
@@ -632,20 +800,8 @@
                             },
                             {
                               "name": "ratio",
-                              "label": "Proporção",
-                              "widget": "select",
-                              "options": [
-                                "16/9",
-                                "16/8",
-                                "4/3",
-                                "3/2",
-                                "1/1",
-                                "4/5",
-                                "3/4",
-                                "2/3",
-                                "9/16"
-                              ],
-                              "default": "4/3",
+                              "label": "Proporção (largura/altura em pixels)",
+                              "widget": "string",
                               "required": false
                             }
                           ]

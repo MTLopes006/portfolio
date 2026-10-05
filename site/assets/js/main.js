@@ -40,10 +40,12 @@
     const inner = src
       ? `<img src="${esc(src)}" alt="${esc(o.alt || label || "")}" loading="lazy">`
       : `<div class="ph${o.tone ? " tone" : ""}"${o.tone ? ` style="--tone:${esc(o.tone)}"` : ""}><span>${esc(label || ui("placeholder"))} · ${esc(r.replace("/", ":"))}</span></div>`;
-    const m = `<div class="media"${o.parallax ? ' data-parallax="0.1"' : ""}${o.reveal === false ? "" : ' data-reveal="print"'} style="aspect-ratio:${r}">${inner}</div>`;
+    const m = `<div class="media${o.round ? " round" : ""}${o.frame ? " frame" : ""}"${o.parallax ? ' data-parallax="0.1"' : ""}${o.reveal === false ? "" : ' data-reveal="print"'} style="aspect-ratio:${r}">${inner}</div>`;
     return o.crop ? `<div class="crop">${m}</div>` : m;
   };
   const stagger = (i, step = 0.06) => `style="--d:${(i * step).toFixed(2)}s"`;
+  const CATS = ["campanhas", "produto", "interna", "clientes", "academico", "outros"];
+  const grouped = () => CATS.map((c) => ({ c, items: projects.map((p, i) => ({ p, i })).filter(({ p }) => (p.category || "outros") === c) })).filter((g) => g.items.length);
 
   /* ---------- header / footer ---------- */
   const nav = [["index.html#projetos", "nav.work", "home"], ["index.html#fotografia", "nav.photo", "photo"], ["sobre.html", "nav.about", "about"], ["contato.html", "nav.contact", "contact"]];
@@ -135,15 +137,15 @@
           </div>
           <div class="track-head label"><span>Nº</span><span>${ui("work.col.title")}</span><span>${ui("work.col.tags")}</span><span style="text-align:right">${ui("work.col.year")}</span><span></span></div>
           <ol class="tracklist">
-            ${projects.map((p, i) => `
-              <li class="track" data-reveal ${stagger(i)}><a href="projeto.html?p=${esc(p.slug)}" data-cover="${esc(p.cover || "")}" data-tone="${esc(p.tone || "")}" data-title="${esc(p.title)}">
+            ${grouped().map((g) => `<li class="track-group label" data-reveal>${ui("cat." + g.c)}</li>` + g.items.map(({ p, i }) => `
+              <li class="track" data-reveal ${stagger(i % 6)}><a href="projeto.html?p=${esc(p.slug)}" data-cover="${esc(p.cover || "")}" data-tone="${esc(p.tone || "")}" data-title="${esc(p.title)}">
                 <span class="track-no">${pad(i + 1)}</span>
                 <span class="track-title">${esc(p.title)}</span>
                 <span class="track-tags">${esc(t(p.tags))}</span>
                 <span class="track-year">${esc(p.year || "—")}</span>
                 <span class="track-arr" aria-hidden="true">→</span>
-                <span class="track-thumb">${media(p.cover, "16/9", p.title, { tone: p.tone, reveal: false })}</span>
-              </a></li>`).join("")}
+                <span class="track-thumb">${media(p.cover, p.coverRatio || "16/9", p.title, { tone: p.tone, reveal: false })}</span>
+              </a></li>`).join("")).join("")}
           </ol>
         </div>
       </section>
@@ -209,11 +211,13 @@
           <h1 class="page-title riso" data-text="${esc(ui("work.title"))}">${ui("work.title")}</h1>
           <p class="page-lead">${ui("work.lead")}</p>
         </header>
+        ${grouped().map((g) => `
+        <div class="cat-head" data-reveal><span class="label">${pad(CATS.indexOf(g.c) + 1)}</span><h2>${ui("cat." + g.c)}</h2><p>${ui("cat." + g.c + ".d")}</p></div>
         <ol class="series-index">
-          ${projects.map((p, i) => `
+          ${g.items.map(({ p, i }) => `
             <li class="series-row" style="--acc:${esc(p.tone || "var(--magenta)")}">
               <a href="projeto.html?p=${esc(p.slug)}">
-                <div class="cover crop"><span class="tape" aria-hidden="true"></span>${media(p.cover, "3/2", p.title, { tone: p.tone })}</div>
+                <div class="cover crop"><span class="tape" aria-hidden="true"></span>${media(p.cover, p.coverRatio || "3/2", p.title, { tone: p.tone })}</div>
                 <div class="info" data-reveal>
                   <span class="n label">${pad(i + 1)} / ${pad(projects.length)}</span>
                   <h2>${esc(p.title)}</h2>
@@ -223,7 +227,7 @@
                 </div>
               </a>
             </li>`).join("")}
-        </ol>
+        </ol>`).join("")}
       </div>`;
   }
 
@@ -240,6 +244,12 @@
       case "full": return `<figure class="b-full" style="margin-top:0;margin-bottom:0">${media(b.img, b.ratio || "16/9", null, { parallax: b.parallax })}${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
       case "split": return `<section class="b-split ${b.side === "right" ? "right" : ""}"><div class="media-wrap">${media(b.img, b.ratio, null, { crop: true })}</div><div class="copy" data-reveal><h3>${esc(t(b.title))}</h3><p>${esc(t(b.text))}</p></div></section>`;
       case "pair": return `<figure class="b-pair" style="margin:0"><div class="grid">${imgs.map((m, i) => `<div ${stagger(i, 0.12)}>${media(m.img, m.ratio)}</div>`).join("")}</div>${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
+      case "rows": {
+        const num = (r) => { const [w, h] = String(r || "1/1").split("/").map(Number); return (w / (h || 1)) || 1; };
+        return `<figure class="b-rows" style="margin:0 auto;${b.width ? `width:min(100%, ${Number(b.width)}%)` : ""}">${(b.rows || []).map((row) => `${t(row.label) ? `<div class="row-label label">${esc(t(row.label))}</div>` : ""}<div class="row${(row.imgs || []).length > 2 ? " many" : ""}">${(row.imgs || []).map((m, i) => `<div style="flex:${num(m.ratio).toFixed(4)} 1 0" ${stagger(i, 0.1)}>${media(m.img, m.ratio, null, { round: m.round, frame: m.frame })}</div>`).join("")}</div>`).join("")}${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
+      }
+      case "columns":
+        return `<figure class="b-cols" style="margin:0 auto;${b.width ? `width:min(100%, ${Number(b.width)}%)` : ""}"><div class="cols">${(b.cols || []).map((c, k) => `<div class="col" style="flex:${Number(c.width) || 1} 1 0">${(c.imgs || []).map((m, i) => `<div ${stagger(k + i, 0.08)}>${media(m.img, m.ratio, null, { round: m.round, frame: m.frame })}</div>`).join("")}</div>`).join("")}</div>${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
       case "trio": return `<section class="b-trio">${imgs.map((m, i) => `<div ${stagger(i, 0.12)}>${media(m.img, m.ratio)}</div>`).join("")}</section>`;
       case "palette": return `<section class="b-palette" data-reveal><div class="blk-label label">${ui("project.palette")}</div><div class="row">${(b.colors || []).map((c) => `<div class="sw label" style="background:${esc(c.hex)};color:${contrast(c.hex)}"><span>${esc(c.name)}</span><span>${esc(c.hex)}</span></div>`).join("")}</div></section>`;
       case "type": return `<section class="b-type" data-reveal><div class="blk-label label">${ui("project.type")}</div><div class="spec"><div><div style="font-family:'${esc(b.family)}';font-size:28px;font-weight:600">${esc(b.family)}</div><div class="label muted" style="margin-top:6px">${esc(b.weights || "")}</div></div><div class="big" style="font-family:'${esc(b.family)}'">${esc(b.sample || "Aa")}</div></div></section>`;
@@ -266,7 +276,7 @@
           <div><dt class="label">${ui("project.role")}</dt><dd>${esc(t(p.role))}</dd></div>
           <div><dt class="label">${ui("project.tags")}</dt><dd>${esc(t(p.tags))}</dd></div>
         </dl>
-        <div class="proj-cover">${media(p.cover, p.coverRatio || "16/9", "Capa / Cover", { parallax: true, tone: p.tone, crop: true })}</div>
+        <div class="proj-cover">${media(p.cover, p.coverRatio || "16/9", "Capa / Cover", { tone: p.tone, crop: true })}</div>
         <div class="proj-body">${(p.blocks || []).map(renderBlock).join("")}</div>
         <nav class="next-proj" data-reveal><a href="projeto.html?p=${esc(next.slug)}"><div><div class="label muted" style="margin-bottom:14px">${ui("project.next")} — ${pad(((idx + 1) % projects.length) + 1)}</div><div class="t">${esc(next.title)}</div></div><span class="arr">→</span></a></nav>
       </article>`;

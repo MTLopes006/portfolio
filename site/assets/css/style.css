@@ -585,3 +585,34 @@ main > .section.sheet:last-child { padding-bottom: clamp(80px, 10vw, 140px); }
 .lightbox .lb-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 56px; height: 56px; color: #F5F3EE; font-size: 28px; }
 .lightbox .lb-prev { left: 12px; } .lightbox .lb-next { right: 12px; }
 .lightbox .lb-count { position: absolute; bottom: 18px; left: 0; right: 0; text-align: center; color: #bdb8b0; }
+
+/* ==========================================================================
+   Blocos que respeitam a proporção original das imagens
+   ========================================================================== */
+/* linhas: cada imagem com a mesma altura, largura proporcional à sua proporção */
+.b-rows { display: flex; flex-direction: column; gap: clamp(10px, 1.2vw, 18px); }
+.b-rows .row { display: flex; gap: clamp(10px, 1.2vw, 18px); align-items: flex-start; }
+.b-rows .row > div { min-width: 0; }
+.b-rows figcaption, .b-cols figcaption { margin-top: 12px; color: var(--muted); }
+.b-rows .row-label { margin: clamp(14px, 2vw, 26px) 0 2px; color: var(--muted); }
+.b-rows .row-label:first-child { margin-top: 0; }
+/* colunas: imagens empilhadas em colunas de larguras proporcionais (colagem) */
+.b-cols .cols { display: flex; gap: clamp(10px, 1.2vw, 18px); align-items: flex-start; }
+.b-cols .col { display: flex; flex-direction: column; gap: clamp(10px, 1.2vw, 18px); min-width: 0; }
+.media.round { border-radius: clamp(10px, 1.4vw, 20px); }
+.media.frame { box-shadow: 0 20px 40px -24px rgba(0,0,0,.45); }
+@media (max-width: 760px) {
+  .b-rows .row.many { flex-wrap: wrap; }
+  .b-rows .row.many > div { flex-basis: calc(50% - 6px) !important; flex-grow: 0 !important; }
+  .b-cols .cols { flex-wrap: wrap; }
+  .b-cols .col { flex-basis: calc(50% - 6px) !important; }
+}
+
+/* índice de projetos agrupado por categoria */
+.cat-head { display: flex; align-items: baseline; gap: 16px; padding: clamp(48px, 7vw, 96px) 0 0; }
+.cat-head:first-child { padding-top: 0; }
+.cat-head h2 { margin: 0; font-family: var(--f-display); font-weight: 700; font-stretch: 105%; font-size: clamp(20px, 1.9vw, 28px); letter-spacing: -.02em; }
+.cat-head .label { color: var(--magenta-ink); }
+.cat-head p { margin: 0 0 0 auto; color: var(--muted); max-width: 30em; text-align: right; font-size: 15px; }
+.track-group { padding: 22px 0 8px; color: var(--magenta-ink); border-bottom: 1px solid var(--rule); }
+@media (max-width: 760px) { .cat-head { flex-wrap: wrap; } .cat-head p { margin: 4px 0 0; text-align: left; } }

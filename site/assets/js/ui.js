@@ -1,6 +1,12 @@
 /* Textos fixos da interface (menus, rótulos). O conteúdo editável fica em /content/*.json */
 window.UI = {
   pt: {
+    "cat.campanhas": "Campanhas", "cat.campanhas.d": "Conceito, direção de arte e desdobramentos para site, app e mídia.",
+    "cat.produto": "Produto e site", "cat.produto.d": "Peças recorrentes dentro das plataformas, em vários formatos.",
+    "cat.interna": "Comunicação interna", "cat.interna.d": "Endomarketing, eventos e impressos para os times.",
+    "cat.clientes": "Clientes e freelas", "cat.clientes.d": "Projetos para marcas atendidas fora da Studio Sol.",
+    "cat.academico": "Acadêmico e pessoal", "cat.academico.d": "Pesquisa, editorial e experimentos.",
+    "cat.outros": "Outros", "cat.outros.d": "",
     "nav.work": "Projetos", "nav.photo": "Fotografia", "nav.about": "Sobre", "nav.contact": "Contato",
     "menu": "Menu", "close": "Fechar", "theme.light": "Claro", "theme.dark": "Escuro",
     "hero.kicker": "Portfólio, edição 2026",
@@ -24,6 +30,12 @@ window.UI = {
     "placeholder": "Imagem", "notfound": "Projeto não encontrado.", "page": "pág.",
   },
   en: {
+    "cat.campanhas": "Campaigns", "cat.campanhas.d": "Concept, art direction and rollout across site, app and media.",
+    "cat.produto": "Product & site", "cat.produto.d": "Recurring pieces inside the platforms, in many formats.",
+    "cat.interna": "Internal comms", "cat.interna.d": "Employer branding, events and printed matter for the teams.",
+    "cat.clientes": "Clients & freelance", "cat.clientes.d": "Work for brands outside Studio Sol.",
+    "cat.academico": "Academic & personal", "cat.academico.d": "Research, editorial and experiments.",
+    "cat.outros": "Other", "cat.outros.d": "",
     "nav.work": "Work", "nav.photo": "Photography", "nav.about": "About", "nav.contact": "Contact",
     "menu": "Menu", "close": "Close", "theme.light": "Light", "theme.dark": "Dark",
     "hero.kicker": "Portfolio, 2026 edition",
