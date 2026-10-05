@@ -276,7 +276,7 @@
     switch (b.type) {
       case "lead": return `<section class="b-lead" data-reveal><p>${esc(t(b.text))}</p></section>`;
       case "text": return `<section class="b-text" data-reveal><h3>${esc(t(b.title))}</h3><p>${esc(t(b.text))}</p></section>`;
-      case "full": return `<figure class="b-full" style="margin-top:0;margin-bottom:0">${media(b.img, b.ratio || "16/9", null, { parallax: b.parallax })}${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
+      case "full": return `<figure class="b-full">${media(b.img, b.ratio || "16/9", null, { parallax: b.parallax })}${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
       case "split": return `<section class="b-split ${b.side === "right" ? "right" : ""}"><div class="media-wrap">${media(b.img, b.ratio, null, { crop: true })}</div><div class="copy" data-reveal><h3>${esc(t(b.title))}</h3><p>${esc(t(b.text))}</p></div></section>`;
       case "pair": return `<figure class="b-pair" style="margin:0"><div class="grid">${imgs.map((m, i) => `<div ${stagger(i, 0.12)}>${media(m.img, m.ratio)}</div>`).join("")}</div>${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
       case "rows": {
@@ -302,6 +302,15 @@
       case "trio": return `<section class="b-trio">${imgs.map((m, i) => `<div ${stagger(i, 0.12)}>${media(m.img, m.ratio)}</div>`).join("")}</section>`;
       case "palette": return `<section class="b-palette" data-reveal><div class="blk-label label">${ui("project.palette")}</div><div class="row">${(b.colors || []).map((c) => `<div class="sw label" style="background:${esc(c.hex)};color:${contrast(c.hex)}"><span>${esc(c.name)}</span><span>${esc(c.hex)}</span></div>`).join("")}</div></section>`;
       case "type": return `<section class="b-type" data-reveal><div class="blk-label label">${ui("project.type")}</div><div class="spec"><div><div style="font-family:'${esc(b.family)}';font-size:28px;font-weight:600">${esc(b.family)}</div><div class="label muted" style="margin-top:6px">${esc(b.weights || "")}</div></div><div class="big" style="font-family:'${esc(b.family)}'">${esc(b.sample || "Aa")}</div></div></section>`;
+      case "typeset": {
+        (b.css || []).forEach((href) => { if (!document.querySelector(`link[href="${href}"]`)) { const l = document.createElement("link"); l.rel = "stylesheet"; l.href = href; document.head.appendChild(l); } });
+        return `<section class="b-typeset"><div class="blk-label label">${ui("project.type")}</div>${(b.fonts || []).map((f) => `
+          <div class="ts-row" data-reveal>
+            <div class="ts-name" style="font-family:${esc(f.family)};font-weight:${esc(f.weight || 400)}">${esc(f.name)}</div>
+            <div class="ts-meta label">${esc(t(f.role))}</div>
+            <p class="ts-sample" style="font-family:${esc(f.family)};font-weight:${esc(f.weight || 400)}">${esc(f.sample)}</p>
+          </div>`).join("")}</section>`;
+      }
       case "quote": return `<section class="b-quote" data-reveal><blockquote>${esc(t(b.text))}</blockquote></section>`;
       case "specs": return `<section class="b-specs" data-reveal><h3>${esc(t(b.title))}</h3><dl>${(b.items || []).map((it) => `<div><dt class="label">${esc(t(it.label))}</dt><dd>${esc(t(it.value))}</dd></div>`).join("")}</dl></section>`;
       default: return "";
@@ -329,6 +338,7 @@
         <div class="proj-body">${(p.blocks || []).map(renderBlock).join("")}</div>
         <nav class="next-proj" data-reveal><a href="projeto.html?p=${esc(next.slug)}"><div><div class="label muted" style="margin-bottom:14px">${ui("project.next")} — ${pad(((idx + 1) % projects.length) + 1)}</div><div class="t">${esc(next.title)}</div></div><span class="arr">→</span></a></nav>
       </article>`;
+    initLightbox(el, ".proj-cover .media img, .proj-body .media img");
   }
 
   /* ---------- PHOTOGRAPHY ---------- */
@@ -364,10 +374,13 @@
       </div>`;
   }
 
-  // Lightbox shared by series pages: arrows, keyboard, counter.
-  function initLightbox(root) {
-    const figs = [...root.querySelectorAll("figure[data-src]")].filter((f) => f.dataset.src);
+  // Lightbox shared by series and project pages: arrows, keyboard, counter.
+  function initLightbox(root, selector) {
+    const figs = selector
+      ? [...root.querySelectorAll(selector)].filter((img) => img.getAttribute("src")).map((img) => { const f = img.closest(".media"); f.dataset.src = img.getAttribute("src"); f.classList.add("zoomable"); return f; })
+      : [...root.querySelectorAll("figure[data-src]")].filter((f) => f.dataset.src);
     if (!figs.length) return;
+    document.querySelectorAll(".lightbox").forEach((n) => n.remove());
     const lb = document.createElement("div");
     lb.className = "lightbox"; lb.setAttribute("role", "dialog"); lb.setAttribute("aria-modal", "true");
     lb.innerHTML = `<img alt=""><button class="lb-btn lb-prev" aria-label="←">←</button><button class="lb-btn lb-next" aria-label="→">→</button><div class="lb-count label"></div>`;
@@ -438,6 +451,29 @@
     initLightbox(el);
   }
 
+  /* ---------- ABOUT: off the clock (games & music) ---------- */
+  const INKS = [["#FF48B0", "#18171A"], ["#0078BF", "#F5F3EE"], ["#FFE800", "#18171A"], ["#00A95C", "#F5F3EE"], ["#FF665E", "#18171A"], ["#765BA7", "#F5F3EE"], ["#FF6C2F", "#18171A"], ["#18171A", "#FF48B0"]];
+  const inkOf = (str) => { let h = 0; for (const ch of String(str)) h = (h * 31 + ch.charCodeAt(0)) >>> 0; return INKS[h % INKS.length]; };
+  // a printed "box art": riso ink, halftone, title set in the display face
+  const boxArt = (title, cls = "") => { const [bg, fg] = inkOf(title); return `<div class="boxart ${cls}" style="--bg:${bg};--fg:${fg}"><span class="ba-title">${esc(title)}</span><span class="ba-mark">M/L</span></div>`; };
+  function offClock(O) {
+    if (!O) return "";
+    const games = lines(O.games), artists = lines(O.artists), hobbies = lines(O.hobbies);
+    return `
+      <section class="offclock">
+        <div class="sec-head" data-reveal><div><div class="sec-label label">${regmark}</div><h2 class="sec-title">${ui("off.title")}</h2></div></div>
+        <p class="off-lead" data-reveal>${ui("off.lead")}</p>
+        <div class="off-grid">
+          ${O.favoriteGame && O.favoriteGame.title ? `<article class="card card-fav" data-reveal><span class="tape" aria-hidden="true"></span><div class="card-label label">${ui("off.fav")}</div>${boxArt(O.favoriteGame.title, "big")}<h3>${esc(O.favoriteGame.title)}</h3>${t(O.favoriteGame.note) ? `<p class="muted">${esc(t(O.favoriteGame.note))}</p>` : ""}${O.playing ? `<div class="fav-playing"><div class="card-label label"><span class="live" aria-hidden="true"></span>${ui("off.playing")}</div><div class="playing">${boxArt(O.playing, "mini")}<h3>${esc(O.playing)}</h3></div></div>` : ""}</article>` : ""}
+          ${games.length ? `<article class="card card-games" data-reveal><div class="card-label label">${ui("off.games")} · ${pad(games.length)}</div><ul class="game-grid">${games.map((g) => `<li>${boxArt(g)}<span class="g-name">${esc(g)}</span></li>`).join("")}</ul></article>` : ""}
+          ${O.song && O.song.title ? `<article class="card card-song" data-reveal><div class="card-label label">${ui("off.song")}</div><div class="cassette" aria-hidden="true"><span class="reel"></span><span class="reel"></span><span class="tape-label">${esc(O.song.title)}</span></div><h3>${esc(O.song.title)}</h3><p class="muted">${esc(O.song.artist)}</p></article>` : ""}
+          ${(O.albums || []).length ? `<article class="card card-albums" data-reveal><div class="card-label label">${ui("off.albums")}</div><ul class="albums">${O.albums.map((a) => { const [bg, fg] = inkOf(a.title); return `<li><div class="sleeve" style="--bg:${bg};--fg:${fg}"><span class="vinyl" aria-hidden="true"></span><span class="sl-title">${esc(a.title)}</span></div><div class="al-meta"><b>${esc(a.title)}</b><span class="muted">${esc(a.artist)}${a.year ? ` · ${esc(a.year)}` : ""}</span></div></li>`; }).join("")}</ul></article>` : ""}
+          ${artists.length ? `<article class="card card-artists" data-reveal><div class="card-label label">${ui("off.artists")}</div><ul class="pins">${artists.map((a) => { const [bg, fg] = inkOf(a); return `<li class="pin" style="--bg:${bg};--fg:${fg}"><span>${esc(a)}</span></li>`; }).join("")}</ul></article>` : ""}
+        </div>
+        ${hobbies.length ? `<ul class="stickers" data-reveal>${hobbies.map((h, i) => `<li style="--r:${[-3, 2, -1.5, 3, -2][i % 5]}deg">${esc(h)}</li>`).join("")}</ul>` : ""}
+      </section>`;
+  }
+
   /* ---------- ABOUT ---------- */
   function renderAbout() {
     const cvRows = (rows) => rows.map((x, i) => `<div class="cv-row" data-reveal ${stagger(i)}><span class="label muted">${esc(t(x.period))}</span><span>${esc(t(x.role))}</span><span>${esc(x.place)}</span></div>`).join("");
@@ -451,6 +487,7 @@
           <div class="about-photo crop"><div data-reveal="print"><img src="${esc(P.photo)}" alt="${esc(P.name)}"></div></div>
           <div class="about-bio" data-reveal>${paras(t(AB.bio)).map((p) => `<p>${esc(p)}</p>`).join("")}</div>
         </div>
+        ${offClock(AB.offclock)}
         <div class="about-lists" data-reveal>
           ${(AB.lists || []).map((l) => `<div><h3 class="label">${esc(t(l.title))}</h3><ul>${lines(l.items).map((it) => `<li>${esc(it)}</li>`).join("")}</ul></div>`).join("")}
         </div>

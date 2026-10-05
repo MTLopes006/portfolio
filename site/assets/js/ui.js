@@ -1,6 +1,9 @@
 /* Textos fixos da interface (menus, rótulos). O conteúdo editável fica em /content/*.json */
 window.UI = {
   pt: {
+    "off.title": "Fora do expediente", "off.lead": "Jogos, discos e o que mais toca por aqui quando o expediente acaba.",
+    "off.fav": "Jogo favorito", "off.games": "Jogos que eu gosto", "off.playing": "Jogando agora", "off.song": "Na cabeça",
+    "off.albums": "Álbuns", "off.artists": "Artistas", "off.hobbies": "Também",
     "cat.campanhas": "Campanhas", "cat.campanhas.d": "Conceito, direção de arte e desdobramentos para site, app e mídia.",
     "cat.produto": "Produto e site", "cat.produto.d": "Peças recorrentes dentro das plataformas, em vários formatos.",
     "cat.interna": "Comunicação interna", "cat.interna.d": "Endomarketing, eventos e impressos para os times.",
@@ -30,6 +33,9 @@ window.UI = {
     "placeholder": "Imagem", "notfound": "Projeto não encontrado.", "page": "pág.",
   },
   en: {
+    "off.title": "Off the clock", "off.lead": "Games, records and whatever else is playing once the workday ends.",
+    "off.fav": "Favourite game", "off.games": "Games I love", "off.playing": "Now playing", "off.song": "Stuck in my head",
+    "off.albums": "Albums", "off.artists": "Artists", "off.hobbies": "Also",
     "cat.campanhas": "Campaigns", "cat.campanhas.d": "Concept, art direction and rollout across site, app and media.",
     "cat.produto": "Product & site", "cat.produto.d": "Recurring pieces inside the platforms, in many formats.",
     "cat.interna": "Internal comms", "cat.interna.d": "Employer branding, events and printed matter for the teams.",

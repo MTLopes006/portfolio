@@ -160,8 +160,8 @@
         }
       ],
       "summary": {
-        "pt": "Campanha para incentivar o acesso de cifras gospel na semana do dia da música gospel.",
-        "en": "A campaign driving gospel chord views during Gospel Music Day week."
+        "pt": "Campanha sazonal que levou o público gospel às cifras na semana da música gospel.",
+        "en": "A seasonal campaign bringing gospel players to the chords during Gospel Music week."
       },
       "slug": "semana-do-gospel",
       "client": {
@@ -178,8 +178,8 @@
       "cover": "assets/img/projetos/semana-do-gospel/kv-violonista.jpg",
       "title": "Semana do Gospel",
       "tags": {
-        "pt": "Identidade Visual · Prancha de conceito · In-app · Interstitials · Destaques",
-        "en": "Seasonal campaign, Visual identity, In-app"
+        "pt": "Campanha · Identidade visual · Direção de arte",
+        "en": "Campaign · Visual identity · Art direction"
       },
       "year": 2026,
       "category": "campanhas"
@@ -343,8 +343,8 @@
         }
       ],
       "summary": {
-        "pt": "Campanha para o curso de coreano da plataforma de ensino do Letras.",
-        "en": "A campaign for Letras' Korean language course."
+        "pt": "Campanha do curso de coreano do Letras, em linguagem de colagem.",
+        "en": "A collage-led campaign for Letras' Korean course."
       },
       "slug": "semana-do-coreano",
       "client": {
@@ -361,8 +361,8 @@
       "cover": "assets/img/projetos/semana-do-coreano/destaque-desktop.jpg",
       "title": "Semana do Coreano",
       "tags": {
-        "pt": "Campanha, Identidade Visual, Colagem",
-        "en": "Campaign, Visual identity, Collage"
+        "pt": "Campanha · Identidade visual · Colagem",
+        "en": "Campaign · Visual identity · Collage"
       },
       "year": 2026,
       "category": "campanhas"
@@ -469,8 +469,8 @@
         }
       ],
       "summary": {
-        "pt": "Campanha de incentivo ao download do app para quem já usava a versão web.",
-        "en": "A campaign nudging web users to download the app."
+        "pt": "Campanha que convida quem usa o site a baixar o app do Cifra Club.",
+        "en": "A campaign inviting web users to download the Cifra Club app."
       },
       "slug": "aplicativo-cifra-club",
       "client": {
@@ -480,15 +480,15 @@
       "tone": "#FF8A3D",
       "coverRatio": "2400/1350",
       "role": {
-        "pt": "Identidade visual, mockups e banners",
-        "en": "Visual identity, mockups & banners"
+        "pt": "Conceito, mockups e house ads",
+        "en": "Concept, mockups & house ads"
       },
       "thumb": "assets/img/thumbs/download-do-app.jpg",
       "cover": "assets/img/projetos/download-do-app/key-visual.jpg",
       "title": "Aplicativo Cifra Club",
       "tags": {
-        "pt": "Campanha, Mockups, Multiformato",
-        "en": "Campaign, Mockups, Multi-format"
+        "pt": "Campanha · Mockups · House ads",
+        "en": "Campaign · Mockups · House ads"
       },
       "year": 2025,
       "category": "campanhas"
@@ -701,8 +701,8 @@
         }
       ],
       "summary": {
-        "pt": "Banners principais dos sites, atualizados de forma recorrente.",
-        "en": "Homepage hero banners, refreshed on a recurring basis."
+        "pt": "Banners principais dos sites, atualizados a cada lançamento.",
+        "en": "Homepage hero banners, refreshed with every release."
       },
       "slug": "destaques",
       "client": {
@@ -712,88 +712,17 @@
       "tone": "#E8711C",
       "coverRatio": "2000/494",
       "role": {
-        "pt": "Adaptação de identidade e formatos multiplataforma",
-        "en": "Identity adaptation & multi-platform formats"
+        "pt": "Adaptação de identidade e formatos",
+        "en": "Identity adaptation & formats"
       },
       "thumb": "assets/img/thumbs/destaques.jpg",
       "cover": "assets/img/projetos/destaques/cifra-tua-graca-desktop.jpg",
       "title": "Destaques",
       "tags": {
-        "pt": "Banner, Direção de arte, Recorrente",
-        "en": "Banner, Art direction, Recurring"
+        "pt": "Banner · Direção de arte · Multiplataforma",
+        "en": "Banner · Art direction · Multi-platform"
       },
       "year": 2026,
-      "category": "produto"
-    },
-    {
-      "blocks": [
-        {
-          "type": "lead",
-          "text": {
-            "pt": "Seleção de peças gráficas criadas para o Palco MP3 durante o estágio na Studio Sol: posts, carrosséis e peças de mídia paga.",
-            "en": "A selection of graphic pieces made for Palco MP3 during my internship at Studio Sol: posts, carousels and paid-media pieces."
-          }
-        },
-        {
-          "type": "trio",
-          "imgs": [
-            {
-              "img": "",
-              "ratio": "1/1"
-            },
-            {
-              "img": "",
-              "ratio": "1/1"
-            },
-            {
-              "img": "",
-              "ratio": "1/1"
-            }
-          ]
-        },
-        {
-          "type": "full",
-          "img": "",
-          "ratio": "16/8",
-          "parallax": true
-        },
-        {
-          "type": "pair",
-          "imgs": [
-            {
-              "img": "",
-              "ratio": "4/5"
-            },
-            {
-              "img": "",
-              "ratio": "4/5"
-            }
-          ]
-        }
-      ],
-      "summary": {
-        "pt": "Seleção de peças gráficas criadas para o Palco MP3 durante o estágio.",
-        "en": "Graphic pieces made for Palco MP3 during my internship."
-      },
-      "slug": "palco-mp3",
-      "client": {
-        "pt": "Palco MP3 · Studio Sol",
-        "en": "Palco MP3 · Studio Sol"
-      },
-      "tone": "#6FA8DC",
-      "coverRatio": "16/9",
-      "role": {
-        "pt": "Design gráfico",
-        "en": "Graphic design"
-      },
-      "thumb": "",
-      "cover": "",
-      "title": "Palco MP3",
-      "tags": {
-        "pt": "Design Gráfico, Social Media",
-        "en": "Graphic Design, Social Media"
-      },
-      "year": 2024,
       "category": "produto"
     },
     {
@@ -896,13 +825,13 @@
         }
       ],
       "summary": {
-        "pt": "Rótulos e cartão ilustrados para os presentes da data.",
-        "en": "Illustrated labels and card for the day's gifts."
+        "pt": "Rótulos e cartão ilustrados para os presentes do Dia da Liderança.",
+        "en": "Illustrated labels and card for Leadership Day gifts."
       },
       "slug": "dia-da-lideranca",
       "client": {
-        "pt": "Studio Sol + Letras · comunicação interna",
-        "en": "Studio Sol + Letras · internal comms"
+        "pt": "Studio Sol + Letras · Comunicação interna",
+        "en": "Studio Sol + Letras · Comunicação interna"
       },
       "tone": "#E9D3B4",
       "coverRatio": "1472/704",
@@ -914,8 +843,8 @@
       "cover": "assets/img/projetos/dia-da-lideranca/ilustracao-vitrola.jpg",
       "title": "Dia da Liderança",
       "tags": {
-        "pt": "Impresso, Ilustração, Endomarketing",
-        "en": "Print, Illustration, Internal comms"
+        "pt": "Impresso · Ilustração · Endomarketing",
+        "en": "Print · Illustration · Internal comms"
       },
       "year": 2026,
       "category": "interna"
@@ -1013,13 +942,13 @@
         }
       ],
       "summary": {
-        "pt": "Identidade de uma série de talks internas entre as duas empresas.",
-        "en": "Identity for an internal talk series shared by both companies."
+        "pt": "Identidade da série de talks internas entre as duas empresas.",
+        "en": "Identity for the internal talk series shared by both companies."
       },
       "slug": "com-studio-sol-letras",
       "client": {
-        "pt": "Studio Sol + Letras · comunicação interna",
-        "en": "Studio Sol + Letras · internal comms"
+        "pt": "Studio Sol + Letras · Comunicação interna",
+        "en": "Studio Sol + Letras · Comunicação interna"
       },
       "tone": "#F4F4F2",
       "coverRatio": "2400/900",
@@ -1031,8 +960,8 @@
       "cover": "assets/img/projetos/com-studio-sol-letras/banner.jpg",
       "title": "Com Studio Sol + Letras",
       "tags": {
-        "pt": "Identidade visual, Sistema de cor, Multiformato",
-        "en": "Visual identity, Colour system, Multi-format"
+        "pt": "Identidade visual · Sistema de cor · Multiformato",
+        "en": "Visual identity · Colour system · Multi-format"
       },
       "year": 2025,
       "category": "interna"
@@ -1042,93 +971,281 @@
         {
           "type": "lead",
           "text": {
-            "pt": "Perfumaria de ambientes atendida como freelancer — social media, conteúdo educativo, impressos e material comercial.",
-            "en": "A home fragrance brand I serve as a freelancer — social media, educational content, printed matter and sales collateral."
+            "pt": "Perfumaria de ambientes atendida como freelancer pela Válore: social media, conteúdo educativo, fotografia de produto e material de ponto de venda, com a mesma atmosfera de casa aconchegante em todas as peças.",
+            "en": "A home-fragrance brand I serve as a freelancer through Válore: social media, educational content, product photography and point-of-sale material, with the same cosy-home atmosphere across every piece."
           }
         },
         {
-          "type": "full",
-          "img": "",
-          "ratio": "16/8",
-          "parallax": true
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/mockup-celular.webp",
+                  "ratio": "548/1083"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/social-01.webp",
+                  "ratio": "820/1025"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
+          },
+          "sideTitle": {
+            "pt": "Social media",
+            "en": "Social media"
+          },
+          "sideText": {
+            "pt": "Posts de produto, conteúdo educativo e interação com a comunidade. Cada fragrância ganha uma cena própria, com luz quente e elementos naturais que traduzem o aroma.",
+            "en": "Product posts, educational content and community engagement. Each fragrance gets its own scene, with warm light and natural elements that translate the scent."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/social-02.webp",
+                  "ratio": "820/1025"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/social-03.webp",
+                  "ratio": "820/1025"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/social-04.webp",
+                  "ratio": "820/1025"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/social-05.webp",
+                  "ratio": "820/1025"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/social-06.webp",
+                  "ratio": "820/1025"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/social-07.webp",
+                  "ratio": "820/1025"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/social-08.webp",
+                  "ratio": "820/1025"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/social-09.webp",
+                  "ratio": "820/1025"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/social-10.webp",
+                  "ratio": "820/1025"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/produto-05.webp",
+                  "ratio": "788/790"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Feed: lançamentos, guias de aroma, mito ou verdade e perguntas para a comunidade",
+            "en": "Feed: launches, scent guides, myth-or-fact and community questions"
+          }
         },
         {
           "type": "text",
           "title": {
-            "pt": "Conteúdo educativo",
-            "en": "Educational content"
+            "pt": "Fotografia de produto",
+            "en": "Product photography"
           },
           "text": {
-            "pt": "Explique como o conteúdo ajuda o cliente a entender e escolher as fragrâncias.",
-            "en": "Explain how the content helps customers understand and choose fragrances."
+            "pt": "Cenas montadas para o catálogo, as redes e o e-commerce: frascos sobre pedra, madeira e linho, com folhas, frutas e especiarias que remetem a cada fragrância.",
+            "en": "Styled scenes for the catalogue, social and e-commerce: bottles on stone, wood and linen, with leaves, fruit and spices that echo each fragrance."
           }
         },
         {
-          "type": "pair",
-          "imgs": [
+          "type": "rows",
+          "rows": [
             {
-              "img": "",
-              "ratio": "4/5"
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/produto-01.webp",
+                  "ratio": "1636/790"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/produto-02.webp",
+                  "ratio": "790/1278"
+                }
+              ]
             },
             {
-              "img": "",
-              "ratio": "1/1"
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/produto-08.webp",
+                  "ratio": "1278/1250"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/produto-03.webp",
+                  "ratio": "792/1278"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/produto-09.webp",
+                  "ratio": "1278/1250"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/produto-04.webp",
+                  "ratio": "1636/790"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/produto-07.webp",
+                  "ratio": "790/790"
+                }
+              ]
             }
-          ]
-        },
-        {
-          "type": "split",
-          "img": "",
-          "ratio": "4/5",
-          "side": "right",
-          "title": {
-            "pt": "Impressos e material comercial",
-            "en": "Print & sales collateral"
-          },
-          "text": {
-            "pt": "Catálogos, etiquetas e peças de ponto de venda.",
-            "en": "Catalogues, labels and point-of-sale pieces."
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
           }
         },
         {
-          "type": "trio",
-          "imgs": [
+          "type": "text",
+          "title": {
+            "pt": "Ponto de venda",
+            "en": "Point of sale"
+          },
+          "text": {
+            "pt": "Expositor para revendas e lojas parceiras, com arquivo fechado para gráfica.",
+            "en": "A display stand for resellers and partner stores, with print-ready files."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
             {
-              "img": "",
-              "ratio": "3/4"
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/expositor.webp",
+                  "ratio": "2000/1125"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/expositor-detalhe-1.jpg",
+                  "ratio": "960/1220"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/expositor-detalhe-2.jpg",
+                  "ratio": "960/1220"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Expositor e detalhes",
+            "en": "Display stand and details"
+          }
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Entregas",
+            "en": "Deliverables"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Social media",
+                "en": "Social media"
+              },
+              "value": {
+                "pt": "Posts, carrosséis e conteúdo educativo",
+                "en": "Posts, carousels & educational content"
+              }
             },
             {
-              "img": "",
-              "ratio": "3/4"
+              "label": {
+                "pt": "Fotografia",
+                "en": "Photography"
+              },
+              "value": {
+                "pt": "Fotos de produto para catálogo, redes e e-commerce",
+                "en": "Product photos for catalogue, social & e-commerce"
+              }
             },
             {
-              "img": "",
-              "ratio": "3/4"
+              "label": {
+                "pt": "Impressos",
+                "en": "Print"
+              },
+              "value": {
+                "pt": "Expositor e material comercial",
+                "en": "Display stand & sales collateral"
+              }
             }
           ]
         }
       ],
       "summary": {
-        "pt": "Design gráfico, social media e fotografia de produto para uma marca de perfumaria.",
-        "en": "Graphic design, social media and product photography for a fragrance brand."
+        "pt": "Comunicação de uma perfumaria de ambientes, do feed ao expositor.",
+        "en": "Communication for a home-fragrance brand, from feed to in-store display."
       },
       "slug": "pantanal-aromas",
       "client": {
         "pt": "Pantanal Aromas · via Válore",
         "en": "Pantanal Aromas · via Válore"
       },
-      "tone": "#C9A46A",
-      "coverRatio": "16/9",
+      "tone": "#5E7F47",
+      "coverRatio": "2000/1126",
       "role": {
-        "pt": "Design gráfico, social media e fotografia de produto",
-        "en": "Graphic design, social media & product photography"
+        "pt": "Social media, fotografia e ponto de venda",
+        "en": "Social media, photography & point of sale"
       },
-      "thumb": "",
-      "cover": "",
+      "thumb": "assets/img/thumbs/pantanal-aromas.jpg",
+      "cover": "assets/img/projetos/pantanal-aromas/capa.webp",
       "title": "Pantanal Aromas",
       "tags": {
-        "pt": "Design Gráfico, Social Media, Fotografia",
-        "en": "Graphic Design, Social Media, Photography"
+        "pt": "Social media · Fotografia de produto · Ponto de venda",
+        "en": "Social media · Product photography · Point of sale"
       },
       "year": 2026,
       "category": "clientes"
@@ -1138,15 +1255,134 @@
         {
           "type": "lead",
           "text": {
-            "pt": "Rebranding acadêmico de uma marca de cosméticos, desenvolvido em trio na disciplina de Design Gráfico da Universidade Federal de Minas Gerais.",
-            "en": "An academic rebranding of a cosmetics brand, developed as a trio in the Graphic Design course at the Federal University of Minas Gerais."
+            "pt": "Rebranding acadêmico de uma marca de cosméticos, desenvolvido em trio na disciplina de Design Gráfico da UFMG: da análise da marca à nova identidade, às embalagens e ao site.",
+            "en": "An academic rebrand of a cosmetics company, developed as a trio in UFMG's Graphic Design course: from brand analysis to the new identity, packaging and website."
           }
         },
         {
           "type": "full",
-          "img": "",
-          "ratio": "16/8",
-          "parallax": true
+          "img": "assets/img/projetos/rebranding-vizzela/logo.jpg",
+          "ratio": "1920/766",
+          "caption": {
+            "pt": "A nova Vizzela",
+            "en": "The new Vizzela"
+          },
+          "parallax": false
+        },
+        {
+          "type": "palette",
+          "colors": [
+            {
+              "hex": "#051E18",
+              "name": "Verde floresta"
+            },
+            {
+              "hex": "#A5CB00",
+              "name": "Lima"
+            },
+            {
+              "hex": "#B1797F",
+              "name": "Rosa"
+            },
+            {
+              "hex": "#870032",
+              "name": "Magenta"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Embalagens",
+            "en": "Packaging"
+          },
+          "text": {
+            "pt": "A linha ganha embalagens em verde e rosa, com o panda da marca em destaque. A direção de fotografia leva os produtos para cenas com luz natural, folhagem e cerejas.",
+            "en": "The range gets green and pink packaging with the brand's panda up front. The photo direction places products in scenes with natural light, foliage and cherries."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/embalagem-po.jpg",
+                  "ratio": "1920/1080"
+                },
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/embalagem-mascara.jpg",
+                  "ratio": "1920/1080"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Pó fixador Fix HD e máscara No Panda",
+            "en": "Fix HD setting powder and No Panda mascara"
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/selos.jpg",
+                  "ratio": "1920/675"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
+          },
+          "sideTitle": {
+            "pt": "Selos",
+            "en": "Seals"
+          },
+          "sideText": {
+            "pt": "O panda com chifre de unicórnio vira um selo com os compromissos da marca: vegana, cruelty free e 100% livre de parabenos.",
+            "en": "The unicorn-horned panda becomes a seal for the brand's commitments: vegan, cruelty-free and 100% paraben-free."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/site.jpg",
+                  "ratio": "1920/1080"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
+          },
+          "sideTitle": {
+            "pt": "Interfaces digitais",
+            "en": "Digital interfaces"
+          },
+          "sideText": {
+            "pt": "Site da nova Vizzela, com interfaces de Mikaela Aleixo.",
+            "en": "The new Vizzela website, with interfaces by Mikaela Aleixo."
+          }
         },
         {
           "type": "specs",
@@ -1186,90 +1422,29 @@
               }
             }
           ]
-        },
-        {
-          "type": "pair",
-          "imgs": [
-            {
-              "img": "",
-              "ratio": "1/1"
-            },
-            {
-              "img": "",
-              "ratio": "4/5"
-            }
-          ]
-        },
-        {
-          "type": "palette",
-          "colors": [
-            {
-              "hex": "#1B1B1F",
-              "name": "Ink"
-            },
-            {
-              "hex": "#D98BA8",
-              "name": "Rosa"
-            },
-            {
-              "hex": "#F4EEE8",
-              "name": "Off"
-            }
-          ]
-        },
-        {
-          "type": "split",
-          "img": "",
-          "ratio": "4/5",
-          "side": "right",
-          "title": {
-            "pt": "Embalagens",
-            "en": "Packaging"
-          },
-          "text": {
-            "pt": "Descreva o sistema de embalagens e as decisões de materiais.",
-            "en": "Describe the packaging system and material choices."
-          }
-        },
-        {
-          "type": "trio",
-          "imgs": [
-            {
-              "img": "",
-              "ratio": "3/4"
-            },
-            {
-              "img": "",
-              "ratio": "3/4"
-            },
-            {
-              "img": "",
-              "ratio": "3/4"
-            }
-          ]
         }
       ],
       "summary": {
-        "pt": "Rebranding acadêmico de uma marca de cosméticos.",
-        "en": "Academic rebranding of a cosmetics brand."
+        "pt": "Rebranding de uma marca de cosméticos, da identidade às embalagens.",
+        "en": "A cosmetics rebrand, from identity to packaging."
       },
       "slug": "rebranding-vizzela",
       "client": {
         "pt": "Projeto acadêmico · UFMG",
-        "en": "Academic project · UFMG"
+        "en": "Projeto acadêmico · UFMG"
       },
-      "tone": "#D98BA8",
-      "coverRatio": "16/9",
+      "tone": "#051E18",
+      "coverRatio": "1920/1080",
       "role": {
         "pt": "Direção de fotografia, mockups e embalagens",
         "en": "Photo direction, mockups & packaging"
       },
-      "thumb": "",
-      "cover": "",
+      "thumb": "assets/img/thumbs/rebranding-vizzela.jpg",
+      "cover": "assets/img/projetos/rebranding-vizzela/capa.jpg",
       "title": "Rebranding Vizzela",
       "tags": {
-        "pt": "Rebranding, Embalagem, Direção de arte",
-        "en": "Rebranding, Packaging, Art direction"
+        "pt": "Rebranding · Embalagem · Direção de arte",
+        "en": "Rebranding · Packaging · Art direction"
       },
       "year": 2025,
       "category": "academico"
@@ -1279,15 +1454,19 @@
         {
           "type": "lead",
           "text": {
-            "pt": "Uma cafeteria inspirada no romance Eu Sou um Gato, de Natsume Sōseki. O projeto é o desenvolvimento gráfico e a diagramação de um menu personalizado.",
-            "en": "A café inspired by Natsume Sōseki's novel I Am a Cat. The project covers the graphic development and layout of a bespoke menu."
+            "pt": "Uma cafeteria inspirada no romance Eu Sou um Gato, de Natsume Sōseki. O projeto é o desenvolvimento gráfico e a diagramação de um menu personalizado, impresso em offset.",
+            "en": "A café inspired by Natsume Sōseki's novel I Am a Cat. The project covers the graphic development and layout of a bespoke menu, printed in offset."
           }
         },
         {
           "type": "full",
-          "img": "",
-          "ratio": "16/8",
-          "parallax": true
+          "img": "assets/img/projetos/cafe-soseki/logo.jpg",
+          "ratio": "1400/167",
+          "caption": {
+            "pt": "",
+            "en": ""
+          },
+          "parallax": false
         },
         {
           "type": "text",
@@ -1296,22 +1475,173 @@
             "en": "Concept"
           },
           "text": {
-            "pt": "A proposta gastronômica mescla elementos tradicionais japoneses com sabores que remetem a aconchego e simplicidade, criando uma experiência alinhada à identidade do espaço.",
-            "en": "The food concept blends traditional Japanese elements with flavours of comfort and simplicity, creating an experience aligned with the space's identity."
+            "pt": "A proposta gastronômica mescla elementos tradicionais japoneses com sabores que remetem a aconchego e simplicidade. O menu acompanha: papel de algodão, ilustrações do gato e caligrafia japonesa ao fundo.",
+            "en": "The food concept blends traditional Japanese elements with flavours of comfort and simplicity. The menu follows suit: cotton paper, cat illustrations and Japanese calligraphy in the background."
           }
         },
         {
-          "type": "pair",
-          "imgs": [
+          "type": "rows",
+          "rows": [
             {
-              "img": "",
-              "ratio": "4/5"
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cafe-soseki/menu-fechado.jpg",
+                  "ratio": "1400/947"
+                },
+                {
+                  "img": "assets/img/projetos/cafe-soseki/menu-aberto.jpg",
+                  "ratio": "1400/913"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Menu fechado e aberto",
+            "en": "Menu closed and open"
+          }
+        },
+        {
+          "type": "palette",
+          "colors": [
+            {
+              "hex": "#232020",
+              "name": "Raisin Black"
             },
             {
-              "img": "",
-              "ratio": "4/5"
+              "hex": "#FCB543",
+              "name": "Hunyadi Yellow"
+            },
+            {
+              "hex": "#FFF8EC",
+              "name": "Floral White"
             }
           ]
+        },
+        {
+          "type": "typeset",
+          "css": [
+            "https://use.typekit.net/bwv1ssy.css",
+            "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap"
+          ],
+          "fonts": [
+            {
+              "name": "Drummond Variable",
+              "family": "\"drummond-variable\", serif",
+              "weight": "400",
+              "role": {
+                "pt": "Títulos e nomes dos pratos",
+                "en": "Headings & dish names"
+              },
+              "sample": "Eu sou um gato. Ainda não tenho nome. Não faço a mínima ideia de onde nasci. Guardo apenas a lembrança de miar num local completamente sombrio, úmido e pegajoso."
+            },
+            {
+              "name": "Asterisk Sans Variable",
+              "family": "\"asterisk-sans-variable\", sans-serif",
+              "weight": "300",
+              "role": {
+                "pt": "Preços e informações",
+                "en": "Prices & details"
+              },
+              "sample": "Eu sou um gato. Ainda não tenho nome. Não faço a mínima ideia de onde nasci. Guardo apenas a lembrança de miar num local completamente sombrio, úmido e pegajoso."
+            },
+            {
+              "name": "Lexia Variable",
+              "family": "\"lexia-variable\", serif",
+              "weight": "400",
+              "role": {
+                "pt": "Textos corridos",
+                "en": "Running text"
+              },
+              "sample": "Eu sou um gato. Ainda não tenho nome. Não faço a mínima ideia de onde nasci. Guardo apenas a lembrança de miar num local completamente sombrio, úmido e pegajoso."
+            },
+            {
+              "name": "Source Han Sans JP",
+              "family": "\"Noto Sans JP\", \"source-han-sans-japanese\", sans-serif",
+              "weight": "300",
+              "role": {
+                "pt": "Japonês",
+                "en": "Japanese"
+              },
+              "sample": "吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。"
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "text": {
+            "pt": "Caem as pétalas, partidas em sombras vãs, o vento as leva.",
+            "en": "Petals fall, broken into idle shadows; the wind carries them off."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cafe-soseki/foto-4.jpg",
+                  "ratio": "463/829"
+                },
+                {
+                  "img": "assets/img/projetos/cafe-soseki/foto-5.jpg",
+                  "ratio": "462/829"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
+          },
+          "sideTitle": {
+            "pt": "Papel e acabamento",
+            "en": "Paper & finish"
+          },
+          "sideText": {
+            "pt": "Miolo em Conqueror Connoisseur 100% algodão e luva em Curious Translucents. A luva translúcida revela o menu aos poucos, como uma página virando.",
+            "en": "Conqueror Connoisseur 100% cotton for the menu and a Curious Translucents sleeve. The translucent sleeve reveals the menu gradually, like a turning page."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cafe-soseki/foto-1.jpg",
+                  "ratio": "463/828"
+                },
+                {
+                  "img": "assets/img/projetos/cafe-soseki/foto-2.jpg",
+                  "ratio": "462/828"
+                },
+                {
+                  "img": "assets/img/projetos/cafe-soseki/foto-3.jpg",
+                  "ratio": "463/828"
+                },
+                {
+                  "img": "assets/img/projetos/cafe-soseki/foto-6.jpg",
+                  "ratio": "463/829"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Menu impresso",
+            "en": "The printed menu"
+          }
         },
         {
           "type": "specs",
@@ -1361,60 +1691,29 @@
               }
             }
           ]
-        },
-        {
-          "type": "split",
-          "img": "",
-          "ratio": "3/4",
-          "side": "right",
-          "title": {
-            "pt": "Papel e acabamento",
-            "en": "Paper & finish"
-          },
-          "text": {
-            "pt": "A luva translúcida revela o menu aos poucos, como uma página virando.",
-            "en": "The translucent sleeve reveals the menu gradually, like a turning page."
-          }
-        },
-        {
-          "type": "trio",
-          "imgs": [
-            {
-              "img": "",
-              "ratio": "3/4"
-            },
-            {
-              "img": "",
-              "ratio": "3/4"
-            },
-            {
-              "img": "",
-              "ratio": "3/4"
-            }
-          ]
         }
       ],
       "summary": {
-        "pt": "Menu conceito para uma cafeteria inspirada em Eu Sou um Gato.",
-        "en": "Concept menu for a café inspired by I Am a Cat."
+        "pt": "Menu impresso para uma cafeteria inspirada em Eu Sou um Gato, de Natsume Sōseki.",
+        "en": "A printed menu for a café inspired by Natsume Sōseki's I Am a Cat."
       },
       "slug": "cafe-soseki",
       "client": {
-        "pt": "TCC · Design UFMG",
-        "en": "Graduation project · Design UFMG"
+        "pt": "Projeto acadêmico · UFMG",
+        "en": "Projeto acadêmico · UFMG"
       },
-      "tone": "#7A8B6F",
-      "coverRatio": "16/9",
+      "tone": "#FCB543",
+      "coverRatio": "1400/1015",
       "role": {
-        "pt": "Projeto gráfico e diagramação do menu",
-        "en": "Menu design & layout"
+        "pt": "Projeto gráfico e diagramação",
+        "en": "Graphic design & layout"
       },
-      "thumb": "",
-      "cover": "",
+      "thumb": "assets/img/thumbs/cafe-soseki.jpg",
+      "cover": "assets/img/projetos/cafe-soseki/pecas.jpg",
       "title": "Café Sōseki",
       "tags": {
-        "pt": "Editorial, Impresso, Identidade",
-        "en": "Editorial, Print, Identity"
+        "pt": "Editorial · Impresso · Identidade visual",
+        "en": "Editorial · Print · Visual identity"
       },
       "year": 2025,
       "category": "academico"
@@ -1424,175 +1723,122 @@
         {
           "type": "lead",
           "text": {
-            "pt": "Apresentação sobre design vernacular, diagramada como peça editorial.",
-            "en": "A presentation on vernacular design, laid out as an editorial piece."
+            "pt": "Projeto pessoal baseado no EP What Did You Think When You Made Me This Way?, da banda britânica Nothing But Thieves. A revista reúne as letras de Gods e Take This Lonely Heart, com conceitos gráficos construídos a partir da estética lírica de cada música.",
+            "en": "A personal project based on the EP What Did You Think When You Made Me This Way? by British rock band Nothing But Thieves. The zine collects the lyrics of Gods and Take This Lonely Heart, with graphic concepts built from each song's lyrical imagery."
           }
         },
         {
-          "type": "full",
-          "img": "",
-          "ratio": "16/8",
-          "caption": {
-            "pt": "",
-            "en": ""
-          },
-          "parallax": true
-        },
-        {
-          "type": "pair",
-          "imgs": [
+          "type": "rows",
+          "rows": [
             {
-              "img": "",
-              "ratio": "4/5"
-            },
-            {
-              "img": "",
-              "ratio": "4/5"
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/fanzine-nothing-but-thieves/capa.jpg",
+                  "ratio": "834/1176"
+                },
+                {
+                  "img": "assets/img/projetos/fanzine-nothing-but-thieves/spread-take-this-lonely-heart.jpg",
+                  "ratio": "1312/932"
+                }
+              ]
             }
           ],
           "caption": {
-            "pt": "",
-            "en": ""
+            "pt": "Capa e Take This Lonely Heart",
+            "en": "Cover and Take This Lonely Heart"
           }
-        }
-      ],
-      "summary": {
-        "pt": "Apresentação sobre design vernacular, diagramada como peça editorial.",
-        "en": "A presentation on vernacular design, laid out as an editorial piece."
-      },
-      "slug": "design-vernacular",
-      "client": {
-        "pt": "Projeto acadêmico · UFMG",
-        "en": "Academic project · UFMG"
-      },
-      "tone": "#E07A5F",
-      "coverRatio": "16/9",
-      "role": {
-        "pt": "Pesquisa e diagramação",
-        "en": "Research & layout"
-      },
-      "thumb": "",
-      "cover": "",
-      "title": "Design Vernacular",
-      "tags": {
-        "pt": "Editorial, Apresentação",
-        "en": "Editorial, Presentation"
-      },
-      "year": 2023,
-      "category": "academico"
-    },
-    {
-      "blocks": [
+        },
         {
-          "type": "lead",
+          "type": "text",
+          "title": {
+            "pt": "Colagem e papel",
+            "en": "Collage & paper"
+          },
           "text": {
-            "pt": "Fanzine e pôsteres dedicados ao Nothing but Thieves. Conte aqui o que motivou o projeto.",
-            "en": "A fanzine and posters dedicated to Nothing but Thieves. Tell what sparked the project."
+            "pt": "Vermelho, papel envelhecido e recortes de imagens religiosas e anatômicas. Trechos das letras ganham destaque em marca-texto e anotações à mão, como numa revista feita em casa.",
+            "en": "Red, aged paper and cut-outs of religious and anatomical imagery. Lyric excerpts are highlighted and annotated by hand, like a homemade zine."
           }
         },
         {
-          "type": "full",
-          "img": "",
-          "ratio": "16/8",
-          "parallax": true
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/fanzine-nothing-but-thieves/spread-in-the-end.jpg",
+                  "ratio": "1312/932"
+                },
+                {
+                  "img": "assets/img/projetos/fanzine-nothing-but-thieves/spread-gods.jpg",
+                  "ratio": "1308/923"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "In the End e Gods",
+            "en": "In the End and Gods"
+          }
         },
         {
-          "type": "pair",
-          "imgs": [
+          "type": "specs",
+          "title": {
+            "pt": "Entregas",
+            "en": "Deliverables"
+          },
+          "items": [
             {
-              "img": "",
-              "ratio": "3/4"
+              "label": {
+                "pt": "Formato",
+                "en": "Format"
+              },
+              "value": {
+                "pt": "Revista / fanzine",
+                "en": "Magazine / zine"
+              }
             },
             {
-              "img": "",
-              "ratio": "3/4"
+              "label": {
+                "pt": "Conteúdo",
+                "en": "Content"
+              },
+              "value": {
+                "pt": "Letras de Gods e Take This Lonely Heart",
+                "en": "Lyrics of Gods & Take This Lonely Heart"
+              }
             }
           ]
         }
       ],
       "summary": {
-        "pt": "Fanzine e pôsteres dedicados à banda.",
-        "en": "A fanzine and posters dedicated to the band."
+        "pt": "Fanzine com as letras de duas músicas do Nothing But Thieves.",
+        "en": "A fanzine built around two Nothing But Thieves songs."
       },
       "slug": "fanzine-nothing-but-thieves",
       "client": {
         "pt": "Projeto pessoal",
-        "en": "Personal project"
+        "en": "Projeto pessoal"
       },
-      "tone": "#B23A48",
-      "coverRatio": "16/9",
+      "tone": "#C8321E",
+      "coverRatio": "1308/923",
       "role": {
-        "pt": "Design editorial e pôster",
-        "en": "Editorial & poster design"
+        "pt": "Design editorial e colagem",
+        "en": "Editorial design & collage"
       },
-      "thumb": "",
-      "cover": "",
+      "thumb": "assets/img/thumbs/fanzine-nothing-but-thieves.jpg",
+      "cover": "assets/img/projetos/fanzine-nothing-but-thieves/spread-gods.jpg",
       "title": "Fanzine — Nothing but Thieves",
       "tags": {
-        "pt": "Editorial, Pôster, Impresso",
-        "en": "Editorial, Poster, Print"
-      },
-      "year": 2022,
-      "category": "academico"
-    },
-    {
-      "blocks": [
-        {
-          "type": "lead",
-          "text": {
-            "pt": "Exercício editorial de tipografia e diagramação.",
-            "en": "An editorial exercise in typography and layout."
-          }
-        },
-        {
-          "type": "full",
-          "img": "",
-          "ratio": "16/8",
-          "caption": {
-            "pt": "",
-            "en": ""
-          },
-          "parallax": true
-        },
-        {
-          "type": "pair",
-          "imgs": [
-            {
-              "img": "",
-              "ratio": "4/5"
-            },
-            {
-              "img": "",
-              "ratio": "4/5"
-            }
-          ],
-          "caption": {
-            "pt": "",
-            "en": ""
-          }
-        }
-      ],
-      "summary": {
-        "pt": "Exercício editorial de tipografia e diagramação.",
-        "en": "An editorial exercise in typography and layout."
-      },
-      "slug": "lorem-ipsum",
-      "client": {
-        "pt": "Projeto acadêmico · UFES",
-        "en": "Academic project · UFES"
-      },
-      "tone": "#9AA5B1",
-      "coverRatio": "16/9",
-      "role": {
-        "pt": "Tipografia e diagramação",
-        "en": "Typography & layout"
-      },
-      "thumb": "",
-      "cover": "",
-      "title": "Lorem Ipsum",
-      "tags": {
-        "pt": "Tipografia, Editorial",
-        "en": "Typography, Editorial"
+        "pt": "Editorial · Colagem · Impresso",
+        "en": "Editorial · Collage · Print"
       },
       "year": 2022,
       "category": "academico"

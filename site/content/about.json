@@ -1,16 +1,9 @@
 {
   "bio": {
-    "pt": "Sou Matheus Lopes, designer gráfico de 24 anos, nascido em São Paulo e vivento atualmente em Belo Horizonte. Trabalho como Visual Designer na Studio Sol, onde desenvolvo a comunicação do Cifra Club, do Palco MP3 e do Letras.mus.br.\n\nComecei no design pela via da comunicação visual e fui encontrando nela um jeito de ficar perto do que mais me interessa: música, entretenimento, cultura independente e a forma como as pessoas se reúnem em torno delas.\n\nDesde 2023 estou na Studio Sol. Entrei como estagiário e fui efetivado em 2025. Ali aprendi a transformar briefings em campanhas que se desdobram em dezenas de formatos, a manter três identidades distintas coerentes entre si e a trabalhar lado a lado com marketing, conteúdo, produto e tecnologia, em plataformas usadas por milhões de pessoas que tocam, cantam e escutam música.\n\nFora da Studio Sol, atendo agências de marketing digital em projetos de tecnologia, arquitetura, mercado imobiliário e beleza, do criativo de mídia paga ao expositor de ponto de venda. \n\nTambém atuo profissionalmente como fotografo com atuação em shows e ensaios para bandas, o que me mantém próximo das produções dos mais diversos tipos de eventos.\n\nNa universidade, meu interesse é a cultura independente vista pelo design. Também publiquei um artigo sobre acessibilidade em jogos digitais e hoje desenvolvo meu TCC sobre a cena independente.",
+    "pt": "Sou Matheus Lopes, designer gráfico de 24 anos, nascido em São Paulo e vivendo atualmente em Belo Horizonte. Trabalho como Visual Designer na Studio Sol, onde desenvolvo a comunicação do Cifra Club, do Palco MP3 e do Letras.mus.br.\n\nComecei no design pela via da comunicação visual e fui encontrando nela um jeito de ficar perto do que mais me interessa: música, entretenimento, cultura independente e a forma como as pessoas se reúnem em torno delas.\n\nDesde 2023 estou na Studio Sol. Entrei como estagiário e fui efetivado em 2025. Ali aprendi a transformar briefings em campanhas que se desdobram em dezenas de formatos, a manter três identidades distintas coerentes entre si e a trabalhar lado a lado com marketing, conteúdo, produto e tecnologia, em plataformas usadas por milhões de pessoas que tocam, cantam e escutam música.\n\nFora da Studio Sol, atendo agências de marketing digital em projetos de tecnologia, arquitetura, mercado imobiliário e beleza, do criativo de mídia paga ao expositor de ponto de venda. \n\nTambém atuo profissionalmente como fotógrafo, com atuação em shows e ensaios para bandas, o que me mantém próximo das produções dos mais diversos tipos de eventos.\n\nNa universidade, meu interesse é a cultura independente vista pelo design. Também publiquei um artigo sobre acessibilidade em jogos digitais e hoje desenvolvo meu TCC sobre a cena independente.",
     "en": "I’m Matheus Lopes, a 24-year-old graphic designer born in São Paulo and currently based in Belo Horizonte. I work as a Visual Designer at Studio Sol, where I develop visual communication for Cifra Club, Palco MP3, and Letras.mus.br.\n\nI first got into design through visual communication, and over time I found in it a way to stay close to what interests me most: music, entertainment, independent culture, and the ways people come together around them.\n\nI have been working at Studio Sol since 2023. I joined as an intern and became a full-time designer in 2025. During this time, I learned how to turn briefs into campaigns that unfold across dozens of formats, maintain consistency across three distinct brand identities, and work closely with marketing, content, product, and technology teams on platforms used by millions of people who play, sing, and listen to music.\n\nOutside Studio Sol, I work with digital marketing agencies on projects across technology, architecture, real estate, and beauty, creating everything from paid media assets to point-of-sale displays.\n\nI also work professionally as a photographer, focusing on live concerts and photo shoots for bands. This keeps me closely connected to the production of a wide range of events and to the independent music scene.\n\nAt university, my main area of interest is independent culture viewed through the lens of design. I have also published an academic article on accessibility in digital games, and I am currently developing my undergraduate thesis on the independent scene."
   },
   "lists": [
-    {
-      "title": {
-        "pt": "Fora do expediente",
-        "en": "Off the clock"
-      },
-      "items": "Toco violão e guitarra\nFrequento shows com regularidade\nSou gamer\nGosto de cozinhar"
-    },
     {
       "title": {
         "pt": "Ferramentas",
@@ -203,5 +196,34 @@
         "en": "Starts Design at UFES, Vitória"
       }
     }
-  ]
+  ],
+  "offclock": {
+    "favoriteGame": {
+      "title": "Final Fantasy XII: The Zodiac Age",
+      "note": {
+        "pt": "",
+        "en": ""
+      }
+    },
+    "games": "Final Fantasy XIV\nPersona 5 Royal\nNieR:Automata\nHollow Knight: Silksong\nElden Ring\nResident Evil\nClair Obscur: Expedition 33\nOri and the Blind Forest",
+    "playing": "Resident Evil 0",
+    "song": {
+      "title": "Misguided Ghosts",
+      "artist": "Paramore"
+    },
+    "albums": [
+      {
+        "title": "Brand New Eyes",
+        "artist": "Paramore",
+        "year": "2009"
+      },
+      {
+        "title": "What Did You Think When You Made Me This Way?",
+        "artist": "Nothing But Thieves",
+        "year": "2020"
+      }
+    ],
+    "artists": "Paramore\nNothing But Thieves",
+    "hobbies": "Toco violão e guitarra\nFrequento shows com regularidade\nSou gamer\nGosto de cozinhar"
+  }
 }

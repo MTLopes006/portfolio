@@ -219,6 +219,7 @@ Campos de cada projeto:
 | Três imagens | Trio escalonado em alturas diferentes |
 | Paleta de cores | Faixas de cor com nome e código hex |
 | Amostra tipográfica | Nome da fonte, pesos e amostra grande |
+| Tipografia ao vivo (`typeset`) | Mostra as fontes reais do projeto (ex.: kit do Adobe Fonts) com nome, função e texto de amostra. Usado no Café Sōseki — kit `bwv1ssy`, liberado para matheuslopes.netlify.app e localhost |
 | Frase de destaque | Citação centralizada |
 | Ficha técnica / créditos | Lista rótulo → valor (entregas, papéis, ferramentas, créditos) |
 
@@ -278,6 +279,7 @@ layouts continuam disponíveis no painel. Dá para trocar a qualquer momento pel
 | Listas pessoais | Um item por linha (Fora do expediente, Ferramentas, Equipamento, Idiomas) |
 | Experiência / Formação | Período, cargo/curso e empresa/instituição |
 | Pesquisa | Tipo, título, resumo e link opcional (ex.: artigo publicado) |
+| Fora do expediente | Jogo favorito, jogos que você gosta, jogando agora, música na cabeça, álbuns, artistas e adesivos. As capas são geradas pelo site (cor de risografia + título), sem imagens de terceiros |
 | Trajetória | Linha do tempo: data + marco |
 
 ### 5.5 Desfazer uma alteração

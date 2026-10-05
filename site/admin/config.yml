@@ -1404,6 +1404,108 @@
               ]
             },
             {
+              "name": "offclock",
+              "label": "Fora do expediente (jogos e música)",
+              "widget": "object",
+              "collapsed": false,
+              "fields": [
+                {
+                  "name": "favoriteGame",
+                  "label": "Jogo favorito",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Título",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "note",
+                      "label": "Por que é o favorito (opcional)",
+                      "widget": "object",
+                      "collapsed": false,
+                      "required": false,
+                      "fields": [
+                        {
+                          "name": "pt",
+                          "label": "Português",
+                          "widget": "string",
+                          "required": false
+                        },
+                        {
+                          "name": "en",
+                          "label": "English",
+                          "widget": "string",
+                          "required": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "games",
+                  "label": "Jogos que eu gosto (um por linha)",
+                  "widget": "text"
+                },
+                {
+                  "name": "playing",
+                  "label": "Jogando agora",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "song",
+                  "label": "Música na cabeça",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Música",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "artist",
+                      "label": "Artista",
+                      "widget": "string"
+                    }
+                  ]
+                },
+                {
+                  "name": "albums",
+                  "label": "Álbuns",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Álbum",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "artist",
+                      "label": "Artista",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "year",
+                      "label": "Ano",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "name": "artists",
+                  "label": "Artistas (um por linha)",
+                  "widget": "text"
+                },
+                {
+                  "name": "hobbies",
+                  "label": "Adesivos / hobbies (um por linha)",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
               "name": "experience",
               "label": "Experiência",
               "widget": "list",
