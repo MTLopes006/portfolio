@@ -642,7 +642,7 @@
             <label><span class="label">${ui("cf.email")}</span><input name="email" type="email" autocomplete="email" required></label>
           </div>
           <fieldset class="cf-topics"><legend class="label">${ui("cf.topic")}</legend>
-            ${["cf.t.project", "cf.t.freela", "cf.t.photo", "cf.t.other"].map((k, i) => `<label class="chip"><input type="radio" name="topic" value="${esc(ui(k))}"${i ? "" : " checked"}><span>${ui(k)}</span></label>`).join("")}
+            ${["cf.t.project", "cf.t.photo", "cf.t.other"].map((k, i) => `<label class="chip"><input type="radio" name="topic" value="${esc(ui(k))}"${i ? "" : " checked"}><span>${ui(k)}</span></label>`).join("")}
           </fieldset>
           <label class="cf-msg"><span class="label">${ui("cf.msg")}</span><textarea name="message" rows="6" required></textarea></label>
           <input type="text" name="_honey" class="cf-honey" tabindex="-1" autocomplete="off" aria-hidden="true">

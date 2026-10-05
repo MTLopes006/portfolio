@@ -3,7 +3,7 @@ window.UI = {
   pt: {
     "off.photos": "Fotos", "pl.vol": "Volume", "pl.play": "Tocar / pausar", "pl.prev": "Anterior", "pl.next": "Próxima", "pl.full": "Ouvir completa", "pl.note": "Prévias de 30 s · Apple Music",
     "cf.name": "Nome", "cf.email": "E-mail", "cf.topic": "Assunto", "cf.msg": "Mensagem", "cf.send": "Enviar mensagem",
-    "cf.t.project": "Projeto", "cf.t.freela": "Freela", "cf.t.photo": "Fotografia", "cf.t.other": "Outro assunto",
+    "cf.t.project": "Design", "cf.t.photo": "Fotografia", "cf.t.other": "Outro assunto",
     "cf.sending": "Enviando…", "cf.ok": "Mensagem enviada. Obrigado! Respondo em breve.", "cf.err": "Não deu para enviar agora. Escreva para", "cf.invalid": "Preencha nome, e-mail válido e mensagem.",
     "off.title": "Fora do expediente", "off.lead": "Jogos, discos e o que mais toca por aqui quando o expediente acaba.",
     "off.fav": "Jogo favorito", "off.games": "Jogos que eu gosto", "off.playing": "Jogando agora", "off.song": "Na cabeça",
@@ -39,7 +39,7 @@ window.UI = {
   en: {
     "off.photos": "Photos", "pl.vol": "Volume", "pl.play": "Play / pause", "pl.prev": "Previous", "pl.next": "Next", "pl.full": "Full track", "pl.note": "30 s previews · Apple Music",
     "cf.name": "Name", "cf.email": "E-mail", "cf.topic": "Subject", "cf.msg": "Message", "cf.send": "Send message",
-    "cf.t.project": "Project", "cf.t.freela": "Freelance", "cf.t.photo": "Photography", "cf.t.other": "Something else",
+    "cf.t.project": "Design", "cf.t.photo": "Photography", "cf.t.other": "Something else",
     "cf.sending": "Sending…", "cf.ok": "Message sent. Thank you! I'll reply soon.", "cf.err": "Couldn't send right now. Write to", "cf.invalid": "Please fill in your name, a valid e-mail and a message.",
     "off.title": "Off the clock", "off.lead": "Games, records and whatever else is playing once the workday ends.",
     "off.fav": "Favourite game", "off.games": "Games I love", "off.playing": "Now playing", "off.song": "Stuck in my head",
