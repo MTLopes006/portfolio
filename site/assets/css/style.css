@@ -760,7 +760,16 @@ p, dd, li, figcaption, .series-row .sub { text-wrap: pretty; orphans: 2; widows:
 
 /* hobby stickers */
 .stickers { list-style: none; margin: clamp(24px, 3vw, 40px) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
-.stickers li { padding: 9px 16px; background: var(--paper); border: 2px solid var(--ink); border-radius: 999px; font-weight: 600; font-size: 14px; transform: rotate(var(--r)); box-shadow: 3px 3px 0 var(--magenta); }
+.stickers li { padding: 9px 16px; background: var(--paper); border: 2px solid var(--ink); border-radius: 999px; font-weight: 600; font-size: 14px; transform: rotate(var(--r)); box-shadow: 3px 3px 0 var(--magenta); transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+.stickers li:hover { transform: translateY(-6px) rotate(calc(var(--r) * .4)); box-shadow: 4px 8px 0 var(--magenta); }
+/* about: centred between the cards and the rule below, spread edge to edge */
+.offclock { padding-bottom: 0; }
+.offclock > .stickers { margin: clamp(40px, 5vw, 72px) 0; }
+@media (min-width: 900px) {
+  .offclock > .stickers, .home-off .stickers { display: grid; grid-template-columns: repeat(5, auto); justify-content: space-between; justify-items: center; gap: 18px 12px; }
+  .offclock > .stickers li:nth-child(5n+1), .home-off .stickers li:nth-child(5n+1) { justify-self: start; }
+  .offclock > .stickers li:nth-child(5n), .home-off .stickers li:nth-child(5n) { justify-self: end; }
+}
 
 @media (max-width: 1000px) {
   .card-fav { grid-column: 1 / 6; } .card-games { grid-column: 6 / 13; }
