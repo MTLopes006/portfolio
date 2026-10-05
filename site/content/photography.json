@@ -133,12 +133,6 @@
           "pick": false
         },
         {
-          "src": "assets/img/fotografia/blessthefall/20.jpg",
-          "ratio": "1350/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
           "src": "assets/img/fotografia/blessthefall/21.jpg",
           "ratio": "1200/1800",
           "caption": "",
@@ -181,38 +175,14 @@
           "pick": false
         },
         {
-          "src": "assets/img/fotografia/blessthefall/28.jpg",
-          "ratio": "1350/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
           "src": "assets/img/fotografia/blessthefall/29.jpg",
           "ratio": "1350/1800",
           "caption": "",
           "pick": false
         },
         {
-          "src": "assets/img/fotografia/blessthefall/30.jpg",
-          "ratio": "1800/1200",
-          "caption": "",
-          "pick": false
-        },
-        {
           "src": "assets/img/fotografia/blessthefall/31.jpg",
           "ratio": "1800/1200",
-          "caption": "",
-          "pick": false
-        },
-        {
-          "src": "assets/img/fotografia/blessthefall/32.jpg",
-          "ratio": "1200/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
-          "src": "assets/img/fotografia/blessthefall/33.jpg",
-          "ratio": "1200/1800",
           "caption": "",
           "pick": false
         },
@@ -477,12 +447,6 @@
           "pick": false
         },
         {
-          "src": "assets/img/fotografia/memphis-may-fire/34.jpg",
-          "ratio": "1800/1200",
-          "caption": "",
-          "pick": false
-        },
-        {
           "src": "assets/img/fotografia/memphis-may-fire/35.jpg",
           "ratio": "1800/1200",
           "caption": "",
@@ -490,12 +454,6 @@
         },
         {
           "src": "assets/img/fotografia/memphis-may-fire/36.jpg",
-          "ratio": "1200/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
-          "src": "assets/img/fotografia/memphis-may-fire/37.jpg",
           "ratio": "1200/1800",
           "caption": "",
           "pick": false
@@ -525,31 +483,13 @@
           "pick": false
         },
         {
-          "src": "assets/img/fotografia/memphis-may-fire/42.jpg",
-          "ratio": "1200/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
           "src": "assets/img/fotografia/memphis-may-fire/43.jpg",
           "ratio": "1200/1800",
           "caption": "",
           "pick": false
         },
         {
-          "src": "assets/img/fotografia/memphis-may-fire/44.jpg",
-          "ratio": "1200/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
           "src": "assets/img/fotografia/memphis-may-fire/45.jpg",
-          "ratio": "1200/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
-          "src": "assets/img/fotografia/memphis-may-fire/46.jpg",
           "ratio": "1200/1800",
           "caption": "",
           "pick": false
@@ -617,12 +557,6 @@
           "pick": false
         },
         {
-          "src": "assets/img/fotografia/chao-de-taco/08.jpg",
-          "ratio": "1350/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
           "src": "assets/img/fotografia/chao-de-taco/09.jpg",
           "ratio": "1350/1800",
           "caption": "",
@@ -660,12 +594,6 @@
         },
         {
           "src": "assets/img/fotografia/chao-de-taco/15.jpg",
-          "ratio": "1350/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
-          "src": "assets/img/fotografia/chao-de-taco/16.jpg",
           "ratio": "1350/1800",
           "caption": "",
           "pick": false
@@ -709,12 +637,6 @@
         {
           "src": "assets/img/fotografia/chao-de-taco/23.jpg",
           "ratio": "1350/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
-          "src": "assets/img/fotografia/chao-de-taco/24.jpg",
-          "ratio": "1800/1012",
           "caption": "",
           "pick": false
         },
@@ -859,12 +781,6 @@
           "pick": false
         },
         {
-          "src": "assets/img/fotografia/bad-luv/18.jpg",
-          "ratio": "1350/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
           "src": "assets/img/fotografia/bad-luv/19.jpg",
           "ratio": "1350/1800",
           "caption": "",
@@ -891,12 +807,6 @@
         {
           "src": "assets/img/fotografia/bad-luv/23.jpg",
           "ratio": "1200/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
-          "src": "assets/img/fotografia/bad-luv/24.jpg",
-          "ratio": "1350/1800",
           "caption": "",
           "pick": false
         },
@@ -933,12 +843,6 @@
         {
           "src": "assets/img/fotografia/bad-luv/30.jpg",
           "ratio": "1200/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
-          "src": "assets/img/fotografia/bad-luv/31.jpg",
-          "ratio": "1350/1800",
           "caption": "",
           "pick": false
         },
