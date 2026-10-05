@@ -483,7 +483,7 @@
         "pt": "Campanha de incentivo ao download do app para quem já usava a versão web.",
         "en": "A campaign nudging web users to download the app."
       },
-      "slug": "download-do-app",
+      "slug": "aplicativo-cifra-club",
       "client": {
         "pt": "Cifra Club · Studio Sol",
         "en": "Cifra Club · Studio Sol"
@@ -496,12 +496,12 @@
       },
       "thumb": "assets/img/thumbs/download-do-app.jpg",
       "cover": "assets/img/projetos/download-do-app/key-visual.jpg",
-      "title": "Download do App",
+      "title": "Aplicativo Cifra Club",
       "tags": {
         "pt": "Campanha, Mockups, Multiformato",
         "en": "Campaign, Mockups, Multi-format"
       },
-      "year": "",
+      "year": 2025,
       "category": "campanhas"
     },
     {
