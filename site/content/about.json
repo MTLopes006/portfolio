@@ -616,6 +616,62 @@
           "cover": "assets/img/sobre/discos/vessel.jpg",
           "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/09/9d/51/099d5159-bba2-f1c8-8476-2b8d2e6b6eed/mzaf_11858233020590662931.plus.aac.p.m4a",
           "link": "https://music.apple.com/br/album/holding-on-to-you/585128397?i=585128668"
+        },
+        {
+          "title": "boca",
+          "artist": "Chão de Taco",
+          "cover": "assets/img/sobre/discos/dificil.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/93/15/70/931570a8-ce93-5f73-6ab5-5858bc00c590/mzaf_8140489967494441204.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/boca/1716658458?i=1716658461"
+        },
+        {
+          "title": "a gente nunca mais se vê",
+          "artist": "Chão de Taco",
+          "cover": "assets/img/sobre/discos/dificil.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/0c/e3/78/0ce3784d-83af-1c6f-187b-cbed2bce5aae/mzaf_5625376192564403916.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/a-gente-nunca-mais-se-v%C3%AA/1716658458?i=1716658464"
+        },
+        {
+          "title": "Brisa",
+          "artist": "Morro Fuji",
+          "cover": "assets/img/sobre/discos/ainda-nem-doeu.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/87/a0/fb87a008-817d-5244-4489-6bef183ab248/mzaf_5799863382676668373.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/brisa/6769138690?i=6769138692"
+        },
+        {
+          "title": "Agridoce",
+          "artist": "Morro Fuji",
+          "cover": "assets/img/sobre/discos/ainda-nem-doeu.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/09/37/7a/09377a1e-3359-19fc-a89f-9ae0ac906b9d/mzaf_14039628416455162765.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/agridoce/6769138690?i=6769138693"
+        },
+        {
+          "title": "capim-limão",
+          "artist": "Rolimã",
+          "cover": "assets/img/sobre/discos/pior-que-eu-tava.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/e0/7d/b7e07db4-019a-4552-b306-672f6e262464/mzaf_4199859732175505319.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/capim-lim%C3%A3o/1862969416?i=1862969418"
+        },
+        {
+          "title": "tendinite",
+          "artist": "Rolimã",
+          "cover": "assets/img/sobre/discos/pior-que-eu-tava.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3b/2c/bf/3b2cbfc9-3a50-0703-1d2a-4a52cd66d478/mzaf_9638435249638013263.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/tendinite/1862969416?i=1862969429"
+        },
+        {
+          "title": "Naquele Inverno",
+          "artist": "Adorável Clichê",
+          "cover": "assets/img/sobre/discos/o-que-existe.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/27/62/b5/2762b565-408f-c448-27ad-408268998493/mzaf_6224650009662764034.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/naquele-inverno/1433553621?i=1433553636"
+        },
+        {
+          "title": "Falsa Valsa",
+          "artist": "Adorável Clichê",
+          "cover": "assets/img/sobre/discos/o-que-existe.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5a/55/f1/5a55f19f-83e1-e74b-30f5-4a72a8a61413/mzaf_7781348527432478442.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/falsa-valsa/1433553621?i=1433553635"
         }
       ]
     }
