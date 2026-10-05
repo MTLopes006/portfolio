@@ -840,10 +840,12 @@ p, dd, li, figcaption, .series-row .sub { text-wrap: pretty; orphans: 2; widows:
 .ho-games .tape { top: -12px; left: 50%; margin-left: -55px; transform: rotate(-3deg); }
 .game-grid li { position: relative; }
 .fav-tag { position: absolute; top: 8px; left: -6px; padding: 3px 8px; background: var(--magenta); color: #18171A; transform: rotate(-4deg); box-shadow: 2px 2px 0 rgba(0,0,0,.25); }
-.home-off .stickers { margin: clamp(28px, 3vw, 44px) 0 0; }
-.section.home-off { padding-bottom: 0; }
+.home-off .stickers { margin: var(--ho-gap) 0 0; }
+/* the block sits centred between the torn edges: same gap above the heading, above the tags and below them
+   (the torn edges reach ~22px into the neighbouring sections) */
+.section.home-off { --ho-gap: clamp(48px, 5vw, 72px); padding-top: calc(var(--ho-gap) + 22px); padding-bottom: 0; }
 /* home ends with the tags: same gap above them and down to the torn edge of the footer */
-body[data-page="home"] .site-footer { margin-top: calc(clamp(28px, 3vw, 44px) + 20px); }
+body[data-page="home"] .site-footer { margin-top: calc(clamp(48px, 5vw, 72px) + 23px); }
 .ho-intro { max-width: 34ch; margin: clamp(28px, 3vw, 44px) 0 0; font-family: var(--f-display); font-weight: 500; font-size: clamp(21px, 2.4vw, 34px); line-height: 1.15; letter-spacing: -.025em; text-wrap: balance; }
 .ho-intro em { font-style: normal; background: linear-gradient(transparent 62%, color-mix(in srgb, var(--magenta) 55%, transparent) 62%); }
 @media (max-width: 1100px) { .ho-games, .ho-song { grid-column: 1 / -1; } }
