@@ -258,6 +258,83 @@
         "year": "2018",
         "cover": "assets/img/sobre/discos/what-did-you-think.jpg",
         "link": "https://music.apple.com/br/album/what-did-you-think-when-you-made-me-this-way-ep/1433956952"
+      },
+      {
+        "title": "Continuar",
+        "artist": "ana paia",
+        "year": "2025",
+        "cover": "assets/img/sobre/discos/continuar.jpg",
+        "link": "https://music.apple.com/br/album/continuar/1843568422"
+      },
+      {
+        "title": "That's the Spirit",
+        "artist": "Bring Me The Horizon",
+        "year": "2015",
+        "cover": "assets/img/sobre/discos/thats-the-spirit.jpg",
+        "link": "https://music.apple.com/br/album/thats-the-spirit/1022197503"
+      },
+      {
+        "title": "The 1975",
+        "artist": "The 1975",
+        "year": "2013",
+        "cover": "assets/img/sobre/discos/the-1975.jpg",
+        "link": "https://music.apple.com/br/album/the-1975/1440818989"
+      },
+      {
+        "title": "fever",
+        "artist": "Against The Current",
+        "year": "2021",
+        "cover": "assets/img/sobre/discos/fever.jpg",
+        "link": "https://music.apple.com/br/album/fever/1573232687"
+      },
+      {
+        "title": "Humbug",
+        "artist": "Arctic Monkeys",
+        "year": "2009",
+        "cover": "assets/img/sobre/discos/humbug.jpg",
+        "link": "https://music.apple.com/br/album/humbug-bonus-track-version/330283015"
+      },
+      {
+        "title": "American Beauty / American Psycho",
+        "artist": "Fall Out Boy",
+        "year": "2015",
+        "cover": "assets/img/sobre/discos/american-beauty.jpg",
+        "link": "https://music.apple.com/br/album/american-beauty-american-psycho/1440826504"
+      },
+      {
+        "title": "Torches",
+        "artist": "Foster the People",
+        "year": "2011",
+        "cover": "assets/img/sobre/discos/torches.jpg",
+        "link": "https://music.apple.com/br/album/torches/435761204"
+      },
+      {
+        "title": "Wiped Out!",
+        "artist": "The Neighbourhood",
+        "year": "2015",
+        "cover": "assets/img/sobre/discos/wiped-out.jpg",
+        "link": "https://music.apple.com/br/album/wiped-out/1030115907"
+      },
+      {
+        "title": "Three Cheers for Sweet Revenge",
+        "artist": "My Chemical Romance",
+        "year": "2004",
+        "cover": "assets/img/sobre/discos/three-cheers.jpg",
+        "link": "https://music.apple.com/br/album/three-cheers-for-sweet-revenge/1156311431"
+      },
+      {
+        "title": "Misadventures",
+        "artist": "Pierce the Veil",
+        "year": "2016",
+        "cover": "assets/img/sobre/discos/misadventures.jpg",
+        "link": "https://music.apple.com/br/album/misadventures/1440950410"
+      },
+      {
+        "title": "Vessel",
+        "artist": "twenty one pilots",
+        "year": "2013",
+        "cover": "assets/img/sobre/discos/vessel.jpg",
+        "link": "https://music.apple.com/br/album/vessel/585128397"
       }
     ],
     "artists": [
