@@ -843,3 +843,12 @@ p, dd, li, figcaption, .series-row .sub { text-wrap: pretty; orphans: 2; widows:
 .cf-status a { border-bottom: 1px solid var(--magenta); }
 .contact-form + .contact-list { margin-top: clamp(48px, 6vw, 80px); }
 @media (max-width: 760px) { .cf-row { grid-template-columns: 1fr; } }
+
+/* player volume */
+.pl-vol { display: flex; align-items: center; gap: 10px; }
+.pl-vol .label { color: var(--muted); }
+.pl-vol output { min-width: 3.2em; text-align: right; color: var(--muted); }
+.pl-vol input[type=range] { --v: 20%; flex: 1; -webkit-appearance: none; appearance: none; height: 3px; background: linear-gradient(90deg, var(--magenta) var(--v), var(--rule) var(--v)); outline: none; cursor: pointer; }
+.pl-vol input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%; background: var(--ink); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--ink); }
+.pl-vol input[type=range]::-moz-range-thumb { width: 12px; height: 12px; border-radius: 50%; background: var(--ink); border: 2px solid var(--paper); }
+.pl-vol input[type=range]:focus-visible { outline: 2px solid var(--magenta); outline-offset: 6px; }

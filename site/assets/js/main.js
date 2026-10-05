@@ -483,6 +483,7 @@
         <button type="button" class="pl-next" aria-label="${ui("pl.next")}">⏭</button>
         <a class="pl-link label" href="${esc(tr[0].link || "#")}" target="_blank" rel="noopener">${ui("pl.full")} ↗</a>
       </div>
+      <label class="pl-vol"><span class="label">${ui("pl.vol")}</span><input type="range" min="0" max="100" step="1" value="20" aria-label="${ui("pl.vol")}"><output class="label">20%</output></label>
       ${compact ? "" : `<ol class="pl-list">${tr.map((x, i) => `<li><button type="button" data-i="${i}"><span class="n label">${pad(i + 1)}</span><span class="t">${esc(x.title)}</span><span class="a muted">${esc(x.artist)}</span></button></li>`).join("")}</ol>`}
       <p class="pl-note label muted">${ui("pl.note")}</p>
       ${PL.spotify ? `<iframe class="pl-spotify" src="${esc(PL.spotify.replace("open.spotify.com/", "open.spotify.com/embed/"))}" loading="lazy" allow="encrypted-media" title="Spotify"></iframe>` : ""}
@@ -492,7 +493,8 @@
   function initPlayers(PL) {
     const tr = (PL && PL.tracks) || [];
     if (!tr.length) return;
-    audio = audio || new Audio(); audio.preload = "none";
+    // never autoplays: sound only starts on the visitor's click, always at 20% volume
+    audio = audio || new Audio(); audio.preload = "none"; audio.autoplay = false; audio.volume = 0.2;
     let i = 0;
     const els = [...document.querySelectorAll("[data-player]")];
     const paint = () => els.forEach((el) => {
@@ -508,6 +510,9 @@
       el.querySelector(".pl-prev").onclick = () => load(i - 1, true);
       el.querySelector(".pl-next").onclick = () => load(i + 1, true);
       el.querySelectorAll(".pl-list button").forEach((b) => (b.onclick = () => load(+b.dataset.i, true)));
+      const vol = el.querySelector(".pl-vol input");
+      vol.oninput = () => { audio.volume = vol.value / 100; els.forEach((x) => { const v = x.querySelector(".pl-vol input"); v.value = vol.value; v.style.setProperty("--v", `${vol.value}%`); x.querySelector(".pl-vol output").textContent = `${vol.value}%`; }); };
+      vol.value = Math.round(audio.volume * 100); vol.style.setProperty("--v", `${vol.value}%`); el.querySelector(".pl-vol output").textContent = `${vol.value}%`;
     });
     audio.onplay = audio.onpause = paint;
     audio.onended = () => load(i + 1, true);
