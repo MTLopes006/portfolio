@@ -106,6 +106,10 @@
         </div>
       </div>`;
     root.lang = lang === "pt" ? "pt-BR" : "en";
+    // static page titles follow the language (project and series pages set their own)
+    const pageTitle = { work: ui("nav.work"), photo: ui("photo.title"), about: ui("about.title"), contact: ui("contact.title"), none: ui("notfound.title") }[page];
+    if (page === "home") document.title = `${P.name} — ${t(P.role)}`;
+    else if (pageTitle) document.title = `${pageTitle} — ${P.name}`;
   }
 
   /* ---------- HOME ---------- */
@@ -728,9 +732,12 @@
   }
 
   /* ---------- boot ---------- */
+  function renderNotFound() {
+    document.querySelector("main").innerHTML = `<div class="wrap page-head"><h1 class="page-title">404</h1><p class="page-lead">${ui("notfound.title")}. <a class="link-arrow" href="index.html">${ui("notfound.back")} ${arr}</a></p></div>`;
+  }
   function renderAll() {
     renderChrome();
-    ({ home: renderHome, project: renderProject, work: renderWork, photo: renderPhoto, series: renderSeries, about: renderAbout, contact: renderContact })[page]?.();
+    ({ home: renderHome, project: renderProject, work: renderWork, photo: renderPhoto, series: renderSeries, about: renderAbout, contact: renderContact, none: renderNotFound })[page]?.();
     initEffects();
     noWidows(document.querySelector("main")); noWidows(document.querySelector(".site-footer"));
     startAdClock();

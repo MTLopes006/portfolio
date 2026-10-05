@@ -1338,14 +1338,30 @@
           }
         },
         {
-          "type": "full",
-          "img": "assets/img/projetos/rebranding-vizzela/embalagem-po.jpg",
-          "ratio": "1920/1080",
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/embalagem-po.jpg",
+                  "ratio": "1920/1080"
+                },
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/embalagem-mascara.jpg",
+                  "ratio": "1920/1080"
+                }
+              ]
+            }
+          ],
           "caption": {
-            "pt": "Pó fixador Fix HD",
-            "en": "Fix HD setting powder"
+            "pt": "Pó fixador Fix HD e máscara de cílios No Panda",
+            "en": "Fix HD setting powder and No Panda mascara"
           },
-          "parallax": false
+          "span": "full"
         },
         {
           "type": "rows",
@@ -1368,87 +1384,17 @@
             }
           ],
           "caption": {
-            "pt": "Detalhes: tampa com o panda e caixa da máscara No Panda",
-            "en": "Details: panda lid and No Panda mascara box"
-          }
-        },
-        {
-          "type": "full",
-          "img": "assets/img/projetos/rebranding-vizzela/embalagem-mascara.jpg",
-          "ratio": "1920/1080",
-          "caption": {
-            "pt": "Máscara de cílios No Panda",
-            "en": "No Panda mascara"
-          },
-          "parallax": false
-        },
-        {
-          "type": "rows",
-          "rows": [
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/rebranding-vizzela/site.jpg",
-                  "ratio": "1920/1080"
-                }
-              ]
-            }
-          ],
-          "caption": {
-            "pt": "",
-            "en": ""
+            "pt": "Tampa com o panda e caixa da máscara No Panda",
+            "en": "Panda lid and No Panda mascara box"
           },
           "sideTitle": {
-            "pt": "Interfaces digitais",
-            "en": "Digital interfaces"
+            "pt": "Detalhes",
+            "en": "Details"
           },
           "sideText": {
-            "pt": "Site da nova Vizzela, com interfaces de Mikaela Aleixo.",
-            "en": "The new Vizzela website, with interfaces by Mikaela Aleixo."
+            "pt": "O panda ocupa o centro das tampas e estampa a caixa da máscara No Panda.",
+            "en": "The panda sits at the centre of the lids and is printed on the No Panda mascara box."
           }
-        },
-        {
-          "type": "specs",
-          "title": {
-            "pt": "Créditos",
-            "en": "Credits"
-          },
-          "items": [
-            {
-              "label": {
-                "pt": "Direção de fotografia, mockups e embalagens",
-                "en": "Photo direction, mockups & packaging"
-              },
-              "value": {
-                "pt": "Matheus Lopes",
-                "en": "Matheus Lopes"
-              }
-            },
-            {
-              "label": {
-                "pt": "Interfaces digitais",
-                "en": "Digital interfaces"
-              },
-              "value": {
-                "pt": "Mikaela Aleixo",
-                "en": "Mikaela Aleixo"
-              }
-            },
-            {
-              "label": {
-                "pt": "Identidade verbal, logo e paleta",
-                "en": "Verbal identity, logo & palette"
-              },
-              "value": {
-                "pt": "Matheus Lopes, Mikaela Aleixo e Rafaela Rodríguez",
-                "en": "Matheus Lopes, Mikaela Aleixo & Rafaela Rodríguez"
-              }
-            }
-          ]
         }
       ],
       "summary": {

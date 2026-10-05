@@ -34,7 +34,7 @@ window.UI = {
     "project.next": "Próxima faixa", "project.palette": "Paleta", "project.type": "Tipografia",
     "badge.edition": "Portfólio · 2026", "badge.access": "All Access", "badge.role": "Função", "badge.company": "Atualmente em",
     "badge.flip": "Vire o crachá", "badge.scan": "Escaneie para conectar no LinkedIn",
-    "placeholder": "Imagem", "notfound": "Projeto não encontrado.", "page": "pág.",
+    "placeholder": "Imagem", "notfound": "Projeto não encontrado.", "notfound.title": "Página não encontrada", "notfound.back": "Voltar ao início", "page": "pág.",
   },
   en: {
     "off.photos": "Photos", "pl.vol": "Volume", "pl.play": "Play / pause", "pl.prev": "Previous", "pl.next": "Next", "pl.full": "Full track", "pl.note": "30 s previews · Apple Music",
@@ -70,6 +70,6 @@ window.UI = {
     "project.next": "Next track", "project.palette": "Palette", "project.type": "Typography",
     "badge.edition": "Portfolio · 2026", "badge.access": "All Access", "badge.role": "Role", "badge.company": "Currently at",
     "badge.flip": "Flip the badge", "badge.scan": "Scan to connect on LinkedIn",
-    "placeholder": "Image", "notfound": "Project not found.", "page": "p.",
+    "placeholder": "Image", "notfound": "Project not found.", "notfound.title": "Page not found", "notfound.back": "Back to home", "page": "p.",
   },
 };
