@@ -297,12 +297,6 @@
           "pick": false
         },
         {
-          "src": "assets/img/fotografia/memphis-may-fire/09.jpg",
-          "ratio": "1200/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
           "src": "assets/img/fotografia/memphis-may-fire/10.jpg",
           "ratio": "1350/1800",
           "caption": "",
@@ -484,12 +478,6 @@
         },
         {
           "src": "assets/img/fotografia/memphis-may-fire/43.jpg",
-          "ratio": "1200/1800",
-          "caption": "",
-          "pick": false
-        },
-        {
-          "src": "assets/img/fotografia/memphis-may-fire/45.jpg",
           "ratio": "1200/1800",
           "caption": "",
           "pick": false
