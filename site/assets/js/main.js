@@ -578,7 +578,7 @@
   // compact version for the home page
   // home "about" block: one heading, the intro line, then the off-clock cards and hobby tags
   function offClockTeaser(O, P) {
-    const intro = `<p class="ho-intro" data-reveal>${ui("about.teaser").replace("{company}", esc(P.company))}</p>`;
+    const intro = `<p class="ho-intro" data-reveal>${ui("off.lead")}</p>`;
     if (!O) return `<section class="section home-off"><div class="wrap">${intro}<a class="link-arrow" href="sobre.html">${ui("about.more")} ${arr}</a></div></section>`;
     const fav = O.favoriteGame && O.favoriteGame.title ? [{ ...O.favoriteGame, fav: true }] : [];
     const games = [...fav, ...gamesOf(O).filter((g) => !fav.length || g.title !== fav[0].title)].slice(0, 4), playing = asItem(O.playing), hobbies = lines(t(O.hobbies));
