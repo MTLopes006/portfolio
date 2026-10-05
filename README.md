@@ -4,8 +4,8 @@ Site de portfólio de design gráfico e fotografia. **Lado A** são os projetos 
 e **Lado B** é a fotografia. A home tem o crachá "All Access" interativo, e a identidade
 segue a estética de risografia e impressão.
 
-- **Site:** `https://SEU-SITE.netlify.app` (troque pelo endereço final)
-- **Painel de edição:** `https://SEU-SITE.netlify.app/admin/`
+- **Site:** `https://matheuslopes.netlify.app` · repositório: https://github.com/MTLopes006/portfolio
+- **Painel de edição:** `https://matheuslopes.netlify.app/admin/`
 
 ---
 
@@ -132,10 +132,10 @@ A partir daqui, **todo push no GitHub publica o site automaticamente**.
 Em `site/admin/config.yml`, troque:
 
 ```json
-"repo": "SEU-USUARIO/portfolio"
+"repo": "MTLopes006/portfolio"
 ```
 
-pelo seu usuário real (ex.: `"matheuslopes16/portfolio"`). Depois faça commit e push.
+(já configurado como `MTLopes006/portfolio`). Se mudar o nome do repositório, atualize aqui.
 
 ---
 
@@ -151,13 +151,13 @@ chave secreta, e só você deve copiá-la e colá-la.
    | Campo | Valor |
    |---|---|
    | Application name | `Portfólio CMS` |
-   | Homepage URL | `https://SEU-SITE.netlify.app` |
+   | Homepage URL | `https://matheuslopes.netlify.app` |
    | Authorization callback URL | `https://api.netlify.com/auth/done` |
 3. Clique em **Register application**. Copie o **Client ID** e clique em
    **Generate a new client secret**. Copie o secret na hora, porque ele só aparece uma vez.
 4. No Netlify, abra o seu site → **Project configuration → Access & security → OAuth**
    → **Install provider** → escolha **GitHub** e cole o Client ID e o Client secret.
-5. Acesse `https://SEU-SITE.netlify.app/admin/` → **Entrar com o GitHub** → autorize.
+5. Acesse `https://matheuslopes.netlify.app/admin/` → **Entrar com o GitHub** → autorize.
 
 Pronto: o painel abre com as seções do site.
 
