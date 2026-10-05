@@ -40,7 +40,8 @@
     const inner = src
       ? `<img src="${esc(src)}" alt="${esc(o.alt || label || "")}" loading="lazy">`
       : `<div class="ph${o.tone ? " tone" : ""}"${o.tone ? ` style="--tone:${esc(o.tone)}"` : ""}><span>${esc(label || ui("placeholder"))} · ${esc(r.replace("/", ":"))}</span></div>`;
-    const m = `<div class="media${o.round ? " round" : ""}${o.frame ? " frame" : ""}"${o.parallax ? ' data-parallax="0.1"' : ""}${o.reveal === false ? "" : ' data-reveal="print"'} style="aspect-ratio:${r}">${inner}</div>`;
+    const bare = src && /\.(webp|png|svg)(\?|$)/i.test(src);
+    const m = `<div class="media${o.round ? " round" : ""}${o.frame ? " frame" : ""}${bare ? " bare" : ""}"${o.parallax ? ' data-parallax="0.1"' : ""}${o.reveal === false ? "" : ' data-reveal="print"'} style="aspect-ratio:${r}">${inner}</div>`;
     return o.crop ? `<div class="crop">${m}</div>` : m;
   };
   const stagger = (i, step = 0.06) => `style="--d:${(i * step).toFixed(2)}s"`;

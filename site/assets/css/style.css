@@ -770,3 +770,7 @@ p, dd, li, figcaption, .series-row .sub { text-wrap: pretty; orphans: 2; widows:
   .game-grid { grid-template-columns: repeat(3, 1fr); }
   .albums { grid-template-columns: 1fr; }
 }
+
+/* images with transparency (mockups, rounded posts) sit directly on the paper */
+.media.bare { background: transparent; }
+.media.bare.frame { box-shadow: none; }

@@ -971,8 +971,8 @@
         {
           "type": "lead",
           "text": {
-            "pt": "Perfumaria de ambientes atendida como freelancer pela Válore: social media, conteúdo educativo, fotografia de produto e material de ponto de venda, com a mesma atmosfera de casa aconchegante em todas as peças.",
-            "en": "A home-fragrance brand I serve as a freelancer through Válore: social media, educational content, product photography and point-of-sale material, with the same cosy-home atmosphere across every piece."
+            "pt": "Perfumaria de ambientes atendida como freelancer pela Válore: social media, conteúdo educativo, imagens de produto e material de ponto de venda, com a mesma atmosfera de casa aconchegante em todas as peças.",
+            "en": "A home-fragrance brand I serve as a freelancer through Válore: social media, educational content, product imagery and point-of-sale material, with the same cosy-home atmosphere across every piece."
           }
         },
         {
@@ -1076,12 +1076,12 @@
         {
           "type": "text",
           "title": {
-            "pt": "Fotografia de produto",
-            "en": "Product photography"
+            "pt": "Imagens de produto",
+            "en": "Product imagery"
           },
           "text": {
-            "pt": "Cenas montadas para o catálogo, as redes e o e-commerce: frascos sobre pedra, madeira e linho, com folhas, frutas e especiarias que remetem a cada fragrância.",
-            "en": "Styled scenes for the catalogue, social and e-commerce: bottles on stone, wood and linen, with leaves, fruit and spices that echo each fragrance."
+            "pt": "Cenas geradas com IA e refinadas no Photoshop, depois diagramadas e exportadas no Figma para catálogo, redes e e-commerce: frascos sobre pedra, madeira e linho, com folhas, frutas e especiarias que remetem a cada fragrância.",
+            "en": "Scenes generated with AI and refined in Photoshop, then laid out and exported in Figma for the catalogue, social and e-commerce: bottles on stone, wood and linen, with leaves, fruit and spices that echo each fragrance."
           }
         },
         {
@@ -1204,12 +1204,12 @@
             },
             {
               "label": {
-                "pt": "Fotografia",
-                "en": "Photography"
+                "pt": "Imagens de produto",
+                "en": "Product imagery"
               },
               "value": {
-                "pt": "Fotos de produto para catálogo, redes e e-commerce",
-                "en": "Product photos for catalogue, social & e-commerce"
+                "pt": "Geradas com IA, refinadas no Photoshop e finalizadas no Figma",
+                "en": "AI-generated, refined in Photoshop and finished in Figma"
               }
             },
             {
@@ -1237,15 +1237,15 @@
       "tone": "#5E7F47",
       "coverRatio": "2000/1126",
       "role": {
-        "pt": "Social media, fotografia e ponto de venda",
-        "en": "Social media, photography & point of sale"
+        "pt": "Social media, imagens de produto e ponto de venda",
+        "en": "Social media, product imagery & point of sale"
       },
       "thumb": "assets/img/thumbs/pantanal-aromas.jpg",
       "cover": "assets/img/projetos/pantanal-aromas/capa.webp",
       "title": "Pantanal Aromas",
       "tags": {
-        "pt": "Social media · Fotografia de produto · Ponto de venda",
-        "en": "Social media · Product photography · Point of sale"
+        "pt": "Social media · Imagens de produto · Ponto de venda",
+        "en": "Social media · Product imagery · Point of sale"
       },
       "year": 2026,
       "category": "clientes"
