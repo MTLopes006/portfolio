@@ -764,9 +764,9 @@ p, dd, li, figcaption, .series-row .sub { text-wrap: pretty; orphans: 2; widows:
 .stickers li:hover { transform: translateY(-6px) rotate(calc(var(--r) * .4)); box-shadow: 4px 8px 0 var(--magenta); }
 /* about: centred between the cards and the rule below, spread edge to edge */
 .offclock { padding-bottom: 0; }
-.offclock > .stickers { margin: clamp(40px, 5vw, 72px) 0; }
+.offclock > .stickers { margin: clamp(28px, 3vw, 44px) 0; }
 @media (min-width: 900px) {
-  .offclock > .stickers, .home-off .stickers { display: grid; grid-template-columns: repeat(5, auto); justify-content: space-between; justify-items: center; gap: 30px 12px; }
+  .offclock > .stickers, .home-off .stickers { display: grid; grid-template-columns: repeat(5, auto); justify-content: space-between; justify-items: center; gap: 44px 12px; }
   .offclock > .stickers li:nth-child(5n+1), .home-off .stickers li:nth-child(5n+1) { justify-self: start; }
   .offclock > .stickers li:nth-child(5n), .home-off .stickers li:nth-child(5n) { justify-self: end; }
 }
@@ -830,7 +830,7 @@ p, dd, li, figcaption, .series-row .sub { text-wrap: pretty; orphans: 2; widows:
 .ho-games .tape { top: -12px; left: 50%; margin-left: -55px; transform: rotate(-3deg); }
 .game-grid li { position: relative; }
 .fav-tag { position: absolute; top: 8px; left: -6px; padding: 3px 8px; background: var(--magenta); color: #18171A; transform: rotate(-4deg); box-shadow: 2px 2px 0 rgba(0,0,0,.25); }
-.home-off .stickers { margin: clamp(40px, 5vw, 72px) 0 0; }
+.home-off .stickers { margin: clamp(28px, 3vw, 44px) 0 0; }
 .ho-intro { max-width: 34ch; margin: clamp(28px, 3vw, 44px) 0 0; font-family: var(--f-display); font-weight: 500; font-size: clamp(21px, 2.4vw, 34px); line-height: 1.15; letter-spacing: -.025em; text-wrap: balance; }
 .ho-intro em { font-style: normal; background: linear-gradient(transparent 62%, color-mix(in srgb, var(--magenta) 55%, transparent) 62%); }
 @media (max-width: 1100px) { .ho-games, .ho-song { grid-column: 1 / -1; } }
