@@ -939,6 +939,77 @@
                   ]
                 },
                 {
+                  "name": "layout",
+                  "label": "Layout da página",
+                  "widget": "select",
+                  "default": "editorial",
+                  "options": [
+                    {
+                      "label": "Pôster — capa sangrada com o nome por cima",
+                      "value": "poster"
+                    },
+                    {
+                      "label": "Folha de contato — filme com marcações de lápis",
+                      "value": "contact"
+                    },
+                    {
+                      "label": "Zine — colagem com fita e carimbo",
+                      "value": "zine"
+                    },
+                    {
+                      "label": "Editorial — grade assimétrica com números",
+                      "value": "editorial"
+                    },
+                    {
+                      "label": "Sequência — uma foto por tela",
+                      "value": "sequence"
+                    }
+                  ]
+                },
+                {
+                  "name": "accent",
+                  "label": "Cor de tinta (risografia)",
+                  "widget": "select",
+                  "default": "#FF48B0",
+                  "options": [
+                    {
+                      "label": "Rosa fluorescente",
+                      "value": "#FF48B0"
+                    },
+                    {
+                      "label": "Azul",
+                      "value": "#0078BF"
+                    },
+                    {
+                      "label": "Vermelho",
+                      "value": "#FF665E"
+                    },
+                    {
+                      "label": "Verde",
+                      "value": "#00A95C"
+                    },
+                    {
+                      "label": "Roxo",
+                      "value": "#765BA7"
+                    },
+                    {
+                      "label": "Laranja",
+                      "value": "#FF6C2F"
+                    },
+                    {
+                      "label": "Amarelo",
+                      "value": "#FFE800"
+                    }
+                  ]
+                },
+                {
+                  "name": "cover",
+                  "label": "Capa (se vazio, usa a primeira foto)",
+                  "widget": "image",
+                  "required": false,
+                  "choose_url": false
+                },
+                {
                   "name": "photos",
                   "label": "Fotos",
                   "widget": "list",
@@ -972,6 +1043,13 @@
                       "name": "caption",
                       "label": "Legenda",
                       "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "pick",
+                      "label": "Destaque (circulada na folha de contato)",
+                      "widget": "boolean",
+                      "default": false,
                       "required": false
                     }
                   ]

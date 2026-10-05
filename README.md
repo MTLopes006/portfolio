@@ -54,7 +54,8 @@ portfolio/
 └── site/                     ← tudo o que vai para o ar
     ├── index.html            Home: nome + crachá, projetos, fotografia, sobre
     ├── projeto.html          Modelo das páginas de projeto (?p=<endereço>)
-    ├── fotografia.html       Índice de bandas + séries de fotos
+    ├── fotografia.html       Índice das séries de fotografia (uma linha por banda)
+    ├── foto.html             Página de cada série (?s=<endereço>), com layout próprio
     ├── sobre.html            Bio, listas, experiência, formação, pesquisa, trajetória
     ├── contato.html          Contatos (também no rodapé de todas as páginas)
     ├── content/              ← O CONTEÚDO EDITÁVEL
@@ -218,12 +219,40 @@ Campos de cada projeto:
 
 ### 5.3 Fotografia (Lado B)
 
-- **Texto de abertura, Como trabalho e Equipamento** aparecem no topo da página.
-- **Bandas:** cada banda vira uma seção com âncora (ex.: `fotografia.html#bad-luv`).
-  - **Tipo:** Show ao vivo, Retrato de banda ou Retrato noturno.
-  - **Local, Ano e Descrição:** opcionais.
-  - **Fotos:** envie quantas quiser. O layout alterna tamanhos a cada 5 fotos.
-    Clicar numa foto abre em tela cheia.
+A fotografia tem três níveis:
+
+1. **Home:** o link "Fotografia" do menu rola até a seção Lado B, com a lista das bandas.
+   O link **Ver fotografia**, ao lado do título, leva ao índice.
+2. **Índice** (`fotografia.html`): uma linha por banda, com capa, tipo, local e número de fotos.
+3. **Página da série** (`foto.html?s=bad-luv`): página própria, com layout e cor de tinta
+   escolhidos para a banda, navegação para a série anterior e a próxima, e fotos em tela
+   cheia com setas (← → no teclado).
+
+**Campos de cada banda:**
+
+| Campo | Observação |
+|---|---|
+| Banda / Endereço | Nome e parte da URL (`foto.html?s=endereco`) |
+| Tipo | Show ao vivo, Retrato de banda, Retrato noturno… |
+| Local, Ano, Descrição | Opcionais |
+| **Layout da página** | Ver tabela abaixo |
+| **Cor de tinta** | Cor de risografia usada nos detalhes da página (números, carimbo, desalinhamento do título, marcação de lápis) |
+| Capa | Imagem do índice e da home. Se vazia, usa a primeira foto |
+| Fotos | Foto, proporção, legenda e **Destaque** (usado na folha de contato) |
+
+**Layouts disponíveis**, um por banda para cada página ter cara própria:
+
+| Layout | Como fica | Funciona melhor com |
+|---|---|---|
+| **Pôster** | Primeira foto sangrada em tela cheia, com o nome da banda por cima; depois fotos grandes alternando largura | Uma foto de abertura muito forte, palco e luz |
+| **Folha de contato** | A foto escolhida ampliada, presa com fita; abaixo, tira de filme com todos os quadros numerados e os destaques circulados a lápis | Cobertura de show com muitas fotos |
+| **Zine** | Colagem com fotos em moldura de papel, levemente giradas, com fita adesiva e carimbo | Ensaios de banda, bastidores, clima DIY |
+| **Editorial** | Grade assimétrica com números grandes na cor da série | Séries variadas, horizontais e verticais |
+| **Sequência** | Uma foto por tela, com contador fixo (03/12) | Retrato noturno, séries curtas e cinematográficas |
+
+Configuração atual: Blessthefall → Pôster (azul) · Memphis May Fire → Folha de contato
+(vermelho) · Chão de Taco → Zine (verde) · Bad Luv → Editorial (rosa) · Julieta Social →
+Sequência (roxo). Dá para trocar a qualquer momento pelo painel.
 
 ### 5.4 Sobre
 
@@ -316,7 +345,8 @@ porque o navegador bloqueia a leitura dos arquivos JSON fora de um servidor.
   magenta de risografia `#FF48B0`, azul riso `#0078BF` (só no efeito de desalinhamento).
   O modo escuro redefine as mesmas variáveis.
 - **Fontes:** Archivo (títulos, largura variável) e Schibsted Grotesk (texto), pelo Google Fonts.
-- **Elementos de impressão:** grão de papel, retícula de fundo, marcas de corte (`.crop`),
+- **Elementos de impressão:** grão e fibras de papel, folhas com borda rasgada (`.sheet` +
+  `.tear`), papel magenta rasgado atrás do crachá, fita adesiva (`.tape`), marcas de corte (`.crop`),
   marcas de registro, barra de cores no rodapé, imagens sangradas e o desalinhamento
   magenta/azul ao passar o mouse nos títulos.
 - **Crachá** (`assets/js/badge.js`, objeto `TUNE`):

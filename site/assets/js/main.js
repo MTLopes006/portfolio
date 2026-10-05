@@ -28,7 +28,7 @@
   sysDark.addEventListener?.("change", (e) => { if (!store.get("ml-theme")) applyTheme(e.matches ? "dark" : "light"); });
 
   const page = document.body.dataset.page;
-  const folio = { home: 1, project: 2, photo: 3, about: 4, contact: 5 }[page] || 1;
+  const folio = { home: 1, project: 2, photo: 3, series: 3, about: 4, contact: 5 }[page] || 1;
 
   /* ---------- snippets ---------- */
   const arr = '<span class="arr" aria-hidden="true">→</span>';
@@ -46,9 +46,9 @@
   const stagger = (i, step = 0.06) => `style="--d:${(i * step).toFixed(2)}s"`;
 
   /* ---------- header / footer ---------- */
-  const nav = [["index.html#projetos", "nav.work", "home"], ["fotografia.html", "nav.photo", "photo"], ["sobre.html", "nav.about", "about"], ["contato.html", "nav.contact", "contact"]];
+  const nav = [["index.html#projetos", "nav.work", "home"], ["index.html#fotografia", "nav.photo", "photo"], ["sobre.html", "nav.about", "about"], ["contato.html", "nav.contact", "contact"]];
   function renderChrome() {
-    const navLinks = nav.map(([h, k, p]) => `<a href="${h}"${p === page && p !== "home" ? ' aria-current="page"' : ""}>${ui(k)}</a>`).join("");
+    const navLinks = nav.map(([h, k, p]) => `<a href="${h}"${(p === page || (p === "photo" && page === "series")) && p !== "home" ? ' aria-current="page"' : ""}>${ui(k)}</a>`).join("");
     const dark = root.getAttribute("data-theme") === "dark";
     const header = document.querySelector(".site-header");
     header.innerHTML = `
@@ -77,7 +77,10 @@
     mnav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { mnav.classList.remove("open"); }));
 
     const contacts = [["Email", `mailto:${P.email}`], ["LinkedIn", P.linkedin], ["WhatsApp", P.whatsapp], P.instagram ? ["Instagram", P.instagram] : null].filter(Boolean);
-    document.querySelector(".site-footer").innerHTML = `
+    const footer = document.querySelector(".site-footer");
+    footer.classList.add("sheet");
+    footer.innerHTML = `
+      <div class="tear tear-top" style="--tx:-410px" aria-hidden="true"></div>
       <div class="wrap">
         <a class="foot-cta riso" data-text="${esc(ui("footer.cta"))}" href="contato.html">${ui("footer.cta")}</a>
         <a class="foot-mail" href="mailto:${esc(P.email)}">${esc(P.email)} ${arr}</a>
@@ -145,7 +148,9 @@
         </div>
       </section>
 
-      <section class="section" id="fotografia" style="padding-top:0">
+      <section class="section sheet" id="fotografia">
+        <div class="tear tear-top" style="--tx:-180px" aria-hidden="true"></div>
+        <div class="tear tear-bottom" style="--tx:-760px" aria-hidden="true"></div>
         <div class="wrap">
           <div class="sec-head" data-reveal>
             <div><div class="sec-label label"><span class="pink">${ui("sideB")}</span>${regmark}</div><h2 class="sec-title">${ui("photo.title")}</h2></div>
@@ -154,16 +159,16 @@
           <div class="sideb-grid">
             <p class="sideb-lead" data-reveal>${esc(t(PH.intro))}</p>
             <ul class="setlist">
-              ${series.map((s, i) => `<li data-reveal ${stagger(i)}><a href="fotografia.html#${esc(s.slug)}"><span class="n label">${pad(i + 1)}</span><span class="t">${esc(s.band)}</span><span class="c label">${pad(s.photos.length)} ${ui("photo.photos")}</span></a></li>`).join("")}
+              ${series.map((s, i) => `<li data-reveal ${stagger(i)}><a href="foto.html?s=${esc(s.slug)}"><span class="n label">${pad(i + 1)}</span><span class="t">${esc(s.band)}</span><span class="c label">${pad(s.photos.length)} ${ui("photo.photos")}</span></a></li>`).join("")}
             </ul>
           </div>
           <div class="sideb-strip">
-            ${stripSeries.map((s, k) => { const ph = s.photos.find((x) => x.src) || s.photos[0] || {}; return `<div ${stagger(k, 0.12)}>${media(ph.src, k === 1 ? "3/4" : k === 0 ? "4/3" : "4/5", s.band, { parallax: k !== 1, crop: k === 0 })}</div>`; }).join("")}
+            ${stripSeries.map((s, k) => `<a href="foto.html?s=${esc(s.slug)}" ${stagger(k, 0.12)} aria-label="${esc(s.band)}">${media(coverOf(s), k === 1 ? "3/4" : k === 0 ? "4/3" : "4/5", s.band, { parallax: k !== 1, crop: k === 0, tone: s.accent })}</a>`).join("")}
           </div>
         </div>
       </section>
 
-      <section class="section" style="padding-top:0">
+      <section class="section">
         <div class="wrap about-teaser" data-reveal>
           <p>${ui("about.teaser").replace("{company}", esc(P.company))}</p>
           <a class="link-arrow" href="sobre.html">${ui("about.more")} ${arr}</a>
@@ -241,6 +246,10 @@
   }
 
   /* ---------- PHOTOGRAPHY ---------- */
+  const coverOf = (s) => s.cover || (s.photos.find((x) => x.src) || {}).src || "";
+  const seriesMeta = (s) => [t(s.kind), s.venue, s.year].filter(Boolean).map(esc).join(" · ");
+
+  // Index: one editorial row per series, each linking to its own page.
   function renderPhoto() {
     const el = document.querySelector("main");
     el.innerHTML = `
@@ -250,31 +259,100 @@
           <h1 class="page-title riso" data-text="${esc(ui("photo.title"))}">${ui("photo.title")}</h1>
           <p class="page-lead">${esc(t(PH.intro))}</p>
           ${t(PH.process) || PH.gear ? `<dl class="photo-specs" data-reveal>${t(PH.process) ? `<div><dt class="label">${ui("photo.process")}</dt><dd>${esc(t(PH.process))}</dd></div>` : ""}${PH.gear ? `<div><dt class="label">${ui("photo.gear")}</dt><dd>${esc(PH.gear)}</dd></div>` : ""}</dl>` : ""}
-          <ol class="band-index">
-            ${series.map((s, i) => `<li data-reveal ${stagger(i)}><a href="#${esc(s.slug)}"><span class="n label muted">${pad(i + 1)}</span><span class="t">${esc(s.band)}</span><span class="kind label muted">${esc(t(s.kind))}</span><span class="label muted">${pad(s.photos.length)} ${ui("photo.photos")}</span></a></li>`).join("")}
-          </ol>
         </header>
-        ${series.map((s, i) => `
-          <section class="series" id="${esc(s.slug)}">
-            <div class="series-head" data-reveal>
-              <span class="label muted">${pad(i + 1)}</span>
-              <h2>${esc(s.band)}</h2>
-              <div class="series-meta label">${[t(s.kind), s.venue, s.year].filter(Boolean).map(esc).join(" · ")}</div>
-            </div>
-            ${t(s.desc) ? `<p class="series-desc" data-reveal>${esc(t(s.desc))}</p>` : ""}
-            <div class="photo-flow">
-              ${s.photos.map((ph, k) => `<figure data-src="${esc(ph.src || "")}">${media(ph.src, ph.ratio, s.band, { parallax: k % 4 === 0, crop: k === 0 })}${ph.caption ? `<figcaption>${esc(ph.caption)}</figcaption>` : ""}</figure>`).join("")}
-            </div>
-          </section>`).join("")}
-      </div>
-      <div class="lightbox" role="dialog" aria-modal="true"><img alt=""></div>`;
-    const lb = el.querySelector(".lightbox");
-    el.querySelectorAll(".photo-flow figure").forEach((f) => f.addEventListener("click", () => {
-      if (!f.dataset.src) return;
-      lb.querySelector("img").src = f.dataset.src; lb.classList.add("open");
-    }));
-    lb.addEventListener("click", () => lb.classList.remove("open"));
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") lb.classList.remove("open"); });
+        <ol class="series-index">
+          ${series.map((s, i) => `
+            <li class="series-row" style="--acc:${esc(s.accent || "var(--magenta)")}">
+              <a href="foto.html?s=${esc(s.slug)}">
+                <div class="cover crop"><span class="tape" aria-hidden="true"></span>${media(coverOf(s), "3/2", s.band, { tone: s.accent })}</div>
+                <div class="info" data-reveal>
+                  <span class="n label">${pad(i + 1)} / ${pad(series.length)}</span>
+                  <h2>${esc(s.band)}</h2>
+                  <div class="meta label">${seriesMeta(s) || "&nbsp;"} · ${pad(s.photos.length)} ${ui("photo.photos")}</div>
+                  <span class="go">${ui("photo.open")} ${arr}</span>
+                </div>
+              </a>
+            </li>`).join("")}
+        </ol>
+      </div>`;
+  }
+
+  // Lightbox shared by series pages: arrows, keyboard, counter.
+  function initLightbox(root) {
+    const figs = [...root.querySelectorAll("figure[data-src]")].filter((f) => f.dataset.src);
+    if (!figs.length) return;
+    const lb = document.createElement("div");
+    lb.className = "lightbox"; lb.setAttribute("role", "dialog"); lb.setAttribute("aria-modal", "true");
+    lb.innerHTML = `<img alt=""><button class="lb-btn lb-prev" aria-label="←">←</button><button class="lb-btn lb-next" aria-label="→">→</button><div class="lb-count label"></div>`;
+    document.body.appendChild(lb);
+    let i = 0;
+    const show = (k) => { i = (k + figs.length) % figs.length; lb.querySelector("img").src = figs[i].dataset.src; lb.querySelector(".lb-count").textContent = `${pad(i + 1)} / ${pad(figs.length)}`; lb.classList.add("open"); };
+    figs.forEach((f, k) => f.addEventListener("click", () => show(k)));
+    lb.addEventListener("click", (e) => { if (e.target.closest(".lb-prev")) show(i - 1); else if (e.target.closest(".lb-next")) show(i + 1); else lb.classList.remove("open"); });
+    document.addEventListener("keydown", (e) => {
+      if (!lb.classList.contains("open")) return;
+      if (e.key === "Escape") lb.classList.remove("open");
+      if (e.key === "ArrowLeft") show(i - 1);
+      if (e.key === "ArrowRight") show(i + 1);
+    });
+  }
+
+  // Each series gets its own page and one of five layouts.
+  function renderSeries() {
+    const el = document.querySelector("main");
+    const slug = new URLSearchParams(location.search).get("s");
+    const idx = Math.max(0, series.findIndex((x) => x.slug === slug));
+    const s = series[idx];
+    if (!s) { el.innerHTML = `<div class="wrap page-head"><p>${ui("notfound")}</p></div>`; return; }
+    document.title = `${s.band} — ${ui("photo.title")} — ${P.name}`;
+    const prev = series[(idx - 1 + series.length) % series.length], next = series[(idx + 1) % series.length];
+    const photos = s.photos || [];
+    const fig = (ph, k, o = {}) => `<figure data-src="${esc(ph.src || "")}" ${o.attrs || ""}>${o.before || ""}${media(ph.src, o.ratio || ph.ratio, `${s.band} ${pad(k + 1)}`, { parallax: o.parallax, crop: o.crop, tone: o.tone })}${ph.caption && !o.noCap ? `<figcaption>${esc(ph.caption)}</figcaption>` : ""}</figure>`;
+    const layout = s.layout || "editorial";
+    let body = "";
+    if (layout === "poster") {
+      const [first, ...rest] = photos;
+      body = `
+        <div class="poster-hero" data-src="${esc(first?.src || "")}">${media(first?.src, "16/9", s.band, { parallax: true, reveal: false, tone: s.accent })}<div class="over">${esc(s.band).split(" ").map((w) => `<span>${w}</span>`).join("")}</div></div>
+        <div class="poster-flow">${rest.map((ph, k) => `<div ${stagger(0)}>${fig(ph, k + 1)}</div>`).join("")}</div>`;
+    } else if (layout === "contact") {
+      const picks = photos.map((ph, k) => ph.pick || (!photos.some((x) => x.pick) && k < 2));
+      const hero = photos[picks.indexOf(true)] || photos[0];
+      body = `
+        ${hero ? `<div class="pick">${fig(hero, 0, { before: '<span class="tape" aria-hidden="true"></span><span class="tape" aria-hidden="true"></span>', crop: true })}</div>` : ""}
+        <div class="film"><div class="frames">${photos.map((ph, k) => `<div class="frame${picks[k] ? " picked" : ""}" data-reveal ${stagger(k, 0.04)}>${fig(ph, k, { ratio: "3/2", noCap: true })}<div class="no"><b>${k + 1}A</b><span>▸ ${pad(k + 1)}</span></div></div>`).join("")}</div></div>`;
+    } else if (layout === "zine") {
+      body = `<div class="collage sheet-free"><span class="stamp" aria-hidden="true">${esc(t(s.kind) || s.band)}</span>${photos.map((ph, k) => fig(ph, k, { before: k % 2 === 0 ? '<span class="tape" aria-hidden="true"></span>' : "" })).join("")}</div>`;
+    } else if (layout === "sequence") {
+      body = `<div class="seq"><div class="counter" aria-hidden="true"><span class="cur">01</span><small>/ ${pad(photos.length)}</small></div>${photos.map((ph, k) => `<section class="slide" data-k="${k}">${fig(ph, k)}</section>`).join("")}</div>`;
+    } else {
+      body = `<div class="ed">${photos.map((ph, k) => fig(ph, k, { before: `<span class="big-n" aria-hidden="true">${pad(k + 1)}</span>`, parallax: k % 4 === 0 })).join("")}</div>`;
+    }
+    el.innerHTML = `
+      <article class="wrap series-page lay-${esc(layout)}" id="top" style="--acc:${esc(s.accent || "var(--magenta)")}">
+        <div class="sp-top label"><a href="fotografia.html">← ${ui("photo.title")}</a><span>${ui("photo.series")} ${pad(idx + 1)}/${pad(series.length)}</span></div>
+        <header class="sp-head">
+          <h1 class="sp-title riso" data-text="${esc(s.band)}">${esc(s.band)}</h1>
+          <dl class="sp-meta label" data-reveal>
+            ${t(s.kind) ? `<div><dt>${ui("photo.kind")}</dt><dd><span class="sp-mark"></span>${esc(t(s.kind))}</dd></div>` : ""}
+            ${s.venue ? `<div><dt>${ui("photo.venue")}</dt><dd>${esc(s.venue)}</dd></div>` : ""}
+            ${s.year ? `<div><dt>${ui("project.year")}</dt><dd>${esc(s.year)}</dd></div>` : ""}
+            <div><dt>${ui("photo.photos")}</dt><dd>${pad(photos.length)}</dd></div>
+          </dl>
+          ${t(s.desc) ? `<p class="sp-desc" data-reveal>${esc(t(s.desc))}</p>` : ""}
+        </header>
+        <div class="sp-body">${body}</div>
+        <nav class="sp-nav">
+          <a href="foto.html?s=${esc(prev.slug)}"><span class="label muted">← ${ui("photo.prev")}</span><span class="t">${esc(prev.band)}</span></a>
+          <a href="foto.html?s=${esc(next.slug)}"><span class="label muted">${ui("photo.next")} →</span><span class="t">${esc(next.band)}</span></a>
+        </nav>
+      </article>`;
+    initLightbox(el);
+    if (layout === "sequence") {
+      const cur = el.querySelector(".counter .cur");
+      const io2 = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) cur.textContent = pad(+e.target.dataset.k + 1); }), { threshold: 0.55 });
+      el.querySelectorAll(".slide").forEach((n) => io2.observe(n));
+    }
   }
 
   /* ---------- ABOUT ---------- */
@@ -350,7 +428,11 @@
     if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || a.target === "_blank") return;
     const url = new URL(a.href, location.href);
     if (url.origin !== location.origin) return;
-    if (url.pathname === location.pathname && url.search === location.search) return;
+    const norm = (x) => x.replace(/\/index\.html$/, "/");
+    if (norm(url.pathname) === norm(location.pathname) && url.search === location.search) {
+      if (url.hash) { e.preventDefault(); document.querySelector(url.hash)?.scrollIntoView({ behavior: "smooth" }); history.replaceState(null, "", url.hash); }
+      return;
+    }
     e.preventDefault();
     document.body.classList.add("is-leaving");
     setTimeout(() => { location.href = url.href; }, 280);
@@ -360,7 +442,7 @@
   /* ---------- boot ---------- */
   function renderAll() {
     renderChrome();
-    ({ home: renderHome, project: renderProject, photo: renderPhoto, about: renderAbout, contact: renderContact })[page]?.();
+    ({ home: renderHome, project: renderProject, photo: renderPhoto, series: renderSeries, about: renderAbout, contact: renderContact })[page]?.();
     initEffects();
   }
   renderAll();

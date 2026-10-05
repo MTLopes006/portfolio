@@ -21,29 +21,37 @@
         {
           "src": "",
           "ratio": "3/2",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "2/3",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "4/5",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "3/2",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "2/3",
-          "caption": ""
+          "caption": "",
+          "pick": false
         }
-      ]
+      ],
+      "layout": "poster",
+      "accent": "#0078BF",
+      "cover": ""
     },
     {
       "slug": "memphis-may-fire",
@@ -62,24 +70,31 @@
         {
           "src": "",
           "ratio": "2/3",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "3/2",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "4/5",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "2/3",
-          "caption": ""
+          "caption": "",
+          "pick": false
         }
-      ]
+      ],
+      "layout": "contact",
+      "accent": "#FF665E",
+      "cover": ""
     },
     {
       "slug": "chao-de-taco",
@@ -98,24 +113,31 @@
         {
           "src": "",
           "ratio": "4/5",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "3/2",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "2/3",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "4/5",
-          "caption": ""
+          "caption": "",
+          "pick": false
         }
-      ]
+      ],
+      "layout": "zine",
+      "accent": "#00A95C",
+      "cover": ""
     },
     {
       "slug": "bad-luv",
@@ -134,24 +156,31 @@
         {
           "src": "",
           "ratio": "3/2",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "4/5",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "2/3",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "3/2",
-          "caption": ""
+          "caption": "",
+          "pick": false
         }
-      ]
+      ],
+      "layout": "editorial",
+      "accent": "#FF48B0",
+      "cover": ""
     },
     {
       "slug": "julieta-social",
@@ -170,24 +199,31 @@
         {
           "src": "",
           "ratio": "2/3",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "4/5",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "3/2",
-          "caption": ""
+          "caption": "",
+          "pick": false
         },
         {
           "src": "",
           "ratio": "4/5",
-          "caption": ""
+          "caption": "",
+          "pick": false
         }
-      ]
+      ],
+      "layout": "sequence",
+      "accent": "#765BA7",
+      "cover": ""
     }
   ],
   "process": {
