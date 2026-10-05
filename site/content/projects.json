@@ -1264,10 +1264,46 @@
           "img": "assets/img/projetos/rebranding-vizzela/logo.jpg",
           "ratio": "1920/766",
           "caption": {
-            "pt": "A nova Vizzela",
-            "en": "The new Vizzela"
+            "pt": "A nova Vizzela: marca em verde floresta",
+            "en": "The new Vizzela: wordmark on forest green"
           },
           "parallax": false
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Panda unicórnio",
+            "en": "Unicorn panda"
+          },
+          "text": {
+            "pt": "O mascote ganha um chifre e vira o símbolo da marca. Ele aparece sozinho nas tampas e embalagens e, dentro do selo circular, reúne os compromissos da Vizzela: vegana, cruelty free e 100% livre de parabenos.",
+            "en": "The mascot gains a horn and becomes the brand symbol. It appears on its own on lids and packaging and, inside the circular seal, gathers Vizzela's commitments: vegan, cruelty-free and 100% paraben-free."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/selo-panda.jpg",
+                  "ratio": "675/675"
+                },
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/selo-compromissos.jpg",
+                  "ratio": "675/675"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Símbolo e selo de compromissos",
+            "en": "Symbol and commitments seal"
+          }
         },
         {
           "type": "palette",
@@ -1297,9 +1333,19 @@
             "en": "Packaging"
           },
           "text": {
-            "pt": "A linha ganha embalagens em verde e rosa, com o panda da marca em destaque. A direção de fotografia leva os produtos para cenas com luz natural, folhagem e cerejas.",
-            "en": "The range gets green and pink packaging with the brand's panda up front. The photo direction places products in scenes with natural light, foliage and cherries."
+            "pt": "A linha ganha embalagens em verde e rosa, com o panda em destaque. A direção de fotografia leva os produtos para cenas com luz natural, folhagem e cerejas.",
+            "en": "The range gets green and pink packaging with the panda up front. The photo direction places products in scenes with natural light, foliage and cherries."
           }
+        },
+        {
+          "type": "full",
+          "img": "assets/img/projetos/rebranding-vizzela/embalagem-po.jpg",
+          "ratio": "1920/1080",
+          "caption": {
+            "pt": "Pó fixador Fix HD",
+            "en": "Fix HD setting powder"
+          },
+          "parallax": false
         },
         {
           "type": "rows",
@@ -1311,49 +1357,30 @@
               },
               "imgs": [
                 {
-                  "img": "assets/img/projetos/rebranding-vizzela/embalagem-po.jpg",
-                  "ratio": "1920/1080"
+                  "img": "assets/img/projetos/rebranding-vizzela/detalhe-tampa.jpg",
+                  "ratio": "640/640"
                 },
                 {
-                  "img": "assets/img/projetos/rebranding-vizzela/embalagem-mascara.jpg",
-                  "ratio": "1920/1080"
+                  "img": "assets/img/projetos/rebranding-vizzela/detalhe-mascara.jpg",
+                  "ratio": "520/840"
                 }
               ]
             }
           ],
           "caption": {
-            "pt": "Pó fixador Fix HD e máscara No Panda",
-            "en": "Fix HD setting powder and No Panda mascara"
+            "pt": "Detalhes: tampa com o panda e caixa da máscara No Panda",
+            "en": "Details: panda lid and No Panda mascara box"
           }
         },
         {
-          "type": "rows",
-          "rows": [
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/rebranding-vizzela/selos.jpg",
-                  "ratio": "1920/675"
-                }
-              ]
-            }
-          ],
+          "type": "full",
+          "img": "assets/img/projetos/rebranding-vizzela/embalagem-mascara.jpg",
+          "ratio": "1920/1080",
           "caption": {
-            "pt": "",
-            "en": ""
+            "pt": "Máscara de cílios No Panda",
+            "en": "No Panda mascara"
           },
-          "sideTitle": {
-            "pt": "Selos",
-            "en": "Seals"
-          },
-          "sideText": {
-            "pt": "O panda com chifre de unicórnio vira um selo com os compromissos da marca: vegana, cruelty free e 100% livre de parabenos.",
-            "en": "The unicorn-horned panda becomes a seal for the brand's commitments: vegan, cruelty-free and 100% paraben-free."
-          }
+          "parallax": false
         },
         {
           "type": "rows",
@@ -1457,16 +1484,6 @@
             "pt": "Uma cafeteria inspirada no romance Eu Sou um Gato, de Natsume Sōseki. O projeto é o desenvolvimento gráfico e a diagramação de um menu personalizado, impresso em offset.",
             "en": "A café inspired by Natsume Sōseki's novel I Am a Cat. The project covers the graphic development and layout of a bespoke menu, printed in offset."
           }
-        },
-        {
-          "type": "full",
-          "img": "assets/img/projetos/cafe-soseki/logo.jpg",
-          "ratio": "1400/167",
-          "caption": {
-            "pt": "",
-            "en": ""
-          },
-          "parallax": false
         },
         {
           "type": "text",
