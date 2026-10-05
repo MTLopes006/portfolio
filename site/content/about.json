@@ -260,7 +260,32 @@
         "link": "https://music.apple.com/br/album/what-did-you-think-when-you-made-me-this-way-ep/1433956952"
       }
     ],
-    "artists": "Paramore\nNothing But Thieves",
+    "artists": [
+      {
+        "name": "Paramore",
+        "photo": "assets/img/sobre/artistas/paramore.jpg",
+        "credit": "Raph_PH · CC BY 2.0",
+        "creditUrl": "https://commons.wikimedia.org/wiki/File:Paramore_2023.jpg"
+      },
+      {
+        "name": "Nothing But Thieves",
+        "photo": "assets/img/sobre/artistas/nothing-but-thieves.jpg",
+        "credit": "Dannyjd12 · CC BY 4.0",
+        "creditUrl": "https://commons.wikimedia.org/wiki/File:Nothing_But_Thieves_Nova_Rock_2023.jpg"
+      },
+      {
+        "name": "Bring Me The Horizon",
+        "photo": "assets/img/sobre/artistas/bring-me-the-horizon.jpg",
+        "credit": "Birgit Fostervold · CC BY-SA 4.0",
+        "creditUrl": "https://commons.wikimedia.org/wiki/File:Bring_Me_The_Horizon_Tons_of_Rock_2026.jpg"
+      },
+      {
+        "name": "Twenty One Pilots",
+        "photo": "assets/img/sobre/artistas/twenty-one-pilots.jpg",
+        "credit": "Nnunghi · CC0",
+        "creditUrl": "https://commons.wikimedia.org/wiki/File:Twenty_One_Pilots_from_Clancy_Tour_in_Dublin_(landscape_crop).jpg"
+      }
+    ],
     "hobbies": "Violão e Guitarra\nAmante de música ao vivo\nGamer\nCozinha por hobby\nFotógrafo\nAnimes",
     "playlist": {
       "spotify": "",

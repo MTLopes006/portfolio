@@ -429,7 +429,8 @@
       body = `<div class="collage sheet-free"><span class="stamp" aria-hidden="true">${esc(t(s.kind) || s.band)}</span>${photos.map((ph, k) => fig(ph, k, { before: k % 2 === 0 ? '<span class="tape" aria-hidden="true"></span>' : "" })).join("")}</div>`;
     } else if (layout === "mosaic") {
       const shape = (r) => { const [w, h] = String(r || "3/2").split("/").map(Number); const q = w / (h || 1); return q > 1.2 ? "land" : q < 0.85 ? "port" : "sq"; };
-      body = `<div class="mosaic">${photos.map((ph, k) => fig(ph, k, { attrs: `class="${shape(ph.ratio)}" data-reveal ${stagger(k % 4, 0.06)}`, before: `<span class="n" aria-hidden="true">${pad(k + 1)}</span>` })).join("")}</div>`;
+      const r = (q) => { const [w, h] = String(q || "3/2").split("/").map(Number); return (w / (h || 1)) || 1.5; };
+      body = `<div class="mosaic justified">${photos.map((ph, k) => fig(ph, k, { attrs: `style="--r:${r(ph.ratio).toFixed(4)}" data-reveal`, before: `<span class="n" aria-hidden="true">${pad(k + 1)}</span>` })).join("")}<i class="mosaic-end" aria-hidden="true"></i></div>`;
     } else {
       body = `<div class="ed">${photos.map((ph, k) => fig(ph, k, { before: `<span class="big-n" aria-hidden="true">${pad(k + 1)}</span>`, parallax: k % 4 === 0 })).join("")}</div>`;
     }
@@ -469,22 +470,41 @@
   const sleeve = (a) => { const [bg, fg] = inkOf(a.title); return `<div class="sleeve${a.cover ? " has-cover" : ""}" style="--bg:${bg};--fg:${fg}"><span class="vinyl" aria-hidden="true"></span>${a.cover ? `<img src="${esc(a.cover)}" alt="${esc(a.title)}" loading="lazy">` : `<span class="sl-title">${esc(a.title)}</span>`}</div>`; };
   const gamesOf = (O) => (Array.isArray(O.games) ? O.games : lines(O.games)).map(asItem);
 
-  // mini player: one audio element for the page, cassette reels spin while playing
-  const playerHTML = (PL, compact) => {
+  // mini player: one audio element for the page; the cassette reels loop and speed up while playing
+  const cassetteSVG = (title) => `
+    <svg class="k7" viewBox="0 0 320 200" role="img" aria-label="Fita cassete">
+      <rect x="4" y="4" width="312" height="192" rx="14" class="k7-shell"/>
+      <rect x="12" y="12" width="296" height="176" rx="9" class="k7-face"/>
+      ${[[22, 22], [298, 22], [22, 178], [298, 178], [160, 178]].map(([x, y]) => `<g class="k7-screw" transform="translate(${x} ${y})"><circle r="5"/><path d="M-3 0h6M0-3v6"/></g>`).join("")}
+      <rect x="30" y="24" width="260" height="104" rx="6" class="k7-label"/>
+      <rect x="30" y="24" width="260" height="20" rx="6" class="k7-label-band"/>
+      <text x="44" y="39" class="k7-side">A</text>
+      <text x="160" y="62" text-anchor="middle" class="k7-title">${esc(title)}</text>
+      ${[74, 86].map((y) => `<line x1="46" x2="274" y1="${y}" y2="${y}" class="k7-rule"/>`).join("")}
+      <rect x="86" y="92" width="148" height="32" rx="16" class="k7-window"/>
+      <path class="k7-tape" d="M108 124 Q160 130 212 124"/>
+      <g class="k7-reel k7-reel-l" transform="translate(110 108)"><circle r="13" class="k7-spool"/><circle r="7" class="k7-hub"/>${[0, 60, 120, 180, 240, 300].map((a) => `<rect x="-1.5" y="-7" width="3" height="4" transform="rotate(${a})" class="k7-tooth"/>`).join("")}</g>
+      <g class="k7-reel k7-reel-r" transform="translate(210 108)"><circle r="9" class="k7-spool"/><circle r="7" class="k7-hub"/>${[0, 60, 120, 180, 240, 300].map((a) => `<rect x="-1.5" y="-7" width="3" height="4" transform="rotate(${a})" class="k7-tooth"/>`).join("")}</g>
+      <path d="M70 196 L88 150 H232 L250 196 Z" class="k7-bevel"/>
+      ${[104, 132, 188, 216].map((x) => `<circle cx="${x}" cy="176" r="5" class="k7-hole"/>`).join("")}
+      <rect x="146" y="168" width="28" height="14" rx="2" class="k7-hole"/>
+    </svg>`;
+  const playerHTML = (PL) => {
     const tr = (PL && PL.tracks) || [];
     if (!tr.length) return "";
-    return `<div class="player${compact ? " compact" : ""}" data-player>
-      <div class="cassette" aria-hidden="true"><span class="reel"></span><span class="reel"></span><span class="tape-label pl-label">${esc(tr[0].title)}</span></div>
-      <div class="pl-now"><img class="pl-cover" src="${esc(tr[0].cover || "")}" alt=""><div><b class="pl-title">${esc(tr[0].title)}</b><span class="pl-artist muted">${esc(tr[0].artist)}</span></div></div>
+    return `<div class="player" data-player>
+      <div class="pl-top">
+        <div class="pl-deck">${cassetteSVG(tr[0].title)}</div>
+        <ol class="pl-list">${tr.map((x, i) => `<li><button type="button" data-i="${i}"><img src="${esc(x.cover || "")}" alt=""><span class="t">${esc(x.title)}<small class="muted">${esc(x.artist)}</small></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button></li>`).join("")}</ol>
+      </div>
+      <div class="pl-now"><div><b class="pl-title">${esc(tr[0].title)}</b><span class="pl-artist muted">${esc(tr[0].artist)}</span></div><a class="pl-link label" href="${esc(tr[0].link || "#")}" target="_blank" rel="noopener">${ui("pl.full")} ↗</a></div>
       <div class="pl-bar" role="progressbar" aria-valuemin="0" aria-valuemax="30"><span></span></div>
       <div class="pl-ctrl">
         <button type="button" class="pl-prev" aria-label="${ui("pl.prev")}">⏮</button>
         <button type="button" class="pl-play" aria-label="${ui("pl.play")}"><span class="i-play">▶</span><span class="i-pause">❚❚</span></button>
         <button type="button" class="pl-next" aria-label="${ui("pl.next")}">⏭</button>
-        <a class="pl-link label" href="${esc(tr[0].link || "#")}" target="_blank" rel="noopener">${ui("pl.full")} ↗</a>
+        <label class="pl-vol"><span class="label">${ui("pl.vol")}</span><input type="range" min="0" max="100" step="1" value="20" aria-label="${ui("pl.vol")}"><output class="label">20%</output></label>
       </div>
-      <label class="pl-vol"><span class="label">${ui("pl.vol")}</span><input type="range" min="0" max="100" step="1" value="20" aria-label="${ui("pl.vol")}"><output class="label">20%</output></label>
-      ${compact ? "" : `<ol class="pl-list">${tr.map((x, i) => `<li><button type="button" data-i="${i}"><span class="n label">${pad(i + 1)}</span><span class="t">${esc(x.title)}</span><span class="a muted">${esc(x.artist)}</span></button></li>`).join("")}</ol>`}
       <p class="pl-note label muted">${ui("pl.note")}</p>
       ${PL.spotify ? `<iframe class="pl-spotify" src="${esc(PL.spotify.replace("open.spotify.com/", "open.spotify.com/embed/"))}" loading="lazy" allow="encrypted-media" title="Spotify"></iframe>` : ""}
     </div>`;
@@ -498,10 +518,9 @@
     let i = 0;
     const els = [...document.querySelectorAll("[data-player]")];
     const paint = () => els.forEach((el) => {
-      const x = tr[i]; el.classList.toggle("playing", !audio.paused);
+      const x = tr[i]; el.classList.toggle("is-playing", !audio.paused);
       el.querySelector(".pl-title").textContent = x.title; el.querySelector(".pl-artist").textContent = x.artist;
-      el.querySelector(".pl-label").textContent = x.title; el.querySelector(".pl-cover").src = x.cover || "";
-      el.querySelector(".pl-link").href = x.link || "#";
+      el.querySelector(".k7-title").textContent = x.title; el.querySelector(".pl-link").href = x.link || "#";
       el.querySelectorAll(".pl-list button").forEach((b) => b.classList.toggle("on", +b.dataset.i === i));
     });
     const load = (k, play) => { i = (k + tr.length) % tr.length; audio.src = tr[i].preview; if (play) audio.play().catch(() => {}); paint(); };
@@ -509,30 +528,52 @@
       el.querySelector(".pl-play").onclick = () => { if (!audio.src) load(i, true); else if (audio.paused) audio.play().catch(() => {}); else audio.pause(); };
       el.querySelector(".pl-prev").onclick = () => load(i - 1, true);
       el.querySelector(".pl-next").onclick = () => load(i + 1, true);
-      el.querySelectorAll(".pl-list button").forEach((b) => (b.onclick = () => load(+b.dataset.i, true)));
+      el.querySelectorAll(".pl-list button").forEach((b) => (b.onclick = () => (+b.dataset.i === i && audio.src ? (audio.paused ? audio.play().catch(() => {}) : audio.pause()) : load(+b.dataset.i, true))));
       const vol = el.querySelector(".pl-vol input");
-      vol.oninput = () => { audio.volume = vol.value / 100; els.forEach((x) => { const v = x.querySelector(".pl-vol input"); v.value = vol.value; v.style.setProperty("--v", `${vol.value}%`); x.querySelector(".pl-vol output").textContent = `${vol.value}%`; }); };
-      vol.value = Math.round(audio.volume * 100); vol.style.setProperty("--v", `${vol.value}%`); el.querySelector(".pl-vol output").textContent = `${vol.value}%`;
+      const setVol = (v) => els.forEach((x) => { const r = x.querySelector(".pl-vol input"); r.value = v; r.style.setProperty("--v", `${v}%`); x.querySelector(".pl-vol output").textContent = `${v}%`; });
+      vol.oninput = () => { audio.volume = vol.value / 100; setVol(vol.value); };
+      setVol(Math.round(audio.volume * 100));
     });
     audio.onplay = audio.onpause = paint;
     audio.onended = () => load(i + 1, true);
     audio.ontimeupdate = () => els.forEach((el) => { const d = audio.duration || 30; el.querySelector(".pl-bar span").style.width = `${(100 * audio.currentTime) / d}%`; });
     paint();
   }
+  // albums as a horizontal carousel: cover on top, title / artist / year below
+  const albumsHTML = (albums) => `<div class="al-carousel" data-carousel>
+      <div class="al-track">${albums.map((a) => `<figure class="al-item">${a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener">` : ""}${sleeve(a)}<figcaption><b>${esc(a.title)}</b><span class="muted">${esc(a.artist)}${a.year ? ` · ${esc(a.year)}` : ""}</span></figcaption>${a.link ? "</a>" : ""}</figure>`).join("")}</div>
+      <div class="al-nav"><button type="button" class="al-prev" aria-label="${ui("pl.prev")}">←</button><button type="button" class="al-next" aria-label="${ui("pl.next")}">→</button></div>
+    </div>`;
+  function initCarousels() {
+    document.querySelectorAll("[data-carousel]").forEach((c) => {
+      const track = c.querySelector(".al-track"), step = () => (track.querySelector(".al-item")?.getBoundingClientRect().width || 240) + 20;
+      const sync = () => { c.querySelector(".al-prev").disabled = track.scrollLeft < 4; c.querySelector(".al-next").disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 4; };
+      c.querySelector(".al-prev").onclick = () => track.scrollBy({ left: -step(), behavior: "smooth" });
+      c.querySelector(".al-next").onclick = () => track.scrollBy({ left: step(), behavior: "smooth" });
+      track.addEventListener("scroll", sync, { passive: true }); addEventListener("resize", sync); sync();
+    });
+  }
+  const pinsHTML = (artists) => {
+    const list = (Array.isArray(artists) ? artists : lines(artists).map((n) => ({ name: n })));
+    const credits = list.filter((a) => a.credit);
+    return `<ul class="pins">${list.map((a) => { const [bg, fg] = inkOf(a.name); return `<li class="pin${a.photo ? " has-photo" : ""}" style="--bg:${bg};--fg:${fg}">${a.photo ? `<img src="${esc(a.photo)}" alt="${esc(a.name)}" loading="lazy">` : ""}<span>${esc(a.name)}</span></li>`; }).join("")}</ul>
+      ${credits.length ? `<p class="pin-credits label muted">${ui("off.photos")}: ${credits.map((a) => `<a href="${esc(a.creditUrl || "#")}" target="_blank" rel="noopener">${esc(a.name)} — ${esc(a.credit)}</a>`).join(" · ")}</p>` : ""}`;
+  };
 
   function offClock(O) {
     if (!O) return "";
-    const games = gamesOf(O), artists = lines(O.artists), hobbies = lines(O.hobbies), playing = asItem(O.playing);
+    const games = gamesOf(O), hobbies = lines(O.hobbies), playing = asItem(O.playing);
+    const hasArtists = Array.isArray(O.artists) ? O.artists.length : lines(O.artists).length;
     return `
       <section class="offclock">
         <div class="sec-head" data-reveal><div><div class="sec-label label">${regmark}</div><h2 class="sec-title">${ui("off.title")}</h2></div></div>
         <p class="off-lead" data-reveal>${ui("off.lead")}</p>
         <div class="off-grid">
-          ${O.favoriteGame && O.favoriteGame.title ? `<article class="card card-fav" data-reveal><span class="tape" aria-hidden="true"></span><div class="card-label label">${ui("off.fav")}</div>${boxArt(O.favoriteGame, "big")}<h3>${esc(O.favoriteGame.title)}</h3>${t(O.favoriteGame.note) ? `<p class="muted">${esc(t(O.favoriteGame.note))}</p>` : ""}${playing.title ? `<div class="fav-playing"><div class="card-label label"><span class="live" aria-hidden="true"></span>${ui("off.playing")}</div><div class="playing">${boxArt(playing, "mini")}<h3>${esc(playing.title)}</h3></div></div>` : ""}</article>` : ""}
+          ${O.favoriteGame && O.favoriteGame.title ? `<article class="card card-fav" data-reveal><span class="tape" aria-hidden="true"></span><div class="card-label label">${ui("off.fav")}</div>${boxArt(O.favoriteGame, "big")}<h3>${esc(O.favoriteGame.title)}</h3>${t(O.favoriteGame.note) ? `<p class="muted">${esc(t(O.favoriteGame.note))}</p>` : ""}${playing.title ? `<div class="fav-playing"><div class="card-label label"><span class="live" aria-hidden="true"></span>${ui("off.playing")}</div><div class="now-game">${boxArt(playing, "mini")}<h3>${esc(playing.title)}</h3></div></div>` : ""}</article>` : ""}
           ${games.length ? `<article class="card card-games" data-reveal><div class="card-label label">${ui("off.games")} · ${pad(games.length)}</div><ul class="game-grid">${games.map((g) => `<li>${boxArt(g)}<span class="g-name">${esc(g.title)}</span></li>`).join("")}</ul></article>` : ""}
-          ${O.playlist && (O.playlist.tracks || []).length ? `<article class="card card-song" data-reveal><div class="card-label label">${ui("off.song")}</div>${playerHTML(O.playlist, true)}</article>` : ""}
-          ${(O.albums || []).length ? `<article class="card card-albums" data-reveal><div class="card-label label">${ui("off.albums")}</div><ul class="albums">${O.albums.map((a) => `<li>${a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener" class="al-link">` : "<div class=\"al-link\">"}${sleeve(a)}<div class="al-meta"><b>${esc(a.title)}</b><span class="muted">${esc(a.artist)}${a.year ? ` · ${esc(a.year)}` : ""}</span></div>${a.link ? "</a>" : "</div>"}</li>`).join("")}</ul></article>` : ""}
-          ${artists.length ? `<article class="card card-artists" data-reveal><div class="card-label label">${ui("off.artists")}</div><ul class="pins">${artists.map((a) => { const [bg, fg] = inkOf(a); return `<li class="pin" style="--bg:${bg};--fg:${fg}"><span>${esc(a)}</span></li>`; }).join("")}</ul></article>` : ""}
+          ${O.playlist && (O.playlist.tracks || []).length ? `<article class="card card-song" data-reveal><div class="card-label label">${ui("off.song")}</div>${playerHTML(O.playlist)}</article>` : ""}
+          ${hasArtists ? `<article class="card card-artists" data-reveal><div class="card-label label">${ui("off.artists")}</div>${pinsHTML(O.artists)}</article>` : ""}
+          ${(O.albums || []).length ? `<article class="card card-albums" data-reveal><div class="card-label label">${ui("off.albums")}</div>${albumsHTML(O.albums)}</article>` : ""}
         </div>
         ${hobbies.length ? `<ul class="stickers" data-reveal>${hobbies.map((h, i) => `<li style="--r:${[-3, 2, -1.5, 3, -2, 1.5][i % 6]}deg">${esc(h)}</li>`).join("")}</ul>` : ""}
       </section>`;
@@ -540,20 +581,21 @@
   // compact version for the home page
   function offClockTeaser(O) {
     if (!O) return "";
-    const games = gamesOf(O).slice(0, 4), playing = asItem(O.playing), hobbies = lines(O.hobbies);
+    const fav = O.favoriteGame && O.favoriteGame.title ? [{ ...O.favoriteGame, fav: true }] : [];
+    const games = [...fav, ...gamesOf(O).filter((g) => !fav.length || g.title !== fav[0].title)].slice(0, 4), playing = asItem(O.playing), hobbies = lines(O.hobbies);
     return `
       <section class="section home-off">
         <div class="wrap">
           <div class="sec-head" data-reveal><div><div class="sec-label label">${regmark}</div><h2 class="sec-title">${ui("off.title")}</h2></div><a class="link-arrow" href="sobre.html">${ui("about.more")} ${arr}</a></div>
           <div class="home-off-grid">
-            ${O.favoriteGame && O.favoriteGame.title ? `<article class="card ho-fav" data-reveal><span class="tape" aria-hidden="true"></span><div class="card-label label">${ui("off.fav")}</div>${boxArt(O.favoriteGame, "big")}<h3>${esc(O.favoriteGame.title)}</h3></article>` : ""}
-            <article class="card ho-games" data-reveal><div class="card-label label">${ui("off.games")}</div><ul class="game-grid">${games.map((g) => `<li>${boxArt(g)}<span class="g-name">${esc(g.title)}</span></li>`).join("")}</ul>${playing.title ? `<div class="fav-playing"><div class="card-label label"><span class="live" aria-hidden="true"></span>${ui("off.playing")}</div><div class="playing">${boxArt(playing, "mini")}<h3>${esc(playing.title)}</h3></div></div>` : ""}</article>
-            ${O.playlist && (O.playlist.tracks || []).length ? `<article class="card ho-song" data-reveal><div class="card-label label">${ui("off.song")}</div>${playerHTML(O.playlist, true)}</article>` : ""}
+            <article class="card ho-games" data-reveal><span class="tape" aria-hidden="true"></span><div class="card-label label">${ui("off.games")}</div><ul class="game-grid">${games.map((g) => `<li${g.fav ? ' class="is-fav"' : ""}>${boxArt(g)}${g.fav ? `<span class="fav-tag label">${ui("off.fav")}</span>` : ""}<span class="g-name">${esc(g.title)}</span></li>`).join("")}</ul>${playing.title ? `<div class="fav-playing"><div class="card-label label"><span class="live" aria-hidden="true"></span>${ui("off.playing")}</div><div class="now-game">${boxArt(playing, "mini")}<h3>${esc(playing.title)}</h3></div></div>` : ""}</article>
+            ${O.playlist && (O.playlist.tracks || []).length ? `<article class="card ho-song" data-reveal><div class="card-label label">${ui("off.song")}</div>${playerHTML(O.playlist)}</article>` : ""}
           </div>
           ${hobbies.length ? `<ul class="stickers" data-reveal>${hobbies.map((h, i) => `<li style="--r:${[-3, 2, -1.5, 3, -2, 1.5][i % 6]}deg">${esc(h)}</li>`).join("")}</ul>` : ""}
         </div>
       </section>`;
   }
+
 
   /* ---------- ABOUT ---------- */
   function renderAbout() {
@@ -579,6 +621,7 @@
         ${(AB.timeline || []).length ? `<div class="cv"><h2 data-reveal>${ui("about.timeline")}</h2><ol class="timeline">${AB.timeline.map((x, i) => `<li data-reveal ${stagger(i, 0.04)}><span class="label">${esc(x.period)}</span><span>${esc(t(x.text))}</span></li>`).join("")}</ol></div>` : ""}
       </div>`;
     initPlayers(AB.offclock && AB.offclock.playlist);
+    initCarousels();
   }
 
   /* ---------- CONTACT ---------- */

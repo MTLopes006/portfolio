@@ -1579,8 +1579,35 @@
                 },
                 {
                   "name": "artists",
-                  "label": "Artistas (um por linha)",
-                  "widget": "text"
+                  "label": "Artistas (bottons)",
+                  "widget": "list",
+                  "summary": "{{fields.name}}",
+                  "fields": [
+                    {
+                      "name": "name",
+                      "label": "Nome",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "photo",
+                      "label": "Foto (quadrada)",
+                      "widget": "image",
+                      "required": false,
+                      "choose_url": false
+                    },
+                    {
+                      "name": "credit",
+                      "label": "Crédito da foto (autor · licença)",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "creditUrl",
+                      "label": "Link do crédito",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
                 },
                 {
                   "name": "hobbies",
