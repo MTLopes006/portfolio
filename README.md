@@ -258,8 +258,9 @@ A fotografia tem três níveis:
 | **Editorial** | Grade assimétrica com números grandes na cor da série | Séries variadas, horizontais e verticais |
 | **Mosaico** | Grade densa: horizontais ocupam o dobro da largura, verticais ficam lado a lado | Séries grandes e variadas, retrato noturno |
 
-Configuração atual: Blessthefall → Pôster (azul) · Memphis May Fire → Folha de contato
-(vermelho) · Chão de Taco → Zine (verde) · Bad Luv → Editorial (rosa) · Distô → Mosaico (laranja). Dá para trocar a qualquer momento pelo painel.
+Configuração atual: todas as séries usam **Mosaico**, cada uma com sua cor de tinta (Blessthefall
+azul · Memphis May Fire vermelho · Chão de Taco verde · Bad Luv rosa · Distô laranja). Os outros
+layouts continuam disponíveis no painel. Dá para trocar a qualquer momento pelo painel.
 
 ### 5.4 Sobre
 

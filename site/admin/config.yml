@@ -1106,7 +1106,7 @@
                   "name": "layout",
                   "label": "Layout da página",
                   "widget": "select",
-                  "default": "editorial",
+                  "default": "mosaic",
                   "options": [
                     {
                       "label": "Pôster — foto de abertura sangrada + galeria assimétrica",

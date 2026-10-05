@@ -91,7 +91,7 @@
           "pick": false
         }
       ],
-      "layout": "poster",
+      "layout": "mosaic",
       "accent": "#0078BF",
       "cover": "assets/img/fotografia/blessthefall/01.jpg",
       "thumb": "assets/img/thumbs/foto-blessthefall.jpg"
@@ -195,7 +195,7 @@
           "pick": false
         }
       ],
-      "layout": "contact",
+      "layout": "mosaic",
       "accent": "#FF665E",
       "cover": "assets/img/fotografia/memphis-may-fire/01.jpg",
       "thumb": "assets/img/thumbs/foto-memphis-may-fire.jpg"
@@ -293,7 +293,7 @@
           "pick": false
         }
       ],
-      "layout": "zine",
+      "layout": "mosaic",
       "accent": "#00A95C",
       "cover": "assets/img/fotografia/chao-de-taco/01.jpg",
       "thumb": "assets/img/thumbs/foto-chao-de-taco.jpg"
@@ -391,7 +391,7 @@
           "pick": false
         }
       ],
-      "layout": "editorial",
+      "layout": "mosaic",
       "accent": "#FF48B0",
       "cover": "assets/img/fotografia/bad-luv/01.jpg",
       "thumb": "assets/img/thumbs/foto-bad-luv.jpg"
