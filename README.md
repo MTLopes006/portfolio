@@ -4,8 +4,8 @@ Site de portfólio de design gráfico e fotografia. **Lado A** são os projetos 
 e **Lado B** é a fotografia. A home tem o crachá "All Access" interativo, e a identidade
 segue a estética de risografia e impressão.
 
-- **Site:** `https://matheuslopes.netlify.app` · repositório: https://github.com/MTLopes006/portfolio
-- **Painel de edição:** `https://matheuslopes.netlify.app/admin/`
+- **Site:** `https://matheuslopes.art.br` (Cloudflare) · repositório: https://github.com/MTLopes006/portfolio
+- **Painel de edição:** `https://matheuslopes.art.br/admin/`
 
 ---
 
@@ -29,7 +29,7 @@ segue a estética de risografia e impressão.
 ## 1. Como tudo se conecta
 
 ```
- Você edita  ──►  GitHub (guarda os arquivos)  ──►  Netlify (publica o site)
+ Você edita  ──►  GitHub (guarda os arquivos)  ──►  Cloudflare (publica o site)
    │                         ▲
    ├─ pelo painel /admin ────┤   cada "Publicar" vira um commit no GitHub
    ├─ pelo chat (Claude) ────┤   o Claude edita os arquivos e envia (push)
@@ -37,7 +37,10 @@ segue a estética de risografia e impressão.
 ```
 
 - **GitHub** é a "fonte da verdade": guarda todas as versões, e dá para voltar a qualquer uma.
-- **Netlify** percebe cada mudança no GitHub e republica o site sozinho, em uns 30 segundos.
+- **Cloudflare Workers** percebe cada mudança no GitHub e republica o site sozinho, em cerca de 1 minuto
+  (projeto `portfolio`, configurado em `wrangler.jsonc`; plano gratuito, sem limite prático para este site).
+- **Netlify** ficou só como "porteiro" do login do painel com o GitHub (não publica mais e não gasta créditos).
+- **Domínio:** `matheuslopes.art.br`, registrado no Registro.br (renovação anual, ~R$ 40), com DNS no Cloudflare.
 - **Decap CMS** é o painel em `/admin`. Ele edita os arquivos de `site/content/` e envia as
   imagens para `site/assets/img/uploads/`, sem você precisar mexer em código.
 
@@ -49,7 +52,8 @@ Não existe banco de dados nem servidor para manter, e a hospedagem é gratuita.
 
 ```
 portfolio/
-├── netlify.toml              Configuração do Netlify (publica a pasta site/)
+├── wrangler.jsonc            Configuração do Cloudflare (publica a pasta site/)
+├── netlify.toml              Configuração antiga do Netlify (mantida só para o login do painel)
 ├── README.md                 Este guia
 └── site/                     ← tudo o que vai para o ar
     ├── index.html            Home: nome + crachá, projetos, fotografia, sobre

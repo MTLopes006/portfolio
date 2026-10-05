@@ -7,7 +7,8 @@
     "commit_messages": {
       "update": "Atualiza {{slug}} pelo CMS",
       "uploadMedia": "Envia {{path}} pelo CMS"
-    }
+    },
+    "site_domain": "matheuslopes.netlify.app"
   },
   "locale": "pt",
   "media_folder": "site/assets/img/uploads",
