@@ -203,27 +203,97 @@
       "note": {
         "pt": "",
         "en": ""
-      }
+      },
+      "cover": "assets/img/sobre/jogos/final-fantasy-xii-the-zodiac-age.jpg"
     },
-    "games": "Final Fantasy XIV\nPersona 5 Royal\nNieR:Automata\nHollow Knight: Silksong\nElden Ring\nResident Evil\nClair Obscur: Expedition 33\nOri and the Blind Forest",
-    "playing": "Resident Evil 0",
-    "song": {
-      "title": "Misguided Ghosts",
-      "artist": "Paramore"
+    "games": [
+      {
+        "title": "Final Fantasy XIV",
+        "cover": "assets/img/sobre/jogos/final-fantasy-xiv.jpg"
+      },
+      {
+        "title": "Persona 5 Royal",
+        "cover": "assets/img/sobre/jogos/persona-5-royal.jpg"
+      },
+      {
+        "title": "NieR:Automata",
+        "cover": "assets/img/sobre/jogos/nier-automata.jpg"
+      },
+      {
+        "title": "Hollow Knight: Silksong",
+        "cover": "assets/img/sobre/jogos/hollow-knight-silksong.jpg"
+      },
+      {
+        "title": "Elden Ring",
+        "cover": "assets/img/sobre/jogos/elden-ring.jpg"
+      },
+      {
+        "title": "Resident Evil",
+        "cover": "assets/img/sobre/jogos/resident-evil.jpg"
+      },
+      {
+        "title": "Clair Obscur: Expedition 33",
+        "cover": "assets/img/sobre/jogos/clair-obscur-expedition-33.jpg"
+      },
+      {
+        "title": "Ori and the Blind Forest",
+        "cover": "assets/img/sobre/jogos/ori-and-the-blind-forest.jpg"
+      }
+    ],
+    "playing": {
+      "title": "Resident Evil 0",
+      "cover": "assets/img/sobre/jogos/resident-evil-0.jpg"
     },
     "albums": [
       {
         "title": "Brand New Eyes",
         "artist": "Paramore",
-        "year": "2009"
+        "year": "2009",
+        "cover": "assets/img/sobre/discos/brand-new-eyes.jpg",
+        "link": "https://music.apple.com/br/album/brand-new-eyes/604800411"
       },
       {
         "title": "What Did You Think When You Made Me This Way?",
         "artist": "Nothing But Thieves",
-        "year": "2020"
+        "year": "2018",
+        "cover": "assets/img/sobre/discos/what-did-you-think.jpg",
+        "link": "https://music.apple.com/br/album/what-did-you-think-when-you-made-me-this-way-ep/1433956952"
       }
     ],
     "artists": "Paramore\nNothing But Thieves",
-    "hobbies": "Toco violão e guitarra\nFrequento shows com regularidade\nSou gamer\nGosto de cozinhar"
+    "hobbies": "Violão e Guitarra\nAmante de música ao vivo\nGamer\nCozinha por hobby\nFotógrafo\nAnimes",
+    "playlist": {
+      "spotify": "",
+      "tracks": [
+        {
+          "title": "Misguided Ghosts",
+          "artist": "Paramore",
+          "cover": "assets/img/sobre/discos/brand-new-eyes.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5f/d1/51/5fd151cc-4dbf-a872-da86-7c4913d629d0/mzaf_12393270698291883802.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/misguided-ghosts/604800411?i=604800423"
+        },
+        {
+          "title": "Brick By Boring Brick",
+          "artist": "Paramore",
+          "cover": "assets/img/sobre/discos/brand-new-eyes.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/23/34/5e2334cd-37a8-52bb-1cf4-70e40ac54c46/mzaf_1898679347951407669.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/brick-by-boring-brick/604800411?i=604800417"
+        },
+        {
+          "title": "Gods",
+          "artist": "Nothing But Thieves",
+          "cover": "assets/img/sobre/discos/what-did-you-think.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fa/78/d4/fa78d415-b4ca-e466-74b9-b5f6e60e1efd/mzaf_5412873394808545757.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/gods/1433956952?i=1433957104"
+        },
+        {
+          "title": "Take This Lonely Heart",
+          "artist": "Nothing But Thieves",
+          "cover": "assets/img/sobre/discos/what-did-you-think.jpg",
+          "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/11/51/f411519c-ad28-eaf8-b28d-f65a6cb2f8e6/mzaf_16665450634136802317.plus.aac.p.m4a",
+          "link": "https://music.apple.com/br/album/take-this-lonely-heart/1433956952?i=1433957261"
+        }
+      ]
+    }
   }
 }

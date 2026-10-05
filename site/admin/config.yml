@@ -1421,6 +1421,13 @@
                       "widget": "string"
                     },
                     {
+                      "name": "cover",
+                      "label": "Capa (vertical, 2:3)",
+                      "widget": "image",
+                      "required": false,
+                      "choose_url": false
+                    },
+                    {
                       "name": "note",
                       "label": "Por que é o favorito (opcional)",
                       "widget": "object",
@@ -1445,29 +1452,91 @@
                 },
                 {
                   "name": "games",
-                  "label": "Jogos que eu gosto (um por linha)",
-                  "widget": "text"
+                  "label": "Jogos que eu gosto",
+                  "widget": "list",
+                  "summary": "{{fields.title}}",
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Título",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "cover",
+                      "label": "Capa (vertical, 2:3)",
+                      "widget": "image",
+                      "required": false,
+                      "choose_url": false
+                    }
+                  ]
                 },
                 {
                   "name": "playing",
                   "label": "Jogando agora",
-                  "widget": "string",
-                  "required": false
-                },
-                {
-                  "name": "song",
-                  "label": "Música na cabeça",
                   "widget": "object",
                   "fields": [
                     {
                       "name": "title",
-                      "label": "Música",
-                      "widget": "string"
+                      "label": "Título",
+                      "widget": "string",
+                      "required": false
                     },
                     {
-                      "name": "artist",
-                      "label": "Artista",
-                      "widget": "string"
+                      "name": "cover",
+                      "label": "Capa (vertical, 2:3)",
+                      "widget": "image",
+                      "required": false,
+                      "choose_url": false
+                    }
+                  ]
+                },
+                {
+                  "name": "playlist",
+                  "label": "Miniplayer",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "name": "spotify",
+                      "label": "Link de playlist do Spotify (opcional — mostra o player do Spotify com as músicas completas)",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "tracks",
+                      "label": "Músicas (prévias de 30 s)",
+                      "widget": "list",
+                      "summary": "{{fields.title}} — {{fields.artist}}",
+                      "fields": [
+                        {
+                          "name": "title",
+                          "label": "Música",
+                          "widget": "string"
+                        },
+                        {
+                          "name": "artist",
+                          "label": "Artista",
+                          "widget": "string"
+                        },
+                        {
+                          "name": "cover",
+                          "label": "Capa do disco",
+                          "widget": "image",
+                          "required": false,
+                          "choose_url": false
+                        },
+                        {
+                          "name": "preview",
+                          "label": "Link do áudio de prévia (.m4a/.mp3) — o Claude preenche pela Apple Music",
+                          "widget": "string",
+                          "required": false
+                        },
+                        {
+                          "name": "link",
+                          "label": "Link para ouvir completa",
+                          "widget": "string",
+                          "required": false
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1475,6 +1544,7 @@
                   "name": "albums",
                   "label": "Álbuns",
                   "widget": "list",
+                  "summary": "{{fields.title}} — {{fields.artist}}",
                   "fields": [
                     {
                       "name": "title",
@@ -1489,6 +1559,19 @@
                     {
                       "name": "year",
                       "label": "Ano",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "name": "cover",
+                      "label": "Capa (quadrada)",
+                      "widget": "image",
+                      "required": false,
+                      "choose_url": false
+                    },
+                    {
+                      "name": "link",
+                      "label": "Link (Spotify/Apple Music)",
                       "widget": "string",
                       "required": false
                     }

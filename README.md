@@ -283,7 +283,8 @@ layouts continuam disponíveis no painel. Dá para trocar a qualquer momento pel
 | Listas pessoais | Um item por linha (Fora do expediente, Ferramentas, Equipamento, Idiomas) |
 | Experiência / Formação | Período, cargo/curso e empresa/instituição |
 | Pesquisa | Tipo, título, resumo e link opcional (ex.: artigo publicado) |
-| Fora do expediente | Jogo favorito, jogos que você gosta, jogando agora, música na cabeça, álbuns, artistas e adesivos. As capas são geradas pelo site (cor de risografia + título), sem imagens de terceiros |
+| Fora do expediente | Jogo favorito, jogos, jogando agora, miniplayer, álbuns, artistas e adesivos. Capas oficiais (Steam para jogos, Apple Music para discos) em `assets/img/sobre/`; sem capa, o site gera uma capa tipográfica. Um resumo aparece também na home |
+| Miniplayer | Toca prévias oficiais de 30 s (Apple Music) das músicas listadas, com fita cassete animada. Opcional: cole um link de playlist do Spotify para exibir o player do Spotify com as músicas completas |
 | Trajetória | Linha do tempo: data + marco |
 
 ### 5.5 Desfazer uma alteração
@@ -292,6 +293,13 @@ Toda publicação vira um commit no GitHub. Para voltar atrás, abra o repositó
 **Commits**, ache a versão anterior e peça ao Claude: *"volte o arquivo X para o commit Y"*.
 
 ---
+
+### 5.6 Formulário de contato
+
+A página de contato tem um formulário que envia a mensagem direto para o seu e-mail, pelo serviço gratuito
+**FormSubmit** (formsubmit.co). **Na primeira mensagem**, o FormSubmit manda um e-mail pedindo para
+**ativar o formulário**: clique no link de confirmação. Depois disso, as mensagens chegam normalmente
+(responder o e-mail já responde a quem escreveu). Os dados de contato continuam listados abaixo do formulário.
 
 ## 6. Imagens: tamanhos, formatos e proporções
 
