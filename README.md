@@ -4,7 +4,7 @@ Site de portfólio de design gráfico e fotografia. **Lado A** são os projetos 
 e **Lado B** é a fotografia. A home tem o crachá "All Access" interativo, e a identidade
 segue a estética de risografia e impressão.
 
-- **Site:** `https://matheuslopes.art.br` (Cloudflare) · repositório: https://github.com/MTLopes006/portfolio
+- **Site:** `https://matheuslopes.art.br` (Vercel) · repositório: https://github.com/MTLopes006/portfolio
 - **Painel de edição:** `https://matheuslopes.art.br/admin/`
 
 ---
@@ -29,7 +29,7 @@ segue a estética de risografia e impressão.
 ## 1. Como tudo se conecta
 
 ```
- Você edita  ──►  GitHub (guarda os arquivos)  ──►  Cloudflare (publica o site)
+ Você edita  ──►  GitHub (guarda os arquivos)  ──►  Vercel (publica o site)
    │                         ▲
    ├─ pelo painel /admin ────┤   cada "Publicar" vira um commit no GitHub
    ├─ pelo chat (Claude) ────┤   o Claude edita os arquivos e envia (push)
@@ -37,10 +37,10 @@ segue a estética de risografia e impressão.
 ```
 
 - **GitHub** é a "fonte da verdade": guarda todas as versões, e dá para voltar a qualquer uma.
-- **Cloudflare Workers** percebe cada mudança no GitHub e republica o site sozinho, em cerca de 1 minuto
-  (projeto `portfolio`, configurado em `wrangler.jsonc`; plano gratuito, sem limite prático para este site).
+- **Vercel** percebe cada mudança no GitHub e republica o site sozinha, em cerca de 1 minuto
+  (plano gratuito; publica a pasta `site/`). O Cloudflare Workers (`wrangler.jsonc`) mantém uma cópia em portfolio.matheusaugusto2002.workers.dev.
 - **Netlify** ficou só como "porteiro" do login do painel com o GitHub (não publica mais e não gasta créditos).
-- **Domínio:** `matheuslopes.art.br`, registrado no Registro.br (renovação anual, ~R$ 40), com DNS no Cloudflare.
+- **Domínio:** `matheuslopes.art.br`, registrado no Registro.br (renovação anual, ~R$ 40), com DNS no Cloudflare apontando para a Vercel.
 - **Decap CMS** é o painel em `/admin`. Ele edita os arquivos de `site/content/` e envia as
   imagens para `site/assets/img/uploads/`, sem você precisar mexer em código.
 
