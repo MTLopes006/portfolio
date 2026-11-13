@@ -61,19 +61,19 @@
               },
               "imgs": [
                 {
-                  "img": "assets/img/projetos/lapso-menores-atos/capa-encarte.jpg",
-                  "ratio": "1696/1696"
+                  "img": "assets/img/projetos/lapso-menores-atos/capa.jpg",
+                  "ratio": "1715/1715"
                 },
                 {
-                  "img": "assets/img/projetos/lapso-menores-atos/contra-capa-encarte.jpg",
-                  "ratio": "1696/1696"
+                  "img": "assets/img/projetos/lapso-menores-atos/contracapa.jpg",
+                  "ratio": "1715/1715"
                 }
               ]
             }
           ],
           "caption": {
-            "pt": "Capa e contracapa do CD",
-            "en": "CD front and back cover"
+            "pt": "Capa e contracapa do CD e do vinil",
+            "en": "CD and vinyl front and back cover"
           }
         },
         {
@@ -101,33 +101,8 @@
             "en": "Visual language"
           },
           "text": {
-            "pt": "Laranja e preto, manchas de luz desfocadas e um fragmento de vidro no centro da capa. No nome da banda, as letras de “atos” aparecem espaçadas e fora do alinhamento, como algo que escapou do lugar.",
-            "en": "Orange and black, blurred patches of light and a shard of glass at the centre of the cover. In the band's name, the letters of “atos” are spaced out and off alignment, like something that slipped out of place."
-          }
-        },
-        {
-          "type": "rows",
-          "rows": [
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/lapso-menores-atos/capa.jpg",
-                  "ratio": "1715/1715"
-                },
-                {
-                  "img": "assets/img/projetos/lapso-menores-atos/contracapa.jpg",
-                  "ratio": "1715/1715"
-                }
-              ]
-            }
-          ],
-          "caption": {
-            "pt": "Capa e contracapa do vinil",
-            "en": "Vinyl front and back cover"
+            "pt": "Laranja e preto, manchas de luz desfocadas e um fragmento de vidro no centro da capa. No encarte, as letras de “atos” aparecem espaçadas e fora do alinhamento, como algo que escapou do lugar.",
+            "en": "Orange and black, blurred patches of light and a shard of glass at the centre of the cover. On the booklet, the letters of “atos” are spaced out and off alignment, like something that slipped out of place."
           }
         },
         {
@@ -156,6 +131,31 @@
           "text": {
             "pt": "As letras ocupam páginas escuras, ao lado de fotos da banda em preto e branco, sempre atravessadas pela mesma luz laranja da capa.",
             "en": "The lyrics sit on dark pages next to black-and-white photos of the band, always crossed by the same orange light as the cover."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/capa-encarte.jpg",
+                  "ratio": "1696/1696"
+                },
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/contra-capa-encarte.jpg",
+                  "ratio": "1696/1696"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Capa e contracapa do encarte",
+            "en": "Booklet front and back cover"
           }
         },
         {
@@ -255,8 +255,8 @@
             "en": "CD and vinyl"
           },
           "text": {
-            "pt": "O CD repete a capa laranja e leva a lista de faixas no verso. No vinil, o selo central usa o mesmo laranja com o nome do disco e da banda.",
-            "en": "The CD repeats the orange cover and carries the tracklist on the back. On the vinyl, the centre label uses the same orange with the album and band names."
+            "pt": "CD e vinil usam a mesma capa e contracapa, com a lista de faixas no verso. No vinil, o selo central leva o laranja do encarte com o nome do disco e da banda.",
+            "en": "The CD and the vinyl share the same front and back cover, with the tracklist on the back. On the vinyl, the centre label carries the booklet's orange with the album and band names."
           }
         },
         {
