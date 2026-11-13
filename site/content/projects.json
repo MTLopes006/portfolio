@@ -30,21 +30,25 @@
       "thumb": "assets/img/thumbs/lapso-menores-atos.jpg",
       "blocks": [
         {
-          "type": "lead",
-          "text": {
-            "pt": "Redesign do álbum Lapso (2018), da banda Menores Atos. A identidade do disco foi refeita a partir do título, e se estende à capa, ao encarte, ao CD, ao vinil e aos posts de lançamento.",
-            "en": "A redesign of Lapso (2018), the album by Menores Atos. The record's identity was rebuilt from its title and carried through the cover, booklet, CD, vinyl and launch posts."
-          }
-        },
-        {
-          "type": "text",
-          "title": {
-            "pt": "O conceito",
-            "en": "The concept"
-          },
-          "text": {
-            "pt": "No dicionário, lapso é um erro de atenção, um intervalo de tempo ou uma interrupção. Nas letras da banda, a palavra ganha um sentido mais íntimo: o momento em que uma relação, uma lembrança ou uma escolha sai do eixo, e o espaço que fica entre o que aconteceu e o que restou. O disco fala de melancolia, tensão e memória, e o título resume essa ideia de uma falha pequena com consequência grande.",
-            "en": "In the dictionary, lapso is a slip of attention, a span of time or an interruption. In the band's lyrics the word turns more personal: the moment a relationship, a memory or a choice goes off course, and the gap between what happened and what was left. The record deals with melancholy, tension and memory, and the title sums up the idea of a small slip with a large consequence."
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/cd.jpg",
+                  "ratio": "2000/1124"
+                }
+              ]
+            }
+          ],
+          "span": "full",
+          "caption": {
+            "pt": "CD: capa e contracapa",
+            "en": "CD: front and back"
           }
         },
         {
@@ -68,8 +72,26 @@
             }
           ],
           "caption": {
-            "pt": "Capa e contracapa do encarte",
-            "en": "Booklet front and back"
+            "pt": "Capa e contracapa do CD",
+            "en": "CD front and back cover"
+          }
+        },
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Redesign do álbum Lapso (2018), da banda Menores Atos. A identidade do disco foi refeita a partir do título, e se estende à capa, ao encarte, ao CD, ao vinil e aos posts de lançamento.",
+            "en": "A redesign of Lapso (2018), the album by Menores Atos. The record's identity was rebuilt from its title and carried through the cover, booklet, CD, vinyl and launch posts."
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "O conceito",
+            "en": "The concept"
+          },
+          "text": {
+            "pt": "No dicionário, lapso é um erro de atenção, um intervalo de tempo ou uma interrupção. Nas letras da banda, a palavra ganha um sentido mais íntimo: o momento em que uma relação, uma lembrança ou uma escolha sai do eixo, e o espaço que fica entre o que aconteceu e o que restou. O disco fala de melancolia, tensão e memória, e o título resume essa ideia de uma falha pequena com consequência grande.",
+            "en": "In the dictionary, lapso is a slip of attention, a span of time or an interruption. In the band's lyrics the word turns more personal: the moment a relationship, a memory or a choice goes off course, and the gap between what happened and what was left. The record deals with melancholy, tension and memory, and the title sums up the idea of a small slip with a large consequence."
           }
         },
         {
@@ -104,8 +126,8 @@
             }
           ],
           "caption": {
-            "pt": "Capa e contracapa do disco",
-            "en": "Album front and back"
+            "pt": "Capa e contracapa do vinil",
+            "en": "Vinyl front and back cover"
           }
         },
         {
@@ -247,21 +269,9 @@
               },
               "imgs": [
                 {
-                  "img": "assets/img/projetos/lapso-menores-atos/cd.jpg",
-                  "ratio": "2000/1124"
-                },
-                {
                   "img": "assets/img/projetos/lapso-menores-atos/cd-frente-close.jpg",
                   "ratio": "2000/1124"
-                }
-              ]
-            },
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
+                },
                 {
                   "img": "assets/img/projetos/lapso-menores-atos/cd-detalhes-1.jpg",
                   "ratio": "2000/1124"
@@ -272,7 +282,11 @@
                 }
               ]
             }
-          ]
+          ],
+          "caption": {
+            "pt": "CD: frente, verso e disco",
+            "en": "CD: front, back and disc"
+          }
         },
         {
           "type": "rows",
