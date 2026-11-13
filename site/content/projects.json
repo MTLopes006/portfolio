@@ -143,6 +143,28 @@
               },
               "imgs": [
                 {
+                  "img": "assets/img/projetos/lapso-menores-atos/encarte-1.jpg",
+                  "ratio": "2000/1121"
+                }
+              ]
+            }
+          ],
+          "span": "full",
+          "caption": {
+            "pt": "Encarte aberto",
+            "en": "The booklet, open"
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
                   "img": "assets/img/projetos/lapso-menores-atos/capa-encarte.jpg",
                   "ratio": "1696/1696"
                 },
@@ -157,24 +179,6 @@
             "pt": "Capa e contracapa do encarte",
             "en": "Booklet front and back cover"
           }
-        },
-        {
-          "type": "rows",
-          "rows": [
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/lapso-menores-atos/encarte-1.jpg",
-                  "ratio": "2000/1121"
-                }
-              ]
-            }
-          ],
-          "span": "full"
         },
         {
           "type": "rows",
