@@ -191,7 +191,7 @@
               "imgs": [
                 {
                   "img": "assets/img/projetos/lapso-menores-atos/miolo-encarte-1.jpg",
-                  "ratio": "2000/1121"
+                  "ratio": "1865/1631"
                 },
                 {
                   "img": "assets/img/projetos/lapso-menores-atos/miolo-encarte-2.jpg",
@@ -219,7 +219,8 @@
           "caption": {
             "pt": "Páginas internas: Miopia e Contramão",
             "en": "Inside spreads: Miopia and Contramão"
-          }
+          },
+          "join": true
         },
         {
           "type": "full",

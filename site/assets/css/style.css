@@ -988,3 +988,6 @@ body[data-page="home"] .site-footer { margin-top: calc(clamp(48px, 5vw, 72px) + 
 
 /* phones: side-by-side landscape images get too small, so they stack */
 @media (max-width: 600px) { .b-rows .row.landscape { flex-direction: column; } .b-rows .row.landscape > div { flex: none !important; } }
+
+/* spreads: pages placed edge to edge so a two-page image reads as one */
+.b-rows.join .row { gap: 0; }

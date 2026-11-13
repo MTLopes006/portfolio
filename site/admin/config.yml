@@ -790,6 +790,13 @@
                               "value": "content"
                             }
                           ]
+                        },
+                        {
+                          "name": "join",
+                          "label": "Juntar imagens sem espaço (páginas espelhadas)",
+                          "widget": "boolean",
+                          "required": false,
+                          "default": false
                         }
                       ]
                     },
