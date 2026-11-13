@@ -275,7 +275,7 @@
     const imgs = (b.imgs || []);
     switch (b.type) {
       case "lead": return `<section class="b-lead" data-reveal><p>${esc(t(b.text))}</p></section>`;
-      case "chapter": return `<header class="b-chapter" data-reveal><h2>${esc(t(b.title))}</h2>${t(b.text) ? `<p>${esc(t(b.text))}</p>` : ""}</header>`;
+      case "chapter": return `<header class="b-chapter" data-reveal><div class="ch-title">${t(b.kicker) ? `<span class="label">${esc(t(b.kicker))}</span>` : ""}<h2>${esc(t(b.title))}</h2></div>${t(b.text) ? `<p>${esc(t(b.text))}</p>` : ""}</header>`;
       case "text": return `<section class="b-text" data-reveal><h3>${esc(t(b.title))}</h3><p>${esc(t(b.text))}</p></section>`;
       case "full": return `<figure class="b-full">${media(b.img, b.ratio || "16/9", null, { parallax: b.parallax })}${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
       case "split": return `<section class="b-split ${b.side === "right" ? "right" : ""}"><div class="media-wrap">${media(b.img, b.ratio, null, { crop: true })}</div><div class="copy" data-reveal><h3>${esc(t(b.title))}</h3><p>${esc(t(b.text))}</p></div></section>`;

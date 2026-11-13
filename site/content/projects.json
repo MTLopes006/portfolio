@@ -408,8 +408,8 @@
         "en": "Homepage banners and campaigns for Cifra Club and Letras."
       },
       "tone": "#904C18",
-      "cover": "assets/img/projetos/semana-do-gospel/kv-violonista.jpg",
-      "coverRatio": "2400/1350",
+      "cover": "assets/img/projetos/destaques/letras-creep-desktop.jpg",
+      "coverRatio": "2000/604",
       "thumb": "assets/img/thumbs/semana-do-gospel.jpg",
       "blocks": [
         {
@@ -428,6 +428,10 @@
           "text": {
             "pt": "O banner principal é a primeira coisa que milhões de pessoas veem ao abrir o Cifra Club e o Letras. São duas lógicas diferentes para o mesmo espaço, sempre em versão desktop e mobile.",
             "en": "The hero banner is the first thing millions of people see when they open Cifra Club and Letras. Two different logics for the same slot, always in desktop and mobile versions."
+          },
+          "kicker": {
+            "pt": "Cifra Club e Letras · 2026",
+            "en": "Cifra Club and Letras · 2026"
           }
         },
         {
@@ -600,13 +604,10 @@
         },
         {
           "type": "chapter",
-          "title": {
-            "pt": "Cifra Club",
-            "en": "Cifra Club"
-          }
-        },
-        {
-          "type": "text",
+          "kicker": {
+            "pt": "Cifra Club · 2026",
+            "en": "Cifra Club · 2026"
+          },
           "title": {
             "pt": "Semana do Gospel",
             "en": "Gospel Week"
@@ -729,10 +730,14 @@
           }
         },
         {
-          "type": "text",
+          "type": "chapter",
+          "kicker": {
+            "pt": "Cifra Club · 2025",
+            "en": "Cifra Club · 2025"
+          },
           "title": {
-            "pt": "Aplicativo Cifra Club",
-            "en": "Cifra Club App"
+            "pt": "Campanha do app",
+            "en": "App campaign"
           },
           "text": {
             "pt": "Campanha de incentivo ao download do app via mídia interna, direcionada a quem já usava a plataforma web. Um conceito adaptado a mockups e banners de Android e iOS.",
@@ -793,13 +798,10 @@
         },
         {
           "type": "chapter",
-          "title": {
-            "pt": "Letras",
-            "en": "Letras"
-          }
-        },
-        {
-          "type": "text",
+          "kicker": {
+            "pt": "Letras · 2026",
+            "en": "Letras · 2026"
+          },
           "title": {
             "pt": "Semana do Coreano",
             "en": "Korean Week"

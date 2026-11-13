@@ -405,6 +405,27 @@
                       "widget": "object",
                       "fields": [
                         {
+                          "name": "kicker",
+                          "label": "Rótulo acima do título (ex.: Cifra Club · 2026)",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "string",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "string",
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
                           "name": "title",
                           "label": "Título",
                           "widget": "object",
