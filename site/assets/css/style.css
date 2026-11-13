@@ -985,3 +985,6 @@ body[data-page="home"] .site-footer { margin-top: calc(clamp(48px, 5vw, 72px) + 
 .lay-mosaic .mosaic.justified figure .media { height: 100%; aspect-ratio: auto !important; }
 .lay-mosaic .mosaic.justified .mosaic-end { flex: 1000 1 0; }
 @media (max-width: 760px) { .lay-mosaic .mosaic.justified figure { flex-basis: calc(var(--r) * 150px); } }
+
+/* phones: side-by-side landscape images get too small, so they stack */
+@media (max-width: 600px) { .b-rows .row.landscape { flex-direction: column; } .b-rows .row.landscape > div { flex: none !important; } }

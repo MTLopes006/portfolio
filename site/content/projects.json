@@ -269,9 +269,21 @@
               },
               "imgs": [
                 {
+                  "img": "assets/img/projetos/lapso-menores-atos/cd-frente-vertical.jpg",
+                  "ratio": "1122/1402"
+                },
+                {
                   "img": "assets/img/projetos/lapso-menores-atos/cd-frente-close.jpg",
                   "ratio": "2000/1124"
-                },
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
                 {
                   "img": "assets/img/projetos/lapso-menores-atos/cd-detalhes-1.jpg",
                   "ratio": "2000/1124"
