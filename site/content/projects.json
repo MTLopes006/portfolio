@@ -1,23 +1,50 @@
 {
   "projects": [
     {
+      "slug": "lapso-menores-atos",
+      "category": "destaque",
+      "year": "2026",
+      "title": {
+        "pt": "Menores Atos · Lapso",
+        "en": "Menores Atos · Lapso"
+      },
+      "client": {
+        "pt": "Menores Atos · redesign de álbum",
+        "en": "Menores Atos · album redesign"
+      },
+      "role": {
+        "pt": "Direção de arte e design gráfico",
+        "en": "Art direction & graphic design"
+      },
+      "tags": {
+        "pt": "Capa de disco · Editorial · Direção de arte",
+        "en": "Album art · Editorial · Art direction"
+      },
+      "summary": {
+        "pt": "Redesign do álbum Lapso, da banda Menores Atos: capa, encarte, CD, vinil e divulgação.",
+        "en": "A redesign of Menores Atos' album Lapso: cover, booklet, CD, vinyl and launch posts."
+      },
+      "tone": "#D27A24",
+      "cover": "assets/img/projetos/lapso-menores-atos/vinil.jpg",
+      "coverRatio": "2000/1124",
+      "thumb": "assets/img/thumbs/lapso-menores-atos.jpg",
       "blocks": [
         {
           "type": "lead",
           "text": {
-            "pt": "Campanha para incentivar o acesso de cifras gospel na plataforma durante a semana do dia da música gospel (9 de junho). A decisão veio da grande adesão do público religioso ao uso da plataforma para aprender músicas e planejar repertório.",
-            "en": "A campaign to drive gospel chord views on the platform during Gospel Music Day week (June 9). It came from the strong uptake among religious users, who rely on the platform to learn songs and plan setlists."
+            "pt": "Redesign do álbum Lapso (2018), da banda Menores Atos. A identidade do disco foi refeita a partir do título, e se estende à capa, ao encarte, ao CD, ao vinil e aos posts de lançamento.",
+            "en": "A redesign of Lapso (2018), the album by Menores Atos. The record's identity was rebuilt from its title and carried through the cover, booklet, CD, vinyl and launch posts."
           }
         },
         {
           "type": "text",
           "title": {
-            "pt": "Prancha de conceito",
-            "en": "Concept board"
+            "pt": "O conceito",
+            "en": "The concept"
           },
           "text": {
-            "pt": "Três cenas de músicos tocando em igreja e em casa, sempre com luz quente de fim de tarde ou de abajur. Os assets foram explorados com IA generativa (ChatGPT e Magnific) e finalizados no Photoshop, com curadoria e acabamento meus.",
-            "en": "Three scenes of musicians playing in church and at home, always under warm late-afternoon or lamp light. Assets were explored with generative AI (ChatGPT and Magnific) and finished in Photoshop, with my own curation and retouching."
+            "pt": "No dicionário, lapso é um erro de atenção, um intervalo de tempo ou uma interrupção. Nas letras da banda, a palavra ganha um sentido mais íntimo: o momento em que uma relação, uma lembrança ou uma escolha sai do eixo, e o espaço que fica entre o que aconteceu e o que restou. O disco fala de melancolia, tensão e memória, e o título resume essa ideia de uma falha pequena com consequência grande.",
+            "en": "In the dictionary, lapso is a slip of attention, a span of time or an interruption. In the band's lyrics the word turns more personal: the moment a relationship, a memory or a choice goes off course, and the gap between what happened and what was left. The record deals with melancholy, tension and memory, and the title sums up the idea of a small slip with a large consequence."
           }
         },
         {
@@ -30,45 +57,151 @@
               },
               "imgs": [
                 {
-                  "img": "assets/img/projetos/semana-do-gospel/kv-igreja.jpg",
-                  "ratio": "2400/1350"
+                  "img": "assets/img/projetos/lapso-menores-atos/capa-encarte.jpg",
+                  "ratio": "1696/1696"
                 },
                 {
-                  "img": "assets/img/projetos/semana-do-gospel/kv-noite.jpg",
-                  "ratio": "2400/1350"
+                  "img": "assets/img/projetos/lapso-menores-atos/contra-capa-encarte.jpg",
+                  "ratio": "1696/1696"
                 }
               ]
             }
           ],
           "caption": {
-            "pt": "Key visuals: igreja e noite",
-            "en": "Key visuals: church and night"
+            "pt": "Capa e contracapa do encarte",
+            "en": "Booklet front and back"
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Linguagem visual",
+            "en": "Visual language"
+          },
+          "text": {
+            "pt": "Laranja e preto, manchas de luz desfocadas e um fragmento de vidro no centro da capa. No nome da banda, as letras de “atos” aparecem espaçadas e fora do alinhamento, como algo que escapou do lugar.",
+            "en": "Orange and black, blurred patches of light and a shard of glass at the centre of the cover. In the band's name, the letters of “atos” are spaced out and off alignment, like something that slipped out of place."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/capa.jpg",
+                  "ratio": "1715/1715"
+                },
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/contracapa.jpg",
+                  "ratio": "1715/1715"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Capa e contracapa do disco",
+            "en": "Album front and back"
           }
         },
         {
           "type": "palette",
           "colors": [
             {
-              "hex": "#FCDA9A",
-              "name": "Soft Peach"
+              "hex": "#D27A24",
+              "name": "Laranja"
             },
             {
-              "hex": "#FBC77D",
-              "name": "Apricot Cream"
+              "hex": "#120E0E",
+              "name": "Preto"
             },
             {
-              "hex": "#904C18",
-              "name": "Chocolate Brown"
+              "hex": "#EDE9E3",
+              "name": "Off-white"
             }
           ]
         },
         {
-          "type": "full",
-          "img": "assets/img/projetos/semana-do-gospel/destaque-desktop.jpg",
-          "ratio": "2400/593",
+          "type": "text",
+          "title": {
+            "pt": "Encarte",
+            "en": "Booklet"
+          },
+          "text": {
+            "pt": "As letras ocupam páginas escuras, ao lado de fotos da banda em preto e branco, sempre atravessadas pela mesma luz laranja da capa.",
+            "en": "The lyrics sit on dark pages next to black-and-white photos of the band, always crossed by the same orange light as the cover."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/encarte-1.jpg",
+                  "ratio": "2000/1134"
+                }
+              ]
+            }
+          ],
+          "span": "full"
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/miolo-encarte-1.jpg",
+                  "ratio": "1865/1631"
+                },
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/miolo-encarte-2.jpg",
+                  "ratio": "1865/1631"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/miolo-encarte-3.jpg",
+                  "ratio": "1865/1631"
+                },
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/miolo-encarte-4.jpg",
+                  "ratio": "1865/1631"
+                }
+              ]
+            }
+          ],
           "caption": {
-            "pt": "Destaque na home do site · desktop",
-            "en": "Homepage highlight · desktop"
+            "pt": "Páginas internas: Miopia e Contramão",
+            "en": "Inside spreads: Miopia and Contramão"
+          }
+        },
+        {
+          "type": "full",
+          "img": "assets/img/projetos/lapso-menores-atos/miolo-encarte-completo.jpg",
+          "ratio": "3400/753",
+          "caption": {
+            "pt": "Miolo do encarte aberto",
+            "en": "The booklet laid open"
           },
           "parallax": false
         },
@@ -82,430 +215,216 @@
               },
               "imgs": [
                 {
-                  "img": "assets/img/projetos/semana-do-gospel/app-1.jpg",
-                  "ratio": "815/1600"
+                  "img": "assets/img/projetos/lapso-menores-atos/encarte-2.jpg",
+                  "ratio": "2000/1124"
                 },
                 {
-                  "img": "assets/img/projetos/semana-do-gospel/app-2.jpg",
-                  "ratio": "814/1600"
+                  "img": "assets/img/projetos/lapso-menores-atos/encarte-3.jpg",
+                  "ratio": "2000/1124"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "CD e vinil",
+            "en": "CD and vinyl"
+          },
+          "text": {
+            "pt": "O CD repete a capa laranja e leva a lista de faixas no verso. No vinil, o selo central usa o mesmo laranja com o nome do disco e da banda.",
+            "en": "The CD repeats the orange cover and carries the tracklist on the back. On the vinyl, the centre label uses the same orange with the album and band names."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/cd.jpg",
+                  "ratio": "2000/1124"
                 },
                 {
-                  "img": "assets/img/projetos/semana-do-gospel/app-3.jpg",
-                  "ratio": "815/1600"
+                  "img": "assets/img/projetos/lapso-menores-atos/cd-frente-close.jpg",
+                  "ratio": "2000/1124"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/cd-detalhes-1.jpg",
+                  "ratio": "2000/1124"
+                },
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/cd-detalhes-2.jpg",
+                  "ratio": "2000/1124"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/vinil-detalhes-1.jpg",
+                  "ratio": "2000/1124"
+                },
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/vinil-detalhes-2.jpg",
+                  "ratio": "2000/1124"
                 }
               ]
             }
           ],
           "caption": {
-            "pt": "Interstitials no app · 3 variações",
-            "en": "App interstitials · 3 variations"
-          },
+            "pt": "Vinil e selo central",
+            "en": "Vinyl and centre label"
+          }
+        },
+        {
+          "type": "rows",
           "sideTitle": {
-            "pt": "In-app e interstitials",
-            "en": "In-app & interstitials"
+            "pt": "Lançamento",
+            "en": "Launch"
           },
           "sideText": {
-            "pt": "No app, a campanha aparece como interstitial com chamada para o curso de violão gospel do Cifra Club Academy, em três variações de cena e de texto.",
-            "en": "In the app, the campaign appears as an interstitial pointing to Cifra Club Academy's gospel guitar course, in three variations of scene and copy."
-          }
-        },
-        {
-          "type": "specs",
-          "title": {
-            "pt": "Entregas",
-            "en": "Deliverables"
+            "pt": "Posts para o Instagram da banda: a capa, uma foto de divulgação e o anúncio de que o disco está disponível nas plataformas digitais.",
+            "en": "Posts for the band's Instagram: the cover, a press photo and the announcement that the album is out on streaming platforms."
           },
-          "items": [
+          "rows": [
             {
               "label": {
-                "pt": "Identidade",
-                "en": "Identity"
+                "pt": "",
+                "en": ""
               },
-              "value": {
-                "pt": "Logotipo da campanha e paleta",
-                "en": "Campaign logotype & palette"
-              }
-            },
-            {
-              "label": {
-                "pt": "Conceito",
-                "en": "Concept"
-              },
-              "value": {
-                "pt": "Prancha de conceito fotográfico",
-                "en": "Photographic concept board"
-              }
-            },
-            {
-              "label": {
-                "pt": "Produto",
-                "en": "Product"
-              },
-              "value": {
-                "pt": "In-app, interstitials e destaques",
-                "en": "In-app, interstitials & highlights"
-              }
-            },
-            {
-              "label": {
-                "pt": "Ferramentas",
-                "en": "Tools"
-              },
-              "value": {
-                "pt": "ChatGPT, Magnific, Photoshop e Figma",
-                "en": "ChatGPT, Magnific, Photoshop & Figma"
-              }
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/instagram-1.webp",
+                  "ratio": "700/1442"
+                },
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/instagram-2.webp",
+                  "ratio": "700/1442"
+                },
+                {
+                  "img": "assets/img/projetos/lapso-menores-atos/instagram-3.webp",
+                  "ratio": "700/1442"
+                }
+              ]
             }
           ]
-        }
-      ],
-      "summary": {
-        "pt": "Campanha para aumentar o acesso a cifras gospel na semana do Dia da Música Gospel.",
-        "en": "A campaign to increase gospel chord views during Gospel Music Day week."
-      },
-      "slug": "semana-do-gospel",
-      "client": {
-        "pt": "Cifra Club · Studio Sol",
-        "en": "Cifra Club · Studio Sol"
-      },
-      "tone": "#904C18",
-      "coverRatio": "2400/1350",
-      "role": {
-        "pt": "Identidade visual e conceito fotográfico",
-        "en": "Visual identity & photographic concept"
-      },
-      "thumb": "assets/img/thumbs/semana-do-gospel.jpg",
-      "cover": "assets/img/projetos/semana-do-gospel/kv-violonista.jpg",
-      "title": {
-        "pt": "Semana do Gospel",
-        "en": "Gospel Week"
-      },
-      "tags": {
-        "pt": "Campanha · Identidade visual · Direção de arte",
-        "en": "Campaign · Visual identity · Art direction"
-      },
-      "year": 2026,
-      "category": "campanhas"
-    },
-    {
-      "blocks": [
-        {
-          "type": "lead",
-          "text": {
-            "pt": "Campanha para incentivar o acesso ao curso de língua coreana da plataforma de ensino do Letras. A decisão veio do crescente acesso a letras de K-pop no site.",
-            "en": "A campaign driving sign-ups to the Korean language course on Letras' learning platform, prompted by the growing traffic to K-pop lyrics on the site."
-          }
-        },
-        {
-          "type": "text",
-          "title": {
-            "pt": "Colagem",
-            "en": "Collage"
-          },
-          "text": {
-            "pt": "Elementos de Seul (N Seoul Tower, placas de rua, soju) recortados e aplicados sobre lilás, rosa e azul. A mesma personagem aparece em todas as peças. Assets gerados no Google Flow e finalizados no Photoshop.",
-            "en": "Seoul elements (N Seoul Tower, street signs, soju) cut out and laid over lilac, pink and blue. The same character appears in every piece. Assets generated in Google Flow and finished in Photoshop."
-          }
-        },
-        {
-          "type": "columns",
-          "cols": [
-            {
-              "width": 487,
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/personagem.jpg",
-                  "ratio": "1055/1170",
-                  "round": true
-                },
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/bandeira.jpg",
-                  "ratio": "1055/1031",
-                  "round": true
-                }
-              ]
-            },
-            {
-              "width": 683,
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/logo.jpg",
-                  "ratio": "1442/702",
-                  "round": true
-                },
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/torre.jpg",
-                  "ratio": "1442/1170",
-                  "round": true
-                }
-              ]
-            },
-            {
-              "width": 406,
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/soju.jpg",
-                  "ratio": "893/1005",
-                  "round": true
-                },
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/placa.jpg",
-                  "ratio": "893/1460",
-                  "round": true
-                }
-              ]
-            }
-          ],
-          "caption": {
-            "pt": "Prancha de conceito: personagem, logotipo e elementos de Seul",
-            "en": "Concept board: character, logotype and Seoul elements"
-          }
-        },
-        {
-          "type": "text",
-          "title": {
-            "pt": "House ads multiformato",
-            "en": "Multi-format house ads"
-          },
-          "text": {
-            "pt": "Peças veiculadas no site do Letras, em espaços de mídia display, para quem chega pelas letras de K-pop. Três formatos (970×250, 300×250 e 970×90), animados em dois quadros: a provocação \"Canta em coreano mas não entende nada?\" e o convite \"Aprenda com os cursos do Letras\", com o botão Comece agora.",
-            "en": "Placements on the Letras website, in display ad slots, for people arriving through K-pop lyrics. Three formats (970×250, 300×250 and 970×90), animated in two frames: the hook \"You sing in Korean but don't understand a thing?\" and the invite \"Learn with Letras courses\", with a Start now button."
-          }
-        },
-        {
-          "type": "ads",
-          "items": [
-            {
-              "frames": [
-                "assets/img/projetos/semana-do-coreano/houseads/970x250_1.webp",
-                "assets/img/projetos/semana-do-coreano/houseads/970x250_2.webp"
-              ],
-              "w": 970,
-              "h": 250
-            },
-            {
-              "frames": [
-                "assets/img/projetos/semana-do-coreano/houseads/300x250_1.webp",
-                "assets/img/projetos/semana-do-coreano/houseads/300x250_2.webp"
-              ],
-              "w": 300,
-              "h": 250
-            },
-            {
-              "frames": [
-                "assets/img/projetos/semana-do-coreano/houseads/970x90_1.webp",
-                "assets/img/projetos/semana-do-coreano/houseads/970x90_2.webp"
-              ],
-              "w": 970,
-              "h": 90
-            }
-          ],
-          "caption": {
-            "pt": "House ads animados em dois quadros",
-            "en": "House ads animated in two frames"
-          }
         },
         {
           "type": "specs",
           "title": {
-            "pt": "Entregas",
-            "en": "Deliverables"
+            "pt": "Peças",
+            "en": "Pieces"
           },
           "items": [
             {
               "label": {
-                "pt": "Identidade",
-                "en": "Identity"
+                "pt": "Disco",
+                "en": "Album"
               },
               "value": {
-                "pt": "Logotipo e prancha de conceito",
-                "en": "Logotype & concept board"
+                "pt": "Capa, contracapa e lista de faixas",
+                "en": "Front, back and tracklist"
               }
             },
             {
               "label": {
-                "pt": "Produto",
-                "en": "Product"
+                "pt": "Encarte",
+                "en": "Booklet"
               },
               "value": {
-                "pt": "In-app, destaques e house ads",
-                "en": "In-app, highlights & house ads"
+                "pt": "Capa, contracapa e páginas com as letras",
+                "en": "Cover, back and lyric pages"
               }
             },
             {
               "label": {
-                "pt": "Ferramentas",
-                "en": "Tools"
-              },
-              "value": {
-                "pt": "Google Flow, Photoshop e Figma",
-                "en": "Google Flow, Photoshop & Figma"
-              }
-            }
-          ]
-        }
-      ],
-      "summary": {
-        "pt": "Campanha do curso de coreano do Letras, em linguagem de colagem.",
-        "en": "A collage-led campaign for Letras' Korean course."
-      },
-      "slug": "semana-do-coreano",
-      "client": {
-        "pt": "Letras · Studio Sol",
-        "en": "Letras · Studio Sol"
-      },
-      "tone": "#B79CF0",
-      "coverRatio": "2400/725",
-      "role": {
-        "pt": "Identidade visual e direção de arte",
-        "en": "Visual identity & art direction"
-      },
-      "thumb": "assets/img/thumbs/semana-do-coreano.jpg",
-      "cover": "assets/img/projetos/semana-do-coreano/destaque-desktop.jpg",
-      "title": {
-        "pt": "Semana do Coreano",
-        "en": "Korean Week"
-      },
-      "tags": {
-        "pt": "Campanha · Identidade visual · Colagem",
-        "en": "Campaign · Visual identity · Collage"
-      },
-      "year": 2026,
-      "category": "campanhas"
-    },
-    {
-      "blocks": [
-        {
-          "type": "lead",
-          "text": {
-            "pt": "Campanha de incentivo ao download do app via mídia interna, direcionada a quem já usava a plataforma web. Um conceito adaptado a mockups e banners de Android e iOS.",
-            "en": "A campaign encouraging app downloads through in-house media, aimed at people already using the web platform. One concept adapted to Android and iOS mockups and banners."
-          }
-        },
-        {
-          "type": "text",
-          "title": {
-            "pt": "House ads multiformato",
-            "en": "Multi-format house ads"
-          },
-          "text": {
-            "pt": "Peças veiculadas no próprio site do Cifra Club, em espaços de mídia display, falando com quem já usa a versão web. São quatro formatos padrão (970×250, 970×90, 300×250 e 320×50), todos animados em dois quadros: primeiro a promessa, \"Aprenda mais rápido e organize seu repertório\"; depois a chamada \"Baixe o app e evolua todos os dias\", com o selo da App Store.",
-            "en": "Placements on Cifra Club's own website, in display ad slots, speaking to people who already use the web version. Four standard formats (970×250, 970×90, 300×250 and 320×50), each animated in two frames: first the promise, \"Learn faster and organise your setlist\"; then the call \"Download the app and improve every day\", with the App Store badge."
-          }
-        },
-        {
-          "type": "ads",
-          "items": [
-            {
-              "frames": [
-                "assets/img/projetos/download-do-app/houseads/970x250_1.webp",
-                "assets/img/projetos/download-do-app/houseads/970x250_2.webp"
-              ],
-              "w": 970,
-              "h": 250
-            },
-            {
-              "frames": [
-                "assets/img/projetos/download-do-app/houseads/300x250_1.webp",
-                "assets/img/projetos/download-do-app/houseads/300x250_2.webp"
-              ],
-              "w": 300,
-              "h": 250
-            },
-            {
-              "frames": [
-                "assets/img/projetos/download-do-app/houseads/970x90_1.webp",
-                "assets/img/projetos/download-do-app/houseads/970x90_2.webp"
-              ],
-              "w": 970,
-              "h": 90
-            },
-            {
-              "frames": [
-                "assets/img/projetos/download-do-app/houseads/320x50_1.webp",
-                "assets/img/projetos/download-do-app/houseads/320x50_2.webp"
-              ],
-              "w": 320,
-              "h": 50
-            }
-          ],
-          "caption": {
-            "pt": "House ads animados em dois quadros",
-            "en": "House ads animated in two frames"
-          }
-        },
-        {
-          "type": "specs",
-          "title": {
-            "pt": "Entregas",
-            "en": "Deliverables"
-          },
-          "items": [
-            {
-              "label": {
-                "pt": "Identidade",
-                "en": "Identity"
-              },
-              "value": {
-                "pt": "Conceito e assets",
-                "en": "Concept & assets"
-              }
-            },
-            {
-              "label": {
-                "pt": "Formatos",
+                "pt": "Mídias",
                 "en": "Formats"
               },
               "value": {
-                "pt": "House ads 970×250, 970×90, 300×250 e 320×50, animados em 2 quadros",
-                "en": "House ads 970×250, 970×90, 300×250 & 320×50, animated in 2 frames"
+                "pt": "CD e vinil",
+                "en": "CD and vinyl"
               }
             },
             {
               "label": {
-                "pt": "Ferramentas",
-                "en": "Tools"
+                "pt": "Divulgação",
+                "en": "Launch"
               },
               "value": {
-                "pt": "Photoshop e Figma",
-                "en": "Photoshop & Figma"
+                "pt": "Posts para Instagram",
+                "en": "Instagram posts"
               }
             }
           ]
         }
-      ],
-      "summary": {
-        "pt": "Campanha que convida quem usa o site a baixar o app do Cifra Club.",
-        "en": "A campaign inviting web users to download the Cifra Club app."
-      },
-      "slug": "aplicativo-cifra-club",
-      "client": {
-        "pt": "Cifra Club · Studio Sol",
-        "en": "Cifra Club · Studio Sol"
-      },
-      "tone": "#FF8A3D",
-      "coverRatio": "2400/1350",
-      "role": {
-        "pt": "Conceito, mockups e house ads",
-        "en": "Concept, mockups & house ads"
-      },
-      "thumb": "assets/img/thumbs/download-do-app.jpg",
-      "cover": "assets/img/projetos/download-do-app/key-visual.jpg",
-      "title": {
-        "pt": "Aplicativo Cifra Club",
-        "en": "Cifra Club App"
-      },
-      "tags": {
-        "pt": "Campanha · Mockups · House ads",
-        "en": "Campaign · Mockups · House ads"
-      },
-      "year": 2025,
-      "category": "campanhas"
+      ]
     },
     {
+      "slug": "cifra-club-e-letras",
+      "category": "campanhas",
+      "year": "2025–2026",
+      "title": {
+        "pt": "Cifra Club e Letras",
+        "en": "Cifra Club and Letras"
+      },
+      "client": {
+        "pt": "Cifra Club e Letras · Studio Sol",
+        "en": "Cifra Club & Letras · Studio Sol"
+      },
+      "role": {
+        "pt": "Direção de arte, campanhas e destaques",
+        "en": "Art direction, campaigns & homepage banners"
+      },
+      "tags": {
+        "pt": "Campanha · Banner · Direção de arte",
+        "en": "Campaign · Banner · Art direction"
+      },
+      "summary": {
+        "pt": "Destaques do site e campanhas feitas para o Cifra Club e o Letras.",
+        "en": "Homepage banners and campaigns for Cifra Club and Letras."
+      },
+      "tone": "#904C18",
+      "cover": "assets/img/projetos/semana-do-gospel/kv-violonista.jpg",
+      "coverRatio": "2400/1350",
+      "thumb": "assets/img/thumbs/semana-do-gospel.jpg",
       "blocks": [
         {
           "type": "lead",
+          "text": {
+            "pt": "Como Visual Designer na Studio Sol, crio para o Cifra Club e o Letras. Esta página reúne os banners de destaque dos dois sites e as campanhas de cada produto.",
+            "en": "As a Visual Designer at Studio Sol, I work on Cifra Club and Letras. This page brings together the homepage banners of both sites and each product's campaigns."
+          }
+        },
+        {
+          "type": "chapter",
+          "title": {
+            "pt": "Destaques do site",
+            "en": "Homepage banners"
+          },
           "text": {
             "pt": "O banner principal é a primeira coisa que milhões de pessoas veem ao abrir o Cifra Club e o Letras. São duas lógicas diferentes para o mesmo espaço, sempre em versão desktop e mobile.",
             "en": "The hero banner is the first thing millions of people see when they open Cifra Club and Letras. Two different logics for the same slot, always in desktop and mobile versions."
@@ -680,6 +599,326 @@
           }
         },
         {
+          "type": "chapter",
+          "title": {
+            "pt": "Cifra Club",
+            "en": "Cifra Club"
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Semana do Gospel",
+            "en": "Gospel Week"
+          },
+          "text": {
+            "pt": "Campanha para incentivar o acesso de cifras gospel na plataforma durante a semana do dia da música gospel (9 de junho). A decisão veio da grande adesão do público religioso ao uso da plataforma para aprender músicas e planejar repertório.",
+            "en": "A campaign to drive gospel chord views on the platform during Gospel Music Day week (June 9). It came from the strong uptake among religious users, who rely on the platform to learn songs and plan setlists."
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Prancha de conceito",
+            "en": "Concept board"
+          },
+          "text": {
+            "pt": "Três cenas de músicos tocando em igreja e em casa, sempre com luz quente de fim de tarde ou de abajur. Os assets foram explorados com IA generativa (ChatGPT e Magnific) e finalizados no Photoshop, com curadoria e acabamento meus.",
+            "en": "Three scenes of musicians playing in church and at home, always under warm late-afternoon or lamp light. Assets were explored with generative AI (ChatGPT and Magnific) and finished in Photoshop, with my own curation and retouching."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/semana-do-gospel/kv-igreja.jpg",
+                  "ratio": "2400/1350"
+                },
+                {
+                  "img": "assets/img/projetos/semana-do-gospel/kv-noite.jpg",
+                  "ratio": "2400/1350"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Key visuals: igreja e noite",
+            "en": "Key visuals: church and night"
+          }
+        },
+        {
+          "type": "palette",
+          "colors": [
+            {
+              "hex": "#FCDA9A",
+              "name": "Soft Peach"
+            },
+            {
+              "hex": "#FBC77D",
+              "name": "Apricot Cream"
+            },
+            {
+              "hex": "#904C18",
+              "name": "Chocolate Brown"
+            }
+          ]
+        },
+        {
+          "type": "rows",
+          "caption": {
+            "pt": "Destaque na home do site · desktop",
+            "en": "Homepage highlight · desktop"
+          },
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/semana-do-gospel/destaque-desktop.jpg",
+                  "ratio": "2400/593"
+                }
+              ]
+            }
+          ],
+          "span": "full"
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/semana-do-gospel/app-1.jpg",
+                  "ratio": "815/1600"
+                },
+                {
+                  "img": "assets/img/projetos/semana-do-gospel/app-2.jpg",
+                  "ratio": "814/1600"
+                },
+                {
+                  "img": "assets/img/projetos/semana-do-gospel/app-3.jpg",
+                  "ratio": "815/1600"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Interstitials no app · 3 variações",
+            "en": "App interstitials · 3 variations"
+          },
+          "sideTitle": {
+            "pt": "In-app e interstitials",
+            "en": "In-app & interstitials"
+          },
+          "sideText": {
+            "pt": "No app, a campanha aparece como interstitial com chamada para o curso de violão gospel do Cifra Club Academy, em três variações de cena e de texto.",
+            "en": "In the app, the campaign appears as an interstitial pointing to Cifra Club Academy's gospel guitar course, in three variations of scene and copy."
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Aplicativo Cifra Club",
+            "en": "Cifra Club App"
+          },
+          "text": {
+            "pt": "Campanha de incentivo ao download do app via mídia interna, direcionada a quem já usava a plataforma web. Um conceito adaptado a mockups e banners de Android e iOS.",
+            "en": "A campaign encouraging app downloads through in-house media, aimed at people already using the web platform. One concept adapted to Android and iOS mockups and banners."
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "House ads multiformato",
+            "en": "Multi-format house ads"
+          },
+          "text": {
+            "pt": "Peças veiculadas no próprio site do Cifra Club, em espaços de mídia display, falando com quem já usa a versão web. São quatro formatos padrão (970×250, 970×90, 300×250 e 320×50), todos animados em dois quadros: primeiro a promessa, \"Aprenda mais rápido e organize seu repertório\"; depois a chamada \"Baixe o app e evolua todos os dias\", com o selo da App Store.",
+            "en": "Placements on Cifra Club's own website, in display ad slots, speaking to people who already use the web version. Four standard formats (970×250, 970×90, 300×250 and 320×50), each animated in two frames: first the promise, \"Learn faster and organise your setlist\"; then the call \"Download the app and improve every day\", with the App Store badge."
+          }
+        },
+        {
+          "type": "ads",
+          "items": [
+            {
+              "frames": [
+                "assets/img/projetos/download-do-app/houseads/970x250_1.webp",
+                "assets/img/projetos/download-do-app/houseads/970x250_2.webp"
+              ],
+              "w": 970,
+              "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/download-do-app/houseads/300x250_1.webp",
+                "assets/img/projetos/download-do-app/houseads/300x250_2.webp"
+              ],
+              "w": 300,
+              "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/download-do-app/houseads/970x90_1.webp",
+                "assets/img/projetos/download-do-app/houseads/970x90_2.webp"
+              ],
+              "w": 970,
+              "h": 90
+            },
+            {
+              "frames": [
+                "assets/img/projetos/download-do-app/houseads/320x50_1.webp",
+                "assets/img/projetos/download-do-app/houseads/320x50_2.webp"
+              ],
+              "w": 320,
+              "h": 50
+            }
+          ],
+          "caption": {
+            "pt": "House ads animados em dois quadros",
+            "en": "House ads animated in two frames"
+          }
+        },
+        {
+          "type": "chapter",
+          "title": {
+            "pt": "Letras",
+            "en": "Letras"
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Semana do Coreano",
+            "en": "Korean Week"
+          },
+          "text": {
+            "pt": "Campanha para incentivar o acesso ao curso de língua coreana da plataforma de ensino do Letras. A decisão veio do crescente acesso a letras de K-pop no site.",
+            "en": "A campaign driving sign-ups to the Korean language course on Letras' learning platform, prompted by the growing traffic to K-pop lyrics on the site."
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Colagem",
+            "en": "Collage"
+          },
+          "text": {
+            "pt": "Elementos de Seul (N Seoul Tower, placas de rua, soju) recortados e aplicados sobre lilás, rosa e azul. A mesma personagem aparece em todas as peças. Assets gerados no Google Flow e finalizados no Photoshop.",
+            "en": "Seoul elements (N Seoul Tower, street signs, soju) cut out and laid over lilac, pink and blue. The same character appears in every piece. Assets generated in Google Flow and finished in Photoshop."
+          }
+        },
+        {
+          "type": "columns",
+          "cols": [
+            {
+              "width": 487,
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/semana-do-coreano/personagem.jpg",
+                  "ratio": "1055/1170",
+                  "round": true
+                },
+                {
+                  "img": "assets/img/projetos/semana-do-coreano/bandeira.jpg",
+                  "ratio": "1055/1031",
+                  "round": true
+                }
+              ]
+            },
+            {
+              "width": 683,
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/semana-do-coreano/logo.jpg",
+                  "ratio": "1442/702",
+                  "round": true
+                },
+                {
+                  "img": "assets/img/projetos/semana-do-coreano/torre.jpg",
+                  "ratio": "1442/1170",
+                  "round": true
+                }
+              ]
+            },
+            {
+              "width": 406,
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/semana-do-coreano/soju.jpg",
+                  "ratio": "893/1005",
+                  "round": true
+                },
+                {
+                  "img": "assets/img/projetos/semana-do-coreano/placa.jpg",
+                  "ratio": "893/1460",
+                  "round": true
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Prancha de conceito: personagem, logotipo e elementos de Seul",
+            "en": "Concept board: character, logotype and Seoul elements"
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "House ads multiformato",
+            "en": "Multi-format house ads"
+          },
+          "text": {
+            "pt": "Peças veiculadas no site do Letras, em espaços de mídia display, para quem chega pelas letras de K-pop. Três formatos (970×250, 300×250 e 970×90), animados em dois quadros: a provocação \"Canta em coreano mas não entende nada?\" e o convite \"Aprenda com os cursos do Letras\", com o botão Comece agora.",
+            "en": "Placements on the Letras website, in display ad slots, for people arriving through K-pop lyrics. Three formats (970×250, 300×250 and 970×90), animated in two frames: the hook \"You sing in Korean but don't understand a thing?\" and the invite \"Learn with Letras courses\", with a Start now button."
+          }
+        },
+        {
+          "type": "ads",
+          "items": [
+            {
+              "frames": [
+                "assets/img/projetos/semana-do-coreano/houseads/970x250_1.webp",
+                "assets/img/projetos/semana-do-coreano/houseads/970x250_2.webp"
+              ],
+              "w": 970,
+              "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/semana-do-coreano/houseads/300x250_1.webp",
+                "assets/img/projetos/semana-do-coreano/houseads/300x250_2.webp"
+              ],
+              "w": 300,
+              "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/semana-do-coreano/houseads/970x90_1.webp",
+                "assets/img/projetos/semana-do-coreano/houseads/970x90_2.webp"
+              ],
+              "w": 970,
+              "h": 90
+            }
+          ],
+          "caption": {
+            "pt": "House ads animados em dois quadros",
+            "en": "House ads animated in two frames"
+          }
+        },
+        {
           "type": "specs",
           "title": {
             "pt": "Entregas",
@@ -688,8 +927,8 @@
           "items": [
             {
               "label": {
-                "pt": "Formatos",
-                "en": "Formats"
+                "pt": "Destaques",
+                "en": "Banners"
               },
               "value": {
                 "pt": "Desktop e mobile, atualização recorrente",
@@ -698,44 +937,27 @@
             },
             {
               "label": {
+                "pt": "Campanhas",
+                "en": "Campaigns"
+              },
+              "value": {
+                "pt": "Identidade, key visuals, in-app, interstitials e house ads",
+                "en": "Identity, key visuals, in-app, interstitials & house ads"
+              }
+            },
+            {
+              "label": {
                 "pt": "Ferramentas",
                 "en": "Tools"
               },
               "value": {
-                "pt": "ChatGPT, Magnific e Photoshop",
-                "en": "ChatGPT, Magnific & Photoshop"
+                "pt": "ChatGPT, Magnific, Google Flow, Photoshop e Figma",
+                "en": "ChatGPT, Magnific, Google Flow, Photoshop & Figma"
               }
             }
           ]
         }
-      ],
-      "summary": {
-        "pt": "Banners principais dos sites, atualizados a cada lançamento.",
-        "en": "Homepage hero banners, refreshed with every release."
-      },
-      "slug": "destaques",
-      "client": {
-        "pt": "Cifra Club e Letras · Studio Sol",
-        "en": "Cifra Club & Letras · Studio Sol"
-      },
-      "tone": "#E8711C",
-      "coverRatio": "2000/494",
-      "role": {
-        "pt": "Adaptação de identidade e formatos",
-        "en": "Identity adaptation & formats"
-      },
-      "thumb": "assets/img/thumbs/destaques.jpg",
-      "cover": "assets/img/projetos/destaques/cifra-tua-graca-desktop.jpg",
-      "title": {
-        "pt": "Destaques",
-        "en": "Featured Banners"
-      },
-      "tags": {
-        "pt": "Banner · Direção de arte · Multiplataforma",
-        "en": "Banner · Art direction · Multi-platform"
-      },
-      "year": 2026,
-      "category": "produto"
+      ]
     },
     {
       "blocks": [

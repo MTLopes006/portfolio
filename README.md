@@ -213,6 +213,7 @@ Campos de cada projeto:
 | Bloco | Como aparece |
 |---|---|
 | Texto de abertura | Parágrafo grande alinhado à direita |
+| Divisória de seção | Título grande com linha acima, para separar partes de um projeto longo (ex.: Destaques · Cifra Club · Letras) |
 | Título + texto | Título à esquerda e texto em coluna à direita |
 | Imagem sangrada | Imagem de ponta a ponta da tela, com legenda e parallax opcionais |
 | Imagem + texto | Imagem com marcas de corte e texto ao lado (escolha o lado da imagem) |

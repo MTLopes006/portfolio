@@ -45,7 +45,7 @@
     return o.crop ? `<div class="crop">${m}</div>` : m;
   };
   const stagger = (i, step = 0.06) => `style="--d:${(i * step).toFixed(2)}s"`;
-  const CATS = ["campanhas", "produto", "interna", "clientes", "academico", "outros"];
+  const CATS = ["destaque", "campanhas", "produto", "interna", "clientes", "academico", "outros"];
   const grouped = () => CATS.map((c) => ({ c, items: projects.map((p, i) => ({ p, i })).filter(({ p }) => (p.category || "outros") === c) })).filter((g) => g.items.length);
 
   /* ---------- header / footer ---------- */
@@ -243,8 +243,8 @@
           <h1 class="page-title riso" data-text="${esc(ui("work.title"))}">${ui("work.title")}</h1>
           <p class="page-lead">${ui("work.lead")}</p>
         </header>
-        ${grouped().map((g) => `
-        <div class="cat-head" data-reveal><div><span class="label">${pad(CATS.indexOf(g.c) + 1)}</span><h2>${ui("cat." + g.c)}</h2></div><p>${ui("cat." + g.c + ".d")}</p></div>
+        ${grouped().map((g, gi) => `
+        <div class="cat-head" data-reveal><div><span class="label">${pad(gi + 1)}</span><h2>${ui("cat." + g.c)}</h2></div><p>${ui("cat." + g.c + ".d")}</p></div>
         <ol class="series-index">
           ${g.items.map(({ p, i }) => `
             <li class="series-row" style="--acc:${esc(p.tone || "var(--magenta)")}">
@@ -275,6 +275,7 @@
     const imgs = (b.imgs || []);
     switch (b.type) {
       case "lead": return `<section class="b-lead" data-reveal><p>${esc(t(b.text))}</p></section>`;
+      case "chapter": return `<header class="b-chapter" data-reveal><h2>${esc(t(b.title))}</h2>${t(b.text) ? `<p>${esc(t(b.text))}</p>` : ""}</header>`;
       case "text": return `<section class="b-text" data-reveal><h3>${esc(t(b.title))}</h3><p>${esc(t(b.text))}</p></section>`;
       case "full": return `<figure class="b-full">${media(b.img, b.ratio || "16/9", null, { parallax: b.parallax })}${t(b.caption) ? `<figcaption class="label">${esc(t(b.caption))}</figcaption>` : ""}</figure>`;
       case "split": return `<section class="b-split ${b.side === "right" ? "right" : ""}"><div class="media-wrap">${media(b.img, b.ratio, null, { crop: true })}</div><div class="copy" data-reveal><h3>${esc(t(b.title))}</h3><p>${esc(t(b.text))}</p></div></section>`;

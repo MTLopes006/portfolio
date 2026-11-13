@@ -227,7 +227,11 @@
                   "default": "campanhas",
                   "options": [
                     {
-                      "label": "Campanhas",
+                      "label": "Projeto em destaque",
+                      "value": "destaque"
+                    },
+                    {
+                      "label": "Studio Sol (Cifra Club e Letras)",
                       "value": "campanhas"
                     },
                     {
@@ -375,6 +379,55 @@
                         {
                           "name": "text",
                           "label": "Texto",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "text",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "text",
+                              "required": false
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "chapter",
+                      "label": "Divisória de seção (título grande)",
+                      "widget": "object",
+                      "fields": [
+                        {
+                          "name": "title",
+                          "label": "Título",
+                          "widget": "object",
+                          "collapsed": false,
+                          "required": false,
+                          "fields": [
+                            {
+                              "name": "pt",
+                              "label": "Português",
+                              "widget": "string",
+                              "required": false
+                            },
+                            {
+                              "name": "en",
+                              "label": "English",
+                              "widget": "string",
+                              "required": false
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "label": "Texto ao lado (opcional)",
                           "widget": "object",
                           "collapsed": false,
                           "required": false,
