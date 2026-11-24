@@ -1187,7 +1187,7 @@
         },
         {
           "name": "photography",
-          "label": "Fotografia (Lado B)",
+          "label": "Editar séries de fotografia",
           "file": "site/content/photography.json",
           "fields": [
             {
@@ -1240,9 +1240,9 @@
             },
             {
               "name": "series",
-              "label": "Bandas",
+              "label": "Séries",
               "widget": "list",
-              "summary": "{{fields.band}}",
+              "summary": "{{fields.band}} · {{fields.venue}} {{fields.date}}",
               "fields": [
                 {
                   "name": "band",
@@ -1400,7 +1400,9 @@
                 {
                   "name": "photos",
                   "label": "Fotos",
-                  "widget": "list",
+                  "widget": "photo-order",
+                  "required": false,
+                  "collapsed": true,
                   "fields": [
                     {
                       "name": "src",
