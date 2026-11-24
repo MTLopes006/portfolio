@@ -345,7 +345,7 @@
   /* ---------- PHOTOGRAPHY ---------- */
   const coverOf = (s) => s.cover || (s.photos.find((x) => x.src) || {}).src || "";
   const THUMB = "16/10";
-  const seriesMeta = (s) => [t(s.kind), s.venue, s.year].filter(Boolean).map(esc).join(" · ");
+  const seriesMeta = (s) => [t(s.kind), s.venue, s.date || s.year].filter(Boolean).map(esc).join(" · ");
 
   // Index: one editorial row per series, each linking to its own page.
   function renderPhoto() {
@@ -439,7 +439,7 @@
           <dl class="sp-meta label" data-reveal>
             ${t(s.kind) ? `<div><dt>${ui("photo.kind")}</dt><dd><span class="sp-mark"></span>${esc(t(s.kind))}</dd></div>` : ""}
             ${s.venue ? `<div><dt>${ui("photo.venue")}</dt><dd>${esc(s.venue)}</dd></div>` : ""}
-            ${s.year ? `<div><dt>${ui("project.year")}</dt><dd>${esc(s.year)}</dd></div>` : ""}
+            ${s.date || s.year ? `<div><dt>${ui(s.date ? "photo.date" : "project.year")}</dt><dd>${esc(s.date || s.year)}</dd></div>` : ""}
             <div><dt>${ui("photo.photos")}</dt><dd>${pad(photos.length)}</dd></div>
           </dl>
           ${t(s.desc) ? `<p class="sp-desc" data-reveal>${esc(t(s.desc))}</p>` : ""}

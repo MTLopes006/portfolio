@@ -1292,6 +1292,12 @@
                   "required": false
                 },
                 {
+                  "name": "date",
+                  "label": "Data do show (DD/MM/AAAA)",
+                  "widget": "string",
+                  "required": false
+                },
+                {
                   "name": "desc",
                   "label": "Descrição",
                   "widget": "object",

@@ -5,6 +5,140 @@
   },
   "series": [
     {
+      "slug": "chao-de-taco-estudio-central",
+      "band": "Chão de Taco",
+      "kind": {
+        "pt": "Show ao vivo",
+        "en": "Live show"
+      },
+      "venue": "Estúdio Central, Belo Horizonte",
+      "year": "2026",
+      "date": "20/11/2026",
+      "desc": {
+        "pt": "Chão de Taco ao vivo no Estúdio Central, em Belo Horizonte.",
+        "en": "Chão de Taco live at Estúdio Central in Belo Horizonte."
+      },
+      "photos": [
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/01.jpg",
+          "ratio": "1080/720",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/02.jpg",
+          "ratio": "1080/1440",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/03.jpg",
+          "ratio": "1080/720",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/04.jpg",
+          "ratio": "1080/720",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/05.jpg",
+          "ratio": "1080/720",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/06.jpg",
+          "ratio": "1080/720",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/07.jpg",
+          "ratio": "1080/720",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/08.jpg",
+          "ratio": "1080/720",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/09.jpg",
+          "ratio": "1080/720",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/10.jpg",
+          "ratio": "1080/720",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/11.jpg",
+          "ratio": "1080/720",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/12.jpg",
+          "ratio": "1080/1440",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/13.jpg",
+          "ratio": "1080/1440",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/14.jpg",
+          "ratio": "1080/1440",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/15.jpg",
+          "ratio": "1080/1440",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/16.jpg",
+          "ratio": "1080/1440",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/17.jpg",
+          "ratio": "1080/1440",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/18.jpg",
+          "ratio": "1080/1440",
+          "caption": "",
+          "pick": false
+        },
+        {
+          "src": "assets/img/fotografia/chao-de-taco-estudio-central/19.jpg",
+          "ratio": "1080/1440",
+          "caption": "",
+          "pick": false
+        }
+      ],
+      "layout": "mosaic",
+      "accent": "#00A95C",
+      "cover": "assets/img/fotografia/chao-de-taco-estudio-central/01.jpg"
+    },
+    {
       "slug": "blessthefall",
       "band": "Blessthefall",
       "kind": {
