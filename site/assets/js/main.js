@@ -226,70 +226,105 @@
 
   /* ---------- HOME ---------- */
   function renderHome() {
-    setTimeout(initIndexPreview, 0);
     const el = document.querySelector("main");
-    const [feat, ...rest] = projects;
     const clients = lines(P.clients);
     const svc = [1, 2, 3, 4, 5];
+    const heroImg = P.heroPhoto || (series[0] && coverOf(series[0])) || "";
+    const heroSeries = series.find((s) => s.photos.some((f) => f.src === heroImg)) || series[0];
+    const credit = heroSeries ? [heroSeries.band, heroSeries.venue].filter(Boolean).join(", ") : "";
+    const card = (p, i) => `
+      <article class="r-item pc">
+        <a href="projeto.html?p=${esc(p.slug)}">
+          ${media(p.thumb || p.cover, "4/3", t(p.title))}
+          <span class="pc-n">${pad(i + 1)}</span>
+          <span class="pc-info"><b>${esc(t(p.title))}</b><span>${esc(t(p.client))}${p.year ? ` · ${esc(p.year)}` : ""}</span></span>
+          <span class="pc-go" aria-hidden="true">↗</span>
+        </a>
+      </article>`;
     el.innerHTML = `
-      <section class="hero" id="top">
-        <div class="wrap">
-          <div class="hero-top">
-            <p class="eyebrow"><span class="live" aria-hidden="true"></span>${esc(t(P.available))}</p>
-            <p class="eyebrow">${esc(t(P.location))}</p>
-          </div>
-          <h1 class="hero-name"><span class="l1">${esc(P.firstName)}</span><span class="l2"><em>${esc(P.lastName)}</em></span></h1>
-          <div class="hero-row">
-            <p class="hero-lead">${esc(t(P.heroLead))}</p>
-            <a class="btn" href="#trabalho">${ui("hero.cta")} <span class="arr" aria-hidden="true">↓</span></a>
-          </div>
+      <section class="hx" id="top">
+        <div class="hx-bg" aria-hidden="true">
+          ${heroImg ? `<img class="hx-base" src="${esc(heroImg)}" alt="" loading="eager"><img class="hx-lens" src="${esc(heroImg)}" alt="" loading="eager"><span class="hx-ring"></span>` : ""}
         </div>
-        ${feat ? `<a class="hero-feature" href="projeto.html?p=${esc(feat.slug)}" style="--tone:${esc(feat.tone || "#111")}">
-          ${media(feat.cover || feat.thumb, "16/7", t(feat.title), { eager: true, parallax: true })}
-          <span class="hero-tag"><span class="eyebrow">${ui("home.featured")}</span><b>${esc(t(feat.title))}</b><span class="arr" aria-hidden="true">↗</span></span>
-        </a>` : ""}
-      </section>
-
-      ${clients.length ? `<section class="marquee" aria-label="${ui("home.clients")}"><div class="marquee-track">${[...clients, ...clients].map((c) => `<span>${esc(c)}</span>`).join("")}</div></section>` : ""}
-
-      <section class="section wrap approach">
-        <div class="sec-head" data-reveal><h2 class="sec-title">${ui("ap.title")}</h2></div>
-        <ol class="ap-list">${[1, 2, 3].map((n, k) => `<li data-reveal ${stagger(k, 0.08)}><span class="ap-n">${pad(n)}</span><h3>${ui("ap." + n)}</h3><p>${ui("ap." + n + ".d")}</p></li>`).join("")}</ol>
+        <div class="wrap hx-inner">
+          <div class="hx-top">
+            <p class="eyebrow"><span class="live" aria-hidden="true"></span>${esc(t(P.available))}</p>
+            <p class="eyebrow">${ui("hero.kicker")}</p>
+          </div>
+          <h1 class="hx-name">
+            <span class="l1">${esc(P.firstName)}</span>
+            <span class="hx-role"><em>${ui("hx.role")}</em></span>
+            <span class="l2">${esc(P.lastName)}<sup>(BH)</sup></span>
+          </h1>
+          <div class="hx-bento">
+            <div class="hb hb-lead">
+              <p>${esc(t(P.heroLead))}</p>
+              <a class="btn" href="#trabalho">${ui("hero.cta")} <span class="arr" aria-hidden="true">↓</span></a>
+            </div>
+            <a class="hb hb-stat" href="projetos.html"><b>${pad(projects.length)}</b><span>${ui("stat.projects")}</span><span class="hb-go" aria-hidden="true">↗</span></a>
+            <a class="hb hb-stat" href="fotografia.html"><b>${pad(series.length)}</b><span>${ui("stat.series")}</span><span class="hb-go" aria-hidden="true">↗</span></a>
+            <a class="hb hb-me" href="sobre.html?m=design">
+              ${P.photo ? `<img src="${esc(P.photo)}" alt="${esc(P.name)}" loading="eager">` : ""}
+              <span><span class="eyebrow">${esc(t(P.location))}</span><b>${ui("about.more")}</b></span>
+              <span class="hb-go" aria-hidden="true">↗</span>
+            </a>
+          </div>
+          ${credit ? `<p class="hx-credit">${ui("hx.photo")} ${esc(credit)}<span class="hx-hint"> · ${ui("hx.hint")}</span></p>` : ""}
+        </div>
       </section>
 
       <section class="section" id="trabalho">
         <div class="wrap">
           <div class="sec-head" data-reveal><h2 class="sec-title">${ui("home.selected")} <sup>(${pad(projects.length)})</sup></h2><a class="link-arrow" href="projetos.html">${ui("home.all")} ${arr}</a></div>
-          ${indexRows(projects)}
+          <div data-reveal>${rail(projects.map(card).join(""))}</div>
         </div>
       </section>
 
-      <section class="section services">
-        <div class="wrap">
-          <div class="sec-head" data-reveal><h2 class="sec-title">${ui("home.services")}</h2></div>
-          <ol class="svc">${svc.map((n, k) => `<li data-reveal ${stagger(k)}><details${k ? "" : " open"}><summary><span class="svc-n">${pad(n)}</span><span class="svc-t">${ui("svc." + n)}</span><span class="svc-x" aria-hidden="true"></span></summary><p>${ui("svc." + n + ".d")}</p></details></li>`).join("")}</ol>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="wrap">
-          <a class="cross" href="fotografia.html" data-reveal>
-            <div class="cross-imgs">${series.slice(0, 3).map((x) => media(coverOf(x), "3/4", x.band)).join("")}</div>
-            <div class="cross-copy"><p class="eyebrow">${ui("mode.photo")}</p><p class="cross-t">${ui("cross.photo")}</p><span class="link-arrow">${ui("cross.go.photo")} ${arr}</span></div>
+      <section class="section bento-sec">
+        <div class="wrap bento">
+          <article class="bt bt-ap" data-reveal>
+            <p class="eyebrow">${ui("ap.title")}</p>
+            <ol class="bt-steps">${[1, 2, 3].map((n) => `<li><span class="bt-n">${pad(n)}</span><h3>${ui("ap." + n)}</h3><p>${ui("ap." + n + ".d")}</p></li>`).join("")}</ol>
+          </article>
+          <a class="bt bt-photo" href="fotografia.html" data-reveal>
+            <div class="bt-imgs">${series.slice(1, 4).map((x) => media(coverOf(x), "3/4", x.band)).join("")}</div>
+            <p class="eyebrow">${ui("mode.photo")}</p>
+            <p class="bt-big">${ui("cross.photo")}</p>
+            <span class="link-arrow">${ui("cross.go.photo")} ${arr}</span>
           </a>
-        </div>
-      </section>
-
-      <section class="section about-teaser">
-        <div class="wrap at-grid">
-          <div class="at-photo" data-reveal>${media(P.photo, "4/5", P.name)}</div>
-          <div class="at-copy" data-reveal>
+          <article class="bt bt-svc" data-reveal>
+            <p class="eyebrow">${ui("home.services")}</p>
+            <ol>${svc.map((n) => `<li><span class="bt-n">${pad(n)}</span><div><b>${ui("svc." + n)}</b><span>${ui("svc." + n + ".d")}</span></div></li>`).join("")}</ol>
+          </article>
+          <a class="bt bt-about" href="sobre.html?m=design" data-reveal>
+            ${media(P.photo, "1/1", P.name)}
             <p class="eyebrow">${ui("home.about")}</p>
-            <p class="at-big">${ui("about.teaser2")}</p>
-            <a class="link-arrow" href="sobre.html">${ui("about.more")} ${arr}</a>
-          </div>
+            <p>${ui("about.teaser2")}</p>
+            <span class="link-arrow">${ui("about.more")} ${arr}</span>
+          </a>
+          ${clients.length ? `<article class="bt bt-clients" data-reveal><p class="eyebrow">${ui("home.clients")}</p><ul>${clients.map((c) => `<li>${esc(c)}</li>`).join("")}</ul></article>` : ""}
         </div>
       </section>`;
+    initCarousels();
+    initLens();
+  }
+
+  // hero lens: a circle that follows the pointer and shows the photo sharp and in colour
+  function initLens() {
+    const hx = document.querySelector(".hx");
+    if (!hx || !hx.querySelector(".hx-lens")) return;
+    const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let x = 0, y = 0, cx = 0, cy = 0, raf = 0;
+    const set = (a, b) => { hx.style.setProperty("--lx", `${a}px`); hx.style.setProperty("--ly", `${b}px`); };
+    const loop = () => { cx += (x - cx) * 0.14; cy += (y - cy) * 0.14; set(cx, cy); raf = Math.abs(x - cx) + Math.abs(y - cy) > 0.3 ? requestAnimationFrame(loop) : 0; };
+    const r = hx.getBoundingClientRect();
+    x = cx = r.width * 0.72; y = cy = r.height * 0.38; set(cx, cy);
+    if (fine) {
+      hx.addEventListener("pointermove", (e) => { const b = hx.getBoundingClientRect(); x = e.clientX - b.left; y = e.clientY - b.top; if (still) { cx = x; cy = y; set(x, y); } else if (!raf) raf = requestAnimationFrame(loop); });
+    } else if (!still) {
+      hx.classList.add("hx-drift");
+    }
   }
 
   /* ---------- WORK INDEX ---------- */
