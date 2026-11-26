@@ -25,8 +25,7 @@
   const root = document.documentElement;
   const sysDark = matchMedia("(prefers-color-scheme: dark)");
   const applyTheme = (th) => root.setAttribute("data-theme", th);
-  applyTheme(store.get("ml-theme") || (sysDark.matches ? "dark" : "light"));
-  sysDark.addEventListener?.("change", (e) => { if (!store.get("ml-theme")) applyTheme(e.matches ? "dark" : "light"); });
+  applyTheme(store.get("ml-theme") || "dark"); // dark by default; light is an option
 
   const page = document.body.dataset.page;
   // two portfolios on one domain: design pages and photo pages; shared pages keep the last one visited
@@ -61,6 +60,14 @@
     const h = String(hex || "").replace("#", ""); const n = parseInt(h.length === 3 ? h.replace(/./g, "$&$&") : h, 16) || 0;
     return (0.299 * (n >> 16 & 255) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) / 255 > 0.6 ? "#111111" : "#F3F1EC";
   }
+
+
+  /* little objects from the music/photo world, drawn in riso inks (used inline in headlines) */
+  const OBJ = {
+    vinyl: `<svg viewBox="0 0 100 100" class="obj obj-vinyl" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#0A090B" stroke="#F0E7D3" stroke-opacity=".55" stroke-width="2.5"/><circle cx="50" cy="50" r="38" fill="none" stroke="#3A3438" stroke-width="1.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="#3A3438" stroke-width="1.5"/><circle cx="50" cy="50" r="17" fill="#FF48B0"/><circle cx="50" cy="50" r="3.5" fill="#131114"/><path d="M28 22 A34 34 0 0 1 60 17" stroke="#F0E7D3" stroke-opacity=".35" stroke-width="3" fill="none" stroke-linecap="round"/></svg>`,
+    camera: `<svg viewBox="0 0 110 90" class="obj obj-camera" aria-hidden="true"><rect x="6" y="22" width="98" height="62" rx="10" fill="#2E8BE6"/><rect x="34" y="10" width="34" height="18" rx="4" fill="#2E8BE6"/><rect x="6" y="40" width="98" height="10" fill="#131114" opacity=".25"/><circle cx="55" cy="53" r="22" fill="#131114"/><circle cx="55" cy="53" r="15" fill="#3A3438"/><circle cx="49" cy="47" r="5" fill="#F0E7D3" opacity=".7"/><rect x="80" y="28" width="14" height="7" rx="2" fill="#FFD23F"/></svg>`,
+    tape: `<svg viewBox="0 0 120 80" class="obj obj-tape" aria-hidden="true"><rect x="4" y="6" width="112" height="68" rx="8" fill="#FFD23F"/><rect x="14" y="14" width="92" height="36" rx="5" fill="#F0E7D3"/><rect x="14" y="14" width="92" height="9" rx="4" fill="#FF48B0"/><rect x="34" y="30" width="52" height="16" rx="8" fill="#131114"/><circle cx="44" cy="38" r="5" fill="#F0E7D3"/><circle cx="76" cy="38" r="5" fill="#F0E7D3"/><path d="M30 74 L38 58 H82 L90 74 Z" fill="#131114" opacity=".2"/></svg>`,
+  };
 
   /* ---------- header / footer ---------- */
   const nav = [["projetos.html", "nav.work", "work"], ["fotografia.html", "nav.photo", "photo"], ["sobre.html", "nav.about", "about"]];
@@ -121,7 +128,9 @@
           <div><p class="eyebrow">${ui("mode.photo")}</p><ul><li><a href="fotografia.html">${ui("nav.home")}</a></li><li><a href="fotografia.html#series">${ui("nav.series")}</a></li></ul></div>
           <div><p class="eyebrow">${ui("footer.contact")}</p><ul>${contacts.map(([k, h]) => `<li><a href="${esc(h)}"${h.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${k}</a></li>`).join("")}<li><a href="sobre.html">${ui("nav.about")}</a></li></ul></div>
         </div>
-        <div class="foot-word" aria-hidden="true">${esc(P.name)}</div>
+      </div>
+      <a class="foot-mailbig" href="mailto:${esc(P.email)}" aria-label="${esc(P.email)}">${bigMarquee(P.email, "bm-mail")}</a>
+      <div class="wrap">
         <div class="foot-base"><span>© ${new Date().getFullYear()} ${esc(P.name)} · ${esc(t(P.location))}</span><a href="index.html">${ui("sel.hint")}</a><a href="#top">${ui("footer.top")} ↑</a></div>
       </div>`;
     root.lang = lang === "pt" ? "pt-BR" : "en";
@@ -151,34 +160,43 @@
     targets.forEach((tg) => spy.observe(tg));
   }
 
-  /* ---------- SELECTOR: the first screen, two doors ---------- */
+  /* ---------- SELECTOR: the first screen — side A (design) or side B (photography) ---------- */
   function renderSelect() {
     const last = store.get("ml-mode");
     const feat = projects[0];
     const shot = series[0];
-    const door = (m, href, img, title, desc, count) => `
+    const clients = lines(P.clients);
+    const door = (m, href, img, side, title, desc, count) => `
       <a class="door door-${m}${last === m ? " last" : ""}" href="${href}" data-m="${m}">
         <div class="door-img">${img ? `<img src="${esc(img)}" alt="" loading="eager">` : ""}</div>
         <div class="door-copy">
+          <span class="door-side">${side}</span>
           ${last === m ? `<span class="pill-last">${ui("sel.last")}</span>` : ""}
-          <span class="eyebrow">${count}</span>
           <h2>${title}</h2>
           <p>${desc}</p>
-          <span class="door-go">${ui("sel.enter")} <span class="arr" aria-hidden="true">→</span></span>
+          <span class="door-go">${ui("sel.enter")} · ${count} <span class="arr" aria-hidden="true">↗</span></span>
         </div>
       </a>`;
     document.querySelector("main").innerHTML = `
-      <section class="select-hero wrap" id="top">
-        <p class="eyebrow"><span class="live" aria-hidden="true"></span>${esc(t(P.available))}</p>
-        <h1 class="hero-name sel-name"><span class="l1">${esc(P.firstName)}</span> <span class="l2"><em>${esc(P.lastName)}</em></span></h1>
-        <div class="sel-intro">
-          <p class="sel-hi">${ui("sel.hi")}</p>
-          <p>${ui("sel.intro")}</p>
-        </div>
+      <nav class="corners" aria-label="${ui("sel.hint")}">
+        <a class="c-tr" href="design.html">${ui("k.sideA")}</a>
+        <a class="c-bl" href="sobre.html">${ui("nav.about")}</a>
+        <a class="c-br" href="fotografia.html">${ui("k.sideB")}</a>
+      </nav>
+      <section class="k-hero" id="top">
+        <h1 class="k-title">
+          <span class="k-line">${ui("k.l1a")} <span class="k-obj">(${OBJ.vinyl})</span> ${ui("k.l1b")}</span>
+          <span class="k-line"><a class="hl-pink" href="design.html">${ui("k.l2a")}</a> ${ui("k.l2b")}</span>
+          <span class="k-line">${ui("k.l3a")} <a class="hl-blue" href="fotografia.html">${ui("k.l3b")}</a> <span class="k-obj">(${OBJ.camera})</span></span>
+        </h1>
+        <span class="k-sticker" aria-hidden="true">${OBJ.tape}</span>
+        <a class="k-down" href="#portas" aria-label="${ui("sel.hint")}">↓</a>
       </section>
-      <section class="select" aria-label="${ui("sel.hint")}">
-        ${door("design", "design.html", feat && (feat.cover || feat.thumb), ui("sel.design"), ui("sel.design.d"), `${pad(projects.length)} ${ui("stat.projects")}`)}
-        ${door("photo", "fotografia.html", shot && coverOf(shot), ui("sel.photo"), ui("sel.photo.d"), `${pad(series.length)} ${ui("stat.series")}`)}
+      <section class="k-bio wrap" data-reveal><p><span class="hl-pink">✱</span> ${ui("k.bio")}</p></section>
+      ${clients.length ? `<section class="marquee" aria-label="${ui("home.clients")}"><div class="marquee-track">${[...clients, ...clients].map((c) => `<span>${esc(c)}</span>`).join("")}</div></section>` : ""}
+      <section class="select" id="portas" aria-label="${ui("sel.hint")}">
+        ${door("design", "design.html", feat && (feat.cover || feat.thumb), ui("k.sideA"), ui("sel.design"), ui("sel.design.d"), `${pad(projects.length)} ${ui("k.works")}`)}
+        ${door("photo", "fotografia.html", shot && coverOf(shot), ui("k.sideB"), ui("sel.photo"), ui("sel.photo.d"), `${pad(series.length)} ${ui("stat.series")}`)}
       </section>`;
     document.querySelectorAll(".door").forEach((d) => d.addEventListener("click", () => store.set("ml-mode", d.dataset.m)));
   }
@@ -197,6 +215,33 @@
         </div>
       </a>
     </li>`;
+
+
+  const INKS3 = ["pink", "blue", "yellow"];
+  const projImgs = (p) => {
+    const out = [];
+    (p.blocks || []).forEach((b) => {
+      if (b.img) out.push([b.img, b.ratio]);
+      (b.rows || []).forEach((r) => (r.imgs || []).forEach((m) => out.push([m.img, m.ratio])));
+      (b.cols || []).forEach((c) => (c.imgs || []).forEach((m) => out.push([m.img, m.ratio])));
+      (b.imgs || []).forEach((m) => out.push([m.img, m.ratio]));
+    });
+    return out.filter(([src]) => src && !/houseads/.test(src)).slice(0, 6);
+  };
+  const featRow = (p, i) => `
+    <li class="feat" data-reveal>
+      <div class="wrap feat-top">
+        <ul class="tagpills">${tags(p.tags).map((x, k) => `<li class="tp-${INKS3[k % 3]}">${esc(x)}</li>`).join("")}</ul>
+        <a class="case-btn" href="projeto.html?p=${esc(p.slug)}">${ui("k.case")} ↗</a>
+      </div>
+      <a class="wrap feat-info" href="projeto.html?p=${esc(p.slug)}">
+        <h3>${esc(t(p.title))}</h3>
+        <span class="feat-meta"><b>${esc(p.year || "")}</b>${esc(t(p.client))}</span>
+        <p>${esc(t(p.summary))}</p>
+      </a>
+      <a class="feat-strip" href="projeto.html?p=${esc(p.slug)}" tabindex="-1" aria-hidden="true"><div class="feat-track">${[[p.cover || p.thumb, p.coverRatio], ...projImgs(p)].filter(([x]) => x).map(([src, r]) => `<div class="fs-item" style="--r:${(() => { const [w, h] = String(r || "16/10").split("/").map(Number); return ((w / (h || 1)) || 1.6).toFixed(3); })()}"><img src="${esc(src)}" alt="" loading="lazy"></div>`).join("")}</div></a>
+    </li>`;
+  const bigMarquee = (txt, cls = "") => `<div class="bigmarquee ${cls}" aria-hidden="true"><div class="bm-track">${Array(6).fill(`<span>${esc(txt)}</span><i>✱</i>`).join("")}</div></div>`;
 
   /* ---------- HOME ---------- */
   function renderHome() {
@@ -230,11 +275,11 @@
         <ol class="ap-list">${[1, 2, 3].map((n, k) => `<li data-reveal ${stagger(k, 0.08)}><span class="ap-n">${pad(n)}</span><h3>${ui("ap." + n)}</h3><p>${ui("ap." + n + ".d")}</p></li>`).join("")}</ol>
       </section>
 
-      <section class="section" id="trabalho">
-        <div class="wrap">
-          <div class="sec-head" data-reveal><h2 class="sec-title">${ui("home.selected")}</h2><a class="link-arrow" href="projetos.html">${ui("home.all")} ${arr}</a></div>
-          <ol class="pgrid">${rest.map((p, k) => projectCard(p, k + 1, { k: k % 2 })).join("")}</ol>
-        </div>
+      <section class="section works" id="trabalho">
+        <h2 class="sr">${ui("home.selected")}</h2>
+        ${bigMarquee(ui("home.selected"))}
+        <ol class="feats">${rest.map((p, k) => featRow(p, k + 1)).join("")}</ol>
+        <div class="wrap works-all"><a class="case-btn big" href="projetos.html">${ui("home.all")} ↗</a></div>
       </section>
 
       <section class="section services">

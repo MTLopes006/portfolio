@@ -637,3 +637,117 @@ body[data-page="select"] main { min-height: 0; }
 .ap-list p { margin: 0; color: var(--muted); max-width: 26em; }
 @media (max-width: 760px) { .ap-list { grid-template-columns: 1fr; } }
 .section.wrap { padding-left: var(--gutter); padding-right: var(--gutter); }
+
+/* ==========================================================================
+   Identity v3 — Kenji-inspired, Matheus' culture
+   Dark by default (cream on near-black), riso inks as accents:
+   magenta = lado A / design, blue = lado B / photography, yellow = highlights.
+   Archivo condensed, heavy, for display; Inter for text; Instrument Serif italic inline.
+   ========================================================================== */
+:root, :root[data-theme="dark"] {
+  --bg: #131114; --bg-2: #1E1B1F; --fg: #F0E7D3; --muted: #9C9384; --line: rgba(240, 231, 211, .14);
+  --card: #1C191D; --band: #F0E7D3; --on-band: #131114;
+  --pink: #FF48B0; --blue: #2E8BE6; --yellow: #FFD23F; --accent: var(--pink);
+  --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --bg: #F0E7D3; --bg-2: #E4D9C2; --fg: #131114; --muted: #6E6658; --line: rgba(19, 17, 20, .14);
+  --card: #F7F0E1; --band: #131114; --on-band: #F0E7D3; color-scheme: light;
+}
+body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(240, 231, 211, .14); --muted: #9C9384; }
+.hl-pink { color: var(--pink); } .hl-blue { color: var(--blue); } .hl-yellow { color: var(--yellow); }
+
+/* condensed heavy display type everywhere a headline lives */
+.hero-name, .page-title, .sec-title, .proj-title, .pcard h3, .scard h3, .svc-t, .np-title, .foot-cta, .cv-h, .b-chapter h2, .stats b,
+.door h2, .cross-t, .ap-list h3, .sp-nav .t, .proj-pn a, .mobile-nav a, .marquee-track span, .k-title, .feat h3, .bigmarquee span {
+  font-family: var(--f-display); font-stretch: 66%; font-weight: 800; letter-spacing: -.01em;
+}
+.hero-name em, .door-photo h2 { font-family: var(--f-serif); font-stretch: 100%; font-weight: 400; }
+.brand-mark { background: var(--pink); color: #131114; }
+.mode-switch { background: var(--card); }
+.mode-switch a { color: var(--muted); }
+.mode-switch a.on { background: var(--fg); color: var(--bg); }
+.mode-switch a:not(.on):hover { color: var(--fg); }
+.btn { background: var(--fg); color: var(--bg); }
+.live { background: #3BD17C; }
+
+/* ---------- selector: Kenji-like hero with corner paths ---------- */
+.corners a { position: fixed; z-index: 41; font-family: var(--f-display); font-stretch: 66%; font-weight: 800; font-size: clamp(18px, 1.6vw, 24px); letter-spacing: .01em; transition: color .25s; }
+.corners .c-tr { top: 20px; right: var(--gutter); color: var(--pink); }
+.corners .c-bl { bottom: 20px; left: var(--gutter); }
+.corners .c-br { bottom: 20px; right: var(--gutter); color: var(--blue); }
+.corners a:hover { color: var(--yellow); }
+body[data-page="select"] .site-header .controls { margin-right: clamp(64px, 8vw, 120px); }
+.k-hero { position: relative; min-height: 100svh; display: grid; place-items: center; padding: 96px var(--gutter) 72px; text-align: center; overflow: hidden; }
+.k-title { margin: 0; display: flex; flex-direction: column; align-items: center; font-size: clamp(56px, 9.6vw, 168px); line-height: .98; color: var(--fg); }
+.k-line { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0 .22em; animation: rise 1.1s var(--ease) both; }
+.k-line:nth-child(2) { animation-delay: .1s; } .k-line:nth-child(3) { animation-delay: .2s; }
+.k-title a { transition: color .3s; }
+.k-title a:hover { color: var(--yellow); }
+.k-obj { display: inline-flex; align-items: center; gap: .12em; font-weight: 400; color: var(--muted); }
+.obj { height: .78em; width: auto; vertical-align: middle; }
+.obj-vinyl { animation: spin 6s linear infinite; }
+.obj-camera { animation: wiggle 3.2s ease-in-out infinite; transform-origin: 50% 80%; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes wiggle { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+.k-sticker { position: absolute; left: 50%; bottom: 9%; width: clamp(90px, 9vw, 150px); transform: translateX(-50%) rotate(-8deg); filter: drop-shadow(0 14px 18px rgba(0, 0, 0, .45)); animation: float 5s ease-in-out infinite; }
+.k-sticker svg { width: 100%; height: auto; }
+@keyframes float { 0%, 100% { transform: translate(-50%, 0) rotate(-8deg); } 50% { transform: translate(-50%, -10px) rotate(-4deg); } }
+.k-down { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); color: var(--blue); font-size: 22px; animation: bob 1.8s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translate(-50%, 6px); } }
+.k-bio { padding-top: clamp(72px, 9vw, 140px); padding-bottom: clamp(56px, 7vw, 104px); text-align: center; }
+.k-bio p { max-width: 24em; margin: 0 auto; font-family: var(--f-display); font-stretch: 80%; font-weight: 600; font-size: clamp(26px, 3.2vw, 52px); line-height: 1.12; letter-spacing: -.01em; }
+.k-bio b { font-weight: 700; }
+.k-bio em { font-family: var(--f-serif); font-stretch: 100%; font-weight: 400; font-style: italic; }
+.pill-home { display: inline-block; padding: 0 .38em; border-radius: 999px; background: var(--pink); color: #131114; line-height: 1.1; }
+.select { height: clamp(460px, 78svh, 820px); padding-top: clamp(56px, 7vw, 104px); }
+.door-side { padding: 6px 14px; border-radius: 999px; font-family: var(--f-display); font-stretch: 66%; font-weight: 800; font-size: 16px; letter-spacing: .02em; text-transform: uppercase; }
+.door-design .door-side { background: var(--pink); color: #131114; }
+.door-photo .door-side { background: var(--blue); color: #131114; }
+.door-copy { gap: 12px; }
+.door-go { background: var(--fg); color: var(--bg); }
+@media (max-width: 760px) {
+  .corners .c-tr { display: none; }
+  .corners a { font-size: 17px; }
+  .k-title { font-size: clamp(44px, 13vw, 80px); }
+}
+
+/* ---------- giant marquee (projects / email) ---------- */
+.bigmarquee { overflow: hidden; padding: clamp(16px, 2vw, 28px) 0; }
+.bm-track { display: flex; align-items: center; width: max-content; animation: marquee 30s linear infinite; }
+.bigmarquee span { padding: 0 .25em; font-size: clamp(72px, 12vw, 220px); line-height: .9; text-transform: uppercase; color: var(--fg); white-space: nowrap; }
+.bigmarquee i { font-style: normal; font-size: clamp(48px, 7vw, 128px); color: var(--blue); }
+.bm-mail span { text-transform: uppercase; color: var(--on-band); }
+.bm-mail i { color: var(--pink); }
+.foot-mailbig { display: block; margin: clamp(40px, 5vw, 72px) 0; transition: opacity .3s; }
+.foot-mailbig:hover .bm-track { animation-play-state: paused; }
+
+/* ---------- featured project rows ---------- */
+.works { padding-top: clamp(64px, 8vw, 120px); }
+.feats { list-style: none; margin: 0; padding: 0; }
+.feat { padding: clamp(40px, 5vw, 72px) 0; border-top: 1px solid var(--line); }
+.feat-top { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.tagpills { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; }
+.tagpills li { padding: 5px 12px; border-radius: 999px; font-family: var(--f-display); font-stretch: 70%; font-weight: 800; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; color: #131114; }
+.tp-pink { background: var(--pink); } .tp-blue { background: var(--blue); } .tp-yellow { background: var(--yellow); }
+.case-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px; background: var(--fg); color: var(--bg); font-family: var(--f-display); font-stretch: 70%; font-weight: 800; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; transition: background-color .25s; }
+.case-btn:hover { background: var(--pink); color: #131114; }
+.case-btn.big { padding: 14px 26px; font-size: 18px; background: var(--pink); color: #131114; }
+.feat-info { display: grid; grid-template-columns: 6fr 2fr 5fr; gap: var(--gutter); align-items: start; margin-top: clamp(18px, 2vw, 28px); }
+.feat h3 { margin: 0; font-size: clamp(44px, 6vw, 104px); line-height: .92; transition: color .3s; }
+.feat-info:hover h3 { color: var(--pink); }
+.feat-meta { display: flex; flex-direction: column; gap: 4px; padding-top: 8px; font-size: 13px; color: var(--muted); }
+.feat-meta b { color: var(--fg); font-weight: 600; }
+.feat-info p { margin: 0; padding-top: 6px; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.5; color: color-mix(in srgb, var(--fg) 82%, transparent); }
+.feat-strip { display: block; margin-top: clamp(24px, 3vw, 40px); overflow: hidden; }
+.feat-track { display: flex; gap: 10px; padding-left: var(--gutter); width: max-content; transition: transform 1.2s var(--ease); }
+.feat:hover .feat-track { transform: translateX(-6%); }
+.fs-item { height: clamp(220px, 24vw, 380px); aspect-ratio: var(--r); border-radius: 10px; overflow: hidden; background: var(--bg-2); flex: none; }
+.fs-item img { width: 100%; height: 100%; object-fit: cover; }
+.works-all { display: flex; justify-content: center; padding-top: clamp(24px, 3vw, 40px); }
+@media (max-width: 860px) { .feat-info { grid-template-columns: 1fr; gap: 10px; } .feat-meta { flex-direction: row; gap: 10px; padding-top: 0; } .feat-top { flex-wrap: wrap; } }
+
+/* footer: email marquee replaces the big name */
+.foot-word { display: none; }
+.site-footer { padding-bottom: 28px; }

@@ -1,9 +1,12 @@
 /* Textos fixos da interface (menus, rótulos). O conteúdo editável fica em /content/*.json */
 window.UI = {
   pt: {
+    "k.l1a": "design", "k.l1b": "é o", "k.l2a": "lado A.", "k.l2b": "fotografia", "k.l3a": "é o", "k.l3b": "lado B",
+    "k.bio": "Sou o Matheus Lopes, <b class=\"hl-pink\">designer gráfico</b> e <b class=\"hl-blue\">fotógrafo</b> em Belo Horizonte. Hoje sou Visual Designer na <b class=\"hl-yellow\">Studio Sol</b>, criando para o <b class=\"hl-pink\">Cifra Club</b> e o <b class=\"hl-blue\">Letras</b>, e fotografo shows e bandas da <em>cena independente</em>. Fica <span class=\"pill-home\">à vontade</span>!",
+    "k.works": "projetos", "k.case": "Ver projeto", "k.sideA": "Lado A", "k.sideB": "Lado B", "k.talk": "Vamos conversar", "k.elsewhere": "Por aí",
     "ap.title": "Como cada projeto é apresentado", "ap.1": "Contexto", "ap.1.d": "Para quem é, onde a peça aparece e o que ela precisa resolver.", "ap.2": "Ideia", "ap.2.d": "O conceito que guia imagem, cor e tipografia.", "ap.3": "Peças", "ap.3.d": "O resultado final, nos formatos em que foi publicado ou impresso.",
     "about.teaser2": "Visual Designer na Studio Sol, no Cifra Club e no Letras, freelancer para outras marcas e fotógrafo de shows. Na página Sobre está o resto da história.",
-    "mode.design": "Design", "mode.photo": "Fotografia", "nav.projects": "Projetos", "nav.series": "Séries", "nav.home": "Início",
+    "mode.design": "Lado A · Design", "mode.photo": "Lado B · Fotografia", "nav.projects": "Projetos", "nav.series": "Séries", "nav.home": "Início",
     "sel.hint": "Escolha um portfólio", "sel.hi": "Oi, eu sou o Matheus.", "sel.intro": "Este portfólio tem dois lados: os projetos de design, cada um com o contexto e as decisões por trás das peças, e as séries de fotos de shows e bandas. Por onde você quer começar?", "sel.design": "Design gráfico", "sel.design.d": "Campanhas, identidade visual, editorial e impressos.",
     "sel.photo": "Fotografia", "sel.photo.d": "Shows ao vivo, ensaios de banda e a cena independente.", "sel.last": "Visto por último", "sel.enter": "Entrar",
     "photo.hire": "Contratar cobertura", "photo.all": "Todas", "photo.seeSeries": "Ver séries", "stat.shows": "shows e ensaios", "stat.venues": "locais",
@@ -55,9 +58,12 @@ window.UI = {
     "placeholder": "Imagem", "notfound": "Projeto não encontrado.", "notfound.title": "Página não encontrada", "notfound.back": "Voltar ao início", "page": "pág.",
   },
   en: {
+    "k.l1a": "design", "k.l1b": "is", "k.l2a": "side A.", "k.l2b": "photography", "k.l3a": "is", "k.l3b": "side B",
+    "k.bio": "I'm Matheus Lopes, a <b class=\"hl-pink\">graphic designer</b> and <b class=\"hl-blue\">photographer</b> in Belo Horizonte, Brazil. I'm a Visual Designer at <b class=\"hl-yellow\">Studio Sol</b>, creating for <b class=\"hl-pink\">Cifra Club</b> and <b class=\"hl-blue\">Letras</b>, and I photograph shows and bands from the <em>independent scene</em>. Make yourself at <span class=\"pill-home\">home</span>!",
+    "k.works": "projects", "k.case": "See project", "k.sideA": "Side A", "k.sideB": "Side B", "k.talk": "Let's talk", "k.elsewhere": "Elsewhere",
     "ap.title": "How each project is presented", "ap.1": "Context", "ap.1.d": "Who it is for, where the piece appears and what it needs to solve.", "ap.2": "Idea", "ap.2.d": "The concept that guides image, colour and typography.", "ap.3": "Pieces", "ap.3.d": "The final result, in the formats it was published or printed in.",
     "about.teaser2": "Visual Designer at Studio Sol, on Cifra Club and Letras, freelancer for other brands and live music photographer. The rest of the story is on the About page.",
-    "mode.design": "Design", "mode.photo": "Photography", "nav.projects": "Work", "nav.series": "Series", "nav.home": "Home",
+    "mode.design": "Side A · Design", "mode.photo": "Side B · Photography", "nav.projects": "Work", "nav.series": "Series", "nav.home": "Home",
     "sel.hint": "Choose a portfolio", "sel.hi": "Hi, I'm Matheus.", "sel.intro": "This portfolio has two sides: design projects, each with the context and decisions behind the pieces, and photo series of shows and bands. Where would you like to start?", "sel.design": "Graphic design", "sel.design.d": "Campaigns, visual identity, editorial and print.",
     "sel.photo": "Photography", "sel.photo.d": "Live shows, band shoots and the independent scene.", "sel.last": "Last visited", "sel.enter": "Enter",
     "photo.hire": "Book a shoot", "photo.all": "All", "photo.seeSeries": "See series", "stat.shows": "shows and shoots", "stat.venues": "venues",
