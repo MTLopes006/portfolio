@@ -2,7 +2,7 @@
 window.UI = {
   pt: {
     "mode.design": "Design", "mode.photo": "Fotografia", "nav.projects": "Projetos", "nav.series": "Séries", "nav.home": "Início",
-    "sel.hint": "Escolha um portfólio", "sel.design": "Design gráfico", "sel.design.d": "Campanhas, identidade visual, editorial e impressos.",
+    "sel.hint": "Escolha um portfólio", "sel.hi": "Oi, eu sou o Matheus.", "sel.intro": "Sou designer gráfico e fotógrafo em Belo Horizonte. Crio para marcas de música, tecnologia e entretenimento, e fotografo shows e bandas da cena independente. Por onde você quer começar?", "sel.design": "Design gráfico", "sel.design.d": "Campanhas, identidade visual, editorial e impressos.",
     "sel.photo": "Fotografia", "sel.photo.d": "Shows ao vivo, ensaios de banda e a cena independente.", "sel.last": "Visto por último", "sel.enter": "Entrar",
     "photo.hire": "Contratar cobertura", "photo.all": "Todas", "photo.seeSeries": "Ver séries", "stat.shows": "shows e ensaios", "stat.venues": "locais",
     "cross.photo": "Também fotografo shows e bandas.", "cross.design": "Também sou designer gráfico.", "cross.go.photo": "Ver fotografia", "cross.go.design": "Ver design",
@@ -54,7 +54,7 @@ window.UI = {
   },
   en: {
     "mode.design": "Design", "mode.photo": "Photography", "nav.projects": "Work", "nav.series": "Series", "nav.home": "Home",
-    "sel.hint": "Choose a portfolio", "sel.design": "Graphic design", "sel.design.d": "Campaigns, visual identity, editorial and print.",
+    "sel.hint": "Choose a portfolio", "sel.hi": "Hi, I'm Matheus.", "sel.intro": "I'm a graphic designer and photographer in Belo Horizonte. I create for music, technology and entertainment brands, and I photograph shows and bands from the independent scene. Where would you like to start?", "sel.design": "Graphic design", "sel.design.d": "Campaigns, visual identity, editorial and print.",
     "sel.photo": "Photography", "sel.photo.d": "Live shows, band shoots and the independent scene.", "sel.last": "Last visited", "sel.enter": "Enter",
     "photo.hire": "Book a shoot", "photo.all": "All", "photo.seeSeries": "See series", "stat.shows": "shows and shoots", "stat.venues": "venues",
     "cross.photo": "I also photograph shows and bands.", "cross.design": "I'm also a graphic designer.", "cross.go.photo": "See photography", "cross.go.design": "See design",

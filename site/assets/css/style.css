@@ -617,3 +617,14 @@ body[data-page="select"] main { min-height: 0; }
   .door:hover { flex-grow: 1; }
 }
 @media (max-width: 860px) { .header-inner > span:empty { display: none; } }
+
+/* selector hero: name + a friendly intro above the two doors */
+.select-hero { padding-top: clamp(100px, 11vw, 140px); }
+.sel-name { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 .18em; font-size: clamp(64px, 12.5vw, 236px); }
+.sel-name .l2 { align-self: auto; }
+.sel-intro { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); margin-top: clamp(24px, 3vw, 44px); animation: rise 1.2s .25s var(--ease) both; }
+.sel-intro .sel-hi { grid-column: 1 / 5; margin: 0; font-family: var(--f-display); font-weight: 600; font-size: clamp(22px, 2vw, 30px); letter-spacing: -.03em; }
+.sel-intro p:last-child { grid-column: 6 / 12; margin: 0; font-size: clamp(17px, 1.45vw, 21px); line-height: 1.45; }
+.select { height: clamp(460px, 78svh, 820px); min-height: 0; padding: clamp(32px, 4vw, 56px) var(--gutter) var(--gutter); }
+@media (max-width: 860px) { .sel-intro .sel-hi, .sel-intro p:last-child { grid-column: 1 / -1; } }
+@media (max-width: 760px) { .select { height: auto; padding-top: 28px; } }

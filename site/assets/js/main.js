@@ -168,9 +168,15 @@
         </div>
       </a>`;
     document.querySelector("main").innerHTML = `
-      <section class="select" id="top">
-        <h1 class="sr">${esc(P.name)}</h1>
-        <p class="select-hint eyebrow">${ui("sel.hint")}</p>
+      <section class="select-hero wrap" id="top">
+        <p class="eyebrow"><span class="live" aria-hidden="true"></span>${esc(t(P.available))}</p>
+        <h1 class="hero-name sel-name"><span class="l1">${esc(P.firstName)}</span> <span class="l2"><em>${esc(P.lastName)}</em></span></h1>
+        <div class="sel-intro">
+          <p class="sel-hi">${ui("sel.hi")}</p>
+          <p>${ui("sel.intro")}</p>
+        </div>
+      </section>
+      <section class="select" aria-label="${ui("sel.hint")}">
         ${door("design", "design.html", feat && (feat.cover || feat.thumb), ui("sel.design"), ui("sel.design.d"), `${pad(projects.length)} ${ui("stat.projects")}`)}
         ${door("photo", "fotografia.html", shot && coverOf(shot), ui("sel.photo"), ui("sel.photo.d"), `${pad(series.length)} ${ui("stat.series")}`)}
       </section>`;
