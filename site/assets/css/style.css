@@ -628,3 +628,12 @@ body[data-page="select"] main { min-height: 0; }
 .select { height: clamp(460px, 78svh, 820px); min-height: 0; padding: clamp(32px, 4vw, 56px) var(--gutter) var(--gutter); }
 @media (max-width: 860px) { .sel-intro .sel-hi, .sel-intro p:last-child { grid-column: 1 / -1; } }
 @media (max-width: 760px) { .select { height: auto; padding-top: 28px; } }
+
+/* design landing: how each project is presented */
+.ap-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
+.ap-list li { padding-top: 18px; border-top: 1px solid var(--fg); }
+.ap-n { color: var(--muted); font-size: 14px; }
+.ap-list h3 { margin: 10px 0 8px; font-family: var(--f-display); font-weight: 600; font-size: clamp(28px, 3vw, 48px); letter-spacing: -.04em; line-height: 1; }
+.ap-list p { margin: 0; color: var(--muted); max-width: 26em; }
+@media (max-width: 760px) { .ap-list { grid-template-columns: 1fr; } }
+.section.wrap { padding-left: var(--gutter); padding-right: var(--gutter); }

@@ -225,10 +225,9 @@
 
       ${clients.length ? `<section class="marquee" aria-label="${ui("home.clients")}"><div class="marquee-track">${[...clients, ...clients].map((c) => `<span>${esc(c)}</span>`).join("")}</div></section>` : ""}
 
-      <section class="section stats wrap" data-reveal>
-        <div><b>${pad(projects.length)}</b><span>${ui("stat.projects")}</span></div>
-        <div><b>${pad(series.length)}</b><span>${ui("stat.series")}</span></div>
-        <div><b>${photoCount}</b><span>${ui("stat.photos")}</span></div>
+      <section class="section wrap approach">
+        <div class="sec-head" data-reveal><h2 class="sec-title">${ui("ap.title")}</h2></div>
+        <ol class="ap-list">${[1, 2, 3].map((n, k) => `<li data-reveal ${stagger(k, 0.08)}><span class="ap-n">${pad(n)}</span><h3>${ui("ap." + n)}</h3><p>${ui("ap." + n + ".d")}</p></li>`).join("")}</ol>
       </section>
 
       <section class="section" id="trabalho">
@@ -259,7 +258,7 @@
           <div class="at-photo" data-reveal>${media(P.photo, "4/5", P.name)}</div>
           <div class="at-copy" data-reveal>
             <p class="eyebrow">${ui("home.about")}</p>
-            <p class="at-big">${esc((paras(t(AB.bio))[0] || "").split(/(?<=\.)\s/).slice(0, 2).join(" "))}</p>
+            <p class="at-big">${ui("about.teaser2")}</p>
             <a class="link-arrow" href="sobre.html">${ui("about.more")} ${arr}</a>
           </div>
         </div>
