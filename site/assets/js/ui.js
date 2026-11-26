@@ -1,6 +1,12 @@
 /* Textos fixos da interface (menus, rótulos). O conteúdo editável fica em /content/*.json */
 window.UI = {
   pt: {
+    "mode.design": "Design", "mode.photo": "Fotografia", "nav.projects": "Projetos", "nav.series": "Séries", "nav.home": "Início",
+    "sel.hint": "Escolha um portfólio", "sel.design": "Design gráfico", "sel.design.d": "Campanhas, identidade visual, editorial e impressos.",
+    "sel.photo": "Fotografia", "sel.photo.d": "Shows ao vivo, ensaios de banda e a cena independente.", "sel.last": "Visto por último", "sel.enter": "Entrar",
+    "photo.hire": "Contratar cobertura", "photo.all": "Todas", "photo.seeSeries": "Ver séries", "stat.shows": "shows e ensaios", "stat.venues": "locais",
+    "cross.photo": "Também fotografo shows e bandas.", "cross.design": "Também sou designer gráfico.", "cross.go.photo": "Ver fotografia", "cross.go.design": "Ver design",
+    "project.prev": "Anterior", "about.bio": "Perfil", "tabs.label": "Nesta página",
     "home.featured": "Projeto em destaque", "home.selected": "Projetos selecionados", "home.clients": "Marcas e clientes", "home.services": "O que eu faço",
     "home.all": "Todos os projetos", "home.photo.lead": "Shows, ensaios de banda e a cena independente de perto.", "home.about": "Sobre mim", "home.scroll": "Role para ver",
     "stat.projects": "projetos de design", "stat.series": "séries de fotos", "stat.photos": "fotos publicadas",
@@ -47,6 +53,12 @@ window.UI = {
     "placeholder": "Imagem", "notfound": "Projeto não encontrado.", "notfound.title": "Página não encontrada", "notfound.back": "Voltar ao início", "page": "pág.",
   },
   en: {
+    "mode.design": "Design", "mode.photo": "Photography", "nav.projects": "Work", "nav.series": "Series", "nav.home": "Home",
+    "sel.hint": "Choose a portfolio", "sel.design": "Graphic design", "sel.design.d": "Campaigns, visual identity, editorial and print.",
+    "sel.photo": "Photography", "sel.photo.d": "Live shows, band shoots and the independent scene.", "sel.last": "Last visited", "sel.enter": "Enter",
+    "photo.hire": "Book a shoot", "photo.all": "All", "photo.seeSeries": "See series", "stat.shows": "shows and shoots", "stat.venues": "venues",
+    "cross.photo": "I also photograph shows and bands.", "cross.design": "I'm also a graphic designer.", "cross.go.photo": "See photography", "cross.go.design": "See design",
+    "project.prev": "Previous", "about.bio": "Profile", "tabs.label": "On this page",
     "home.featured": "Featured project", "home.selected": "Selected work", "home.clients": "Brands & clients", "home.services": "What I do",
     "home.all": "All work", "home.photo.lead": "Live shows, band shoots and the independent scene up close.", "home.about": "About me", "home.scroll": "Scroll to explore",
     "stat.projects": "design projects", "stat.series": "photo series", "stat.photos": "published photos",

@@ -29,6 +29,12 @@
   sysDark.addEventListener?.("change", (e) => { if (!store.get("ml-theme")) applyTheme(e.matches ? "dark" : "light"); });
 
   const page = document.body.dataset.page;
+  // two portfolios on one domain: design pages and photo pages; shared pages keep the last one visited
+  const MODE_OF = { home: "design", work: "design", project: "design", photo: "photo", series: "photo" };
+  const qMode = new URLSearchParams(location.search).get("m");
+  const mode = MODE_OF[page] || (qMode === "photo" || qMode === "design" ? qMode : null) || store.get("ml-mode") || "design";
+  if (page !== "select") { store.set("ml-mode", mode); document.body.classList.add("mode-" + mode); }
+  const landing = (m = mode) => (m === "photo" ? "fotografia.html" : "design.html");
 
   /* ---------- snippets ---------- */
   const arr = '<span class="arr" aria-hidden="true">→</span>';
@@ -60,59 +66,115 @@
   const nav = [["projetos.html", "nav.work", "work"], ["fotografia.html", "nav.photo", "photo"], ["sobre.html", "nav.about", "about"]];
   const isOn = (p) => p === page || (p === "photo" && page === "series") || (p === "work" && page === "project");
   function renderChrome() {
-    const navLinks = nav.map(([h, k, p]) => `<a href="${h}"${isOn(p) ? ' aria-current="page"' : ""}>${ui(k)}</a>`).join("");
+    const navs = {
+      design: [["design.html", "nav.home", "home"], ["projetos.html", "nav.projects", "work"], ["sobre.html", "nav.about", "about"]],
+      photo: [["fotografia.html", "nav.home", "photo"], ["fotografia.html#series", "nav.series", "series"], ["sobre.html", "nav.about", "about"]],
+    };
+    const nav = navs[mode];
+    const navLinks = nav.map(([h, k, p]) => `<a href="${h}"${p === page || (p === "work" && page === "project") ? ' aria-current="page"' : ""}>${ui(k)}</a>`).join("");
+    const switcher = `<div class="mode-switch" role="tablist" aria-label="Portfólio">${["design", "photo"].map((m) => `<a role="tab" href="${landing(m)}" aria-selected="${page !== "select" && mode === m}" class="${page !== "select" && mode === m ? "on" : ""}">${ui("mode." + m)}</a>`).join("")}</div>`;
     const dark = root.getAttribute("data-theme") === "dark";
     const header = document.querySelector(".site-header");
     header.innerHTML = `
       <div class="wrap header-inner">
-        <a class="brand" href="index.html">${esc(P.name)}</a>
-        <nav class="nav">${navLinks}</nav>
+        <a class="brand" href="index.html" title="${ui("sel.hint")}"><span class="brand-mark" aria-hidden="true">ML</span><span class="brand-name">${esc(P.name)}</span></a>
+        ${page === "select" ? "<span></span>" : `<div class="header-mid">${switcher}<nav class="nav" aria-label="${ui("menu")}">${navLinks}</nav></div>`}
         <div class="controls">
           <button class="ctrl lang-btn" type="button" aria-label="Idioma / Language"><span class="${lang === "pt" ? "on" : ""}">PT</span><span class="${lang === "en" ? "on" : ""}">EN</span></button>
-          <button class="ctrl theme-btn" type="button" aria-label="${ui(dark ? "theme.light" : "theme.dark")}" title="${ui(dark ? "theme.light" : "theme.dark")}"><span class="dot" aria-hidden="true"></span></button>
-          <a class="btn btn-sm" href="contato.html"${page === "contact" ? ' aria-current="page"' : ""}>${ui("nav.contact")}</a>
-          <button class="ctrl menu-btn" type="button" aria-expanded="false">${ui("menu")}</button>
+          ${mode === "photo" && page !== "select" ? "" : `<button class="ctrl theme-btn" type="button" aria-label="${ui(dark ? "theme.light" : "theme.dark")}" title="${ui(dark ? "theme.light" : "theme.dark")}"><span class="dot" aria-hidden="true"></span></button>`}
+          ${page === "select" ? "" : `<a class="btn btn-sm" href="contato.html?m=${mode}"${page === "contact" ? ' aria-current="page"' : ""}>${ui("nav.contact")}</a><button class="ctrl menu-btn" type="button" aria-expanded="false">${ui("menu")}</button>`}
         </div>
       </div>`;
     let mnav = document.querySelector(".mobile-nav");
     if (!mnav) { mnav = document.createElement("nav"); mnav.className = "mobile-nav"; document.body.appendChild(mnav); }
-    mnav.innerHTML = navLinks + `<a href="contato.html">${ui("nav.contact")}</a>`;
+    mnav.innerHTML = `${switcher}<div class="mn-links">${navLinks}<a href="contato.html?m=${mode}">${ui("nav.contact")}</a></div><a class="mn-home" href="index.html">← ${ui("sel.hint")}</a>`;
     header.querySelector(".lang-btn").onclick = () => { lang = lang === "pt" ? "en" : "pt"; store.set("ml-lang", lang); renderAll(); };
-    header.querySelector(".theme-btn").onclick = () => {
+    const tb = header.querySelector(".theme-btn");
+    if (tb) tb.onclick = () => {
       const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
       store.set("ml-theme", next);
       const swap = () => { root.classList.add("theme-swap"); applyTheme(next); renderChrome(); void root.offsetWidth; requestAnimationFrame(() => root.classList.remove("theme-swap")); };
       if (document.startViewTransition && !document.hidden && !matchMedia("(prefers-reduced-motion: reduce)").matches) { const vt = document.startViewTransition(swap); vt.ready.catch(() => {}); vt.finished.catch(() => {}); } else swap();
     };
     const mb = header.querySelector(".menu-btn");
-    mb.onclick = () => {
+    const closeNav = () => { mnav.classList.remove("open"); document.body.classList.remove("nav-open"); if (mb) { mb.setAttribute("aria-expanded", "false"); mb.textContent = ui("menu"); } };
+    if (mb) mb.onclick = () => {
       const open = !mnav.classList.contains("open");
       mnav.classList.toggle("open", open); mb.setAttribute("aria-expanded", open); mb.textContent = ui(open ? "close" : "menu");
       document.body.classList.toggle("nav-open", open);
     };
-    mnav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { mnav.classList.remove("open"); document.body.classList.remove("nav-open"); }));
+    mnav.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeNav));
+    document.onkeydown = (e) => { if (e.key === "Escape" && mnav.classList.contains("open")) closeNav(); };
 
     const contacts = [["Email", `mailto:${P.email}`], ["LinkedIn", P.linkedin], ["WhatsApp", P.whatsapp], P.instagram ? ["Instagram", P.instagram] : null].filter(Boolean);
     const footer = document.querySelector(".site-footer");
+    footer.hidden = page === "select";
     footer.innerHTML = `
       <div class="wrap">
         <div class="foot-top">
           <p class="eyebrow">${esc(t(P.available))}</p>
-          <a class="foot-cta" href="contato.html">${ui("footer.cta")} ${arrUp}</a>
+          <a class="foot-cta" href="contato.html?m=${mode}">${ui("footer.cta")} ${arrUp}</a>
           <a class="foot-mail" href="mailto:${esc(P.email)}">${esc(P.email)}</a>
         </div>
         <div class="foot-cols">
-          <div><p class="eyebrow">${esc(t(P.location))}</p><p>${esc(t(P.role))} · ${esc(P.company)}</p></div>
-          <div><p class="eyebrow">${ui("footer.contact")}</p><ul>${contacts.map(([k, h]) => `<li><a href="${esc(h)}"${h.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${k}</a></li>`).join("")}</ul></div>
-          <div><p class="eyebrow">${ui("footer.nav")}</p><ul>${[...nav, ["contato.html", "nav.contact"]].map(([h, k]) => `<li><a href="${h}">${ui(k)}</a></li>`).join("")}</ul></div>
+          <div><p class="eyebrow">${ui("mode.design")}</p><ul><li><a href="design.html">${ui("nav.home")}</a></li><li><a href="projetos.html">${ui("nav.projects")}</a></li></ul></div>
+          <div><p class="eyebrow">${ui("mode.photo")}</p><ul><li><a href="fotografia.html">${ui("nav.home")}</a></li><li><a href="fotografia.html#series">${ui("nav.series")}</a></li></ul></div>
+          <div><p class="eyebrow">${ui("footer.contact")}</p><ul>${contacts.map(([k, h]) => `<li><a href="${esc(h)}"${h.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${k}</a></li>`).join("")}<li><a href="sobre.html">${ui("nav.about")}</a></li></ul></div>
         </div>
         <div class="foot-word" aria-hidden="true">${esc(P.name)}</div>
-        <div class="foot-base"><span>© ${new Date().getFullYear()} ${esc(P.name)}</span><a href="#top">${ui("footer.top")} ↑</a></div>
+        <div class="foot-base"><span>© ${new Date().getFullYear()} ${esc(P.name)} · ${esc(t(P.location))}</span><a href="index.html">${ui("sel.hint")}</a><a href="#top">${ui("footer.top")} ↑</a></div>
       </div>`;
     root.lang = lang === "pt" ? "pt-BR" : "en";
-    const pageTitle = { work: ui("nav.work"), photo: ui("photo.title"), about: ui("about.title"), contact: ui("contact.title"), none: ui("notfound.title") }[page];
-    if (page === "home") document.title = `${P.name} — ${t(P.role)}`;
+    const pageTitle = { work: ui("nav.projects"), photo: ui("photo.title"), about: ui("about.title"), contact: ui("contact.title"), none: ui("notfound.title"), home: ui("mode.design") }[page];
+    if (page === "select") document.title = `${P.name} — ${ui("sel.design")} · ${ui("sel.photo")}`;
     else if (pageTitle) document.title = `${pageTitle} — ${P.name}`;
+  }
+
+  /* breadcrumb trail for deep pages: always a one-click way back */
+  const crumbs = (items) => `<nav class="crumbs" aria-label="breadcrumb"><a class="back" href="${items[items.length - 2][1]}" aria-label="${ui("project.prev")}">←</a><ol>${items.map(([l, h], k) => `<li>${k < items.length - 1 ? `<a href="${h}">${esc(l)}</a>` : `<span aria-current="page">${esc(l)}</span>`}</li>`).join("")}</ol></nav>`;
+
+  /* in-page tabs: sticky bar that follows the sections of long pages */
+  function pageTabs(items) {
+    if (items.length < 2) return "";
+    return `<nav class="page-tabs" aria-label="${ui("tabs.label")}"><div class="wrap"><ul>${items.map(([id, l]) => `<li><a href="#${id}" data-tab="${id}">${esc(l)}</a></li>`).join("")}</ul></div></nav>`;
+  }
+  function initTabs() {
+    const bar = document.querySelector(".page-tabs");
+    if (!bar) return;
+    const links = [...bar.querySelectorAll("a")];
+    const targets = links.map((a) => document.getElementById(a.dataset.tab)).filter(Boolean);
+    const spy = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      links.forEach((a) => a.classList.toggle("on", a.dataset.tab === e.target.id));
+      const on = bar.querySelector("a.on"); if (on) on.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+    }), { rootMargin: "-30% 0px -60% 0px" });
+    targets.forEach((tg) => spy.observe(tg));
+  }
+
+  /* ---------- SELECTOR: the first screen, two doors ---------- */
+  function renderSelect() {
+    const last = store.get("ml-mode");
+    const feat = projects[0];
+    const shot = series[0];
+    const door = (m, href, img, title, desc, count) => `
+      <a class="door door-${m}${last === m ? " last" : ""}" href="${href}" data-m="${m}">
+        <div class="door-img">${img ? `<img src="${esc(img)}" alt="" loading="eager">` : ""}</div>
+        <div class="door-copy">
+          ${last === m ? `<span class="pill-last">${ui("sel.last")}</span>` : ""}
+          <span class="eyebrow">${count}</span>
+          <h2>${title}</h2>
+          <p>${desc}</p>
+          <span class="door-go">${ui("sel.enter")} <span class="arr" aria-hidden="true">→</span></span>
+        </div>
+      </a>`;
+    document.querySelector("main").innerHTML = `
+      <section class="select" id="top">
+        <h1 class="sr">${esc(P.name)}</h1>
+        <p class="select-hint eyebrow">${ui("sel.hint")}</p>
+        ${door("design", "design.html", feat && (feat.cover || feat.thumb), ui("sel.design"), ui("sel.design.d"), `${pad(projects.length)} ${ui("stat.projects")}`)}
+        ${door("photo", "fotografia.html", shot && coverOf(shot), ui("sel.photo"), ui("sel.photo.d"), `${pad(series.length)} ${ui("stat.series")}`)}
+      </section>`;
+    document.querySelectorAll(".door").forEach((d) => d.addEventListener("click", () => store.set("ml-mode", d.dataset.m)));
   }
 
   /* ---------- project card (home + index) ---------- */
@@ -177,12 +239,12 @@
         </div>
       </section>
 
-      <section class="section dark-band" id="fotografia">
+      <section class="section">
         <div class="wrap">
-          <div class="sec-head" data-reveal><div><h2 class="sec-title">${ui("photo.title")}</h2><p class="sec-lead">${ui("home.photo.lead")}</p></div><a class="link-arrow" href="fotografia.html">${ui("photo.see")} ${arr}</a></div>
-        </div>
-        <div class="hscroll" data-reveal>
-          <ul>${series.map((s) => `<li><a href="foto.html?s=${esc(s.slug)}">${media(coverOf(s), "4/5", s.band)}<span class="hs-t">${esc(s.band)}</span><span class="hs-m">${seriesMeta(s)}</span></a></li>`).join("")}</ul>
+          <a class="cross" href="fotografia.html" data-reveal>
+            <div class="cross-imgs">${series.slice(0, 3).map((x) => media(coverOf(x), "3/4", x.band)).join("")}</div>
+            <div class="cross-copy"><p class="eyebrow">${ui("mode.photo")}</p><p class="cross-t">${ui("cross.photo")}</p><span class="link-arrow">${ui("cross.go.photo")} ${arr}</span></div>
+          </a>
         </div>
       </section>
 
@@ -204,7 +266,7 @@
     document.querySelector("main").innerHTML = `
       <div class="wrap" id="top">
         <header class="page-head">
-          <p class="eyebrow">${pad(projects.length)} ${ui("stat.projects")}</p>
+          ${crumbs([[ui("mode.design"), "design.html"], [ui("nav.projects"), "#"]])}
           <h1 class="page-title">${ui("work.title")}</h1>
           <p class="page-lead">${ui("work.lead")}</p>
         </header>
@@ -226,11 +288,12 @@
   const spanOf = (b) => b.span || (!b.width ? "full" : b.width >= 85 ? "wide" : b.width >= 60 ? "center" : "content");
   const onGrid = (b, html) => `<div class="b-grid span-${spanOf(b)}">${html}</div>`;
   const cap = (b) => t(b.caption) ? `<figcaption>${esc(t(b.caption))}</figcaption>` : "";
+  let chapterSeq = 0;
   function renderBlock(b) {
     const imgs = (b.imgs || []);
     switch (b.type) {
       case "lead": return `<section class="b-lead" data-reveal><p>${esc(t(b.text))}</p></section>`;
-      case "chapter": return `<header class="b-chapter" data-reveal><div class="ch-title">${t(b.kicker) ? `<span class="eyebrow">${esc(t(b.kicker))}</span>` : ""}<h2>${esc(t(b.title))}</h2></div>${t(b.text) ? `<p>${esc(t(b.text))}</p>` : ""}</header>`;
+      case "chapter": return `<header class="b-chapter" id="ch-${++chapterSeq}" data-reveal><div class="ch-title">${t(b.kicker) ? `<span class="eyebrow">${esc(t(b.kicker))}</span>` : ""}<h2>${esc(t(b.title))}</h2></div>${t(b.text) ? `<p>${esc(t(b.text))}</p>` : ""}</header>`;
       case "text": return `<section class="b-text" data-reveal><h3>${esc(t(b.title))}</h3><p>${esc(t(b.text))}</p></section>`;
       case "full": return `<figure class="b-full">${media(b.img, b.ratio || "16/9", null, { parallax: b.parallax })}${cap(b)}</figure>`;
       case "split": return `<section class="b-split ${b.side === "right" ? "right" : ""}"><div class="media-wrap">${media(b.img, b.ratio)}</div><div class="copy" data-reveal><h3>${esc(t(b.title))}</h3><p>${esc(t(b.text))}</p></div></section>`;
@@ -278,14 +341,16 @@
     const i = projects.findIndex((p) => p.slug === slug);
     const p = projects[i < 0 ? 0 : i], idx = i < 0 ? 0 : i;
     if (!p) { el.innerHTML = `<div class="wrap page-head"><p>${ui("notfound")}</p></div>`; return; }
-    const next = projects[(idx + 1) % projects.length];
+    const next = projects[(idx + 1) % projects.length], prev = projects[(idx - 1 + projects.length) % projects.length];
+    const chapters = (p.blocks || []).filter((b) => b.type === "chapter");
     const tone = p.tone || "#111111";
     document.title = `${t(p.title)} — ${P.name}`;
+    chapterSeq = 0;
     el.innerHTML = `
       <article class="project" id="top" style="--tone:${esc(tone)};--on-tone:${contrast(tone)}">
         <div class="progress" aria-hidden="true"><span></span></div>
         <header class="wrap proj-head">
-          <div class="proj-top"><a class="back" href="projetos.html">← ${ui("project.back")}</a><span class="eyebrow">${pad(idx + 1)} / ${pad(projects.length)}</span></div>
+          <div class="proj-top">${crumbs([[ui("mode.design"), "design.html"], [ui("nav.projects"), "projetos.html"], [t(p.title), "#"]])}<span class="eyebrow">${pad(idx + 1)} / ${pad(projects.length)}</span></div>
           <p class="eyebrow proj-client"><span class="tone-dot" aria-hidden="true"></span>${esc(t(p.client))}</p>
           <h1 class="proj-title">${esc(t(p.title))}</h1>
           <div class="proj-intro">
@@ -298,7 +363,9 @@
           </div>
         </header>
         <div class="proj-cover">${media(p.cover, p.coverRatio || "16/9", t(p.title), { tone: p.tone, parallax: true, eager: true })}</div>
+        ${pageTabs(chapters.map((c, k) => ["ch-" + (k + 1), t(c.title)]))}
         <div class="wrap proj-body">${(p.blocks || []).map(renderBlock).join("")}</div>
+        <nav class="wrap proj-pn"><a href="projeto.html?p=${esc(prev.slug)}"><span class="eyebrow">← ${ui("project.prev")}</span><span>${esc(t(prev.title))}</span></a><a href="projetos.html"><span class="eyebrow">${ui("project.back")}</span><span>${pad(projects.length)} ${ui("stat.projects")}</span></a></nav>
         <a class="next-proj" href="projeto.html?p=${esc(next.slug)}" style="--tone:${esc(next.tone || "#111")};--on-tone:${contrast(next.tone || "#111")}">
           <div class="wrap np-inner">
             <span class="eyebrow">${ui("project.next")}</span>
@@ -313,24 +380,59 @@
   /* ---------- PHOTOGRAPHY ---------- */
   function renderPhoto() {
     const el = document.querySelector("main");
+    const kinds = [...new Set(series.map((x) => t(x.kind)).filter(Boolean))];
+    const heroes = series.map(coverOf).filter(Boolean).slice(0, 6);
     el.innerHTML = `
-      <div class="wrap" id="top">
-        <header class="page-head">
-          <p class="eyebrow">${pad(series.length)} ${ui("stat.series")} · ${photoCount} ${ui("stat.photos")}</p>
+      <section class="ph-hero" id="top">
+        <div class="ph-slides" aria-hidden="true">${heroes.map((src, k) => `<img src="${esc(src)}" alt="" class="${k ? "" : "on"}" loading="${k ? "lazy" : "eager"}">`).join("")}</div>
+        <div class="wrap ph-hero-copy">
+          <p class="eyebrow"><span class="live" aria-hidden="true"></span>${esc(t(P.available))}</p>
           <h1 class="page-title">${ui("photo.title")}</h1>
           <p class="page-lead">${esc(t(PH.intro))}</p>
-          ${t(PH.process) || PH.gear ? `<dl class="photo-specs">${t(PH.process) ? `<div><dt>${ui("photo.process")}</dt><dd>${esc(t(PH.process))}</dd></div>` : ""}${PH.gear ? `<div><dt>${ui("photo.gear")}</dt><dd>${esc(PH.gear)}</dd></div>` : ""}</dl>` : ""}
-        </header>
-        <ol class="sgrid">
-          ${series.map((s, i) => `
-            <li class="scard${i === 0 ? " big" : ""}" data-reveal ${stagger(i % 2, 0.08)} style="--tone:${esc(s.accent || "#111")}">
-              <a href="foto.html?s=${esc(s.slug)}">
-                <div class="scard-img">${media(i === 0 ? coverOf(s) : (s.thumb || coverOf(s)), i === 0 ? "16/9" : "4/3", s.band)}<span class="pcard-go" aria-hidden="true">↗</span></div>
-                <div class="scard-info"><h3>${esc(s.band)}</h3><span class="scard-n">${pad(s.photos.length)} ${ui("photo.photos")}</span><p>${seriesMeta(s)}</p></div>
-              </a>
-            </li>`).join("")}
-        </ol>
-      </div>`;
+          <div class="ph-actions"><a class="btn" href="#series">${ui("photo.seeSeries")} <span class="arr" aria-hidden="true">↓</span></a><a class="btn btn-ghost" href="contato.html?m=photo">${ui("photo.hire")}</a></div>
+        </div>
+      </section>
+      <section class="section stats wrap" data-reveal>
+        <div><b>${pad(series.length)}</b><span>${ui("stat.series")}</span></div>
+        <div><b>${photoCount}</b><span>${ui("stat.photos")}</span></div>
+        <div><b>${pad(new Set(series.map((x) => x.venue).filter(Boolean)).size)}</b><span>${ui("stat.venues")}</span></div>
+      </section>
+      <section class="section" id="series">
+        <div class="wrap">
+          <div class="sec-head" data-reveal><h2 class="sec-title">${ui("nav.series")}</h2></div>
+          ${kinds.length > 1 ? `<div class="filters" role="toolbar"><button type="button" class="on" data-f="*">${ui("photo.all")}</button>${kinds.map((k) => `<button type="button" data-f="${esc(k)}">${esc(k)}</button>`).join("")}</div>` : ""}
+          <ol class="sgrid">
+            ${series.map((x, i) => `
+              <li class="scard${i === 0 ? " big" : ""}" data-kind="${esc(t(x.kind))}" data-reveal ${stagger(i % 2, 0.08)} style="--tone:${esc(x.accent || "#111")}">
+                <a href="foto.html?s=${esc(x.slug)}">
+                  <div class="scard-img">${media(i === 0 ? coverOf(x) : (x.thumb || coverOf(x)), i === 0 ? "16/9" : "4/3", x.band)}<span class="pcard-go" aria-hidden="true">↗</span></div>
+                  <div class="scard-info"><h3>${esc(x.band)}</h3><span class="scard-n">${pad(x.photos.length)} ${ui("photo.photos")}</span><p>${seriesMeta(x)}</p></div>
+                </a>
+              </li>`).join("")}
+          </ol>
+        </div>
+      </section>
+      ${t(PH.process) || PH.gear ? `<section class="section"><div class="wrap"><dl class="photo-specs" data-reveal>${t(PH.process) ? `<div><dt>${ui("photo.process")}</dt><dd>${esc(t(PH.process))}</dd></div>` : ""}${PH.gear ? `<div><dt>${ui("photo.gear")}</dt><dd>${esc(PH.gear)}</dd></div>` : ""}</dl></div></section>` : ""}
+      <section class="section">
+        <div class="wrap">
+          <a class="cross" href="design.html" data-reveal>
+            <div class="cross-imgs">${projects.slice(0, 3).map((x) => media(x.thumb || x.cover, "3/4", t(x.title))).join("")}</div>
+            <div class="cross-copy"><p class="eyebrow">${ui("mode.design")}</p><p class="cross-t">${ui("cross.design")}</p><span class="link-arrow">${ui("cross.go.design")} ${arr}</span></div>
+          </a>
+        </div>
+      </section>`;
+    // filters by kind (shows / shoots)
+    const bs = [...el.querySelectorAll(".filters button")];
+    bs.forEach((b) => (b.onclick = () => {
+      bs.forEach((x) => x.classList.toggle("on", x === b));
+      el.querySelectorAll(".scard").forEach((c) => (c.hidden = b.dataset.f !== "*" && c.dataset.kind !== b.dataset.f));
+    }));
+    // slow crossfade between series covers
+    const imgs = [...el.querySelectorAll(".ph-slides img")];
+    if (imgs.length > 1 && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      let k = 0; clearInterval(window.__slides);
+      window.__slides = setInterval(() => { imgs[k].classList.remove("on"); k = (k + 1) % imgs.length; imgs[k].classList.add("on"); }, 4500);
+    }
   }
 
   // Lightbox shared by series and project pages: arrows, keyboard, counter.
@@ -373,7 +475,7 @@
     el.innerHTML = `
       <article class="series-page" id="top" style="--tone:${esc(s.accent || "#111")}">
         <header class="wrap sp-head">
-          <div class="proj-top"><a class="back" href="fotografia.html">← ${ui("photo.title")}</a><span class="eyebrow">${pad(idx + 1)} / ${pad(series.length)}</span></div>
+          <div class="proj-top">${crumbs([[ui("mode.photo"), "fotografia.html"], [ui("nav.series"), "fotografia.html#series"], [s.band, "#"]])}<span class="eyebrow">${pad(idx + 1)} / ${pad(series.length)}</span></div>
           <p class="eyebrow"><span class="tone-dot" aria-hidden="true"></span>${esc(t(s.kind))}</p>
           <h1 class="proj-title">${esc(s.band)}</h1>
           <div class="proj-intro">
@@ -468,7 +570,7 @@
     const games = gamesOf(O), hobbies = lines(t(O.hobbies)), playing = asItem(O.playing);
     const artists = Array.isArray(O.artists) ? O.artists : lines(O.artists).map((n) => ({ name: n }));
     return `
-      <section class="section offclock">
+      <section class="section offclock" id="fora">
         <div class="sec-head" data-reveal><div><h2 class="sec-title">${ui("off.title")}</h2><p class="sec-lead">${ui("off.lead")}</p></div></div>
         <div class="off-grid">
           ${O.playlist && (O.playlist.tracks || []).length ? `<article class="tile tile-song" data-reveal><p class="eyebrow">${ui("off.song")}</p>${playerHTML(O.playlist)}</article>` : ""}
@@ -488,10 +590,11 @@
     document.querySelector("main").innerHTML = `
       <div class="wrap" id="top">
         <header class="page-head">
-          <p class="eyebrow">${esc(t(P.role))} · ${esc(t(P.location))}</p>
+          ${crumbs([[ui("mode." + mode), landing()], [ui("about.title"), "#"]])}
           <h1 class="page-title">${ui("about.title")}</h1>
         </header>
-        <div class="about-grid">
+        ${pageTabs([["perfil", ui("about.bio")], AB.offclock ? ["fora", ui("off.title")] : null, ["experiencia", ui("about.exp")], (AB.education || []).length ? ["formacao", ui("about.edu")] : null, (AB.research || []).length ? ["pesquisa", ui("about.research")] : null, (AB.timeline || []).length ? ["trajetoria", ui("about.timeline")] : null].filter(Boolean))}
+        <div class="about-grid" id="perfil">
           <div class="about-photo" data-reveal>${media(P.photo, "4/5", P.name, { eager: true })}</div>
           <div class="about-bio">${bio.map((p, i) => `<p${i ? "" : ' class="first"'} data-reveal>${esc(p)}</p>`).join("")}</div>
         </div>
@@ -499,11 +602,11 @@
         <div class="about-lists" data-reveal>
           ${(AB.lists || []).map((l) => `<div><p class="eyebrow">${esc(t(l.title))}</p><ul>${lines(t(l.items)).map((it) => `<li>${esc(it)}</li>`).join("")}</ul></div>`).join("")}
         </div>
-        <div class="cv"><h2 class="cv-h" data-reveal>${ui("about.exp")}</h2>${cvRows(AB.experience || [])}</div>
-        ${(AB.education || []).length ? `<div class="cv"><h2 class="cv-h" data-reveal>${ui("about.edu")}</h2>${cvRows(AB.education)}</div>` : ""}
-        ${(AB.research || []).length ? `<div class="cv"><h2 class="cv-h" data-reveal>${ui("about.research")}</h2>${AB.research.map((r, i) => `
+        <div class="cv" id="experiencia"><h2 class="cv-h" data-reveal>${ui("about.exp")}</h2>${cvRows(AB.experience || [])}</div>
+        ${(AB.education || []).length ? `<div class="cv" id="formacao"><h2 class="cv-h" data-reveal>${ui("about.edu")}</h2>${cvRows(AB.education)}</div>` : ""}
+        ${(AB.research || []).length ? `<div class="cv" id="pesquisa"><h2 class="cv-h" data-reveal>${ui("about.research")}</h2>${AB.research.map((r, i) => `
           <article class="research" data-reveal ${stagger(i)}><span class="eyebrow">${esc(t(r.kind))}</span><div><h3>${r.link ? `<a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(t(r.title))} ↗</a>` : esc(t(r.title))}</h3><p>${esc(t(r.text))}</p></div></article>`).join("")}</div>` : ""}
-        ${(AB.timeline || []).length ? `<div class="cv"><h2 class="cv-h" data-reveal>${ui("about.timeline")}</h2><ol class="timeline">${AB.timeline.map((x, i) => `<li data-reveal ${stagger(i, 0.04)}><span class="tl-y">${esc(x.period)}</span><span>${esc(t(x.text))}</span></li>`).join("")}</ol></div>` : ""}
+        ${(AB.timeline || []).length ? `<div class="cv" id="trajetoria"><h2 class="cv-h" data-reveal>${ui("about.timeline")}</h2><ol class="timeline">${AB.timeline.map((x, i) => `<li data-reveal ${stagger(i, 0.04)}><span class="tl-y">${esc(x.period)}</span><span>${esc(t(x.text))}</span></li>`).join("")}</ol></div>` : ""}
       </div>`;
     initPlayers(AB.offclock && AB.offclock.playlist);
     initCarousels();
@@ -515,7 +618,7 @@
     document.querySelector("main").innerHTML = `
       <div class="wrap" id="top">
         <header class="page-head">
-          <p class="eyebrow"><span class="live" aria-hidden="true"></span>${esc(t(P.available))}</p>
+          ${crumbs([[ui("mode." + mode), landing()], [ui("contact.title"), "#"]])}
           <h1 class="page-title">${ui("footer.cta")}</h1>
           <p class="page-lead">${ui("contact.lead")}</p>
         </header>
@@ -526,7 +629,7 @@
               <label><span>${ui("cf.email")}</span><input name="email" type="email" autocomplete="email" required></label>
             </div>
             <fieldset class="cf-topics"><legend>${ui("cf.topic")}</legend>
-              ${["cf.t.project", "cf.t.photo", "cf.t.other"].map((k, i) => `<label class="chip"><input type="radio" name="topic" value="${esc(ui(k))}"${i ? "" : " checked"}><span>${ui(k)}</span></label>`).join("")}
+              ${["cf.t.project", "cf.t.photo", "cf.t.other"].map((k, i) => `<label class="chip"><input type="radio" name="topic" value="${esc(ui(k))}"${i === (mode === "photo" ? 1 : 0) ? " checked" : ""}><span>${ui(k)}</span></label>`).join("")}
             </fieldset>
             <label class="cf-msg"><span>${ui("cf.msg")}</span><textarea name="message" rows="6" required></textarea></label>
             <input type="text" name="_honey" class="cf-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -625,7 +728,8 @@
   }
   function renderAll() {
     renderChrome();
-    ({ home: renderHome, project: renderProject, work: renderWork, photo: renderPhoto, series: renderSeries, about: renderAbout, contact: renderContact, none: renderNotFound })[page]?.();
+    ({ select: renderSelect, home: renderHome, project: renderProject, work: renderWork, photo: renderPhoto, series: renderSeries, about: renderAbout, contact: renderContact, none: renderNotFound })[page]?.();
+    initTabs();
     initEffects();
     noWidows(document.querySelector("main")); noWidows(document.querySelector(".site-footer"));
     startAdClock();

@@ -514,3 +514,106 @@ body[data-page="none"] .page-head { min-height: 60vh; }
 body[data-page="project"] .site-footer { margin-top: 0; }
 .link-arrow { white-space: nowrap; }
 @media (max-width: 600px) { .sec-head { flex-direction: column; align-items: flex-start; } }
+
+/* ==========================================================================
+   Navigation: two portfolios (design / photo) on one domain
+   ========================================================================== */
+/* photo portfolio: always dark, so the photographs carry the page */
+body.mode-photo {
+  --bg: #0E0E0F; --bg-2: #1B1B1D; --fg: #F2F0EA; --muted: #9B978F; --line: rgba(242, 240, 234, .14);
+  --card: #18181A; --band: #F2F0EA; --on-band: #0E0E0F; color-scheme: dark;
+}
+
+/* header: brand · portfolio switch + section links · controls */
+.brand { display: inline-flex; align-items: center; gap: 10px; }
+.brand-mark { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; background: var(--fg); color: var(--bg); font-size: 12px; font-weight: 700; letter-spacing: -.02em; }
+.header-mid { display: flex; align-items: center; gap: 8px; }
+.mode-switch { display: inline-flex; padding: 4px; border-radius: 999px; background: var(--fg); }
+.mode-switch a { padding: 7px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; color: color-mix(in srgb, var(--bg) 65%, transparent); transition: background-color .25s, color .25s; }
+.mode-switch a.on { background: var(--bg); color: var(--fg); }
+.mode-switch a:not(.on):hover { color: var(--bg); }
+@media (max-width: 1100px) { .brand-name { display: none; } }
+@media (max-width: 860px) { .header-mid { display: none; } }
+.mobile-nav { gap: 24px; }
+.mobile-nav .mode-switch { align-self: flex-start; }
+.mobile-nav .mode-switch a { font-size: 15px; padding: 10px 18px; }
+.mobile-nav .mn-links { display: flex; flex-direction: column; }
+.mobile-nav .mn-home { margin-top: auto; font-family: var(--f-text); font-size: 15px; font-weight: 500; color: var(--muted); }
+
+/* breadcrumbs with a back button */
+.crumbs { display: flex; align-items: center; gap: 12px; }
+.crumbs .back { width: 40px; height: 40px; padding: 0; display: grid; place-items: center; border-radius: 50%; }
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; font-size: 14px; }
+.crumbs li + li::before { content: "/"; margin-right: 6px; color: var(--muted); }
+.crumbs a { color: var(--muted); transition: color .2s; }
+.crumbs a:hover { color: var(--fg); }
+.crumbs [aria-current] { font-weight: 500; max-width: 40ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: bottom; }
+.page-head .crumbs { margin-bottom: 8px; }
+
+/* sticky in-page tabs for long pages (project chapters, about sections) */
+.page-tabs { position: sticky; top: 76px; z-index: 30; margin-top: clamp(40px, 5vw, 72px); background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-block: 1px solid var(--line); }
+.page-tabs ul { list-style: none; display: flex; gap: 4px; margin: 0; padding: 8px 0; overflow-x: auto; scrollbar-width: none; }
+.page-tabs ul::-webkit-scrollbar { display: none; }
+.page-tabs a { display: block; padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; white-space: nowrap; color: var(--muted); transition: background-color .25s, color .25s; }
+.page-tabs a:hover { color: var(--fg); }
+.page-tabs a.on { background: var(--fg); color: var(--bg); }
+@media (max-width: 860px) { .page-tabs { top: 64px; } }
+[id] { scroll-margin-top: 150px; }
+.project .page-tabs { margin-top: clamp(48px, 6vw, 88px); }
+
+/* previous / all projects */
+.proj-pn { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); padding-top: var(--sec); }
+.proj-pn a { display: flex; flex-direction: column; gap: 8px; padding-top: 18px; border-top: 1px solid var(--fg); font-family: var(--f-display); font-weight: 600; font-size: clamp(20px, 2.4vw, 36px); letter-spacing: -.035em; line-height: 1.05; }
+.proj-pn a:last-child { text-align: right; align-items: flex-end; }
+.proj-pn .eyebrow { font-family: var(--f-text); letter-spacing: 0; }
+
+/* cross-link between the two portfolios */
+.cross { display: grid; grid-template-columns: 6fr 5fr; gap: clamp(24px, 4vw, 72px); align-items: center; padding: clamp(20px, 3vw, 40px); border-radius: var(--r); background: var(--card); }
+.cross-imgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.cross-imgs .media:nth-child(2) { transform: translateY(-14px); }
+.cross-t { margin: 12px 0 24px; font-family: var(--f-display); font-weight: 600; font-size: clamp(28px, 3.4vw, 56px); line-height: 1; letter-spacing: -.045em; }
+.cross:hover .media img { transform: scale(1.05); }
+@media (max-width: 760px) { .cross { grid-template-columns: 1fr; } }
+
+/* photo landing */
+.ph-hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; }
+.ph-slides { position: absolute; inset: 0; }
+.ph-slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity 1.6s var(--ease), transform 6s linear; }
+.ph-slides img.on { opacity: 1; transform: scale(1); }
+.ph-slides::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14, 14, 15, .55) 0%, rgba(14, 14, 15, .15) 35%, rgba(14, 14, 15, .92) 100%); }
+.ph-hero-copy { position: relative; padding-bottom: clamp(40px, 6vw, 88px); color: #F2F0EA; }
+.ph-hero-copy .page-lead { color: rgba(242, 240, 234, .78); }
+.ph-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+.btn-ghost { background: transparent; color: var(--fg); box-shadow: inset 0 0 0 1px currentColor; }
+
+/* ==========================================================================
+   Selector: the first screen — two doors, design and photography
+   ========================================================================== */
+body[data-page="select"] main { min-height: 0; }
+.select { position: relative; display: flex; height: 100svh; min-height: 560px; padding: 84px var(--gutter) var(--gutter); gap: var(--gap); }
+.select-hint { position: absolute; top: 92px; left: 50%; transform: translateX(-50%); z-index: 2; padding: 8px 16px; border-radius: 999px; background: var(--bg); color: var(--fg); }
+.door { position: relative; flex: 1 1 0; display: flex; align-items: flex-end; border-radius: var(--r); overflow: hidden; color: #F2F0EA; transition: flex-grow .7s var(--ease); isolation: isolate; }
+.door:hover, .door:focus-visible { flex-grow: 1.5; }
+.door-img { position: absolute; inset: 0; z-index: -1; background: #1B1B1D; }
+.door-img img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); transition: transform 1.2s var(--ease), filter .7s; }
+.door:hover .door-img img { transform: scale(1); }
+.door-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, .05) 30%, rgba(0, 0, 0, .78) 100%); }
+.door-design .door-img { background: #E8E5DE; }
+.door-copy { padding: clamp(20px, 3vw, 44px); display: flex; flex-direction: column; align-items: flex-start; gap: 10px; max-width: 34em; }
+.door-copy .eyebrow { color: rgba(242, 240, 234, .75); }
+.door h2 { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: clamp(44px, 6.6vw, 120px); line-height: .9; letter-spacing: -.055em; }
+.door-photo h2 { font-family: var(--f-serif); font-weight: 400; font-style: italic; letter-spacing: -.03em; }
+.door p { margin: 0; font-size: clamp(15px, 1.2vw, 18px); color: rgba(242, 240, 234, .82); }
+.door-go { display: inline-flex; align-items: center; gap: 10px; margin-top: 10px; padding: 12px 20px; border-radius: 999px; background: #F2F0EA; color: #111; font-weight: 500; font-size: 15px; }
+.door:hover .door-go .arr { transform: translateX(4px); }
+.door-go .arr { transition: transform .35s var(--ease); }
+.pill-last { padding: 5px 12px; border-radius: 999px; background: var(--accent); color: #fff; font-size: 12px; font-weight: 600; }
+.door { animation: rise 1.1s var(--ease) both; }
+.door-photo { animation-delay: .12s; }
+@media (max-width: 760px) {
+  .select { flex-direction: column; padding-top: 76px; height: auto; min-height: 100svh; }
+  .select-hint { position: static; transform: none; align-self: center; margin-bottom: 4px; }
+  .door { min-height: 42svh; }
+  .door:hover { flex-grow: 1; }
+}
+@media (max-width: 860px) { .header-inner > span:empty { display: none; } }
