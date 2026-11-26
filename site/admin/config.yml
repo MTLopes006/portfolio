@@ -171,6 +171,12 @@
                   "required": false
                 }
               ]
+            },
+            {
+              "name": "clients",
+              "label": "Marcas e clientes (um por linha, aparece na faixa da home)",
+              "widget": "text",
+              "required": false
             }
           ]
         },
