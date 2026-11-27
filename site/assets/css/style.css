@@ -952,3 +952,13 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 .hx::after { height: clamp(60px, 12vh, 140px) !important; }
 .sc-list { padding-top: clamp(20px, 2.5vw, 40px) !important; }
 @media (max-width: 640px) { .hx { min-height: 100svh; } }
+
+/* hero: name and intro centred in the space under the top line; a small arrow points to the projects */
+.hx-top { margin-bottom: 0 !important; }
+.hx-name { margin-top: auto; }
+.hx-foot { margin-bottom: auto; }
+.hx-down { position: absolute; z-index: 4; left: 50%; bottom: clamp(18px, 3.5vh, 36px); width: 44px; height: 44px; margin-left: -22px; display: grid; place-items: center; border-radius: 50%; color: #F0E7D3; font-size: 20px; transition: color .25s; }
+.hx-down span { display: block; animation: hx-bob 2.2s ease-in-out infinite; }
+.hx-down:hover { color: var(--pink); }
+@keyframes hx-bob { 0%, 100% { transform: translateY(-3px); } 50% { transform: translateY(5px); } }
+@media (prefers-reduced-motion: reduce) { .hx-down span { animation: none; } }

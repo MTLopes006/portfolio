@@ -315,10 +315,10 @@
           <div class="hx-foot">
             <div class="hf-lead">
               <p>${esc(t(P.heroLead))}</p>
-              <a class="btn" href="#trabalho">${ui("hero.cta")} <span class="arr" aria-hidden="true">↓</span></a>
             </div>
           </div>
         </div>
+        <a class="hx-down" href="#trabalho" aria-label="${ui("hero.cta")}"><span aria-hidden="true">↓</span></a>
       </section>
 
       <div class="sc-list" id="trabalho">
