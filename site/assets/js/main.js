@@ -1,5 +1,5 @@
 /* Matheus Lopes — shared behaviour + page renderers.
-   Content lives in /content/*.json (edited by hand, by chat, or via /admin). */
+   Content lives in /content/*.json (edited by hand or by chat). */
 (async () => {
   const UI = window.UI;
   const store = {

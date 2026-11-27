@@ -1,6 +1,3 @@
-# Cloudflare: editing panel and content are never cached, so edits show up right away
-/admin/*
-  X-Robots-Tag: noindex
-  Cache-Control: no-cache
+# Cloudflare: content is never cached, so edits show up right away
 /content/*
   Cache-Control: no-cache
