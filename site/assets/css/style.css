@@ -774,20 +774,21 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
    v5 — home: hero with a lens over Matheus' own live photo, a plain footer row
    and a project carousel.
    ========================================================================== */
-.hx { --lx: 70%; --ly: 40%; --lr: clamp(90px, 11vw, 170px); position: relative; min-height: 100svh; display: flex; overflow: hidden; isolation: isolate; color: #F0E7D3; background: #0B0A0C; }
+.hx { --lx: 70%; --ly: 40%; --lr: clamp(90px, 11vw, 170px); position: relative; min-height: 100svh; display: flex; overflow: hidden; isolation: isolate; color: #F0E7D3; background: var(--bg); }
 .hx-bg { position: absolute; inset: 0; z-index: -1; }
 .hx-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hx-base { filter: grayscale(1) contrast(1.15) brightness(.42) blur(6px); transform: scale(1.06); }
 .hx-bg::after { content: ""; position: absolute; inset: 0; pointer-events: none;
   background: radial-gradient(60% 55% at 78% 30%, color-mix(in srgb, var(--pink) 28%, transparent), transparent 70%),
-              linear-gradient(180deg, rgba(11,10,12,.55) 0%, rgba(11,10,12,0) 30%, rgba(11,10,12,.35) 60%, #0B0A0C 100%); }
+              linear-gradient(180deg, rgba(11,10,12,.55) 0%, rgba(11,10,12,0) 30%, rgba(11,10,12,.45) 62%, rgba(11,10,12,.7) 100%); }
+.hx::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; height: clamp(140px, 26vh, 300px); background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 0%, transparent) 0%, color-mix(in srgb, var(--bg) 55%, transparent) 45%, var(--bg) 100%); pointer-events: none; }
 .hx-lens { z-index: 1; -webkit-mask: radial-gradient(circle var(--lr) at var(--lx) var(--ly), #000 calc(100% - 1px), transparent 100%); mask: radial-gradient(circle var(--lr) at var(--lx) var(--ly), #000 calc(100% - 1px), transparent 100%); transform: scale(1.06); }
 .hx-ring { position: absolute; z-index: 2; left: var(--lx); top: var(--ly); width: calc(var(--lr) * 2); height: calc(var(--lr) * 2); margin: calc(var(--lr) * -1) 0 0 calc(var(--lr) * -1); border-radius: 50%; border: 1px solid rgba(240,231,211,.55); box-shadow: 0 0 0 10px rgba(240,231,211,.06), inset 0 0 40px rgba(0,0,0,.35); pointer-events: none; }
 .hx-drift { animation: hx-drift 14s ease-in-out infinite alternate; }
 @keyframes hx-drift { 0% { --lx: 72%; --ly: 30%; } 50% { --lx: 40%; --ly: 42%; } 100% { --lx: 62%; --ly: 22%; } }
 @property --lx { syntax: "<length-percentage>"; inherits: true; initial-value: 70%; }
 @property --ly { syntax: "<length-percentage>"; inherits: true; initial-value: 40%; }
-.hx-inner { position: relative; z-index: 3; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; gap: clamp(20px, 2.6vw, 36px); padding-top: clamp(100px, 12vw, 150px); padding-bottom: clamp(24px, 3vw, 40px); pointer-events: none; }
+.hx-inner { position: relative; z-index: 3; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; gap: clamp(20px, 2.6vw, 36px); padding-top: clamp(100px, 12vw, 150px); padding-bottom: clamp(110px, 20vh, 240px); pointer-events: none; }
 .hx-inner a, .hx-inner .btn { pointer-events: auto; }
 .hx .eyebrow { color: rgba(240,231,211,.72); }
 .hx-top { display: flex; justify-content: space-between; gap: 16px; margin-bottom: auto; }
