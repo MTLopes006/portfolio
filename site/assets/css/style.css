@@ -945,3 +945,10 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 /* hero footer: only the intro and the button */
 .hx-foot { grid-template-columns: 1fr !important; }
 .hf-lead { justify-content: space-between; }
+
+/* hero fills exactly the first screen; featured band starts right below the fold */
+.hx { min-height: 100vh; min-height: 100svh; }
+.hx-inner { padding-bottom: clamp(36px, 6vh, 72px) !important; }
+.hx::after { height: clamp(60px, 12vh, 140px) !important; }
+.sc-list { padding-top: clamp(20px, 2.5vw, 40px) !important; }
+@media (max-width: 640px) { .hx { min-height: 100svh; } }
