@@ -285,7 +285,7 @@
         </a>
       </article>`;
     const showcase = (p) => {
-      const imgs = projectImages(p).slice(0, 7);
+      const imgs = (p.showcaseImgs && p.showcaseImgs.length ? p.showcaseImgs.map((x) => ({ src: x.img, focus: x.focus })) : projectImages(p)).slice(0, 8);
       return `
       <section class="sc" data-showcase>
         <div class="sc-sticky">
@@ -294,7 +294,7 @@
             <p class="sc-sum">${esc(t(p.summary))}</p>
             <a class="link-arrow" href="projeto.html?p=${esc(p.slug)}">${ui("sc.open")} ${arr}</a>
           </div>
-          <div class="sc-track">${[0, 1].map((k) => imgs.map((x) => `<figure class="sc-item"${k ? ' aria-hidden="true"' : ""}><img src="${esc(x.src)}" alt="" loading="lazy" decoding="async"></figure>`).join("")).join("")}</div>
+          <div class="sc-track">${[0, 1].map((k) => imgs.map((x) => `<figure class="sc-item"${k ? ' aria-hidden="true"' : ""}><img src="${esc(x.src)}" alt="" loading="lazy" decoding="async"${x.focus ? ` style="object-position:${esc(x.focus)}"` : ""}></figure>`).join("")).join("")}</div>
         </div>
       </section>`;
     };

@@ -412,7 +412,41 @@
           ]
         }
       ],
-      "showcase": true
+      "showcase": true,
+      "showcaseImgs": [
+        {
+          "img": "assets/img/projetos/lapso-menores-atos/cd-frente-vertical.jpg",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/lapso-menores-atos/capa.jpg",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/lapso-menores-atos/cd.jpg",
+          "focus": "32% 50%"
+        },
+        {
+          "img": "assets/img/projetos/lapso-menores-atos/instagram-1.webp",
+          "focus": "50% 63%"
+        },
+        {
+          "img": "assets/img/projetos/lapso-menores-atos/contracapa.jpg",
+          "focus": "0% 50%"
+        },
+        {
+          "img": "assets/img/projetos/lapso-menores-atos/capa-encarte.jpg",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/lapso-menores-atos/encarte-1.jpg",
+          "focus": "30% 50%"
+        },
+        {
+          "img": "assets/img/projetos/lapso-menores-atos/vinil-detalhes-1.jpg",
+          "focus": "55% 50%"
+        }
+      ]
     },
     {
       "slug": "cifra-club",
@@ -960,6 +994,40 @@
             }
           ]
         }
+      ],
+      "showcaseImgs": [
+        {
+          "img": "assets/img/projetos/cifra-club/cmv-kv-1.jpg",
+          "focus": "16% 50%"
+        },
+        {
+          "img": "assets/img/projetos/cifra-club/inapp-1.jpg",
+          "focus": "50% 15%"
+        },
+        {
+          "img": "assets/img/projetos/carrosseis/tim-01.jpg",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/destaques/cifra-me-va-mobile.jpg",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/semana-do-gospel/app-1.jpg",
+          "focus": "50% 53%"
+        },
+        {
+          "img": "assets/img/projetos/semana-do-gospel/kv-igreja.jpg",
+          "focus": "100% 50%"
+        },
+        {
+          "img": "assets/img/projetos/cifra-club/cmv-vertical.jpg",
+          "focus": "50% 20%"
+        },
+        {
+          "img": "assets/img/projetos/cifra-club/inapp-3.jpg",
+          "focus": "50% 52%"
+        }
       ]
     },
     {
@@ -1378,6 +1446,40 @@
               }
             }
           ]
+        }
+      ],
+      "showcaseImgs": [
+        {
+          "img": "assets/img/projetos/carrosseis/letras-01.jpg",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/lojas-de-apps/letras-ios-02.jpg",
+          "focus": "50% 0%"
+        },
+        {
+          "img": "assets/img/projetos/semana-do-coreano/personagem.jpg",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/carrosseis/letras-05.jpg",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/lojas-de-apps/letras-ios-04.jpg",
+          "focus": "50% 0%"
+        },
+        {
+          "img": "assets/img/projetos/semana-do-coreano/placa.jpg",
+          "focus": "50% 0%"
+        },
+        {
+          "img": "assets/img/projetos/destaques/letras-creep-mobile.jpg",
+          "focus": "45% 50%"
+        },
+        {
+          "img": "assets/img/projetos/carrosseis/letras-07.jpg",
+          "focus": "50% 50%"
         }
       ]
     },
@@ -2140,7 +2242,41 @@
       },
       "year": 2026,
       "category": "clientes",
-      "showcase": true
+      "showcase": true,
+      "showcaseImgs": [
+        {
+          "img": "assets/img/projetos/pantanal-aromas/mockup-celular.webp",
+          "focus": "50% 85%"
+        },
+        {
+          "img": "assets/img/projetos/pantanal-aromas/social-01.webp",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/pantanal-aromas/social-02.webp",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/pantanal-aromas/social-03.webp",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/pantanal-aromas/social-04.webp",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/pantanal-aromas/social-05.webp",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/pantanal-aromas/social-06.webp",
+          "focus": "50% 50%"
+        },
+        {
+          "img": "assets/img/projetos/pantanal-aromas/social-07.webp",
+          "focus": "50% 50%"
+        }
+      ]
     },
     {
       "blocks": [
