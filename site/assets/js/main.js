@@ -256,18 +256,14 @@
             <span class="hx-role"><em>${ui("hx.role")}</em></span>
             <span class="l2">${esc(P.lastName)}<sup>(BH)</sup></span>
           </h1>
-          <div class="hx-bento">
-            <div class="hb hb-lead">
+          <div class="hx-foot">
+            <div class="hf-lead">
               <p>${esc(t(P.heroLead))}</p>
               <a class="btn" href="#trabalho">${ui("hero.cta")} <span class="arr" aria-hidden="true">↓</span></a>
             </div>
-            <a class="hb hb-stat" href="projetos.html"><b>${pad(projects.length)}</b><span>${ui("stat.projects")}</span><span class="hb-go" aria-hidden="true">↗</span></a>
-            <a class="hb hb-stat" href="fotografia.html"><b>${pad(series.length)}</b><span>${ui("stat.series")}</span><span class="hb-go" aria-hidden="true">↗</span></a>
-            <a class="hb hb-me" href="sobre.html?m=design">
-              ${P.photo ? `<img src="${esc(P.photo)}" alt="${esc(P.name)}" loading="eager">` : ""}
-              <span><span class="eyebrow">${esc(t(P.location))}</span><b>${ui("about.more")}</b></span>
-              <span class="hb-go" aria-hidden="true">↗</span>
-            </a>
+            <a class="hf-link" href="projetos.html"><b>${pad(projects.length)}</b><span>${ui("stat.projects")} ${arr}</span></a>
+            <a class="hf-link" href="fotografia.html"><b>${pad(series.length)}</b><span>${ui("stat.series")} ${arr}</span></a>
+            <a class="hf-link" href="sobre.html?m=design"><b>${esc(t(P.location))}</b><span>${ui("about.more")} ${arr}</span></a>
           </div>
           ${credit ? `<p class="hx-credit">${ui("hx.photo")} ${esc(credit)}<span class="hx-hint"> · ${ui("hx.hint")}</span></p>` : ""}
         </div>
@@ -280,29 +276,37 @@
         </div>
       </section>
 
-      <section class="section bento-sec">
-        <div class="wrap bento">
-          <article class="bt bt-ap" data-reveal>
-            <p class="eyebrow">${ui("ap.title")}</p>
-            <ol class="bt-steps">${[1, 2, 3].map((n) => `<li><span class="bt-n">${pad(n)}</span><h3>${ui("ap." + n)}</h3><p>${ui("ap." + n + ".d")}</p></li>`).join("")}</ol>
-          </article>
-          <a class="bt bt-photo" href="fotografia.html" data-reveal>
-            <div class="bt-imgs">${series.slice(1, 4).map((x) => media(coverOf(x), "3/4", x.band)).join("")}</div>
-            <p class="eyebrow">${ui("mode.photo")}</p>
-            <p class="bt-big">${ui("cross.photo")}</p>
-            <span class="link-arrow">${ui("cross.go.photo")} ${arr}</span>
+      ${clients.length ? `<section class="marquee" aria-label="${ui("home.clients")}"><div class="marquee-track">${[...clients, ...clients].map((c) => `<span>${esc(c)}</span>`).join("")}</div></section>` : ""}
+
+      <section class="section wrap approach">
+        <div class="sec-head" data-reveal><h2 class="sec-title">${ui("ap.title")}</h2></div>
+        <ol class="ap-list">${[1, 2, 3].map((n, k) => `<li data-reveal ${stagger(k, 0.08)}><span class="ap-n">${pad(n)}</span><h3>${ui("ap." + n)}</h3><p>${ui("ap." + n + ".d")}</p></li>`).join("")}</ol>
+      </section>
+
+      <section class="section services">
+        <div class="wrap">
+          <div class="sec-head" data-reveal><h2 class="sec-title">${ui("home.services")}</h2></div>
+          <ol class="svc">${svc.map((n, k) => `<li data-reveal ${stagger(k)}><details${k ? "" : " open"}><summary><span class="svc-n">${pad(n)}</span><span class="svc-t">${ui("svc." + n)}</span><span class="svc-x" aria-hidden="true"></span></summary><p>${ui("svc." + n + ".d")}</p></details></li>`).join("")}</ol>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <a class="cross" href="fotografia.html" data-reveal>
+            <div class="cross-imgs">${series.slice(1, 4).map((x) => media(coverOf(x), "3/4", x.band)).join("")}</div>
+            <div class="cross-copy"><p class="eyebrow">${ui("mode.photo")}</p><p class="cross-t">${ui("cross.photo")}</p><span class="link-arrow">${ui("cross.go.photo")} ${arr}</span></div>
           </a>
-          <article class="bt bt-svc" data-reveal>
-            <p class="eyebrow">${ui("home.services")}</p>
-            <ol>${svc.map((n) => `<li><span class="bt-n">${pad(n)}</span><div><b>${ui("svc." + n)}</b><span>${ui("svc." + n + ".d")}</span></div></li>`).join("")}</ol>
-          </article>
-          <a class="bt bt-about" href="sobre.html?m=design" data-reveal>
-            ${media(P.photo, "1/1", P.name)}
+        </div>
+      </section>
+
+      <section class="section about-teaser">
+        <div class="wrap at-grid">
+          <div class="at-photo" data-reveal>${media(P.photo, "4/5", P.name)}</div>
+          <div class="at-copy" data-reveal>
             <p class="eyebrow">${ui("home.about")}</p>
-            <p>${ui("about.teaser2")}</p>
-            <span class="link-arrow">${ui("about.more")} ${arr}</span>
-          </a>
-          ${clients.length ? `<article class="bt bt-clients" data-reveal><p class="eyebrow">${ui("home.clients")}</p><ul>${clients.map((c) => `<li>${esc(c)}</li>`).join("")}</ul></article>` : ""}
+            <p class="at-big">${ui("about.teaser2")}</p>
+            <a class="link-arrow" href="sobre.html?m=design">${ui("about.more")} ${arr}</a>
+          </div>
         </div>
       </section>`;
     initCarousels();
