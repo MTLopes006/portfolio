@@ -996,10 +996,22 @@
               "img": "assets/img/projetos/carrosseis/cifra-mpb-04.jpg"
             },
             {
+              "img": "assets/img/projetos/carrosseis/cifra-mpb-05.jpg"
+            },
+            {
               "img": "assets/img/projetos/carrosseis/cifra-mpb-06.jpg"
             },
             {
+              "img": "assets/img/projetos/carrosseis/cifra-mpb-07.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-mpb-08.jpg"
+            },
+            {
               "img": "assets/img/projetos/carrosseis/cifra-mpb-09.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-mpb-10.jpg"
             },
             {
               "img": "assets/img/projetos/carrosseis/cifra-mpb-11.jpg"
@@ -1021,21 +1033,36 @@
               "img": "assets/img/projetos/carrosseis/cifra-violao-02.jpg"
             },
             {
+              "img": "assets/img/projetos/carrosseis/cifra-violao-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-violao-04.jpg"
+            },
+            {
               "img": "assets/img/projetos/carrosseis/cifra-violao-05.jpg"
             },
             {
               "img": "assets/img/projetos/carrosseis/cifra-violao-06.jpg"
             },
             {
+              "img": "assets/img/projetos/carrosseis/cifra-violao-07.jpg"
+            },
+            {
               "img": "assets/img/projetos/carrosseis/cifra-violao-08.jpg"
             },
             {
+              "img": "assets/img/projetos/carrosseis/cifra-violao-09.jpg"
+            },
+            {
               "img": "assets/img/projetos/carrosseis/cifra-violao-10.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-violao-11.jpg"
             }
           ],
           "caption": {
-            "pt": "10 dúvidas de quem começa no violão: a pergunta é o título, a resposta cabe em poucas linhas",
-            "en": "10 questions beginners ask about the guitar: the question is the headline, the answer fits in a few lines"
+            "pt": "10 dúvidas de quem começa no violão: a pergunta é o título, a resposta cabe em poucas linhas. As telas marcadas com “vídeo” recebem um vídeo na postagem",
+            "en": "10 questions beginners ask about the guitar: the question is the headline, the answer fits in a few lines. Slides marked “vídeo” get a video when posted"
           }
         },
         {
@@ -1640,16 +1667,31 @@
               "img": "assets/img/projetos/carrosseis/letras-hoquei-03.jpg"
             },
             {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-04.jpg"
+            },
+            {
               "img": "assets/img/projetos/carrosseis/letras-hoquei-05.jpg"
             },
             {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-06.jpg"
+            },
+            {
               "img": "assets/img/projetos/carrosseis/letras-hoquei-07.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-08.jpg"
             },
             {
               "img": "assets/img/projetos/carrosseis/letras-hoquei-09.jpg"
             },
             {
               "img": "assets/img/projetos/carrosseis/letras-hoquei-10.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-11.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-12.jpg"
             },
             {
               "img": "assets/img/projetos/carrosseis/letras-hoquei-13.jpg"
@@ -2080,8 +2122,8 @@
             "en": "Social media"
           },
           "text": {
-            "pt": "Posts de oferta com a mesma luz da campanha. O presente aparece como caixa fechada, e o desconto só no último quadro.",
-            "en": "Offer posts in the campaign's light. The gift shows up as a closed box, and the discount only in the last frame."
+            "pt": "Dois carrosséis com a mesma luz da campanha. No do presente, a caixa vai sendo aberta a cada quadro e o desconto só aparece no último.",
+            "en": "Two carousels in the campaign's light. In the gift one, the box opens a little more each frame and the discount only shows in the last."
           }
         },
         {
@@ -2089,24 +2131,50 @@
           "ratio": "4/5",
           "imgs": [
             {
-              "img": "assets/img/projetos/cifra-club-30-anos/social-1.jpg"
+              "img": "assets/img/projetos/cifra-club-30-anos/post-1.jpg"
             },
             {
-              "img": "assets/img/projetos/cifra-club-30-anos/social-2.jpg"
+              "img": "assets/img/projetos/cifra-club-30-anos/post-2.jpg"
             },
             {
-              "img": "assets/img/projetos/cifra-club-30-anos/social-3.jpg"
+              "img": "assets/img/projetos/cifra-club-30-anos/post-3.jpg"
             },
             {
-              "img": "assets/img/projetos/cifra-club-30-anos/social-4.jpg"
+              "img": "assets/img/projetos/cifra-club-30-anos/post-4.jpg"
             },
             {
-              "img": "assets/img/projetos/cifra-club-30-anos/social-5.jpg"
-            },
-            {
-              "img": "assets/img/projetos/cifra-club-30-anos/social-8.jpg"
+              "img": "assets/img/projetos/cifra-club-30-anos/post-5.jpg"
             }
-          ]
+          ],
+          "caption": {
+            "pt": "Carrossel da oferta",
+            "en": "Offer carousel"
+          }
+        },
+        {
+          "type": "deck",
+          "ratio": "4/5",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/presente-1.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/presente-2.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/presente-3.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/presente-4.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/presente-5.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "Carrossel do presente: abre com um vídeo de dedilhado (espaço marcado com “vídeo”) e termina com a caixa aberta e o desconto",
+            "en": "Gift carousel: it opens with a fingerpicking video (space marked “vídeo”) and ends with the open box and the discount"
+          }
         },
         {
           "type": "chapter",
