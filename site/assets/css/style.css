@@ -1008,3 +1008,7 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 .b-gallery figcaption { margin-top: 14px; color: var(--muted); font-size: 14px; }
 @media (max-width: 900px) { .gal-grid { grid-template-columns: repeat(min(var(--cols), 4), minmax(0, 1fr)); } }
 @media (max-width: 560px) { .gal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* app-store strip built from the separate screens, with a gap like in the store */
+.b-pan .pan-view { background: transparent; border-radius: 0; }
+.pan-track img { border-radius: calc(var(--r) * .5); padding-right: 0; margin-right: clamp(8px, .9vw, 14px); }

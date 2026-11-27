@@ -458,7 +458,10 @@
         return `<figure class="b-deck" data-p="deck"><div class="deck-track">${imgs.map((m, i) => `<div class="deck-card" style="--i:${i};--rot:${((i % 2 ? 1 : -1) * (3 + (i % 4))).toFixed(1)}deg;z-index:${n - i}">${media(m.img, b.ratio || "4/5")}</div>`).join("")}</div>${cap(b)}</figure>`;
       }
       case "pan": // a long strip (app store screens, panoramas) that loops sideways on its own and can be dragged
-        return `<figure class="b-pan" data-showcase><div class="pan-view"><div class="sc-track pan-track">${[0, 1].map((k) => `<img src="${esc(b.img)}" alt="${k ? "" : esc(t(b.caption) || "")}"${k ? ' aria-hidden="true"' : ""} loading="lazy" style="aspect-ratio:${esc(b.ratio || "3/1")}">`).join("")}</div></div>${cap(b)}</figure>`;
+        {
+          const shots = imgs.length ? imgs : [{ img: b.img, ratio: b.ratio }];
+          return `<figure class="b-pan" data-showcase><div class="pan-view"><div class="sc-track pan-track">${[0, 1].map((k) => shots.map((m) => `<img src="${esc(m.img)}" alt=""${k ? ' aria-hidden="true"' : ""} loading="lazy" style="aspect-ratio:${esc(m.ratio || b.ratio || "3/1")}">`).join("")).join("")}</div></div>${cap(b)}</figure>`;
+        }
       case "gallery": // every piece side by side, same height, opens in the lightbox
         return `<figure class="b-gallery" style="--cols:${Number(b.cols) || imgs.length || 4}"><div class="gal-grid">${imgs.map((m, i) => `<div ${stagger(i, 0.04)}>${media(m.img, m.ratio || b.ratio)}</div>`).join("")}</div>${cap(b)}</figure>`;
       case "scatter": { // cards that land from different directions and settle slightly turned

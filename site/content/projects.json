@@ -1194,7 +1194,7 @@
       },
       "tone": "#F2E600",
       "cover": "assets/img/projetos/lojas-de-apps/capa.jpg",
-      "coverRatio": "2305/1297",
+      "coverRatio": "2400/1350",
       "thumb": "assets/img/thumbs/lojas-de-apps.jpg",
       "blocks": [
         {
@@ -1221,17 +1221,39 @@
         },
         {
           "type": "pan",
-          "img": "assets/img/projetos/lojas-de-apps/letras-ios.jpg",
-          "ratio": "4096/1297",
+          "ratio": "568/1234",
           "caption": {
             "pt": "Sequência completa para iOS, em português, rodando como na loja",
             "en": "Full iOS set, in Portuguese, running as in the store"
-          }
+          },
+          "imgs": [
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-04.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-05.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-06.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-07.jpg"
+            }
+          ]
         },
         {
           "type": "gallery",
           "cols": 7,
-          "ratio": "1320/2868",
+          "ratio": "568/1234",
           "imgs": [
             {
               "img": "assets/img/projetos/lojas-de-apps/letras-ios-01.jpg"
@@ -1277,12 +1299,31 @@
         },
         {
           "type": "pan",
-          "img": "assets/img/projetos/lojas-de-apps/songsift-ios.jpg",
-          "ratio": "4096/1484",
+          "ratio": "683/1484",
           "caption": {
             "pt": "Sequência completa para iOS, em português, rodando como na loja",
             "en": "Full iOS set, in Portuguese, running as in the store"
-          }
+          },
+          "imgs": [
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-04.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-05.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-06.jpg"
+            }
+          ]
         },
         {
           "type": "gallery",
