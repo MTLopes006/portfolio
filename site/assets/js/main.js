@@ -119,7 +119,7 @@
         </div>
         <div class="foot-cols">
           <div><p class="eyebrow">${ui("mode.design")}</p><ul><li><a href="design.html">${ui("nav.home")}</a></li><li><a href="projetos.html">${ui("nav.projects")}</a></li></ul></div>
-          <div><p class="eyebrow">${ui("mode.photo")}</p><ul><li><a href="fotografia.html">${ui("nav.home")}</a></li><li><a href="fotografia.html#series">${ui("nav.series")}</a></li></ul></div>
+          ${mode === "photo" ? `<div><p class="eyebrow">${ui("mode.photo")}</p><ul><li><a href="fotografia.html">${ui("nav.home")}</a></li><li><a href="fotografia.html#series">${ui("nav.series")}</a></li></ul></div>` : ""}
           <div><p class="eyebrow">${ui("footer.contact")}</p><ul>${contacts.map(([k, h]) => `<li><a href="${esc(h)}"${h.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${k}</a></li>`).join("")}<li><a href="sobre.html">${ui("nav.about")}</a></li></ul></div>
         </div>
 
@@ -153,6 +153,23 @@
   }
 
   /* ---------- SELECTOR: the first screen — choose design or photography ---------- */
+  // animated gradient + grain background; one patch of light follows the pointer
+  const glowBg = (cls) => `<div class="${cls}" aria-hidden="true"><div class="hx-glow"><span class="hx-g g1"></span><span class="hx-g g2"></span><span class="hx-g g3"></span></div><span class="hx-g gm"></span><span class="hx-noise"></span></div>`;
+  function initGlow() {
+    const box = document.querySelector(".hx, .sel-bg");
+    if (!box) return;
+    const host = box.classList.contains("hx") ? box : document.documentElement;
+    const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let x = innerWidth * 0.62, y = innerHeight * 0.38, cx = x, cy = y, raf = 0;
+    const set = () => { const b = box.getBoundingClientRect(); host.style.setProperty("--mx", `${cx - (host === box ? b.left : 0)}px`); host.style.setProperty("--my", `${cy - (host === box ? b.top : 0)}px`); host.style.setProperty("--px", ((cx / innerWidth) * 2 - 1).toFixed(3)); host.style.setProperty("--py", ((cy / innerHeight) * 2 - 1).toFixed(3)); };
+    const loop = () => { cx += (x - cx) * 0.08; cy += (y - cy) * 0.08; set(); raf = Math.abs(x - cx) + Math.abs(y - cy) > 0.5 ? requestAnimationFrame(loop) : 0; };
+    set();
+    if (still || !matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    if (window._glowMove) removeEventListener("pointermove", window._glowMove);
+    window._glowMove = (e) => { x = e.clientX; y = e.clientY; if (!raf) raf = requestAnimationFrame(loop); };
+    addEventListener("pointermove", window._glowMove, { passive: true });
+  }
+
   function renderSelect() {
     const last = store.get("ml-mode");
     const feat = projects[0];
@@ -170,6 +187,7 @@
         </div>
       </a>`;
     document.querySelector("main").innerHTML = `
+      ${glowBg("sel-bg")}
       <section class="select-hero wrap" id="top">
         <p class="eyebrow">${esc(t(P.available))}</p>
         <h1 class="sel-name">${esc(P.name)}</h1>
@@ -184,6 +202,7 @@
       </section>
       ${clients.length ? `<section class="clients wrap" aria-label="${ui("home.clients")}"><p class="eyebrow">${ui("home.clients")}</p><ul>${clients.map((c) => `<li>${esc(c)}</li>`).join("")}</ul></section>` : ""}`;
     document.querySelectorAll(".door").forEach((d) => d.addEventListener("click", () => store.set("ml-mode", d.dataset.m)));
+    initGlow();
   }
 
   /* ---------- project card (home + index) ---------- */
@@ -248,7 +267,7 @@
   function renderHome() {
     const el = document.querySelector("main");
     const clients = lines(P.clients);
-    const svc = [1, 2, 3, 4, 5];
+    const svc = [1, 2, 3, 4];
     const shows = projects.filter((p) => p.showcase).slice(0, 4);
     const card = (p) => `
       <article class="r-item pc">
@@ -273,11 +292,11 @@
     };
     el.innerHTML = `
       <section class="hx" id="top">
-        <div class="hx-bg" aria-hidden="true"><span class="hx-g g1"></span><span class="hx-g g2"></span><span class="hx-g g3"></span><span class="hx-noise"></span></div>
+        ${glowBg("hx-bg")}
         <div class="wrap hx-inner">
           <div class="hx-top">
             <p class="eyebrow">${esc(t(P.available))}</p>
-            <p class="eyebrow">${ui("hero.kicker")}</p>
+            <p class="eyebrow">${esc(t(P.role))}</p>
           </div>
           <h1 class="hx-name">
             <span class="l1">${esc(P.firstName)}</span>
@@ -290,13 +309,16 @@
               <a class="btn" href="#trabalho">${ui("hero.cta")} <span class="arr" aria-hidden="true">↓</span></a>
             </div>
             <a class="hf-link" href="projetos.html"><b>${pad(projects.length)}</b><span>${ui("stat.projects")} ${arr}</span></a>
-            <a class="hf-link" href="fotografia.html"><b>${pad(series.length)}</b><span>${ui("stat.series")} ${arr}</span></a>
+            <a class="hf-link" href="#clientes"><b>${pad(clients.length)}</b><span>${ui("stat.clients")} ${arr}</span></a>
             <a class="hf-link" href="sobre.html?m=design"><b>${esc(t(P.location))}</b><span>${ui("about.more")} ${arr}</span></a>
           </div>
         </div>
       </section>
 
-      <div id="trabalho">${shows.map(showcase).join("")}</div>
+      <div class="sc-list" id="trabalho">
+        ${shows.length ? `<div class="wrap sc-intro"><h2 class="sec-title" data-scale>${ui("home.featuredMany")}</h2></div>` : ""}
+        ${shows.map(showcase).join("")}
+      </div>
 
       <section class="section">
         <div class="wrap">
@@ -305,7 +327,7 @@
         </div>
       </section>
 
-      ${clients.length ? `<section class="marquee" aria-label="${ui("home.clients")}"><div class="marquee-track">${[...clients, ...clients].map((c, k) => clientMark(c, k >= clients.length)).join("")}</div></section>` : ""}
+      ${clients.length ? `<section class="marquee" id="clientes" aria-label="${ui("home.clients")}"><div class="marquee-track">${[...clients, ...clients].map((c, k) => clientMark(c, k >= clients.length)).join("")}</div></section>` : ""}
 
       <section class="section services">
         <div class="wrap svc-plain">
@@ -318,12 +340,34 @@
         <div class="wrap at-grid">
           <div class="at-photo" data-scale>${media(P.photo, "4/5", P.name)}</div>
           <div class="at-copy">
-            <p class="at-big">${ui("about.teaser2")}</p>
+            <p class="at-big">${ui("about.teaser.d")}</p>
             <a class="link-arrow" href="sobre.html?m=design">${ui("about.more")} ${arr}</a>
           </div>
         </div>
       </section>`;
     initCarousels();
+    initGlow();
+    initDrag();
+  }
+
+  // drag the looping showcases sideways with mouse or finger; a drag never counts as a click
+  function initDrag() {
+    document.querySelectorAll("[data-showcase]").forEach((sc) => {
+      const tr = sc.querySelector(".sc-track");
+      tr.querySelectorAll("img").forEach((im) => (im.draggable = false));
+      let down = false, sx = 0, sy = 0, lx = 0, moved = false, lockY = false;
+      tr.addEventListener("pointerdown", (e) => { down = true; moved = false; lockY = false; sx = lx = e.clientX; sy = e.clientY; sc._v = 0; });
+      addEventListener("pointermove", (e) => {
+        if (!down) return;
+        if (!moved && !lockY) { if (Math.abs(e.clientY - sy) > Math.abs(e.clientX - sx) + 4) { lockY = true; down = false; return; } if (Math.abs(e.clientX - sx) > 5) { moved = true; sc._drag = true; sc.classList.add("is-drag"); } }
+        if (!moved) return;
+        const dx = e.clientX - lx; lx = e.clientX;
+        sc._x = (sc._x || 0) + dx; sc._v = dx;
+      }, { passive: true });
+      const up = () => { if (!down && !moved) return; down = false; sc._drag = false; sc.classList.remove("is-drag"); setTimeout(() => (moved = false), 0); };
+      addEventListener("pointerup", up); addEventListener("pointercancel", up);
+      tr.addEventListener("click", (e) => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+    });
   }
 
   /* ---------- WORK INDEX ---------- */
@@ -705,7 +749,7 @@
               <label><span>${ui("cf.email")}</span><input name="email" type="email" autocomplete="email" required></label>
             </div>
             <fieldset class="cf-topics"><legend>${ui("cf.topic")}</legend>
-              ${["cf.t.project", "cf.t.photo", "cf.t.other"].map((k, i) => `<label class="chip"><input type="radio" name="topic" value="${esc(ui(k))}"${i === (mode === "photo" ? 1 : 0) ? " checked" : ""}><span>${ui(k)}</span></label>`).join("")}
+              ${(mode === "photo" ? ["cf.t.photo", "cf.t.project", "cf.t.other"] : ["cf.t.project", "cf.t.other"]).map((k, i) => `<label class="chip"><input type="radio" name="topic" value="${esc(ui(k))}"${i === 0 ? " checked" : ""}><span>${ui(k)}</span></label>`).join("")}
             </fieldset>
             <label class="cf-msg"><span>${ui("cf.msg")}</span><textarea name="message" rows="6" required></textarea></label>
             <input type="text" name="_honey" class="cf-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -768,8 +812,11 @@
     boost += (Math.min(1600, Math.abs(dy) / Math.max(dt, 0.001)) - boost) * 0.08;
     showcases.forEach((sc) => {
       if (!sc._on || !sc._w) return;
-      const speed = (38 + boost * 0.35) * (sc._slow ? 0.2 : 1);
-      sc._x += sc._dir * speed * dt;
+      if (!sc._drag) {
+        const speed = (38 + boost * 0.35) * (sc._slow ? 0.2 : 1);
+        sc._v = (sc._v || 0) * 0.92;
+        sc._x += sc._dir * speed * dt + (Math.abs(sc._v) > 0.1 ? sc._v : 0);
+      }
       if (sc._x <= -sc._w) sc._x += sc._w; else if (sc._x > 0) sc._x -= sc._w;
       sc._track.style.transform = `translate3d(${sc._x.toFixed(1)}px, 0, 0) scale(${sc._k.toFixed(3)})`;
     });

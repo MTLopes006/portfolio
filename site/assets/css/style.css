@@ -890,8 +890,9 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 .svc-plain li[data-scale], .sec-title[data-scale] { transform-origin: 0 50%; }
 
 /* showcases loop in place instead of pinning the page */
-.sc { padding-top: clamp(40px, 5vw, 80px); }
-.sc:first-child { padding-top: var(--sec); }
+.sc { padding-top: clamp(72px, 8vw, 128px); }
+.sc-list { padding-top: var(--sec); }
+.sc-intro + .sc { padding-top: clamp(28px, 3vw, 48px); }
 .sc-sticky { position: static; height: auto; overflow: hidden; }
 .sc-track { transform-origin: 50% 50%; padding: 0; gap: 0; }
 .sc-track .sc-item { margin-right: clamp(10px, 1.2vw, 18px); }
@@ -914,3 +915,16 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
   animation: hx-grain 1.2s steps(6) infinite; }
 @keyframes hx-grain { 0% { transform: translate(0, 0); } 20% { transform: translate(-3%, 2%); } 40% { transform: translate(2%, -4%); } 60% { transform: translate(-4%, -1%); } 80% { transform: translate(3%, 3%); } 100% { transform: translate(0, 0); } }
 @media (prefers-reduced-motion: reduce) { .hx-g, .hx-noise { animation: none; } }
+
+/* pointer-following light, parallax on the slow patches */
+.hx-glow { position: absolute; inset: 0; transform: translate3d(calc(var(--px, 0) * -2.5vw), calc(var(--py, 0) * -2.5vh), 0); }
+.hx-g.gm { left: var(--mx, 62%); top: var(--my, 38%); width: 46vmax; height: 46vmax; margin: -23vmax 0 0 -23vmax; background: radial-gradient(circle, rgba(255,72,176,.30) 0%, rgba(255,72,176,.08) 38%, rgba(255,72,176,0) 62%); animation: none; mix-blend-mode: screen; }
+/* selector: same background behind the whole first screen */
+.sel-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; background: #0D0B0E; }
+:root[data-theme="light"] .sel-bg { background: var(--bg); }
+:root[data-theme="light"] .sel-bg .hx-g { opacity: .5; }
+.select-hero, .select, .clients { position: relative; z-index: 1; }
+/* drag the showcases */
+.sc-track { cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.sc.is-drag .sc-track { cursor: grabbing; }
+.sc.is-drag .sc-item img { transform: none; }
