@@ -1042,3 +1042,18 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 .b-assets figcaption { margin-top: 14px; color: var(--muted); font-size: 14px; }
 .p-static .as-item { transform: rotate(var(--rot)); opacity: 1; }
 @media (max-width: 720px) { .as-item { height: clamp(110px, 34vw, 180px); } }
+
+/* typewriter role on the design hero */
+.tw { display: inline-flex; align-items: baseline; }
+.tw-caret { display: inline-block; width: .06em; height: .9em; margin-left: .06em; background: var(--pink); transform: translateY(.08em); animation: tw-blink 1s steps(1) infinite; }
+.tw.typing .tw-caret { animation: none; }
+@keyframes tw-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .tw-caret { display: none; } }
+/* hire call-to-action */
+.hire-in { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 72px); align-items: end; padding-top: clamp(32px, 4vw, 64px); padding-bottom: clamp(32px, 4vw, 64px); border-top: 1px solid var(--line); transform-origin: 0 50%; }
+.hire-t { margin: 0; font-family: var(--f-display); font-stretch: 66%; font-weight: 800; font-size: clamp(44px, 6.4vw, 112px); line-height: .9; text-transform: uppercase; }
+.hire-side { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.hire-side p { margin: 0; color: var(--muted); font-size: clamp(16px, 1.25vw, 19px); line-height: 1.5; max-width: 30em; }
+.hire-sm { padding-top: clamp(48px, 6vw, 96px); }
+.hire-sm .hire-t { font-size: clamp(36px, 4.6vw, 76px); }
+@media (max-width: 860px) { .hire-in { grid-template-columns: 1fr; } }

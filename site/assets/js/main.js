@@ -308,7 +308,7 @@
           </div>
           <h1 class="hx-name">
             <span class="l1">${esc(P.firstName)}</span>
-            <span class="hx-role"><em>${ui("hx.role")}</em></span>
+            <span class="hx-role"><em class="tw" data-words="${esc(ui("hx.roles"))}" aria-label="${esc(ui("hx.roles").split("|").join(", "))}"><span class="tw-text" aria-hidden="true">${esc(ui("hx.roles").split("|")[0])}</span><span class="tw-caret" aria-hidden="true"></span></em></span>
             <span class="l2">${esc(P.lastName)}<sup>(BH)</sup></span>
           </h1>
           <div class="hx-foot">
@@ -349,9 +349,41 @@
             <a class="link-arrow" href="sobre.html?m=design">${ui("about.more")} ${arr}</a>
           </div>
         </div>
+      </section>
+
+      <section class="section hire">
+        <div class="wrap hire-in" data-scale>
+          <h2 class="hire-t">${ui("hire.t")}</h2>
+          <div class="hire-side">
+            <p>${ui("hire.d")}</p>
+            <a class="btn" href="contato.html?m=design">${ui("hire.btn")} ${arr}</a>
+          </div>
+        </div>
       </section>`;
     initCarousels();
     initGlow();
+    initTyper();
+  }
+
+  // hero role: types one role, holds, erases it and types the next
+  function initTyper() {
+    const el = document.querySelector(".tw");
+    if (!el) return;
+    const words = el.dataset.words.split("|"), out = el.querySelector(".tw-text");
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches || words.length < 2) return;
+    clearTimeout(window._tw);
+    let w = 0, n = words[0].length, del = false;
+    const step = () => {
+      const word = words[w];
+      if (!del) {
+        if (n < word.length) { n++; out.textContent = word.slice(0, n); window._tw = setTimeout(step, 70 + Math.random() * 60); return; }
+        del = true; el.classList.remove("typing"); window._tw = setTimeout(step, 2200); return;
+      }
+      el.classList.add("typing");
+      if (n > 0) { n--; out.textContent = word.slice(0, n); window._tw = setTimeout(step, 35); return; }
+      del = false; w = (w + 1) % words.length; window._tw = setTimeout(step, 350);
+    };
+    window._tw = setTimeout(step, 2400);
   }
 
   // click-and-hold drag for the native horizontal scrollers (project rail, slide decks)
@@ -537,6 +569,12 @@
           <div class="more-head"><p class="eyebrow">${ui("project.more")}</p><a class="link-arrow" href="projetos.html">${ui("project.all")} (${pad(projects.length)}) ${arr}</a></div>
           <ol class="ptiles">${more.map(tile).join("")}</ol>
           <a class="back-all" href="projetos.html">← ${ui("project.back")}</a>
+        </section>
+        <section class="wrap hire hire-sm">
+          <div class="hire-in">
+            <h2 class="hire-t">${ui("hire.p.t")}</h2>
+            <div class="hire-side"><p>${ui("hire.p.d")}</p><a class="btn" href="contato.html?m=design">${ui("hire.btn")} ${arr}</a></div>
+          </div>
         </section>
       </article>`;
     initLightbox(el, ".case-cover .media img, .proj-body .media img");
