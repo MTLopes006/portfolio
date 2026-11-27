@@ -890,7 +890,8 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 .svc-plain li[data-scale], .sec-title[data-scale] { transform-origin: 0 50%; }
 
 /* showcases loop in place instead of pinning the page */
-.sc { padding-top: var(--sec); }
+.sc { padding-top: clamp(40px, 5vw, 80px); }
+.sc:first-child { padding-top: var(--sec); }
 .sc-sticky { position: static; height: auto; overflow: hidden; }
 .sc-track { transform-origin: 50% 50%; padding: 0; gap: 0; }
 .sc-track .sc-item { margin-right: clamp(10px, 1.2vw, 18px); }

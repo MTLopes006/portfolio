@@ -320,15 +320,6 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="wrap">
-          <a class="cross" href="fotografia.html" data-scale>
-            <div class="cross-imgs">${series.slice(1, 4).map((x) => media(coverOf(x), "3/4", x.band)).join("")}</div>
-            <div class="cross-copy"><p class="cross-t">${ui("cross.photo")}</p><span class="link-arrow">${ui("cross.go.photo")} ${arr}</span></div>
-          </a>
-        </div>
-      </section>
-
       <section class="section about-teaser">
         <div class="wrap at-grid">
           <div class="at-photo" data-scale>${media(P.photo, "4/5", P.name)}</div>
