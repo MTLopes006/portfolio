@@ -261,7 +261,7 @@
         </a>
       </article>`;
     const showcase = (p) => {
-      const imgs = projectImages(p).slice(0, 9);
+      const imgs = projectImages(p).slice(0, 7);
       return `
       <section class="sc" data-showcase>
         <div class="sc-sticky">
@@ -270,7 +270,7 @@
             <p class="sc-sum">${esc(t(p.summary))}</p>
             <a class="link-arrow" href="projeto.html?p=${esc(p.slug)}">${ui("sc.open")} ${arr}</a>
           </div>
-          <div class="sc-track">${imgs.map((x) => `<figure class="sc-item" style="--r:${esc(x.ratio)}"><img src="${esc(x.src)}" alt="" loading="lazy"></figure>`).join("")}</div>
+          <div class="sc-track">${imgs.map((x) => `<figure class="sc-item"><img src="${esc(x.src)}" alt="" loading="lazy" decoding="async"></figure>`).join("")}</div>
         </div>
       </section>`;
     };
@@ -777,19 +777,22 @@
     io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.08, rootMargin: "0px 0px -5% 0px" });
     document.querySelectorAll("[data-reveal]").forEach((n) => (reduce ? n.classList.add("in") : io.observe(n)));
     scaleEls = reduce ? [] : [...document.querySelectorAll("[data-scale], .proj-body .media")];
+    seen?.disconnect();
+    seen = new IntersectionObserver((es) => es.forEach((e) => { e.target._on = e.isIntersecting; }), { rootMargin: "20% 0px" });
+    scaleEls.forEach((el) => seen.observe(el));
     showcases = [...document.querySelectorAll("[data-showcase]")];
+    showcases.forEach((sc) => { sc._track = sc.querySelector(".sc-track"); });
     showcases.forEach((sc) => sc.classList.toggle("sc-static", reduce));
     sizeShowcases();
-    document.querySelectorAll("[data-showcase] img").forEach((im) => im.addEventListener("load", sizeShowcases, { once: true }));
     tick();
   }
-  let scaleEls = [], showcases = [];
+  let scaleEls = [], showcases = [], seen;
   const clamp01 = (x) => Math.max(0, Math.min(1, x));
   const easeOut = (x) => 1 - Math.pow(1 - x, 3);
   // pinned showcases: the section is as tall as the horizontal distance the track has to travel
   function sizeShowcases() {
     if (reduce) return;
-    showcases.forEach((sc) => { const tr = sc.querySelector(".sc-track"); const dist = Math.max(0, tr.scrollWidth - innerWidth); sc.style.height = `${innerHeight + dist}px`; sc._dist = dist; });
+    showcases.forEach((sc) => { const tr = sc.querySelector(".sc-track"); const dist = Math.max(0, tr.scrollWidth - innerWidth); sc._dist = dist; sc.style.height = `${innerHeight + Math.min(dist, innerHeight * 1.1)}px`; });
     tick();
   }
   let ticking = false;
@@ -802,32 +805,24 @@
       const prog = (r.top + r.height / 2 - vh / 2) / vh;
       el.firstElementChild.style.transform = `translate3d(0, ${(-prog * (parseFloat(el.dataset.parallax) || 0.08) * r.height).toFixed(1)}px, 0) scale(1.08)`;
     });
-    // scale on scroll: elements grow as they enter and shrink a little as they leave the top
-    scaleEls.forEach((el) => {
-      const r = el.getBoundingClientRect();
-      if (r.bottom < -vh * 0.2 || r.top > vh * 1.2) return;
-      const enter = easeOut(clamp01((vh - r.top) / (vh * 0.75)));
-      const leave = easeOut(clamp01(r.bottom / (vh * 0.6)));
-      const k = Math.min(enter, leave);
-      el.style.transform = `scale(${(0.84 + 0.16 * k).toFixed(4)})`;
-      el.style.opacity = (0.35 + 0.65 * k).toFixed(3);
+    // scale on scroll, only for elements on screen: read every rect first, then write (no layout thrash)
+    const vis = scaleEls.filter((el) => el._on);
+    const rects = vis.map((el) => el.getBoundingClientRect());
+    vis.forEach((el, i) => {
+      const r = rects[i];
+      const k = Math.min(easeOut(clamp01((vh - r.top) / (vh * 0.7))), easeOut(clamp01(r.bottom / (vh * 0.5))));
+      el.style.transform = `scale(${(0.88 + 0.12 * k).toFixed(3)})`;
     });
-    if (!reduce) showcases.forEach((sc) => {
-      const r = sc.getBoundingClientRect();
-      if (r.bottom < 0 || r.top > vh) return;
-      const p = clamp01(-r.top / Math.max(1, sc.offsetHeight - vh));
-      const tr = sc.querySelector(".sc-track");
-      tr.style.transform = `translate3d(${(-p * (sc._dist || 0)).toFixed(1)}px, 0, 0)`;
-      const mid = innerWidth / 2;
-      tr.querySelectorAll(".sc-item").forEach((it) => {
-        const b = it.getBoundingClientRect();
-        const d = Math.min(1, Math.abs(b.left + b.width / 2 - mid) / innerWidth);
-        it.style.transform = `scale(${(1 - d * 0.28).toFixed(4)})`;
-        it.firstElementChild.style.transform = `scale(${(1.12 - (1 - d) * 0.12).toFixed(4)})`;
-        it.style.opacity = (1 - d * 0.55).toFixed(3);
+    if (!reduce) {
+      const sr = showcases.map((sc) => sc.getBoundingClientRect());
+      showcases.forEach((sc, i) => {
+        const r = sr[i];
+        if (r.bottom < 0 || r.top > vh) return;
+        const p = clamp01(-r.top / Math.max(1, r.height - vh));
+        const enter = easeOut(clamp01((vh - r.top) / vh));
+        sc._track.style.transform = `translate3d(${(-p * (sc._dist || 0)).toFixed(1)}px, 0, 0) scale(${(0.9 + 0.1 * enter).toFixed(3)})`;
       });
-      sc.style.setProperty("--p", p.toFixed(4));
-    });
+    }
     document.querySelector(".site-header")?.classList.toggle("is-scrolled", scrollY > 24);
     const bar = document.querySelector(".progress span");
     if (bar) { const h = document.documentElement.scrollHeight - vh; bar.style.transform = `scaleX(${h > 0 ? Math.min(1, scrollY / h) : 0})`; }
