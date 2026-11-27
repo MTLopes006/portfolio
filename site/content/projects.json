@@ -837,16 +837,109 @@
         {
           "type": "chapter",
           "kicker": {
-            "pt": "Cifra Club · Instagram · Tim Bernardes, “BB”",
-            "en": "Cifra Club · Instagram · Tim Bernardes, “BB”"
+            "pt": "Cifra Club · espanhol · 2025",
+            "en": "Cifra Club · Spanish · 2025"
+          },
+          "title": {
+            "pt": "Black November",
+            "en": "Black November"
+          },
+          "text": {
+            "pt": "Black Friday do Cifra Club para o público de língua espanhola, com até 60% de desconto no PRO. Laranja quente, moedas douradas e o app sempre na cena, ao lado de quem toca.",
+            "en": "Cifra Club's Black Friday for Spanish-speaking users, with up to 60% off PRO. Warm orange, gold coins and the app always in the scene, next to the player."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cifra-club/bf-destaque-1.jpg",
+                  "ratio": "2000/494"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cifra-club/bf-destaque-2.jpg",
+                  "ratio": "2000/494"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cifra-club/bf-mobile-1.jpg",
+                  "ratio": "936/936"
+                },
+                {
+                  "img": "assets/img/projetos/cifra-club/bf-mobile-2.jpg",
+                  "ratio": "936/936"
+                },
+                {
+                  "img": "assets/img/projetos/cifra-club/bf-mobile-3.jpg",
+                  "ratio": "936/936"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Destaques do site no desktop e no celular",
+            "en": "Site banners on desktop and mobile"
+          }
+        },
+        {
+          "type": "ads",
+          "items": [
+            {
+              "frames": [
+                "assets/img/projetos/cifra-club/bf-ha-1.jpg",
+                "assets/img/projetos/cifra-club/bf-ha-2.jpg"
+              ],
+              "w": 970,
+              "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/cifra-club/bf-ha-q1.jpg",
+                "assets/img/projetos/cifra-club/bf-ha-q2.jpg"
+              ],
+              "w": 300,
+              "h": 250
+            }
+          ],
+          "caption": {
+            "pt": "House ads com as duas mensagens se alternando",
+            "en": "House ads alternating the two messages"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Cifra Club · Instagram",
+            "en": "Cifra Club · Instagram"
           },
           "title": {
             "pt": "Social media",
             "en": "Social media"
           },
           "text": {
-            "pt": "Fotografia de cena e títulos em caixa alta, com o laranja do Cifra Club como fio condutor. No meio do carrossel, o acorde da música aparece como diagrama.",
-            "en": "Staged photography and all-caps titles, with Cifra Club orange as the thread. Midway through, the song's chord shows up as a diagram."
+            "pt": "Três formatos de carrossel: artista em destaque, ranking de cifras e conteúdo didático. Foto em cena, cifra sobre a imagem e o laranja do Cifra Club amarrando tudo.",
+            "en": "Three carousel formats: featured artist, chord rankings and how-to content. Staged photos, chords over the image and Cifra Club orange tying it together."
           }
         },
         {
@@ -882,8 +975,67 @@
             }
           ],
           "caption": {
-            "pt": "Os 9 slides do carrossel",
-            "en": "The carousel's 9 slides"
+            "pt": "Tim Bernardes, “BB”: no meio do carrossel, o acorde da música vira diagrama",
+            "en": "Tim Bernardes, “BB”: midway through, the song's chord becomes a diagram"
+          }
+        },
+        {
+          "type": "deck",
+          "ratio": "4/5",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-mpb-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-mpb-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-mpb-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-mpb-04.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-mpb-06.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-mpb-09.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-mpb-11.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "As 10 músicas de MPB mais tocadas do Cifra Club: a cifra de cada uma sobre o retrato do artista",
+            "en": "Cifra Club's 10 most-played MPB songs: each one's chords over the artist's portrait"
+          }
+        },
+        {
+          "type": "deck",
+          "ratio": "4/5",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-violao-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-violao-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-violao-05.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-violao-06.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-violao-08.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/cifra-violao-10.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "10 dúvidas de quem começa no violão: a pergunta é o título, a resposta cabe em poucas linhas",
+            "en": "10 questions beginners ask about the guitar: the question is the headline, the answer fits in a few lines"
           }
         },
         {
@@ -1208,16 +1360,230 @@
         {
           "type": "chapter",
           "kicker": {
-            "pt": "Letras · Instagram · A quinta geração do K-pop",
-            "en": "Letras · Instagram · K-pop's fifth generation"
+            "pt": "Letras · cursos",
+            "en": "Letras · courses"
+          },
+          "title": {
+            "pt": "Idiomas com música",
+            "en": "Languages through music"
+          },
+          "text": {
+            "pt": "Capas para as aulas de idiomas com música. Nas quadradas, o artista aparece em preto e branco e ganha cor quando o mouse passa por cima. Cada idioma tem a sua moldura: azul e vermelho no inglês, amarelo e verde no espanhol.",
+            "en": "Covers for the language-through-music lessons. On the square ones the artist sits in black and white and turns to colour on hover. Each language has its own frame: blue and red for English, yellow and green for Spanish."
+          }
+        },
+        {
+          "type": "swap",
+          "cols": 4,
+          "imgs": [
+            {
+              "img": "assets/img/projetos/letras/idiomas-amy-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-amy.jpg",
+              "label": {
+                "pt": "Amy Winehouse",
+                "en": "Amy Winehouse"
+              }
+            },
+            {
+              "img": "assets/img/projetos/letras/idiomas-beyonce-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-beyonce.jpg",
+              "label": {
+                "pt": "Beyoncé",
+                "en": "Beyoncé"
+              }
+            },
+            {
+              "img": "assets/img/projetos/letras/idiomas-harry-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-harry.jpg",
+              "label": {
+                "pt": "Harry Styles",
+                "en": "Harry Styles"
+              }
+            },
+            {
+              "img": "assets/img/projetos/letras/idiomas-bob-marley-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-bob-marley.jpg",
+              "label": {
+                "pt": "Bob Marley",
+                "en": "Bob Marley"
+              }
+            },
+            {
+              "img": "assets/img/projetos/letras/idiomas-michael-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-michael.jpg",
+              "label": {
+                "pt": "Michael Jackson",
+                "en": "Michael Jackson"
+              }
+            },
+            {
+              "img": "assets/img/projetos/letras/idiomas-abba-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-abba.jpg",
+              "label": {
+                "pt": "ABBA",
+                "en": "ABBA"
+              }
+            },
+            {
+              "img": "assets/img/projetos/letras/idiomas-taylor-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-taylor.jpg",
+              "label": {
+                "pt": "Taylor Swift",
+                "en": "Taylor Swift"
+              }
+            },
+            {
+              "img": "assets/img/projetos/letras/idiomas-karol-g-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-karol-g.jpg",
+              "label": {
+                "pt": "Karol G",
+                "en": "Karol G"
+              }
+            }
+          ],
+          "caption": {
+            "pt": "Passe o mouse (ou toque) para ver a versão colorida. 8 de mais de 35 capas",
+            "en": "Hover (or tap) to see the colour version. 8 of more than 35 covers"
+          }
+        },
+        {
+          "type": "gallery",
+          "cols": 4,
+          "ratio": "1280/720",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/letras/aula-becky-g.jpg"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-saja-boys.jpg"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-john-lennon.jpg"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-bts.jpg"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-bibi.jpg"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-rihanna.jpg"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-foo-fighters.jpg"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-taylor-swift.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "Thumbs dos vídeos: um trecho da letra em caixa alta, o artista recortado e o idioma na moldura",
+            "en": "Video thumbnails: a line from the lyrics in caps, the artist cut out and the language on the frame"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Letras · site",
+            "en": "Letras · site"
+          },
+          "title": {
+            "pt": "House ads",
+            "en": "House ads"
+          },
+          "text": {
+            "pt": "Anúncios que ficam no ar o ano todo dentro do Letras: assinatura, curso de inglês, envio de letras e o app. A base é sempre verde-limão e roxo, com a foto em recorte e uma mensagem por quadro.",
+            "en": "Ads that run all year inside Letras: subscription, the English course, lyric submissions and the app. Always a lime and purple base, a cut-out photo and one message per frame."
+          }
+        },
+        {
+          "type": "ads",
+          "items": [
+            {
+              "frames": [
+                "assets/img/projetos/letras/ha-assine-1.jpg",
+                "assets/img/projetos/letras/ha-assine-2.jpg"
+              ],
+              "w": 970,
+              "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/ha-assine-q1.jpg",
+                "assets/img/projetos/letras/ha-assine-q2.jpg"
+              ],
+              "w": 300,
+              "h": 250
+            }
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
+          }
+        },
+        {
+          "type": "ads",
+          "items": [
+            {
+              "frames": [
+                "assets/img/projetos/letras/ha-ingles-1.jpg",
+                "assets/img/projetos/letras/ha-ingles-2.jpg"
+              ],
+              "w": 970,
+              "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/ha-ingles-q1.jpg",
+                "assets/img/projetos/letras/ha-ingles-q2.jpg"
+              ],
+              "w": 300,
+              "h": 250
+            }
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
+          }
+        },
+        {
+          "type": "ads",
+          "items": [
+            {
+              "frames": [
+                "assets/img/projetos/letras/ha-contribua-1.jpg",
+                "assets/img/projetos/letras/ha-contribua-2.jpg"
+              ],
+              "w": 970,
+              "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/ha-app-1.jpg",
+                "assets/img/projetos/letras/ha-app-2.jpg"
+              ],
+              "w": 970,
+              "h": 250
+            }
+          ],
+          "caption": {
+            "pt": "Cada anúncio alterna duas mensagens",
+            "en": "Each ad alternates two messages"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Letras · Instagram",
+            "en": "Letras · Instagram"
           },
           "title": {
             "pt": "Social media",
             "en": "Social media"
           },
           "text": {
-            "pt": "Colagem com recortes de papel, fita e estrelas sobre o roxo do Letras. As fotos dos grupos entram como polaroides, e o texto fica sempre em blocos curtos.",
-            "en": "Paper cut-outs, tape and stars over Letras purple. Group photos come in as polaroids and the copy stays in short blocks."
+            "pt": "Carrosséis de análise sobre música e cultura pop. Colagem com recortes de papel, fita e polaroides, e o texto sempre em blocos curtos.",
+            "en": "Analysis carousels on music and pop culture. Collage with paper cut-outs, tape and polaroids, and copy always in short blocks."
           }
         },
         {
@@ -1256,8 +1622,42 @@
             }
           ],
           "caption": {
-            "pt": "Os 10 slides, na ordem em que foram publicados",
-            "en": "All 10 slides, in publishing order"
+            "pt": "A quinta geração do K-pop",
+            "en": "K-pop's fifth generation"
+          }
+        },
+        {
+          "type": "deck",
+          "ratio": "4/5",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-05.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-07.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-09.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-10.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-hoquei-13.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "A cultura de fandoms fez o hóquei voltar a crescer? Do Drive to Survive aos livros de romance que levaram um público novo aos jogos",
+            "en": "Did fandom culture bring hockey back? From Drive to Survive to the romance novels that brought a new crowd to the games"
           }
         },
         {
@@ -1406,6 +1806,383 @@
         {
           "img": "assets/img/projetos/destaques/letras-misterio-desktop.jpg",
           "focus": "52% 50%"
+        }
+      ]
+    },
+    {
+      "slug": "cifra-club-30-anos",
+      "title": {
+        "pt": "Cifra Club 30 anos",
+        "en": "Cifra Club 30 years"
+      },
+      "client": {
+        "pt": "Cifra Club · Studio Sol",
+        "en": "Cifra Club · Studio Sol"
+      },
+      "role": {
+        "pt": "Direção de arte, peças da campanha e conceito de produto",
+        "en": "Art direction, campaign pieces & product concept"
+      },
+      "tags": {
+        "pt": "Campanha · Direção de arte · Produto",
+        "en": "Campaign · Art direction · Product"
+      },
+      "year": "2025–2026",
+      "category": "campanhas",
+      "tone": "#7A4A22",
+      "summary": {
+        "pt": "Os 30 anos do Cifra Club caíram na virada para 2026. A campanha de fim de ano tratou a assinatura como presente para quem quer tocar mais no ano novo.",
+        "en": "Cifra Club turned 30 at the turn of 2026. The year-end campaign framed the subscription as a gift for anyone who wants to play more in the new year."
+      },
+      "cover": "assets/img/projetos/cifra-club-30-anos/kv-1.jpg",
+      "coverRatio": "2400/1351",
+      "thumb": "assets/img/thumbs/cifra-club-30-anos.jpg",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Campanha de Natal e Ano Novo que marcou os 30 anos do Cifra Club, com o PRO com até 67% de desconto. Músicos fotografados em estúdio, um cenário de madeira com luz quente e a árvore de Natal ao fundo: a mesma cena do story ao banner do site.",
+            "en": "The Christmas and New Year campaign that marked Cifra Club's 30th birthday, with up to 67% off PRO. Musicians shot in the studio, a warm-lit wooden set and the Christmas tree behind them: one scene from story to site banner."
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Natal e Ano Novo · 2025",
+            "en": "Christmas & New Year · 2025"
+          },
+          "title": {
+            "pt": "Key visual",
+            "en": "Key visual"
+          },
+          "text": {
+            "pt": "Fotos de estúdio recortadas e montadas sobre o cenário. O selo de 30 anos em dourado assina todas as peças.",
+            "en": "Studio photos cut out and placed on the set. The gold 30-year seal signs every piece."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cifra-club-30-anos/kv-1.jpg",
+                  "ratio": "2400/1351"
+                },
+                {
+                  "img": "assets/img/projetos/cifra-club-30-anos/kv-2.jpg",
+                  "ratio": "2400/1351"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
+          }
+        },
+        {
+          "type": "assets",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/asset-cenario.jpg",
+              "ratio": "2000/1143",
+              "label": {
+                "pt": "Cenário",
+                "en": "Set"
+              }
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/asset-trio.webp",
+              "ratio": "1100/1125",
+              "label": {
+                "pt": "Trio",
+                "en": "Trio"
+              }
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/asset-violao.webp",
+              "ratio": "800/1169",
+              "label": {
+                "pt": "Violão",
+                "en": "Acoustic"
+              }
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/asset-guitarra-1.webp",
+              "ratio": "900/996",
+              "label": {
+                "pt": "Guitarra",
+                "en": "Electric"
+              }
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/asset-arvore.webp",
+              "ratio": "600/1208",
+              "label": {
+                "pt": "Árvore",
+                "en": "Tree"
+              }
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/asset-ukulele.webp",
+              "ratio": "318/727",
+              "label": {
+                "pt": "Ukulele",
+                "en": "Ukulele"
+              }
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/asset-amplificador.webp",
+              "ratio": "600/584",
+              "label": {
+                "pt": "Amplificador",
+                "en": "Amp"
+              }
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/asset-presentes.webp",
+              "ratio": "600/369",
+              "label": {
+                "pt": "Presentes",
+                "en": "Gifts"
+              }
+            }
+          ],
+          "caption": {
+            "pt": "Os recortes que montam todas as peças",
+            "en": "The cut-outs behind every piece"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Peças",
+            "en": "Pieces"
+          },
+          "title": {
+            "pt": "Do story ao site",
+            "en": "From story to site"
+          },
+          "text": {
+            "pt": "Nos formatos verticais a foto ocupa quase tudo. Nos horizontais, o texto ganha espaço à esquerda e o músico fica do lado da árvore.",
+            "en": "In vertical formats the photo takes almost everything. In horizontal ones, the copy gets room on the left and the musician stands by the tree."
+          }
+        },
+        {
+          "type": "gallery",
+          "cols": 5,
+          "ratio": "828/1866",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/story-1.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/story-2.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/story-3.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/story-4.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/story-5.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "Stories",
+            "en": "Stories"
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cifra-club-30-anos/destaque-1.jpg",
+                  "ratio": "2000/494"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cifra-club-30-anos/mobile-1.jpg",
+                  "ratio": "936/936"
+                },
+                {
+                  "img": "assets/img/projetos/cifra-club-30-anos/mobile-2.jpg",
+                  "ratio": "936/936"
+                },
+                {
+                  "img": "assets/img/projetos/cifra-club-30-anos/inapp-1.jpg",
+                  "ratio": "900/1200"
+                },
+                {
+                  "img": "assets/img/projetos/cifra-club-30-anos/inapp-3.jpg",
+                  "ratio": "900/1200"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Destaque do site, versões para celular e mensagens no app",
+            "en": "Site banner, mobile versions and in-app messages"
+          }
+        },
+        {
+          "type": "ads",
+          "items": [
+            {
+              "frames": [
+                "assets/img/projetos/cifra-club-30-anos/ha-1.jpg",
+                "assets/img/projetos/cifra-club-30-anos/ha-2.jpg"
+              ],
+              "w": 970,
+              "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/cifra-club-30-anos/ha-q1.jpg",
+                "assets/img/projetos/cifra-club-30-anos/ha-q2.jpg"
+              ],
+              "w": 300,
+              "h": 250
+            }
+          ],
+          "caption": {
+            "pt": "House ads",
+            "en": "House ads"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Instagram",
+            "en": "Instagram"
+          },
+          "title": {
+            "pt": "Social media",
+            "en": "Social media"
+          },
+          "text": {
+            "pt": "Posts de oferta com a mesma luz da campanha. O presente aparece como caixa fechada, e o desconto só no último quadro.",
+            "en": "Offer posts in the campaign's light. The gift shows up as a closed box, and the discount only in the last frame."
+          }
+        },
+        {
+          "type": "deck",
+          "ratio": "4/5",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/social-1.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/social-2.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/social-3.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/social-4.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/social-5.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/social-8.jpg"
+            }
+          ]
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Conceito de produto",
+            "en": "Product concept"
+          },
+          "title": {
+            "pt": "Camisas comemorativas",
+            "en": "Anniversary shirts"
+          },
+          "text": {
+            "pt": "Propostas de camisa para os 30 anos: oversized em algodão canelado, com a marca discreta na frente e o violão grande nas costas, e uma polo com gola branca e o escudo do violão.",
+            "en": "Shirt proposals for the 30th: an oversized ribbed-cotton tee with a small mark on the front and a large guitar on the back, and a polo with a white collar and the guitar crest."
+          }
+        },
+        {
+          "type": "gallery",
+          "cols": 5,
+          "ratio": "1/1",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/camisa-frente.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/camisa-costas.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/camisa-bolso.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/camisa-polo.jpg"
+            },
+            {
+              "img": "assets/img/projetos/cifra-club-30-anos/camisa-polo-laranja.jpg"
+            }
+          ]
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Entregas",
+            "en": "Deliverables"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Campanha",
+                "en": "Campaign"
+              },
+              "value": {
+                "pt": "Key visual, stories, destaques do site, mensagens no app e house ads",
+                "en": "Key visual, stories, site banners, in-app messages and house ads"
+              }
+            },
+            {
+              "label": {
+                "pt": "Social media",
+                "en": "Social media"
+              },
+              "value": {
+                "pt": "Posts e carrossel de oferta",
+                "en": "Offer posts and carousel"
+              }
+            },
+            {
+              "label": {
+                "pt": "Produto",
+                "en": "Product"
+              },
+              "value": {
+                "pt": "Conceitos de camisa comemorativa",
+                "en": "Anniversary shirt concepts"
+              }
+            }
+          ]
         }
       ]
     },
@@ -1887,8 +2664,23 @@
         {
           "type": "lead",
           "text": {
-            "pt": "Perfumaria de ambientes atendida como freelancer pela Válore: social media, conteúdo educativo, imagens de produto e material de ponto de venda, com luz quente e cenários domésticos em todas as peças.",
-            "en": "A home-fragrance brand I serve as a freelancer through Válore: social media, educational content, product imagery and point-of-sale material, with warm light and home settings across every piece."
+            "pt": "Perfumaria de ambientes atendida como freelancer pela Válore. O trabalho cobre o que a marca mostra para quem compra, nas redes, e o que ela leva para lojistas e revendas: expositor e apresentação comercial.",
+            "en": "A home-fragrance brand I serve as a freelancer through Válore. The work covers what the brand shows shoppers on social media and what it takes to retailers and resellers: a display stand and a sales deck."
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Instagram · guia de conteúdo",
+            "en": "Instagram · content guide"
+          },
+          "title": {
+            "pt": "Social media",
+            "en": "Social media"
+          },
+          "text": {
+            "pt": "Cada fragrância tem uma cena própria, com luz quente e elementos ligados ao aroma, como frutas, folhas e especiarias. O feed mistura lançamentos, guias de uso, mito ou verdade e perguntas para a comunidade.",
+            "en": "Each fragrance has its own scene, with warm light and elements tied to the scent, such as fruit, leaves and spices. The feed mixes launches, how-to guides, myth-or-fact and questions for the community."
           }
         },
         {
@@ -1914,14 +2706,6 @@
           "caption": {
             "pt": "",
             "en": ""
-          },
-          "sideTitle": {
-            "pt": "Social media",
-            "en": "Social media"
-          },
-          "sideText": {
-            "pt": "Posts de produto, conteúdo educativo e interação com a comunidade. Cada fragrância tem uma cena própria, com luz quente e elementos ligados ao aroma, como frutas, folhas e especiarias.",
-            "en": "Product posts, educational content and community engagement. Each fragrance has its own scene, with warm light and elements tied to the scent, such as fruit, leaves and spices."
           }
         },
         {
@@ -1990,7 +2774,11 @@
           }
         },
         {
-          "type": "text",
+          "type": "chapter",
+          "kicker": {
+            "pt": "Catálogo e e-commerce",
+            "en": "Catalogue & e-commerce"
+          },
           "title": {
             "pt": "Imagens de produto",
             "en": "Product imagery"
@@ -2062,14 +2850,27 @@
           }
         },
         {
-          "type": "text",
+          "type": "chapter",
+          "kicker": {
+            "pt": "Impressos",
+            "en": "Print"
+          },
           "title": {
             "pt": "Ponto de venda",
             "en": "Point of sale"
           },
           "text": {
-            "pt": "Expositor para revendas e lojas parceiras, com arquivo fechado para gráfica.",
-            "en": "A display stand for resellers and partner stores, with print-ready files."
+            "pt": "Expositor para revendas e lojas parceiras, com arquivo fechado para gráfica. No topo, a frase que resume a linha: da limpeza ao perfume, aromas que transformam ambientes.",
+            "en": "A display stand for resellers and partner stores, with print-ready files. On top, the line that sums up the range: from cleaning to perfume, scents that transform a room."
+          }
+        },
+        {
+          "type": "full",
+          "img": "assets/img/projetos/pantanal-aromas/expositor.webp",
+          "ratio": "2000/1125",
+          "caption": {
+            "pt": "",
+            "en": ""
           }
         },
         {
@@ -2082,23 +2883,82 @@
               },
               "imgs": [
                 {
-                  "img": "assets/img/projetos/pantanal-aromas/expositor.webp",
-                  "ratio": "2000/1125"
+                  "img": "assets/img/projetos/pantanal-aromas/expositor-detalhe-1.jpg"
                 },
                 {
-                  "img": "assets/img/projetos/pantanal-aromas/expositor-detalhe-1.jpg",
-                  "ratio": "960/1220"
-                },
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/expositor-detalhe-2.jpg",
-                  "ratio": "960/1220"
+                  "img": "assets/img/projetos/pantanal-aromas/expositor-detalhe-2.jpg"
                 }
               ]
             }
           ],
           "caption": {
-            "pt": "Expositor e detalhes",
-            "en": "Display stand and details"
+            "pt": "Detalhes do expositor",
+            "en": "Display details"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "B2B",
+            "en": "B2B"
+          },
+          "title": {
+            "pt": "Apresentação comercial",
+            "en": "Sales deck"
+          },
+          "text": {
+            "pt": "Material para lojistas e revendas. A história da marca vira uma linha do tempo de 2020 a 2025, até os mais de 400 pontos de venda, e os números do digital mostram a procura que a marca gera: mais de 5 mil seguidores, 180 mil visualizações por ano e 230 influenciadores parceiros.",
+            "en": "Material for retailers and resellers. The brand's story becomes a 2020–2025 timeline, up to its 400+ points of sale, and the digital numbers show the demand it creates: over 5,000 followers, 180,000 views a year and 230 partner influencers."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/apresentacao-1.webp",
+                  "ratio": "2000/1126"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/lavanda.webp",
+                  "ratio": "1278/1250"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/alecrim.webp",
+                  "ratio": "1278/1250"
+                },
+                {
+                  "img": "assets/img/projetos/pantanal-aromas/apresentacao-2.webp",
+                  "ratio": "2000/1126"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
+          }
+        },
+        {
+          "type": "full",
+          "img": "assets/img/projetos/pantanal-aromas/banner-final.webp",
+          "ratio": "2400/1339",
+          "caption": {
+            "pt": "Encerramento da apresentação: essência, afeto, acolhimento",
+            "en": "The deck's closing slide: essence, affection, comfort"
           }
         },
         {
@@ -2114,8 +2974,8 @@
                 "en": "Social media"
               },
               "value": {
-                "pt": "Posts, carrosséis e conteúdo educativo",
-                "en": "Posts, carousels & educational content"
+                "pt": "Posts, carrosséis e guia de conteúdo",
+                "en": "Posts, carousels & content guide"
               }
             },
             {
@@ -2134,16 +2994,26 @@
                 "en": "Print"
               },
               "value": {
-                "pt": "Expositor e material comercial",
-                "en": "Display stand & sales collateral"
+                "pt": "Expositor para ponto de venda",
+                "en": "Point-of-sale display stand"
+              }
+            },
+            {
+              "label": {
+                "pt": "Apresentação comercial",
+                "en": "Sales deck"
+              },
+              "value": {
+                "pt": "Linha do tempo da marca e resultados do digital para lojistas (B2B)",
+                "en": "Brand timeline and digital results for retailers (B2B)"
               }
             }
           ]
         }
       ],
       "summary": {
-        "pt": "Uma perfumaria de ambientes com a mesma atmosfera do feed ao expositor da loja: luz quente, cenários domésticos e uma cena por fragrância.",
-        "en": "A home-fragrance brand with the same atmosphere from feed to in-store display: warm light, home settings and one scene per fragrance."
+        "pt": "Uma perfumaria de ambientes com a mesma atmosfera do feed ao expositor e à apresentação para lojistas: luz quente, cenários domésticos e uma cena por fragrância.",
+        "en": "A home-fragrance brand with the same atmosphere from feed to display stand to the retailer deck: warm light, home settings and one scene per fragrance."
       },
       "slug": "pantanal-aromas",
       "client": {
@@ -2153,8 +3023,8 @@
       "tone": "#5E7F47",
       "coverRatio": "2000/1126",
       "role": {
-        "pt": "Social media, imagens de produto e ponto de venda",
-        "en": "Social media, product imagery & point of sale"
+        "pt": "Social media, imagens de produto, ponto de venda e apresentação comercial",
+        "en": "Social media, product imagery, point of sale & sales deck"
       },
       "thumb": "assets/img/thumbs/pantanal-aromas.jpg",
       "cover": "assets/img/projetos/pantanal-aromas/capa.webp",
@@ -2163,8 +3033,8 @@
         "en": "Pantanal Aromas"
       },
       "tags": {
-        "pt": "Social media · Imagens de produto · Ponto de venda",
-        "en": "Social media · Product imagery · Point of sale"
+        "pt": "Social media · Imagens de produto · Ponto de venda · B2B",
+        "en": "Social media · Product imagery · Point of sale · B2B"
       },
       "year": 2026,
       "category": "clientes",
@@ -2205,29 +3075,47 @@
         {
           "type": "lead",
           "text": {
-            "pt": "Rebranding acadêmico de uma marca de cosméticos, desenvolvido em trio na disciplina de Design Gráfico da UFMG: análise da marca, nova identidade e embalagens.",
-            "en": "An academic rebrand of a cosmetics company, developed as a trio in UFMG's Graphic Design course: brand analysis, new identity and packaging."
+            "pt": "Rebranding acadêmico da Vizzela, marca brasileira de maquiagem vegana, feito em trio com Mikaela Aleixo e Rafaela Rodríguez na disciplina Design de Percurso Gráfico (UFMG, 2025/1). Partimos dos valores da marca para chegar a uma identidade mais próxima, legível e alegre.",
+            "en": "An academic rebrand of Vizzela, a Brazilian vegan make-up brand, made as a trio with Mikaela Aleixo and Rafaela Rodríguez for the Design de Percurso Gráfico course (UFMG, 2025/1). We started from the brand's values to reach a warmer, more legible and more joyful identity."
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Pesquisa",
+            "en": "Research"
+          },
+          "title": {
+            "pt": "Ponto de partida",
+            "en": "Starting point"
+          },
+          "text": {
+            "pt": "Uma nuvem de palavras resumiu como a marca se vê. Dela saíram os valores que guiaram o resto do projeto: ser sustentável, prezar pela inclusão e ter samba no pé.",
+            "en": "A word cloud summed up how the brand sees itself. It gave us the values that guided the rest of the project: being sustainable, being inclusive and having samba in its step."
           }
         },
         {
           "type": "full",
-          "img": "assets/img/projetos/rebranding-vizzela/logo.jpg",
-          "ratio": "1920/766",
+          "img": "assets/img/projetos/rebranding-vizzela/nuvem.jpg",
+          "ratio": "1920/1080",
           "caption": {
-            "pt": "A nova Vizzela: marca em verde floresta",
-            "en": "The new Vizzela: wordmark on forest green"
-          },
-          "parallax": false
+            "pt": "Nuvem de palavras",
+            "en": "Word cloud"
+          }
         },
         {
-          "type": "text",
+          "type": "chapter",
+          "kicker": {
+            "pt": "Identidade",
+            "en": "Identity"
+          },
           "title": {
-            "pt": "Panda unicórnio",
-            "en": "Unicorn panda"
+            "pt": "A nova Vizzela",
+            "en": "The new Vizzela"
           },
           "text": {
-            "pt": "O mascote ganha um chifre e vira o símbolo da marca. Ele aparece sozinho nas tampas e embalagens e, dentro do selo circular, reúne os compromissos da Vizzela: vegana, cruelty free e 100% livre de parabenos.",
-            "en": "The mascot gains a horn and becomes the brand symbol. It appears on its own on lids and packaging and, inside the circular seal, gathers Vizzela's commitments: vegan, cruelty-free and 100% paraben-free."
+            "pt": "Saem as maiúsculas espaçadas de 2019 e entra um logotipo em minúsculas, com ponto final. A marca fica mais amigável e legível, e o ponto reforça uma voz direta.",
+            "en": "The widely spaced capitals of 2019 give way to a lowercase logotype with a full stop. The brand becomes friendlier and more legible, and the full stop backs a direct voice."
           }
         },
         {
@@ -2240,12 +3128,98 @@
               },
               "imgs": [
                 {
-                  "img": "assets/img/projetos/rebranding-vizzela/selo-panda.jpg",
-                  "ratio": "675/675"
+                  "img": "assets/img/projetos/rebranding-vizzela/antes.jpg",
+                  "ratio": "1920/1080"
                 },
                 {
-                  "img": "assets/img/projetos/rebranding-vizzela/selo-compromissos.jpg",
-                  "ratio": "675/675"
+                  "img": "assets/img/projetos/rebranding-vizzela/depois.jpg",
+                  "ratio": "1920/1080"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Antes, em 2019, e depois",
+            "en": "Before, in 2019, and after"
+          }
+        },
+        {
+          "type": "full",
+          "img": "assets/img/projetos/rebranding-vizzela/logo-anotado.jpg",
+          "ratio": "1920/1080",
+          "caption": {
+            "pt": "",
+            "en": ""
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/marca-rosa.jpg",
+                  "ratio": "1920/1080"
+                },
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/marca-verde.jpg",
+                  "ratio": "1920/1080"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/marca-foto.jpg",
+                  "ratio": "1920/1080"
+                },
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/marca-vz.jpg",
+                  "ratio": "1920/1080"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Aplicações e a assinatura reduzida vz.",
+            "en": "Applications and the short vz. signature"
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Panda unicórnio",
+            "en": "Unicorn panda"
+          },
+          "text": {
+            "pt": "O mascote ganha um chifre e vira o símbolo da marca. Sozinho, ele vai nas tampas e embalagens; dentro do selo circular, reúne os compromissos da Vizzela: vegana, cruelty free e 100% livre de parabenos.",
+            "en": "The mascot gains a horn and becomes the brand symbol. On its own it goes on lids and packaging; inside the circular seal it gathers Vizzela's commitments: vegan, cruelty-free and 100% paraben-free."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/panda.jpg",
+                  "ratio": "1920/1080"
+                },
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/selo.jpg",
+                  "ratio": "1920/1080"
                 }
               ]
             }
@@ -2259,32 +3233,90 @@
           "type": "palette",
           "colors": [
             {
-              "hex": "#051E18",
-              "name": "Verde floresta"
+              "hex": "#10471D",
+              "name": "Verde Vizzela"
+            },
+            {
+              "hex": "#F9A6C4",
+              "name": "Rosa sensação"
             },
             {
               "hex": "#A5CB00",
               "name": "Lima"
             },
             {
-              "hex": "#B1797F",
-              "name": "Rosa"
+              "hex": "#001706",
+              "name": "Verde noite"
             },
             {
-              "hex": "#870032",
-              "name": "Magenta"
+              "hex": "#EEE7D4",
+              "name": "Creme"
             }
           ]
         },
         {
-          "type": "text",
+          "type": "palette",
+          "colors": [
+            {
+              "hex": "#851156",
+              "name": "Vinho"
+            },
+            {
+              "hex": "#279EEC",
+              "name": "Azul"
+            },
+            {
+              "hex": "#C2C9F7",
+              "name": "Lavanda"
+            },
+            {
+              "hex": "#E9FE72",
+              "name": "Limão"
+            },
+            {
+              "hex": "#545E21",
+              "name": "Oliva"
+            }
+          ]
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/tipo-display.jpg",
+                  "ratio": "1920/1080"
+                },
+                {
+                  "img": "assets/img/projetos/rebranding-vizzela/tipo-apoio.jpg",
+                  "ratio": "1920/1080"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Aclonica nos títulos e Be Vietnam nos textos",
+            "en": "Aclonica for headlines, Be Vietnam for text"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Fotografia",
+            "en": "Photography"
+          },
           "title": {
-            "pt": "Embalagens",
-            "en": "Packaging"
+            "pt": "Direção de fotografia",
+            "en": "Photo direction"
           },
           "text": {
-            "pt": "A linha ganha embalagens em verde e rosa, com o panda em destaque. A direção de fotografia leva os produtos para cenas com luz natural, folhagem e cerejas.",
-            "en": "The range gets green and pink packaging with the panda up front. The photo direction places products in scenes with natural light, foliage and cherries."
+            "pt": "Pessoas reais, pele com textura e muita risada, em luz natural. Nos produtos, bambu, folhagem, pedra e cerejas no lugar do fundo infinito.",
+            "en": "Real people, textured skin and plenty of laughter, in natural light. For products, bamboo, foliage, stone and cherries instead of a seamless backdrop."
           }
         },
         {
@@ -2297,25 +3329,13 @@
               },
               "imgs": [
                 {
-                  "img": "assets/img/projetos/rebranding-vizzela/embalagem-po.jpg",
-                  "ratio": "1920/1080"
+                  "img": "assets/img/projetos/rebranding-vizzela/foto-1.jpg"
                 },
                 {
-                  "img": "assets/img/projetos/rebranding-vizzela/embalagem-mascara.jpg",
-                  "ratio": "1920/1080"
+                  "img": "assets/img/projetos/rebranding-vizzela/foto-2.jpg"
                 }
               ]
-            }
-          ],
-          "caption": {
-            "pt": "Pó fixador Fix HD e máscara de cílios No Panda",
-            "en": "Fix HD setting powder and No Panda mascara"
-          },
-          "span": "full"
-        },
-        {
-          "type": "rows",
-          "rows": [
+            },
             {
               "label": {
                 "pt": "",
@@ -2323,33 +3343,147 @@
               },
               "imgs": [
                 {
-                  "img": "assets/img/projetos/rebranding-vizzela/detalhe-tampa.jpg",
-                  "ratio": "640/640"
+                  "img": "assets/img/projetos/rebranding-vizzela/foto-3.jpg"
                 },
                 {
-                  "img": "assets/img/projetos/rebranding-vizzela/detalhe-mascara.jpg",
-                  "ratio": "520/840"
+                  "img": "assets/img/projetos/rebranding-vizzela/foto-4.jpg"
                 }
               ]
             }
           ],
           "caption": {
-            "pt": "Tampa com o panda e caixa da máscara No Panda",
-            "en": "Panda lid and No Panda mascara box"
-          },
-          "sideTitle": {
-            "pt": "Detalhes",
-            "en": "Details"
-          },
-          "sideText": {
-            "pt": "O panda ocupa o centro das tampas e estampa a caixa da máscara No Panda.",
-            "en": "The panda sits at the centre of the lids and is printed on the No Panda mascara box."
+            "pt": "",
+            "en": ""
           }
+        },
+        {
+          "type": "gallery",
+          "cols": 4,
+          "ratio": "1920/1080",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/prod-22.jpg"
+            },
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/prod-23.jpg"
+            },
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/prod-25.jpg"
+            },
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/prod-26.jpg"
+            },
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/prod-27.jpg"
+            },
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/prod-28.jpg"
+            },
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/prod-29.jpg"
+            },
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/prod-24.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "Embalagens da nova linha",
+            "en": "The new range's packaging"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Digital",
+            "en": "Digital"
+          },
+          "title": {
+            "pt": "Site",
+            "en": "Website"
+          },
+          "text": {
+            "pt": "Proposta de e-commerce com a nova identidade: vitrine de lançamentos, compra por categoria e os mais vendidos.",
+            "en": "An e-commerce proposal in the new identity: a launch showcase, shopping by category and the best sellers."
+          }
+        },
+        {
+          "type": "full",
+          "img": "assets/img/projetos/rebranding-vizzela/site-30.jpg",
+          "ratio": "1920/1080",
+          "caption": {
+            "pt": "",
+            "en": ""
+          }
+        },
+        {
+          "type": "pan",
+          "ratio": "1920/1080",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/site-31.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/site-32.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/site-33.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/rebranding-vizzela/site-34.jpg",
+              "ratio": "1920/1080"
+            }
+          ],
+          "caption": {
+            "pt": "Telas do site",
+            "en": "Site screens"
+          }
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Ficha",
+            "en": "Credits"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Equipe",
+                "en": "Team"
+              },
+              "value": {
+                "pt": "Mikaela Aleixo, Matheus Lopes e Rafaela Rodríguez",
+                "en": "Mikaela Aleixo, Matheus Lopes and Rafaela Rodríguez"
+              }
+            },
+            {
+              "label": {
+                "pt": "Disciplina",
+                "en": "Course"
+              },
+              "value": {
+                "pt": "Design de Percurso Gráfico, UFMG, 2025/1",
+                "en": "Design de Percurso Gráfico, UFMG, 2025/1"
+              }
+            },
+            {
+              "label": {
+                "pt": "Entregas",
+                "en": "Deliverables"
+              },
+              "value": {
+                "pt": "Logotipo, mascote, paleta, tipografia, embalagens, direção de fotografia e site",
+                "en": "Logotype, mascot, palette, typography, packaging, photo direction and website"
+              }
+            }
+          ]
         }
       ],
       "summary": {
-        "pt": "Um panda ganha um chifre e vira o símbolo de uma marca de cosméticos, da tampa à embalagem. Rebranding acadêmico em trio.",
-        "en": "A panda gains a horn and becomes the symbol of a cosmetics brand, from lid to box. An academic rebrand made as a trio."
+        "pt": "Um panda ganha um chifre e uma marca de maquiagem vegana ganha voz própria: logotipo em minúsculas, verde e rosa, fotos com gente de verdade. Rebranding acadêmico em trio.",
+        "en": "A panda gains a horn and a vegan make-up brand finds its own voice: a lowercase logotype, green and pink, photos of real people. An academic rebrand made as a trio."
       },
       "slug": "rebranding-vizzela",
       "client": {

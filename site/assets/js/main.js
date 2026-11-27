@@ -502,6 +502,8 @@
       case "assets": { // the cut-outs of a campaign laid out like stickers, each one named
         return `<figure class="b-assets" data-p="assets"><div class="as-board">${imgs.map((m, i) => `<div class="as-item" style="--rot:${(i % 2 ? 1 : -1) * (2 + (i % 3))}deg;--dy:${(i % 3) * 3 - 3}vh;--r:${esc(m.ratio || "1/1")}">${media(m.img, m.ratio || "1/1")}${t(m.label) ? `<span class="as-label">${esc(t(m.label))}</span>` : ""}</div>`).join("")}</div>${cap(b)}</figure>`;
       }
+      case "swap": // square covers in black and white that turn to colour on hover (or on tap)
+        return `<figure class="b-swap" style="--cols:${Number(b.cols) || 4}"><div class="sw-grid">${imgs.map((m, i) => `<button type="button" class="sw-item" aria-label="${esc(t(m.label) || "")}" ${stagger(i, 0.04)}><img src="${esc(m.img)}" alt="" loading="lazy"><img class="on" src="${esc(m.hover)}" alt="" loading="lazy"></button>`).join("")}</div>${cap(b)}</figure>`;
       case "trio": return `<section class="b-trio">${imgs.map((m, i) => `<div ${stagger(i, 0.12)}>${media(m.img, m.ratio)}</div>`).join("")}</section>`;
       case "palette": return `<section class="b-palette" data-reveal><p class="eyebrow">${ui("project.palette")}</p><div class="sw-row">${(b.colors || []).map((c) => `<div class="sw" style="background:${esc(c.hex)};color:${contrast(c.hex)}"><span>${esc(c.name)}</span><span>${esc(c.hex)}</span></div>`).join("")}</div></section>`;
       case "type": return `<section class="b-type" data-reveal><p class="eyebrow">${ui("project.type")}</p><div class="spec"><div><div style="font-family:'${esc(b.family)}';font-size:28px;font-weight:600">${esc(b.family)}</div><div class="muted" style="margin-top:6px">${esc(b.weights || "")}</div></div><div class="big" style="font-family:'${esc(b.family)}'">${esc(b.sample || "Aa")}</div></div></section>`;
@@ -578,6 +580,7 @@
         </section>
       </article>`;
     initLightbox(el, ".case-cover .media img, .proj-body .media img");
+    el.querySelectorAll(".sw-item").forEach((x) => x.addEventListener("click", () => x.classList.toggle("is-on")));
   }
 
   /* ---------- PHOTOGRAPHY ---------- */

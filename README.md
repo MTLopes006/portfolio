@@ -108,6 +108,7 @@ sobrando. Cole o arquivo em https://jsonlint.com para achar o erro.
 O trabalho na Studio Sol fica organizado **por marca**: uma página para o **Cifra Club**, uma
 para o **Letras** e uma para a **Studio Sol** (comunicação interna e Songsift). Cada página tem
 seções com abas fixas no topo (destaques do site, campanhas, app, social media, lojas de apps…).
+Os 30 anos do Cifra Club (campanha de fim de ano e camisas) têm página própria, `cifra-club-30-anos`.
 Projetos de clientes e pessoais (Lapso, Pantanal Aromas, Vizzela, Café Sōseki, Fanzine) têm página própria.
 
 Endereços antigos (`cifra-club-e-letras`, `natal-2025`, `lojas-de-apps` etc.) redirecionam para a
@@ -142,6 +143,7 @@ página da marca.
 | `deck` | **Pilha que se abre:** slides empilhados que se espalham em fila ao rolar; depois dá para arrastar. Para carrosséis de Instagram |
 | `pan` | **Faixa em loop:** uma sequência de telas (ou slides) passando sozinha, arrastável. Para telas de loja de apps |
 | `gallery` | **Galeria:** peças lado a lado na mesma altura, abrem em tela cheia |
+| `swap` | **Capas que ganham cor:** quadradas em preto e branco que viram coloridas ao passar o mouse (ou tocar). Cada item tem `img` (P&B) e `hover` (colorida) |
 | `scatter` | **Cartões espalhados:** uma peça em destaque no centro e as outras em volta, levemente giradas |
 | `palette`, `type`, `typeset` | Paleta de cores e amostras tipográficas |
 | `quote`, `specs` | Frase de destaque e ficha técnica |
