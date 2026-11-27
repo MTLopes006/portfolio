@@ -941,3 +941,7 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 .fb-c { font-family: var(--f-display); font-weight: 800; font-stretch: 62%; text-transform: uppercase; font-size: clamp(64px, 10.5vw, 190px); color: transparent; -webkit-text-stroke: 1.5px color-mix(in srgb, var(--fg) 70%, transparent); }
 .fb-static .fb-track { width: auto; flex-wrap: wrap; }
 .fb-static .fb-set + .fb-set, .fb-static .fb-set > :nth-child(n+3) { display: none; }
+
+/* hero footer: only the intro and the button */
+.hx-foot { grid-template-columns: 1fr !important; }
+.hf-lead { justify-content: space-between; }

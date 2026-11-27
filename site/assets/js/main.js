@@ -317,9 +317,6 @@
               <p>${esc(t(P.heroLead))}</p>
               <a class="btn" href="#trabalho">${ui("hero.cta")} <span class="arr" aria-hidden="true">↓</span></a>
             </div>
-            <a class="hf-link" href="projetos.html"><b>${pad(projects.length)}</b><span>${ui("stat.projects")} ${arr}</span></a>
-            <a class="hf-link" href="#clientes"><b>${pad(clients.length)}</b><span>${ui("stat.clients")} ${arr}</span></a>
-            <a class="hf-link" href="sobre.html?m=design"><b>${esc(t(P.location))}</b><span>${ui("about.more")} ${arr}</span></a>
           </div>
         </div>
       </section>
