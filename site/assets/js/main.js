@@ -264,6 +264,16 @@
     return out.filter((x, i, a) => a.findIndex((y) => y.src === x.src) === i);
   };
 
+  // "Projetos em destaque" as a moving band: wide letters that breathe, a serif phrase and an outlined echo
+  const featBand = () => {
+    const word = (w) => [...w].map((ch, i) => `<span style="--i:${i}">${ch === " " ? "&nbsp;" : esc(ch)}</span>`).join("");
+    const group = `<span class="fb-a">${word(ui("fb.a"))}</span><em class="fb-b">${esc(ui("fb.b"))}</em><span class="fb-c">${esc(ui("fb.a"))}</span><em class="fb-b">${esc(ui("fb.b"))}</em>`;
+    return `<div class="sc-intro fb" data-band>
+      <h2 class="sr-only">${ui("home.featuredMany")}</h2>
+      <div class="fb-track" aria-hidden="true"><div class="fb-set">${group}</div><div class="fb-set">${group}</div></div>
+    </div>`;
+  };
+
   function renderHome() {
     const el = document.querySelector("main");
     const clients = lines(P.clients);
@@ -316,7 +326,7 @@
       </section>
 
       <div class="sc-list" id="trabalho">
-        ${shows.length ? `<div class="wrap sc-intro"><h2 class="sec-title" data-scale>${ui("home.featuredMany")}</h2></div>` : ""}
+        ${shows.length ? featBand() : ""}
         ${shows.map(showcase).join("")}
       </div>
 
@@ -794,16 +804,19 @@
     showcases.forEach((sc, i) => { sc._track = sc.querySelector(".sc-track"); sc._dir = i % 2 ? 1 : -1; sc._x = sc._dir > 0 ? -1 : 0; sc._k = 1; sc.classList.toggle("sc-static", reduce);
       sc.onpointerenter = () => (sc._slow = true); sc.onpointerleave = () => (sc._slow = false); });
     showcases.forEach((sc) => seen.observe(sc));
+    bands = [...document.querySelectorAll("[data-band]")];
+    bands.forEach((b) => { b._track = b.querySelector(".fb-track"); b._x = 0; b._dir = -1; b.classList.toggle("fb-static", reduce); seen.observe(b); });
     sizeShowcases();
-    if (!reduce && showcases.length && !loopRaf) loopRaf = requestAnimationFrame(loop);
+    if (!reduce && (showcases.length || bands.length) && !loopRaf) loopRaf = requestAnimationFrame(loop);
     tick();
   }
-  let scaleEls = [], showcases = [], seen;
+  let scaleEls = [], showcases = [], bands = [], seen;
   const clamp01 = (x) => Math.max(0, Math.min(1, x));
   const easeOut = (x) => 1 - Math.pow(1 - x, 3);
   // looping showcases: the image row is rendered twice and slides forever; scrolling speeds it up
   function sizeShowcases() {
     showcases.forEach((sc) => { sc._w = sc._track.scrollWidth / 2; });
+    bands.forEach((b) => { b._w = b._track.firstElementChild.offsetWidth; });
   }
   let loopRaf = 0, lastT = 0, lastY = scrollY, boost = 0;
   function loop(t) {
@@ -820,7 +833,17 @@
       if (sc._x <= -sc._w) sc._x += sc._w; else if (sc._x > 0) sc._x -= sc._w;
       sc._track.style.transform = `translate3d(${sc._x.toFixed(1)}px, 0, 0) scale(${sc._k.toFixed(3)})`;
     });
-    loopRaf = showcases.length ? requestAnimationFrame(loop) : 0;
+    // the band runs with the scroll direction and leans into fast scrolling
+    bands.forEach((b) => {
+      if (!b._on) return;
+      if (!b._w) b._w = b._track.firstElementChild.offsetWidth;
+      if (Math.abs(dy) > 0.5) b._dir = dy > 0 ? -1 : 1;
+      b._x += b._dir * (70 + boost * 0.6) * dt;
+      if (b._x <= -b._w) b._x += b._w; else if (b._x > 0) b._x -= b._w;
+      const skew = Math.min(12, boost * 0.012) * -b._dir;
+      b._track.style.transform = `translate3d(${b._x.toFixed(1)}px, 0, 0) skewX(${skew.toFixed(2)}deg)`;
+    });
+    loopRaf = showcases.length || bands.length ? requestAnimationFrame(loop) : 0;
   }
   let ticking = false;
   function tick() {
