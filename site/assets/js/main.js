@@ -264,10 +264,9 @@
     return out.filter((x, i, a) => a.findIndex((y) => y.src === x.src) === i);
   };
 
-  // "Projetos em destaque" as a moving band: wide letters that breathe, a serif phrase and an outlined echo
+  // "Projetos em destaque" as a moving band: wide letters, a serif phrase and an outlined echo
   const featBand = () => {
-    const word = (w) => [...w].map((ch, i) => `<span style="--i:${i}">${ch === " " ? "&nbsp;" : esc(ch)}</span>`).join("");
-    const group = `<span class="fb-a">${word(ui("fb.a"))}</span><em class="fb-b">${esc(ui("fb.b"))}</em><span class="fb-c">${esc(ui("fb.a"))}</span><em class="fb-b">${esc(ui("fb.b"))}</em>`;
+    const group = `<span class="fb-a">${esc(ui("fb.a"))}</span><em class="fb-b">${esc(ui("fb.b"))}</em><span class="fb-c">${esc(ui("fb.a"))}</span><em class="fb-b">${esc(ui("fb.b"))}</em>`;
     return `<div class="sc-intro fb" data-band>
       <h2 class="sr-only">${ui("home.featuredMany")}</h2>
       <div class="fb-track" aria-hidden="true"><div class="fb-set">${group}</div><div class="fb-set">${group}</div></div>
