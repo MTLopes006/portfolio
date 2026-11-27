@@ -79,13 +79,6 @@
               "widget": "string"
             },
             {
-              "name": "heroPhoto",
-              "label": "Foto de fundo do hero (design)",
-              "hint": "Uma foto horizontal. Fica em preto e branco desfocada; a lente que segue o mouse mostra a cor.",
-              "widget": "image",
-              "required": false
-            },
-            {
               "name": "heroLead",
               "label": "Frase da home",
               "widget": "object",

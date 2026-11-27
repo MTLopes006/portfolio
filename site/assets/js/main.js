@@ -249,9 +249,6 @@
     const el = document.querySelector("main");
     const clients = lines(P.clients);
     const svc = [1, 2, 3, 4, 5];
-    const heroImg = P.heroPhoto || (series[0] && coverOf(series[0])) || "";
-    const heroSeries = series.find((s) => s.photos.some((f) => f.src === heroImg)) || series[0];
-    const credit = heroSeries ? [heroSeries.band, heroSeries.venue].filter(Boolean).join(", ") : "";
     const shows = projects.filter((p) => p.showcase).slice(0, 4);
     const card = (p) => `
       <article class="r-item pc">
@@ -276,9 +273,7 @@
     };
     el.innerHTML = `
       <section class="hx" id="top">
-        <div class="hx-bg" aria-hidden="true">
-          ${heroImg ? `<img class="hx-base" src="${esc(heroImg)}" alt="" loading="eager"><img class="hx-lens" src="${esc(heroImg)}" alt="" loading="eager"><span class="hx-ring"></span>` : ""}
-        </div>
+        <div class="hx-bg" aria-hidden="true"><span class="hx-g g1"></span><span class="hx-g g2"></span><span class="hx-g g3"></span><span class="hx-noise"></span></div>
         <div class="wrap hx-inner">
           <div class="hx-top">
             <p class="eyebrow">${esc(t(P.available))}</p>
@@ -298,7 +293,6 @@
             <a class="hf-link" href="fotografia.html"><b>${pad(series.length)}</b><span>${ui("stat.series")} ${arr}</span></a>
             <a class="hf-link" href="sobre.html?m=design"><b>${esc(t(P.location))}</b><span>${ui("about.more")} ${arr}</span></a>
           </div>
-          ${credit ? `<p class="hx-credit">${ui("hx.photo")} ${esc(credit)}<span class="hx-hint">. ${ui("hx.hint")}</span></p>` : ""}
         </div>
       </section>
 
@@ -330,25 +324,6 @@
         </div>
       </section>`;
     initCarousels();
-    initLens();
-  }
-
-  // hero lens: a circle that follows the pointer and shows the photo sharp and in colour
-  function initLens() {
-    const hx = document.querySelector(".hx");
-    if (!hx || !hx.querySelector(".hx-lens")) return;
-    const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
-    const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let x = 0, y = 0, cx = 0, cy = 0, raf = 0;
-    const set = (a, b) => { hx.style.setProperty("--lx", `${a}px`); hx.style.setProperty("--ly", `${b}px`); };
-    const loop = () => { cx += (x - cx) * 0.14; cy += (y - cy) * 0.14; set(cx, cy); raf = Math.abs(x - cx) + Math.abs(y - cy) > 0.3 ? requestAnimationFrame(loop) : 0; };
-    const r = hx.getBoundingClientRect();
-    x = cx = r.width * 0.72; y = cy = r.height * 0.38; set(cx, cy);
-    if (fine) {
-      hx.addEventListener("pointermove", (e) => { const b = hx.getBoundingClientRect(); x = e.clientX - b.left; y = e.clientY - b.top; if (still) { cx = x; cy = y; set(x, y); } else if (!raf) raf = requestAnimationFrame(loop); });
-    } else if (!still) {
-      hx.classList.add("hx-drift");
-    }
   }
 
   /* ---------- WORK INDEX ---------- */
