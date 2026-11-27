@@ -184,6 +184,18 @@
               "label": "Marcas e clientes (um por linha, aparece na faixa da home)",
               "widget": "text",
               "required": false
+            },
+            {
+              "name": "clientLogos",
+              "label": "Logos dos clientes (faixa da home)",
+              "hint": "Use PNG com fundo transparente ou SVG. A cor do arquivo não importa: o site mostra todos numa cor só. O nome precisa ser igual ao da lista acima.",
+              "widget": "list",
+              "required": false,
+              "fields": [
+                { "name": "name", "label": "Nome (igual ao da lista)", "widget": "string" },
+                { "name": "logo", "label": "Logo", "widget": "image" },
+                { "name": "ratio", "label": "Proporção largura/altura (ex.: 3 para um logo 3x mais largo que alto)", "widget": "number", "value_type": "float", "required": false }
+              ]
             }
           ]
         },

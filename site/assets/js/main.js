@@ -225,6 +225,13 @@
   }
 
   /* ---------- HOME ---------- */
+  // a client in the marquee: its logo (tinted to one colour with a CSS mask) or, without a logo, its name
+  const clientLogo = (name) => (P.clientLogos || []).find((c) => c && c.logo && String(c.name).trim().toLowerCase() === String(name).trim().toLowerCase());
+  const clientMark = (name, dup) => {
+    const c = clientLogo(name);
+    const hide = dup ? ' aria-hidden="true"' : "";
+    return c ? `<span class="mq-logo" role="img" aria-label="${esc(name)}"${hide} style="--logo:url('${esc(c.logo)}');--ar:${esc(c.ratio || 3)}"></span>` : `<span class="mq-name"${hide}>${esc(name)}</span>`;
+  };
   function renderHome() {
     const el = document.querySelector("main");
     const clients = lines(P.clients);
@@ -276,7 +283,7 @@
         </div>
       </section>
 
-      ${clients.length ? `<section class="marquee" aria-label="${ui("home.clients")}"><div class="marquee-track">${[...clients, ...clients].map((c) => `<span>${esc(c)}</span>`).join("")}</div></section>` : ""}
+      ${clients.length ? `<section class="marquee" aria-label="${ui("home.clients")}"><div class="marquee-track">${[...clients, ...clients].map((c, k) => clientMark(c, k >= clients.length)).join("")}</div></section>` : ""}
 
       <section class="section wrap approach">
         <div class="sec-head" data-reveal><h2 class="sec-title">${ui("ap.title")}</h2></div>

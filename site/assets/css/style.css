@@ -154,8 +154,8 @@ main { min-height: 60vh; }
 }
 
 /* clients marquee */
-.marquee { margin-top: clamp(40px, 5vw, 72px); border-block: 1px solid var(--line); overflow: hidden; }
-.marquee-track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+.marquee { margin-top: clamp(40px, 5vw, 72px); overflow: hidden; }
+.marquee-track { display: flex; align-items: center; width: max-content; animation: marquee 38s linear infinite; }
 .marquee-track span { padding: 22px clamp(24px, 3vw, 48px); font-family: var(--f-display); font-weight: 600; font-size: clamp(20px, 2.2vw, 32px); letter-spacing: -.03em; white-space: nowrap; color: var(--muted); }
 .marquee-track span::after { content: "✦"; margin-left: clamp(24px, 3vw, 48px); font-size: .5em; vertical-align: middle; color: var(--accent); }
 @keyframes marquee { to { transform: translateX(-50%); } }
@@ -840,3 +840,9 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 .pc-info span { font-size: 13px; color: rgba(240,231,211,.75); }
 .pc-go { position: absolute; z-index: 1; right: 16px; bottom: 16px; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: var(--pink); color: #131114; transition: transform .35s var(--ease); }
 .pc a:hover .pc-go { transform: rotate(45deg); }
+
+/* client logos: any transparent PNG/SVG is shown in a single colour (the muted text tone) */
+.mq-logo { display: block; flex: none; height: clamp(28px, 2.6vw, 40px); aspect-ratio: var(--ar, 3); margin: 22px clamp(28px, 3.4vw, 56px); padding: 0 !important; background: var(--muted);
+  -webkit-mask: var(--logo) center / contain no-repeat; mask: var(--logo) center / contain no-repeat; transition: background-color .3s; }
+.marquee-track .mq-logo::after { content: none; }
+.marquee:hover .mq-logo { background: var(--fg); }
