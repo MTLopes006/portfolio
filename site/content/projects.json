@@ -907,24 +907,40 @@
           "items": [
             {
               "frames": [
-                "assets/img/projetos/cifra-club/bf-ha-1.jpg",
-                "assets/img/projetos/cifra-club/bf-ha-2.jpg"
+                "assets/img/projetos/cifra-club/houseads-black-november/970x250_1.jpg",
+                "assets/img/projetos/cifra-club/houseads-black-november/970x250_2.jpg"
               ],
               "w": 970,
               "h": 250
             },
             {
               "frames": [
-                "assets/img/projetos/cifra-club/bf-ha-q1.jpg",
-                "assets/img/projetos/cifra-club/bf-ha-q2.jpg"
+                "assets/img/projetos/cifra-club/houseads-black-november/300x250_1.jpg",
+                "assets/img/projetos/cifra-club/houseads-black-november/300x250_2.jpg"
               ],
               "w": 300,
               "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/cifra-club/houseads-black-november/970x90_1.jpg",
+                "assets/img/projetos/cifra-club/houseads-black-november/970x90_2.jpg"
+              ],
+              "w": 970,
+              "h": 90
+            },
+            {
+              "frames": [
+                "assets/img/projetos/cifra-club/houseads-black-november/320x50_1.jpg",
+                "assets/img/projetos/cifra-club/houseads-black-november/320x50_2.jpg"
+              ],
+              "w": 320,
+              "h": 50
             }
           ],
           "caption": {
-            "pt": "House ads com as duas mensagens se alternando",
-            "en": "House ads alternating the two messages"
+            "pt": "House ads em todos os formatos, com as duas mensagens se alternando",
+            "en": "House ads in every format, alternating the two messages"
           }
         },
         {
@@ -1198,6 +1214,102 @@
               },
               "imgs": [
                 {
+                  "img": "assets/img/projetos/destaques/letras-rosalia-desktop.jpg",
+                  "ratio": "2000/604"
+                },
+                {
+                  "img": "assets/img/projetos/destaques/letras-rosalia-mobile.jpg",
+                  "ratio": "1116/546"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/destaques/letras-menos-e-mais-desktop.jpg",
+                  "ratio": "2000/604"
+                },
+                {
+                  "img": "assets/img/projetos/destaques/letras-menos-e-mais-mobile.jpg",
+                  "ratio": "1116/546"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/destaques/letras-minions-desktop.jpg",
+                  "ratio": "2000/604"
+                },
+                {
+                  "img": "assets/img/projetos/destaques/letras-minions-mobile.jpg",
+                  "ratio": "1116/546"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/destaques/letras-maluma-desktop.jpg",
+                  "ratio": "2000/604"
+                },
+                {
+                  "img": "assets/img/projetos/destaques/letras-maluma-mobile.jpg",
+                  "ratio": "1116/546"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/destaques/letras-olivia-rodrigo-desktop.jpg",
+                  "ratio": "2000/604"
+                },
+                {
+                  "img": "assets/img/projetos/destaques/letras-olivia-rodrigo-mobile.jpg",
+                  "ratio": "1116/546"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/destaques/letras-triple-lavada-desktop.jpg",
+                  "ratio": "2000/604"
+                },
+                {
+                  "img": "assets/img/projetos/destaques/letras-triple-lavada-mobile.jpg",
+                  "ratio": "1116/546"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
                   "img": "assets/img/projetos/destaques/letras-breach-desktop.jpg",
                   "ratio": "2000/604"
                 },
@@ -1219,6 +1331,22 @@
                 },
                 {
                   "img": "assets/img/projetos/destaques/letras-creep-mobile.jpg",
+                  "ratio": "1116/546"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/destaques/letras-sufrale-desktop.jpg",
+                  "ratio": "2000/604"
+                },
+                {
+                  "img": "assets/img/projetos/destaques/letras-sufrale-mobile.jpg",
                   "ratio": "1116/546"
                 }
               ]
@@ -1466,47 +1594,147 @@
                 "pt": "Karol G",
                 "en": "Karol G"
               }
+            },
+            {
+              "img": "assets/img/projetos/letras/idiomas-rbd-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-rbd.jpg",
+              "label": {
+                "pt": "RBD",
+                "en": "RBD"
+              }
+            },
+            {
+              "img": "assets/img/projetos/letras/idiomas-shakira-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-shakira.jpg",
+              "label": {
+                "pt": "Shakira",
+                "en": "Shakira"
+              }
+            },
+            {
+              "img": "assets/img/projetos/letras/idiomas-bad-bunny-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-bad-bunny.jpg",
+              "label": {
+                "pt": "Bad Bunny",
+                "en": "Bad Bunny"
+              }
+            },
+            {
+              "img": "assets/img/projetos/letras/idiomas-sebastian-yatra-pb.jpg",
+              "hover": "assets/img/projetos/letras/idiomas-sebastian-yatra.jpg",
+              "label": {
+                "pt": "Sebastián Yatra",
+                "en": "Sebastián Yatra"
+              }
             }
           ],
           "caption": {
-            "pt": "Passe o mouse (ou toque) para ver a versão colorida. 8 de mais de 35 capas",
-            "en": "Hover (or tap) to see the colour version. 8 of more than 35 covers"
+            "pt": "Passe o mouse (ou toque) para ver a versão colorida. 12 de mais de 40 capas, em inglês e espanhol",
+            "en": "Hover (or tap) to see the colour version. 12 of more than 40 covers, in English and Spanish"
           }
         },
         {
-          "type": "gallery",
-          "cols": 4,
-          "ratio": "1280/720",
+          "type": "pan",
+          "ratio": "16/9",
           "imgs": [
             {
-              "img": "assets/img/projetos/letras/aula-becky-g.jpg"
+              "img": "assets/img/projetos/letras/aula-becky-g.jpg",
+              "ratio": "1280/720"
             },
             {
-              "img": "assets/img/projetos/letras/aula-saja-boys.jpg"
+              "img": "assets/img/projetos/letras/aula-saja-boys.jpg",
+              "ratio": "1280/720"
             },
             {
-              "img": "assets/img/projetos/letras/aula-john-lennon.jpg"
+              "img": "assets/img/projetos/letras/aula-john-lennon.jpg",
+              "ratio": "1280/720"
             },
             {
-              "img": "assets/img/projetos/letras/aula-bts.jpg"
+              "img": "assets/img/projetos/letras/aula-selena-1.jpg",
+              "ratio": "1116/645"
             },
             {
-              "img": "assets/img/projetos/letras/aula-bibi.jpg"
+              "img": "assets/img/projetos/letras/aula-bad-bunny.jpg",
+              "ratio": "1280/720"
             },
             {
-              "img": "assets/img/projetos/letras/aula-rihanna.jpg"
+              "img": "assets/img/projetos/letras/aula-bts.jpg",
+              "ratio": "1280/720"
             },
             {
-              "img": "assets/img/projetos/letras/aula-foo-fighters.jpg"
+              "img": "assets/img/projetos/letras/aula-huntrx.jpg",
+              "ratio": "1280/720"
             },
             {
-              "img": "assets/img/projetos/letras/aula-taylor-swift.jpg"
+              "img": "assets/img/projetos/letras/aula-selena-2.jpg",
+              "ratio": "1116/645"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-ed-sheeran.jpg",
+              "ratio": "1280/720"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-bibi.jpg",
+              "ratio": "1280/720"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-floyymenor.jpg",
+              "ratio": "1280/720"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-rihanna.jpg",
+              "ratio": "1280/720"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-j-hope.jpg",
+              "ratio": "1116/645"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-le-sserafim.jpg",
+              "ratio": "1280/720"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-american-pie.jpg",
+              "ratio": "1280/720"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-selena-3.jpg",
+              "ratio": "1116/645"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-pink.jpg",
+              "ratio": "1280/720"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-stray-kids.jpg",
+              "ratio": "1280/720"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-kt-tunstall.jpg",
+              "ratio": "1280/720"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-selena-4.jpg",
+              "ratio": "1116/645"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-foo-fighters.jpg",
+              "ratio": "1280/720"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-selena-5.jpg",
+              "ratio": "1116/645"
+            },
+            {
+              "img": "assets/img/projetos/letras/aula-taylor-swift.jpg",
+              "ratio": "1280/720"
             }
           ],
           "caption": {
-            "pt": "Thumbs dos vídeos: um trecho da letra em caixa alta, o artista recortado e o idioma na moldura",
-            "en": "Video thumbnails: a line from the lyrics in caps, the artist cut out and the language on the frame"
-          }
+            "pt": "Thumbs dos vídeos: um trecho da letra em caixa alta, o artista recortado e o idioma na moldura. Arraste para os lados",
+            "en": "Video thumbnails: a line from the lyrics in caps, the artist cut out and the language on the frame. Drag sideways"
+          },
+          "size": "sm"
         },
         {
           "type": "chapter",
@@ -1528,24 +1756,48 @@
           "items": [
             {
               "frames": [
-                "assets/img/projetos/letras/ha-assine-1.jpg",
-                "assets/img/projetos/letras/ha-assine-2.jpg"
+                "assets/img/projetos/letras/houseads-assine/970x250_1.jpg",
+                "assets/img/projetos/letras/houseads-assine/970x250_2.jpg"
               ],
               "w": 970,
               "h": 250
             },
             {
               "frames": [
-                "assets/img/projetos/letras/ha-assine-q1.jpg",
-                "assets/img/projetos/letras/ha-assine-q2.jpg"
+                "assets/img/projetos/letras/houseads-assine/300x250_1.jpg",
+                "assets/img/projetos/letras/houseads-assine/300x250_2.jpg"
               ],
               "w": 300,
               "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-assine/970x90_1.jpg",
+                "assets/img/projetos/letras/houseads-assine/970x90_2.jpg"
+              ],
+              "w": 970,
+              "h": 90
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-assine/320x100_1.jpg",
+                "assets/img/projetos/letras/houseads-assine/320x100_2.jpg"
+              ],
+              "w": 320,
+              "h": 100
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-assine/320x50_1.jpg",
+                "assets/img/projetos/letras/houseads-assine/320x50_2.jpg"
+              ],
+              "w": 320,
+              "h": 50
             }
           ],
           "caption": {
-            "pt": "",
-            "en": ""
+            "pt": "Assinatura",
+            "en": "Subscription"
           }
         },
         {
@@ -1553,24 +1805,48 @@
           "items": [
             {
               "frames": [
-                "assets/img/projetos/letras/ha-ingles-1.jpg",
-                "assets/img/projetos/letras/ha-ingles-2.jpg"
+                "assets/img/projetos/letras/houseads-ingles/970x250_1.jpg",
+                "assets/img/projetos/letras/houseads-ingles/970x250_2.jpg"
               ],
               "w": 970,
               "h": 250
             },
             {
               "frames": [
-                "assets/img/projetos/letras/ha-ingles-q1.jpg",
-                "assets/img/projetos/letras/ha-ingles-q2.jpg"
+                "assets/img/projetos/letras/houseads-ingles/300x250_1.jpg",
+                "assets/img/projetos/letras/houseads-ingles/300x250_2.jpg"
               ],
               "w": 300,
               "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-ingles/970x90_1.jpg",
+                "assets/img/projetos/letras/houseads-ingles/970x90_2.jpg"
+              ],
+              "w": 970,
+              "h": 90
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-ingles/320x100_1.jpg",
+                "assets/img/projetos/letras/houseads-ingles/320x100_2.jpg"
+              ],
+              "w": 320,
+              "h": 100
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-ingles/320x50_1.jpg",
+                "assets/img/projetos/letras/houseads-ingles/320x50_2.jpg"
+              ],
+              "w": 320,
+              "h": 50
             }
           ],
           "caption": {
-            "pt": "",
-            "en": ""
+            "pt": "Curso de inglês",
+            "en": "English course"
           }
         },
         {
@@ -1578,24 +1854,81 @@
           "items": [
             {
               "frames": [
-                "assets/img/projetos/letras/ha-contribua-1.jpg",
-                "assets/img/projetos/letras/ha-contribua-2.jpg"
+                "assets/img/projetos/letras/houseads-contribua/970x250_1.jpg",
+                "assets/img/projetos/letras/houseads-contribua/970x250_2.jpg"
               ],
               "w": 970,
               "h": 250
             },
             {
               "frames": [
-                "assets/img/projetos/letras/ha-app-1.jpg",
-                "assets/img/projetos/letras/ha-app-2.jpg"
+                "assets/img/projetos/letras/houseads-contribua/970x90_1.jpg",
+                "assets/img/projetos/letras/houseads-contribua/970x90_2.jpg"
               ],
               "w": 970,
-              "h": 250
+              "h": 90
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-contribua/320x100_1.jpg",
+                "assets/img/projetos/letras/houseads-contribua/320x100_2.jpg"
+              ],
+              "w": 320,
+              "h": 100
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-contribua/320x50_1.jpg",
+                "assets/img/projetos/letras/houseads-contribua/320x50_2.jpg"
+              ],
+              "w": 320,
+              "h": 50
             }
           ],
           "caption": {
-            "pt": "Cada anúncio alterna duas mensagens",
-            "en": "Each ad alternates two messages"
+            "pt": "Envio de letras e traduções",
+            "en": "Lyric and translation submissions"
+          }
+        },
+        {
+          "type": "ads",
+          "items": [
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-app/970x250_1.jpg",
+                "assets/img/projetos/letras/houseads-app/970x250_2.jpg"
+              ],
+              "w": 970,
+              "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-app/970x90_1.jpg",
+                "assets/img/projetos/letras/houseads-app/970x90_2.jpg"
+              ],
+              "w": 970,
+              "h": 90
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-app/320x100_1.jpg",
+                "assets/img/projetos/letras/houseads-app/320x100_2.jpg"
+              ],
+              "w": 320,
+              "h": 100
+            },
+            {
+              "frames": [
+                "assets/img/projetos/letras/houseads-app/320x50_1.jpg",
+                "assets/img/projetos/letras/houseads-app/320x50_2.jpg"
+              ],
+              "w": 320,
+              "h": 50
+            }
+          ],
+          "caption": {
+            "pt": "App. Cada anúncio alterna duas mensagens",
+            "en": "App. Each ad alternates two messages"
           }
         },
         {
@@ -1747,38 +2080,6 @@
               "img": "assets/img/projetos/lojas-de-apps/letras-ios-07.jpg"
             }
           ]
-        },
-        {
-          "type": "gallery",
-          "cols": 7,
-          "ratio": "568/1234",
-          "imgs": [
-            {
-              "img": "assets/img/projetos/lojas-de-apps/letras-ios-01.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/letras-ios-02.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/letras-ios-03.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/letras-ios-04.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/letras-ios-05.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/letras-ios-06.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/letras-ios-07.jpg"
-            }
-          ],
-          "caption": {
-            "pt": "As 7 telas separadas",
-            "en": "The 7 screens on their own"
-          }
         },
         {
           "type": "specs",
@@ -2091,24 +2392,40 @@
           "items": [
             {
               "frames": [
-                "assets/img/projetos/cifra-club-30-anos/ha-1.jpg",
-                "assets/img/projetos/cifra-club-30-anos/ha-2.jpg"
+                "assets/img/projetos/cifra-club-30-anos/houseads/970x250_1.jpg",
+                "assets/img/projetos/cifra-club-30-anos/houseads/970x250_2.jpg"
               ],
               "w": 970,
               "h": 250
             },
             {
               "frames": [
-                "assets/img/projetos/cifra-club-30-anos/ha-q1.jpg",
-                "assets/img/projetos/cifra-club-30-anos/ha-q2.jpg"
+                "assets/img/projetos/cifra-club-30-anos/houseads/300x250_1.jpg",
+                "assets/img/projetos/cifra-club-30-anos/houseads/300x250_2.jpg"
               ],
               "w": 300,
               "h": 250
+            },
+            {
+              "frames": [
+                "assets/img/projetos/cifra-club-30-anos/houseads/970x90_1.jpg",
+                "assets/img/projetos/cifra-club-30-anos/houseads/970x90_2.jpg"
+              ],
+              "w": 970,
+              "h": 90
+            },
+            {
+              "frames": [
+                "assets/img/projetos/cifra-club-30-anos/houseads/320x50_1.jpg",
+                "assets/img/projetos/cifra-club-30-anos/houseads/320x50_2.jpg"
+              ],
+              "w": 320,
+              "h": 50
             }
           ],
           "caption": {
-            "pt": "House ads",
-            "en": "House ads"
+            "pt": "House ads em todos os formatos",
+            "en": "House ads in every format"
           }
         },
         {
@@ -2696,35 +3013,6 @@
               "img": "assets/img/projetos/lojas-de-apps/songsift-ios-06.jpg"
             }
           ]
-        },
-        {
-          "type": "gallery",
-          "cols": 6,
-          "ratio": "683/1484",
-          "imgs": [
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-01.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-02.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-03.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-04.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-05.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-06.jpg"
-            }
-          ],
-          "caption": {
-            "pt": "As 6 telas separadas",
-            "en": "The 6 screens on their own"
-          }
         }
       ]
     },

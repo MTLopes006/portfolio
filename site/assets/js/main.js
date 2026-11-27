@@ -491,7 +491,7 @@
       case "pan": // a long strip (app store screens, panoramas) that loops sideways on its own and can be dragged
         {
           const shots = imgs.length ? imgs : [{ img: b.img, ratio: b.ratio }];
-          return `<figure class="b-pan" data-showcase><div class="pan-view"><div class="sc-track pan-track">${[0, 1].map((k) => shots.map((m) => `<img src="${esc(m.img)}" alt=""${k ? ' aria-hidden="true"' : ""} loading="lazy" style="aspect-ratio:${esc(m.ratio || b.ratio || "3/1")}">`).join("")).join("")}</div></div>${cap(b)}</figure>`;
+          return `<figure class="b-pan${b.size === "sm" ? " pan-sm" : ""}" data-showcase><div class="pan-view"><div class="sc-track pan-track">${[0, 1].map((k) => shots.map((m) => `<img src="${esc(m.img)}" alt=""${k ? ' aria-hidden="true"' : ""} loading="lazy" style="aspect-ratio:${esc(m.ratio || b.ratio || "3/1")}">`).join("")).join("")}</div></div>${cap(b)}</figure>`;
         }
       case "gallery": // every piece side by side, same height, opens in the lightbox
         return `<figure class="b-gallery" style="--cols:${Number(b.cols) || imgs.length || 4}"><div class="gal-grid">${imgs.map((m, i) => `<div ${stagger(i, 0.04)}>${media(m.img, m.ratio || b.ratio)}</div>`).join("")}</div>${cap(b)}</figure>`;

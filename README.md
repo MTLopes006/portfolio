@@ -141,7 +141,7 @@ página da marca.
 | `ads` | Prancha de banners animados em dois quadros |
 | `pair`, `trio` | Duas ou três imagens |
 | `deck` | **Pilha que se abre:** slides empilhados que se espalham em fila ao rolar; depois dá para arrastar. Para carrosséis de Instagram |
-| `pan` | **Faixa em loop:** uma sequência de telas (ou slides) passando sozinha, arrastável. Para telas de loja de apps |
+| `pan` | **Faixa em loop:** uma sequência de telas (ou slides) passando sozinha, arrastável. Para telas de loja de apps. Com `"size": "sm"` a faixa fica baixa, para thumbs horizontais |
 | `gallery` | **Galeria:** peças lado a lado na mesma altura, abrem em tela cheia |
 | `swap` | **Capas que ganham cor:** quadradas em preto e branco que viram coloridas ao passar o mouse (ou tocar). Cada item tem `img` (P&B) e `hover` (colorida) |
 | `scatter` | **Cartões espalhados:** uma peça em destaque no centro e as outras em volta, levemente giradas |

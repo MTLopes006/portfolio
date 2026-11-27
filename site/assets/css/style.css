@@ -1084,3 +1084,6 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
   .sel-role span + span { padding-left: 0; }
 }
 @media (max-width: 860px) { .sel-role { rotate: 0deg; } }
+/* house ads without the board behind them */
+.b-ads .board { background: none; padding: 0; border-radius: 0; }
+.b-pan.pan-sm .pan-view { height: clamp(170px, 24vw, 340px); }
