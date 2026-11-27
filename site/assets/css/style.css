@@ -1018,3 +1018,14 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 .sel-role { position: absolute; left: 86%; top: 52%; transform: translateY(-50%) rotate(-4deg); white-space: nowrap; font-family: var(--f-serif); font-stretch: 100%; font-weight: 400; font-style: italic; text-transform: none; letter-spacing: -.02em; font-size: .36em; line-height: 1; color: var(--pink); text-shadow: 0 6px 40px rgba(0,0,0,.45); animation: rise 1.2s .3s var(--ease) both; }
 @media (max-width: 860px) { .sel-intro p:last-child { grid-column: 1 / -1; } }
 @media (max-width: 860px) { .sel-role { left: auto; right: auto; position: static; display: block; transform: rotate(-3deg); margin-top: .1em; font-size: .4em; } }
+
+/* selector role on two lines, centred on the height of LOPES, second line stepped in */
+.sel-role { top: 50%; left: 84%; transform: translateY(-50%) rotate(-3deg); font-size: .3em; line-height: .95; }
+.sel-role span { display: block; }
+.sel-role span + span { padding-left: .55em; }
+@media (max-width: 860px) { .sel-role { transform: rotate(-3deg); font-size: .34em; } }
+/* the entrance animation owns `transform`, so centre with margin and tilt with `rotate` */
+.sel-role { transform: none; rotate: -3deg; margin-top: -.95em; }
+@media (max-width: 860px) { .sel-role { margin-top: .1em; } }
+.sel-role { font-size: .42em; line-height: .9; margin-top: -.9em; }
+@media (max-width: 860px) { .sel-role { font-size: .36em; margin-top: .1em; } }

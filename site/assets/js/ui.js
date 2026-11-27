@@ -36,7 +36,7 @@ window.UI = {
     "menu": "Menu", "close": "Fechar", "theme.light": "Claro", "theme.dark": "Escuro",
     "hero.kicker": "Designer gráfico e fotógrafo",
     "hero.cta": "Ver projetos",
-    "sc.open": "Ver o projeto", "hx.role": "designer gráfico", "sel.role": "designer e fotógrafo",
+    "sc.open": "Ver o projeto", "hx.role": "designer gráfico", "sel.role": "designer e|fotógrafo",
     "hero.drag": "Puxe o crachá. Clique para virar.",
     
     "work.title": "Projetos de design", "work.count": "faixas", "work.see": "Ver projetos", "work.open": "Ver projeto", "work.lead": "Cada projeto abre com o contexto, mostra a ideia e termina nas peças finais, nos formatos em que foram usadas.",
@@ -91,7 +91,7 @@ window.UI = {
     "menu": "Menu", "close": "Close", "theme.light": "Light", "theme.dark": "Dark",
     "hero.kicker": "Graphic designer & photographer",
     "hero.cta": "See work",
-    "sc.open": "See the project", "hx.role": "graphic designer", "sel.role": "designer & photographer",
+    "sc.open": "See the project", "hx.role": "graphic designer", "sel.role": "designer &|photographer",
     "hero.drag": "Pull the badge. Click to flip.",
     
     "work.title": "Design work", "work.count": "tracks", "work.see": "See work", "work.open": "View project", "work.lead": "Each project opens with the context, shows the idea and ends with the final pieces, in the formats they were used in.",
