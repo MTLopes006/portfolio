@@ -994,6 +994,267 @@
       "showcase": true
     },
     {
+      "slug": "carrosseis-editoriais",
+      "category": "campanhas",
+      "year": "",
+      "showcase": true,
+      "title": {
+        "pt": "Carrosséis editoriais",
+        "en": "Editorial carousels"
+      },
+      "client": {
+        "pt": "Letras e Cifra Club · Studio Sol",
+        "en": "Letras and Cifra Club · Studio Sol"
+      },
+      "role": {
+        "pt": "Roteiro visual, direção de arte e diagramação",
+        "en": "Visual script, art direction and layout"
+      },
+      "tags": {
+        "pt": "Social media · Editorial · Instagram",
+        "en": "Social media · Editorial · Instagram"
+      },
+      "summary": {
+        "pt": "Dois carrosséis para o Instagram. No Letras, a pergunta se a quinta geração matou ou salvou o K-pop. No Cifra Club, uma leitura de “BB (garupa de moto amarela)”, de Tim Bernardes. Cada slide puxa o próximo.",
+        "en": "Two Instagram carousels. On Letras, whether the fifth generation killed or saved K-pop. On Cifra Club, a reading of Tim Bernardes' “BB (garupa de moto amarela)”. Each slide pulls you to the next."
+      },
+      "tone": "#7B3FF2",
+      "cover": "assets/img/projetos/carrosseis/capa.jpg",
+      "coverRatio": "2400/1350",
+      "thumb": "assets/img/thumbs/carrosseis-editoriais.jpg",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Carrossel é leitura em sequência: a capa precisa parar o polegar e cada slide tem que deixar uma pergunta para o seguinte. Os dois seguem a identidade de cada marca, mas com o tom de revista.",
+            "en": "A carousel is read in sequence: the cover has to stop the thumb and every slide leaves a question for the next. Both follow each brand's identity, with a magazine tone."
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Letras",
+            "en": "Letras"
+          },
+          "title": {
+            "pt": "A quinta geração do K-pop",
+            "en": "K-pop's fifth generation"
+          },
+          "text": {
+            "pt": "Colagem com recortes de papel, fita e estrelas sobre o roxo do Letras. As fotos dos grupos entram como polaroides, e o texto fica sempre em blocos curtos.",
+            "en": "Paper cut-outs, tape and stars over Letras purple. Group photos come in as polaroids and the copy stays in short blocks."
+          }
+        },
+        {
+          "type": "deck",
+          "ratio": "4/5",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/carrosseis/letras-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-04.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-05.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-06.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-07.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-08.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-09.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/letras-10.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "Os 10 slides, na ordem em que foram publicados",
+            "en": "All 10 slides, in publishing order"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Cifra Club",
+            "en": "Cifra Club"
+          },
+          "title": {
+            "pt": "Tim Bernardes, “BB”",
+            "en": "Tim Bernardes, “BB”"
+          },
+          "text": {
+            "pt": "Fotografia de cena e títulos em caixa alta, com o laranja do Cifra Club como fio condutor. No meio do carrossel, o acorde da música aparece como diagrama.",
+            "en": "Staged photography and all-caps titles, with Cifra Club orange as the thread. Midway through, the song's chord shows up as a diagram."
+          }
+        },
+        {
+          "type": "deck",
+          "ratio": "4/5",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/carrosseis/tim-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-04.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-05.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-06.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-07.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-08.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-09.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "Os 9 slides do carrossel",
+            "en": "The carousel's 9 slides"
+          }
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Peças",
+            "en": "Pieces"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Formato",
+                "en": "Format"
+              },
+              "value": {
+                "pt": "Carrossel 1080 × 1350",
+                "en": "Carousel 1080 × 1350"
+              }
+            },
+            {
+              "label": {
+                "pt": "Slides",
+                "en": "Slides"
+              },
+              "value": {
+                "pt": "10 (Letras) e 9 (Cifra Club)",
+                "en": "10 (Letras) and 9 (Cifra Club)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lojas-de-apps",
+      "category": "produto",
+      "year": "",
+      "title": {
+        "pt": "Telas para lojas de apps",
+        "en": "App store screens"
+      },
+      "client": {
+        "pt": "Letras e Songsift · Studio Sol",
+        "en": "Letras and Songsift · Studio Sol"
+      },
+      "role": {
+        "pt": "Direção de arte, layout e adaptação de idiomas",
+        "en": "Art direction, layout and language versions"
+      },
+      "tags": {
+        "pt": "Produto · App Store · Google Play",
+        "en": "Product · App Store · Google Play"
+      },
+      "summary": {
+        "pt": "As imagens que apresentam o Letras e o Songsift na App Store e no Google Play. Cada sequência é uma faixa contínua: a cor e os aparelhos passam de uma tela para a outra.",
+        "en": "The images that present Letras and Songsift on the App Store and Google Play. Each set is one continuous strip: colour and phones run from one screen into the next."
+      },
+      "tone": "#F2E600",
+      "cover": "assets/img/projetos/lojas-de-apps/capa.jpg",
+      "coverRatio": "2305/1297",
+      "thumb": "assets/img/thumbs/lojas-de-apps.jpg",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "Na loja, a pessoa decide em poucos segundos se baixa o app. As telas contam a função principal de cada produto em frases curtas, sempre com o aparelho mostrando a interface de verdade.",
+            "en": "In the store, people decide in seconds whether to download. The screens tell each product's main feature in short lines, always with the phone showing the real interface."
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Letras",
+            "en": "Letras"
+          },
+          "title": {
+            "pt": "Letras, iOS",
+            "en": "Letras, iOS"
+          },
+          "text": {
+            "pt": "Amarelo, laranja e roxo da marca em blocos que se emendam. Versões em português, inglês e espanhol, para iOS e Android.",
+            "en": "The brand's yellow, orange and purple in blocks that join up. Portuguese, English and Spanish versions for iOS and Android."
+          }
+        },
+        {
+          "type": "pan",
+          "img": "assets/img/projetos/lojas-de-apps/letras-ios.jpg",
+          "ratio": "4096/1297",
+          "caption": {
+            "pt": "Sequência completa para iOS, em português",
+            "en": "Full iOS set, in Portuguese"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Songsift",
+            "en": "Songsift"
+          },
+          "title": {
+            "pt": "Songsift, iOS",
+            "en": "Songsift, iOS"
+          },
+          "text": {
+            "pt": "Degradê quente e uma onda sonora que atravessa as telas. O app separa instrumentos e vozes, então a imagem mostra a música sendo dividida.",
+            "en": "A warm gradient and a sound wave that crosses the screens. The app separates instruments and vocals, so the image shows the song being split."
+          }
+        },
+        {
+          "type": "pan",
+          "img": "assets/img/projetos/lojas-de-apps/songsift-ios.jpg",
+          "ratio": "4096/1484",
+          "caption": {
+            "pt": "Sequência completa para iOS, em português",
+            "en": "Full iOS set, in Portuguese"
+          }
+        }
+      ]
+    },
+    {
       "blocks": [
         {
           "type": "lead",
@@ -1239,6 +1500,81 @@
       },
       "year": 2025,
       "category": "interna"
+    },
+    {
+      "slug": "natal-2025",
+      "category": "interna",
+      "year": "2025",
+      "title": {
+        "pt": "Natal 2025",
+        "en": "Christmas 2025"
+      },
+      "client": {
+        "pt": "Studio Sol + Letras · Comunicação interna",
+        "en": "Studio Sol + Letras · Internal comms"
+      },
+      "role": {
+        "pt": "Conceito, ilustração e layout",
+        "en": "Concept, illustration and layout"
+      },
+      "tags": {
+        "pt": "Endomarketing · Ilustração · Cartão",
+        "en": "Internal comms · Illustration · Card"
+      },
+      "summary": {
+        "pt": "O cartão de fim de ano da Studio Sol e do Letras. Selos de carta, carimbos e um violão embrulhado como presente. A página mostra a versão final no meio das explorações que vieram antes.",
+        "en": "Studio Sol and Letras' end-of-year card. Postage stamps, postmarks and a guitar wrapped as a gift. The page shows the final version among the explorations that came before it."
+      },
+      "tone": "#7A1822",
+      "cover": "assets/img/projetos/natal-2025/capa.jpg",
+      "coverRatio": "2400/1350",
+      "thumb": "assets/img/thumbs/natal-2025.jpg",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "A ideia era um cartão que parecesse ter chegado pelo correio: papel creme, borda serrilhada de selo e uma letra cursiva para o “Feliz Natal!”.",
+            "en": "The idea was a card that looked like it came in the post: cream paper, a stamp's perforated edge and a script for “Feliz Natal!”."
+          }
+        },
+        {
+          "type": "scatter",
+          "feature": 4,
+          "imgs": [
+            {
+              "img": "assets/img/projetos/natal-2025/natal-1.jpg"
+            },
+            {
+              "img": "assets/img/projetos/natal-2025/natal-2.jpg"
+            },
+            {
+              "img": "assets/img/projetos/natal-2025/natal-3.jpg"
+            },
+            {
+              "img": "assets/img/projetos/natal-2025/natal-4.jpg"
+            },
+            {
+              "img": "assets/img/projetos/natal-2025/natal-5.jpg"
+            },
+            {
+              "img": "assets/img/projetos/natal-2025/natal-6.jpg"
+            },
+            {
+              "img": "assets/img/projetos/natal-2025/natal-7.jpg"
+            },
+            {
+              "img": "assets/img/projetos/natal-2025/natal-8.jpg"
+            },
+            {
+              "img": "assets/img/projetos/natal-2025/natal-9.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "No centro, a versão final. Em volta, as explorações de layout, selos e ilustração.",
+            "en": "In the middle, the final version. Around it, layout, stamp and illustration explorations."
+          }
+        }
+      ]
     },
     {
       "blocks": [

@@ -434,6 +434,17 @@
         const row = (a) => a.length ? `<div class="ads-row">${a.map(ad).join("")}</div>` : "";
         return `<figure class="b-ads" data-reveal><div class="board">${row([...big, ...rect])}${row([...lead, ...mob])}</div>${cap(b)}</figure>`;
       }
+      case "deck": {
+        // slides stacked like a pile; they fan out into a row as the block scrolls in, then scroll sideways
+        const n = imgs.length;
+        return `<figure class="b-deck" data-p="deck"><div class="deck-track">${imgs.map((m, i) => `<div class="deck-card" style="--i:${i};--rot:${((i % 2 ? 1 : -1) * (3 + (i % 4))).toFixed(1)}deg;z-index:${n - i}">${media(m.img, b.ratio || "4/5")}</div>`).join("")}</div>${cap(b)}</figure>`;
+      }
+      case "pan": // a long strip (app store screens, panoramas) that slides sideways while the page scrolls
+        return `<figure class="b-pan" data-p="pan"><div class="pan-view"><img src="${esc(b.img)}" alt="${esc(t(b.caption) || "")}" loading="lazy" style="aspect-ratio:${esc(b.ratio || "3/1")}"></div>${cap(b)}</figure>`;
+      case "scatter": { // cards that land from different directions and settle slightly turned
+        const f = Number.isInteger(b.feature) ? b.feature : -1;
+        return `<figure class="b-scatter" data-p="scatter"><div class="scatter-board">${imgs.map((m, i) => `<div class="sc-card${i === f ? " feat" : ""}" style="--rot:${(((i * 37) % 9) - 4) * 1.2}deg;--dx:${(((i * 53) % 7) - 3) * 9}vw;--dy:${(((i * 29) % 5) - 2) * 6}vh">${media(m.img, m.ratio || "1/1")}</div>`).join("")}</div>${cap(b)}</figure>`;
+      }
       case "trio": return `<section class="b-trio">${imgs.map((m, i) => `<div ${stagger(i, 0.12)}>${media(m.img, m.ratio)}</div>`).join("")}</section>`;
       case "palette": return `<section class="b-palette" data-reveal><p class="eyebrow">${ui("project.palette")}</p><div class="sw-row">${(b.colors || []).map((c) => `<div class="sw" style="background:${esc(c.hex)};color:${contrast(c.hex)}"><span>${esc(c.name)}</span><span>${esc(c.hex)}</span></div>`).join("")}</div></section>`;
       case "type": return `<section class="b-type" data-reveal><p class="eyebrow">${ui("project.type")}</p><div class="spec"><div><div style="font-family:'${esc(b.family)}';font-size:28px;font-weight:600">${esc(b.family)}</div><div class="muted" style="margin-top:6px">${esc(b.weights || "")}</div></div><div class="big" style="font-family:'${esc(b.family)}'">${esc(b.sample || "Aa")}</div></div></section>`;
@@ -794,19 +805,22 @@
     document.querySelectorAll("[data-reveal]").forEach((n) => (reduce ? n.classList.add("in") : io.observe(n)));
     scaleEls = reduce ? [] : [...document.querySelectorAll("[data-scale], .proj-body .media")];
     seen?.disconnect();
-    seen = new IntersectionObserver((es) => es.forEach((e) => { e.target._on = e.isIntersecting; }), { rootMargin: "20% 0px" });
+    seen = new IntersectionObserver((es) => { es.forEach((e) => { e.target._on = e.isIntersecting; }); requestAnimationFrame(tick); }, { rootMargin: "20% 0px" });
     scaleEls.forEach((el) => seen.observe(el));
     showcases = [...document.querySelectorAll("[data-showcase]")];
     showcases.forEach((sc, i) => { sc._track = sc.querySelector(".sc-track"); sc._dir = i % 2 ? 1 : -1; sc._x = sc._dir > 0 ? -1 : 0; sc._k = 1; sc.classList.toggle("sc-static", reduce);
       sc.onpointerenter = () => (sc._slow = true); sc.onpointerleave = () => (sc._slow = false); });
     showcases.forEach((sc) => seen.observe(sc));
+    progEls = reduce ? [] : [...document.querySelectorAll("[data-p]")];
+    document.querySelectorAll("[data-p]").forEach((el) => el.classList.toggle("p-static", reduce));
+    progEls.forEach((el) => seen.observe(el));
     bands = [...document.querySelectorAll("[data-band]")];
     bands.forEach((b) => { b._track = b.querySelector(".fb-track"); b._x = 0; b._dir = -1; b.classList.toggle("fb-static", reduce); seen.observe(b); });
     sizeShowcases();
     if (!reduce && (showcases.length || bands.length) && !loopRaf) loopRaf = requestAnimationFrame(loop);
     tick();
   }
-  let scaleEls = [], showcases = [], bands = [], seen;
+  let scaleEls = [], showcases = [], bands = [], progEls = [], seen;
   const clamp01 = (x) => Math.max(0, Math.min(1, x));
   const easeOut = (x) => 1 - Math.pow(1 - x, 3);
   // looping showcases: the image row is rendered twice and slides forever; scrolling speeds it up
@@ -858,6 +872,16 @@
       const r = rects[i];
       const k = Math.min(easeOut(clamp01((vh - r.top) / (vh * 0.7))), easeOut(clamp01(r.bottom / (vh * 0.5))));
       el.style.transform = `scale(${(0.88 + 0.12 * k).toFixed(3)})`;
+    });
+    // scroll progress for deck / pan / scatter blocks
+    const pv = progEls.filter((el) => el._on);
+    const pr = pv.map((el) => [el.getBoundingClientRect(), el.dataset.p === "pan" ? el.querySelector("img") : null, el.dataset.p === "pan" ? el.querySelector(".pan-view").clientWidth : 0]);
+    pv.forEach((el, i) => {
+      const [r, img, vw] = pr[i];
+      if (el.dataset.p === "pan") {
+        const p = clamp01((vh - r.top) / (vh + r.height));
+        img.style.transform = `translate3d(${(-p * Math.max(0, img.offsetWidth - vw)).toFixed(1)}px, 0, 0)`;
+      } else el.style.setProperty("--p", easeOut(clamp01((vh - r.top) / (vh * 0.85))).toFixed(3));
     });
     if (!reduce) {
       const sr = showcases.map((sc) => (sc._on ? sc.getBoundingClientRect() : null));
