@@ -990,3 +990,21 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
   .sc-card.feat { grid-column: 1 / -1; grid-row: auto; order: -1; }
   .deck-card { width: 72vw; }
 }
+
+/* click-and-drag on horizontal scrollers */
+.rail-track, .deck-track { cursor: grab; }
+.rail-track.is-drag, .deck-track.is-drag { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; user-select: none; }
+.rail-track.is-drag a, .deck-track.is-drag * { pointer-events: none; }
+/* app-store strip: loops on its own */
+.b-pan .pan-view { height: clamp(300px, 62vh, 680px); }
+.pan-track { display: flex; height: 100%; width: max-content; padding: 0; }
+.pan-track img { height: 100%; width: auto; max-width: none; flex: none; display: block; padding-right: clamp(10px, 1vw, 16px); box-sizing: content-box; }
+.b-pan.sc-static .pan-view { overflow-x: auto; }
+.b-pan.sc-static .pan-track img[aria-hidden] { display: none; }
+/* gallery: every screen side by side */
+.b-gallery { margin: clamp(20px, 2.5vw, 40px) 0 clamp(40px, 5vw, 80px); }
+.gal-grid { display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: clamp(8px, 1vw, 16px); }
+.gal-grid .media { border-radius: calc(var(--r) * .6); cursor: zoom-in; }
+.b-gallery figcaption { margin-top: 14px; color: var(--muted); font-size: 14px; }
+@media (max-width: 900px) { .gal-grid { grid-template-columns: repeat(min(var(--cols), 4), minmax(0, 1fr)); } }
+@media (max-width: 560px) { .gal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

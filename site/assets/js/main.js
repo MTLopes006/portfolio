@@ -353,13 +353,31 @@
       </section>`;
     initCarousels();
     initGlow();
-    initDrag();
+  }
+
+  // click-and-hold drag for the native horizontal scrollers (project rail, slide decks)
+  function initDragScroll() {
+    document.querySelectorAll(".rail-track, .deck-track").forEach((el) => {
+      if (el._dragReady) return; el._dragReady = true;
+      el.querySelectorAll("img").forEach((im) => (im.draggable = false));
+      let down = false, sx = 0, sl = 0, moved = false;
+      el.addEventListener("pointerdown", (e) => { if (e.pointerType !== "mouse" || e.button !== 0) return; down = true; moved = false; sx = e.clientX; sl = el.scrollLeft; });
+      addEventListener("pointermove", (e) => {
+        if (!down) return;
+        const dx = e.clientX - sx;
+        if (!moved && Math.abs(dx) > 5) { moved = true; el.classList.add("is-drag"); }
+        if (moved) el.scrollLeft = sl - dx;
+      });
+      addEventListener("pointerup", () => { if (!down) return; down = false; el.classList.remove("is-drag"); setTimeout(() => (moved = false), 0); });
+      el.addEventListener("click", (e) => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+    });
   }
 
   // drag the looping showcases sideways with mouse or finger; a drag never counts as a click
   function initDrag() {
     document.querySelectorAll("[data-showcase]").forEach((sc) => {
       const tr = sc.querySelector(".sc-track");
+      if (tr._dragReady) return; tr._dragReady = true;
       tr.querySelectorAll("img").forEach((im) => (im.draggable = false));
       let down = false, sx = 0, sy = 0, lx = 0, moved = false, lockY = false;
       tr.addEventListener("pointerdown", (e) => { down = true; moved = false; lockY = false; sx = lx = e.clientX; sy = e.clientY; sc._v = 0; });
@@ -439,8 +457,10 @@
         const n = imgs.length;
         return `<figure class="b-deck" data-p="deck"><div class="deck-track">${imgs.map((m, i) => `<div class="deck-card" style="--i:${i};--rot:${((i % 2 ? 1 : -1) * (3 + (i % 4))).toFixed(1)}deg;z-index:${n - i}">${media(m.img, b.ratio || "4/5")}</div>`).join("")}</div>${cap(b)}</figure>`;
       }
-      case "pan": // a long strip (app store screens, panoramas) that slides sideways while the page scrolls
-        return `<figure class="b-pan" data-p="pan"><div class="pan-view"><img src="${esc(b.img)}" alt="${esc(t(b.caption) || "")}" loading="lazy" style="aspect-ratio:${esc(b.ratio || "3/1")}"></div>${cap(b)}</figure>`;
+      case "pan": // a long strip (app store screens, panoramas) that loops sideways on its own and can be dragged
+        return `<figure class="b-pan" data-showcase><div class="pan-view"><div class="sc-track pan-track">${[0, 1].map((k) => `<img src="${esc(b.img)}" alt="${k ? "" : esc(t(b.caption) || "")}"${k ? ' aria-hidden="true"' : ""} loading="lazy" style="aspect-ratio:${esc(b.ratio || "3/1")}">`).join("")}</div></div>${cap(b)}</figure>`;
+      case "gallery": // every piece side by side, same height, opens in the lightbox
+        return `<figure class="b-gallery" style="--cols:${Number(b.cols) || imgs.length || 4}"><div class="gal-grid">${imgs.map((m, i) => `<div ${stagger(i, 0.04)}>${media(m.img, m.ratio || b.ratio)}</div>`).join("")}</div>${cap(b)}</figure>`;
       case "scatter": { // cards that land from different directions and settle slightly turned
         const f = Number.isInteger(b.feature) ? b.feature : -1;
         return `<figure class="b-scatter" data-p="scatter"><div class="scatter-board">${imgs.map((m, i) => `<div class="sc-card${i === f ? " feat" : ""}" style="--rot:${(((i * 37) % 9) - 4) * 1.2}deg;--dx:${(((i * 53) % 7) - 3) * 9}vw;--dy:${(((i * 29) % 5) - 2) * 6}vh">${media(m.img, m.ratio || "1/1")}</div>`).join("")}</div>${cap(b)}</figure>`;
@@ -817,6 +837,7 @@
     bands = [...document.querySelectorAll("[data-band]")];
     bands.forEach((b) => { b._track = b.querySelector(".fb-track"); b._x = 0; b._dir = -1; b.classList.toggle("fb-static", reduce); seen.observe(b); });
     sizeShowcases();
+    initDrag(); initDragScroll();
     if (!reduce && (showcases.length || bands.length) && !loopRaf) loopRaf = requestAnimationFrame(loop);
     tick();
   }

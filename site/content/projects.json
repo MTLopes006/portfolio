@@ -1224,8 +1224,40 @@
           "img": "assets/img/projetos/lojas-de-apps/letras-ios.jpg",
           "ratio": "4096/1297",
           "caption": {
-            "pt": "Sequência completa para iOS, em português",
-            "en": "Full iOS set, in Portuguese"
+            "pt": "Sequência completa para iOS, em português, rodando como na loja",
+            "en": "Full iOS set, in Portuguese, running as in the store"
+          }
+        },
+        {
+          "type": "gallery",
+          "cols": 7,
+          "ratio": "1320/2868",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-04.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-05.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-06.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/letras-ios-07.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "As 7 telas separadas",
+            "en": "The 7 screens on their own"
           }
         },
         {
@@ -1248,8 +1280,37 @@
           "img": "assets/img/projetos/lojas-de-apps/songsift-ios.jpg",
           "ratio": "4096/1484",
           "caption": {
-            "pt": "Sequência completa para iOS, em português",
-            "en": "Full iOS set, in Portuguese"
+            "pt": "Sequência completa para iOS, em português, rodando como na loja",
+            "en": "Full iOS set, in Portuguese, running as in the store"
+          }
+        },
+        {
+          "type": "gallery",
+          "cols": 6,
+          "ratio": "683/1484",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-04.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-05.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-06.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "As 6 telas separadas",
+            "en": "The 6 screens on their own"
           }
         }
       ]
