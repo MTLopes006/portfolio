@@ -1087,3 +1087,15 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 /* house ads without the board behind them */
 .b-ads .board { background: none; padding: 0; border-radius: 0; }
 .b-pan.pan-sm .pan-view { height: clamp(170px, 24vw, 340px); }
+
+/* pairs: desktop + mobile banners side by side, two staggered rows looping sideways */
+.b-pairs { margin: clamp(24px, 3vw, 48px) 0 clamp(40px, 5vw, 80px); display: grid; gap: clamp(8px, 1vw, 16px); }
+.pr-row { overflow: hidden; margin: 0 calc(var(--pad, 0px) * -1); cursor: grab; }
+.pr-row.is-drag { cursor: grabbing; }
+.pr-track { display: flex; width: max-content; will-change: transform; }
+.pr-set { display: flex; gap: clamp(8px, 1vw, 16px); padding-right: clamp(8px, 1vw, 16px); }
+.pr-item { display: flex; gap: clamp(6px, .6vw, 10px); height: clamp(130px, 15vw, 250px); padding-right: clamp(14px, 2vw, 32px); }
+.pr-item img { height: 100%; width: auto; max-width: none; display: block; border-radius: calc(var(--r) * .5); user-select: none; -webkit-user-drag: none; }
+.b-pairs figcaption { margin-top: 6px; color: var(--muted); font-size: 14px; }
+.sc-static .pr-row, .b-pairs .sc-static { overflow-x: auto; }
+.pr-row.sc-static .pr-set[aria-hidden] { display: none; }

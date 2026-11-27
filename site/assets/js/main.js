@@ -493,6 +493,12 @@
           const shots = imgs.length ? imgs : [{ img: b.img, ratio: b.ratio }];
           return `<figure class="b-pan${b.size === "sm" ? " pan-sm" : ""}" data-showcase><div class="pan-view"><div class="sc-track pan-track">${[0, 1].map((k) => shots.map((m) => `<img src="${esc(m.img)}" alt=""${k ? ' aria-hidden="true"' : ""} loading="lazy" style="aspect-ratio:${esc(m.ratio || b.ratio || "3/1")}">`).join("")).join("")}</div></div>${cap(b)}</figure>`;
         }
+      case "pairs": { // desktop + mobile banners side by side, in two staggered rows that loop sideways
+        const items = b.items || [];
+        const pi = (m) => `<div class="pr-item">${[m.desktop, m.mobile].filter(Boolean).map((x) => `<img src="${esc(x.img)}" alt="" loading="lazy" style="aspect-ratio:${esc(x.ratio || "16/9")}">`).join("")}</div>`;
+        const row = (set, k) => set.length ? `<div class="pr-row" data-showcase data-dir="-1"${k ? ' data-off="0.5"' : ""}><div class="sc-track pr-track">${[0, 1].map((c) => `<div class="pr-set"${c ? ' aria-hidden="true"' : ""}>${set.map(pi).join("")}</div>`).join("")}</div></div>` : "";
+        return `<figure class="b-pairs">${row(items.filter((_, i) => i % 2 === 0), 0)}${row(items.filter((_, i) => i % 2 === 1), 1)}${cap(b)}</figure>`;
+      }
       case "gallery": // every piece side by side, same height, opens in the lightbox
         return `<figure class="b-gallery" style="--cols:${Number(b.cols) || imgs.length || 4}"><div class="gal-grid">${imgs.map((m, i) => `<div ${stagger(i, 0.04)}>${media(m.img, m.ratio || b.ratio)}</div>`).join("")}</div>${cap(b)}</figure>`;
       case "scatter": { // cards that land from different directions and settle slightly turned
@@ -877,7 +883,7 @@
     seen = new IntersectionObserver((es) => { es.forEach((e) => { e.target._on = e.isIntersecting; }); requestAnimationFrame(tick); }, { rootMargin: "20% 0px" });
     scaleEls.forEach((el) => seen.observe(el));
     showcases = [...document.querySelectorAll("[data-showcase]")];
-    showcases.forEach((sc, i) => { sc._track = sc.querySelector(".sc-track"); sc._dir = i % 2 ? 1 : -1; sc._x = sc._dir > 0 ? -1 : 0; sc._k = 1; sc.classList.toggle("sc-static", reduce);
+    showcases.forEach((sc, i) => { sc._track = sc.querySelector(".sc-track"); sc._dir = sc.dataset.dir ? Number(sc.dataset.dir) : (i % 2 ? 1 : -1); sc._x = sc._dir > 0 ? -1 : 0; sc._k = 1; sc.classList.toggle("sc-static", reduce);
       sc.onpointerenter = () => (sc._slow = true); sc.onpointerleave = () => (sc._slow = false); });
     showcases.forEach((sc) => seen.observe(sc));
     progEls = reduce ? [] : [...document.querySelectorAll("[data-p]")];
@@ -895,7 +901,11 @@
   const easeOut = (x) => 1 - Math.pow(1 - x, 3);
   // looping showcases: the image row is rendered twice and slides forever; scrolling speeds it up
   function sizeShowcases() {
-    showcases.forEach((sc) => { sc._w = sc._track.scrollWidth / 2; });
+    showcases.forEach((sc) => {
+      sc._w = sc._track.scrollWidth / 2;
+      // the second row of a pair carousel starts half an item in, so the two rows never line up
+      if (sc.dataset.off && !sc._offDone && sc._w) { const f = sc._track.querySelector(".pr-item"); if (f && f.offsetWidth) { sc._x = -f.offsetWidth * Number(sc.dataset.off); sc._offDone = true; } }
+    });
     bands.forEach((b) => { b._w = b._track.firstElementChild.offsetWidth; });
   }
   let loopRaf = 0, lastT = 0, lastY = scrollY, boost = 0;
