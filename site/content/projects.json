@@ -2122,12 +2122,13 @@
             "en": "Social media"
           },
           "text": {
-            "pt": "Dois carrosséis com a mesma luz da campanha. No do presente, a caixa vai sendo aberta a cada quadro e o desconto só aparece no último.",
-            "en": "Two carousels in the campaign's light. In the gift one, the box opens a little more each frame and the discount only shows in the last."
+            "pt": "Posts de oferta e um carrossel com a mesma luz da campanha. No carrossel, a caixa vai sendo aberta a cada quadro e o desconto só aparece no último.",
+            "en": "Offer posts and a carousel in the campaign's light. In the carousel, the box opens a little more each frame and the discount only shows in the last."
           }
         },
         {
-          "type": "deck",
+          "type": "gallery",
+          "cols": 5,
           "ratio": "4/5",
           "imgs": [
             {
@@ -2147,8 +2148,8 @@
             }
           ],
           "caption": {
-            "pt": "Carrossel da oferta",
-            "en": "Offer carousel"
+            "pt": "Posts da oferta",
+            "en": "Offer posts"
           }
         },
         {
@@ -2752,88 +2753,39 @@
           }
         },
         {
-          "type": "rows",
-          "rows": [
+          "type": "gallery",
+          "cols": 5,
+          "ratio": "820/1025",
+          "imgs": [
             {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/mockup-celular.webp",
-                  "ratio": "548/1083"
-                },
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/social-01.webp",
-                  "ratio": "820/1025"
-                }
-              ]
-            }
-          ],
-          "caption": {
-            "pt": "",
-            "en": ""
-          }
-        },
-        {
-          "type": "rows",
-          "rows": [
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/social-02.webp",
-                  "ratio": "820/1025"
-                },
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/social-03.webp",
-                  "ratio": "820/1025"
-                },
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/social-04.webp",
-                  "ratio": "820/1025"
-                },
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/social-05.webp",
-                  "ratio": "820/1025"
-                },
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/social-06.webp",
-                  "ratio": "820/1025"
-                }
-              ]
+              "img": "assets/img/projetos/pantanal-aromas/social-01.webp"
             },
             {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/social-07.webp",
-                  "ratio": "820/1025"
-                },
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/social-08.webp",
-                  "ratio": "820/1025"
-                },
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/social-09.webp",
-                  "ratio": "820/1025"
-                },
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/social-10.webp",
-                  "ratio": "820/1025"
-                },
-                {
-                  "img": "assets/img/projetos/pantanal-aromas/produto-05.webp",
-                  "ratio": "788/790"
-                }
-              ]
+              "img": "assets/img/projetos/pantanal-aromas/social-02.webp"
+            },
+            {
+              "img": "assets/img/projetos/pantanal-aromas/social-03.webp"
+            },
+            {
+              "img": "assets/img/projetos/pantanal-aromas/social-04.webp"
+            },
+            {
+              "img": "assets/img/projetos/pantanal-aromas/social-05.webp"
+            },
+            {
+              "img": "assets/img/projetos/pantanal-aromas/social-06.webp"
+            },
+            {
+              "img": "assets/img/projetos/pantanal-aromas/social-07.webp"
+            },
+            {
+              "img": "assets/img/projetos/pantanal-aromas/social-08.webp"
+            },
+            {
+              "img": "assets/img/projetos/pantanal-aromas/social-09.webp"
+            },
+            {
+              "img": "assets/img/projetos/pantanal-aromas/social-10.webp"
             }
           ],
           "caption": {
