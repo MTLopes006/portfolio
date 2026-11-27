@@ -1012,3 +1012,9 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 /* app-store strip built from the separate screens, with a gap like in the store */
 .b-pan .pan-view { background: transparent; border-radius: 0; }
 .pan-track img { border-radius: calc(var(--r) * .5); padding-right: 0; margin-right: clamp(8px, .9vw, 14px); }
+
+/* selector: serif role tucked after the surname, like "designer gráfico" on the design hero */
+.sel-name .l2 { position: relative; display: inline-block; }
+.sel-role { position: absolute; left: 86%; top: 52%; transform: translateY(-50%) rotate(-4deg); white-space: nowrap; font-family: var(--f-serif); font-stretch: 100%; font-weight: 400; font-style: italic; text-transform: none; letter-spacing: -.02em; font-size: .36em; line-height: 1; color: var(--pink); text-shadow: 0 6px 40px rgba(0,0,0,.45); animation: rise 1.2s .3s var(--ease) both; }
+@media (max-width: 860px) { .sel-intro p:last-child { grid-column: 1 / -1; } }
+@media (max-width: 860px) { .sel-role { left: auto; right: auto; position: static; display: block; transform: rotate(-3deg); margin-top: .1em; font-size: .4em; } }

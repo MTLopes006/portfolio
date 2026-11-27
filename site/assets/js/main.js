@@ -190,9 +190,8 @@
       ${glowBg("sel-bg")}
       <section class="select-hero wrap" id="top">
         <p class="eyebrow">${esc(t(P.available))}</p>
-        <h1 class="sel-name">${esc(P.name)}</h1>
+        <h1 class="sel-name"><span class="l1">${esc(P.firstName)}</span> <span class="l2">${esc(P.lastName)}<em class="sel-role">${ui("sel.role")}</em></span></h1>
         <div class="sel-intro">
-          <p class="sel-hi">${ui("sel.hi")}</p>
           <p>${ui("sel.intro")}</p>
         </div>
       </section>
