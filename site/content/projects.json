@@ -330,39 +330,6 @@
           }
         },
         {
-          "type": "rows",
-          "sideTitle": {
-            "pt": "Lançamento",
-            "en": "Launch"
-          },
-          "sideText": {
-            "pt": "Posts para o Instagram da banda: a capa, uma foto de divulgação e o anúncio de que o disco está disponível nas plataformas digitais.",
-            "en": "Posts for the band's Instagram: the cover, a press photo and the announcement that the album is out on streaming platforms."
-          },
-          "rows": [
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/lapso-menores-atos/instagram-1.webp",
-                  "ratio": "700/1442"
-                },
-                {
-                  "img": "assets/img/projetos/lapso-menores-atos/instagram-2.webp",
-                  "ratio": "700/1442"
-                },
-                {
-                  "img": "assets/img/projetos/lapso-menores-atos/instagram-3.webp",
-                  "ratio": "700/1442"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "type": "specs",
           "title": {
             "pt": "Peças",
@@ -397,16 +364,6 @@
               "value": {
                 "pt": "CD e vinil",
                 "en": "CD and vinyl"
-              }
-            },
-            {
-              "label": {
-                "pt": "Divulgação",
-                "en": "Launch"
-              },
-              "value": {
-                "pt": "Posts para Instagram",
-                "en": "Instagram posts"
               }
             }
           ]
