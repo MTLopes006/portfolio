@@ -674,28 +674,6 @@
               },
               "imgs": [
                 {
-                  "img": "assets/img/projetos/cifra-club/cmv-logo.jpg",
-                  "ratio": "1400/1206"
-                }
-              ]
-            }
-          ],
-          "caption": {
-            "pt": "Assinatura da campanha",
-            "en": "Campaign lettering"
-          },
-          "span": "center"
-        },
-        {
-          "type": "rows",
-          "rows": [
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
                   "img": "assets/img/projetos/cifra-club/cmv-kv-1.jpg",
                   "ratio": "1920/1080"
                 },
@@ -1127,57 +1105,60 @@
           }
         },
         {
-          "type": "columns",
-          "cols": [
+          "type": "assets",
+          "imgs": [
             {
-              "width": 487,
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/personagem.jpg",
-                  "ratio": "1055/1170",
-                  "round": true
-                },
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/bandeira.jpg",
-                  "ratio": "1055/1031",
-                  "round": true
-                }
-              ]
+              "img": "assets/img/projetos/semana-do-coreano/logo.jpg",
+              "ratio": "1442/702",
+              "label": {
+                "pt": "Logotipo",
+                "en": "Logotype"
+              }
             },
             {
-              "width": 683,
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/logo.jpg",
-                  "ratio": "1442/702",
-                  "round": true
-                },
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/torre.jpg",
-                  "ratio": "1442/1170",
-                  "round": true
-                }
-              ]
+              "img": "assets/img/projetos/semana-do-coreano/personagem.jpg",
+              "ratio": "1055/1170",
+              "label": {
+                "pt": "Personagem",
+                "en": "Character"
+              }
             },
             {
-              "width": 406,
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/soju.jpg",
-                  "ratio": "893/1005",
-                  "round": true
-                },
-                {
-                  "img": "assets/img/projetos/semana-do-coreano/placa.jpg",
-                  "ratio": "893/1460",
-                  "round": true
-                }
-              ]
+              "img": "assets/img/projetos/semana-do-coreano/torre.jpg",
+              "ratio": "1442/1170",
+              "label": {
+                "pt": "N Seoul Tower",
+                "en": "N Seoul Tower"
+              }
+            },
+            {
+              "img": "assets/img/projetos/semana-do-coreano/bandeira.jpg",
+              "ratio": "1055/1031",
+              "label": {
+                "pt": "Bandeira",
+                "en": "Flag"
+              }
+            },
+            {
+              "img": "assets/img/projetos/semana-do-coreano/soju.jpg",
+              "ratio": "893/1005",
+              "label": {
+                "pt": "Soju",
+                "en": "Soju"
+              }
+            },
+            {
+              "img": "assets/img/projetos/semana-do-coreano/placa.jpg",
+              "ratio": "893/1460",
+              "label": {
+                "pt": "Placa de rua",
+                "en": "Street sign"
+              }
             }
           ],
           "caption": {
-            "pt": "Prancha de conceito: personagem, logotipo e elementos de Seul",
-            "en": "Concept board: character, logotype and Seoul elements"
+            "pt": "Os recortes da campanha: cada elemento de Seul foi recortado e colorido para montar as peças",
+            "en": "The campaign cut-outs: each Seoul element was cut out and recoloured to build the pieces"
           }
         },
         {

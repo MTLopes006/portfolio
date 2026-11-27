@@ -467,6 +467,9 @@
         const f = Number.isInteger(b.feature) ? b.feature : -1;
         return `<figure class="b-scatter" data-p="scatter"><div class="scatter-board">${imgs.map((m, i) => `<div class="sc-card${i === f ? " feat" : ""}" style="--rot:${(((i * 37) % 9) - 4) * 1.2}deg;--dx:${(((i * 53) % 7) - 3) * 9}vw;--dy:${(((i * 29) % 5) - 2) * 6}vh">${media(m.img, m.ratio || "1/1")}</div>`).join("")}</div>${cap(b)}</figure>`;
       }
+      case "assets": { // the cut-outs of a campaign laid out like stickers, each one named
+        return `<figure class="b-assets" data-p="assets"><div class="as-board">${imgs.map((m, i) => `<div class="as-item" style="--rot:${(i % 2 ? 1 : -1) * (2 + (i % 3))}deg;--dy:${(i % 3) * 3 - 3}vh;--r:${esc(m.ratio || "1/1")}">${media(m.img, m.ratio || "1/1")}${t(m.label) ? `<span class="as-label">${esc(t(m.label))}</span>` : ""}</div>`).join("")}</div>${cap(b)}</figure>`;
+      }
       case "trio": return `<section class="b-trio">${imgs.map((m, i) => `<div ${stagger(i, 0.12)}>${media(m.img, m.ratio)}</div>`).join("")}</section>`;
       case "palette": return `<section class="b-palette" data-reveal><p class="eyebrow">${ui("project.palette")}</p><div class="sw-row">${(b.colors || []).map((c) => `<div class="sw" style="background:${esc(c.hex)};color:${contrast(c.hex)}"><span>${esc(c.name)}</span><span>${esc(c.hex)}</span></div>`).join("")}</div></section>`;
       case "type": return `<section class="b-type" data-reveal><p class="eyebrow">${ui("project.type")}</p><div class="spec"><div><div style="font-family:'${esc(b.family)}';font-size:28px;font-weight:600">${esc(b.family)}</div><div class="muted" style="margin-top:6px">${esc(b.weights || "")}</div></div><div class="big" style="font-family:'${esc(b.family)}'">${esc(b.sample || "Aa")}</div></div></section>`;

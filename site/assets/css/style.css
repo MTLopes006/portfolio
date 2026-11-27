@@ -1029,3 +1029,16 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 @media (max-width: 860px) { .sel-role { margin-top: .1em; } }
 .sel-role { font-size: .42em; line-height: .9; margin-top: -.9em; }
 @media (max-width: 860px) { .sel-role { font-size: .36em; margin-top: .1em; } }
+
+/* assets block: campaign cut-outs as a sticker sheet */
+.b-assets { --p: 1; margin: clamp(32px, 4vw, 64px) 0; }
+.as-board { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: clamp(18px, 2.6vw, 44px) clamp(16px, 2.2vw, 36px); padding: clamp(28px, 4vw, 64px) clamp(16px, 3vw, 48px); border-radius: var(--r); background: var(--card); }
+.as-item { position: relative; flex: none; height: clamp(150px, 19vw, 300px); aspect-ratio: var(--r);
+  transform: translateY(calc((1 - var(--p)) * (12vh + var(--dy)))) rotate(calc(var(--rot) * (1 + (1 - var(--p)) * 2))) scale(calc(.85 + .15 * var(--p)));
+  opacity: calc(.2 + .8 * var(--p)); transition: transform .45s var(--ease); }
+.as-item .media { height: 100%; border-radius: 10px; box-shadow: 0 22px 40px -24px rgba(0,0,0,.75); }
+.as-item:hover { transform: rotate(0deg) translateY(-6px) scale(1.04); z-index: 2; }
+.as-label { position: absolute; left: 50%; bottom: -14px; transform: translateX(-50%); white-space: nowrap; padding: 5px 12px; border-radius: 999px; background: var(--bg); color: var(--fg); font-size: 12px; font-weight: 500; box-shadow: 0 6px 18px -8px rgba(0,0,0,.6); }
+.b-assets figcaption { margin-top: 14px; color: var(--muted); font-size: 14px; }
+.p-static .as-item { transform: rotate(var(--rot)); opacity: 1; }
+@media (max-width: 720px) { .as-item { height: clamp(110px, 34vw, 180px); } }
