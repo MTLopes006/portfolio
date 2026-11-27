@@ -415,61 +415,51 @@
       "showcase": true
     },
     {
-      "slug": "cifra-club-e-letras",
+      "slug": "cifra-club",
       "category": "campanhas",
       "year": "2025–2026",
+      "showcase": true,
       "title": {
-        "pt": "Cifra Club e Letras",
-        "en": "Cifra Club and Letras"
+        "pt": "Cifra Club",
+        "en": "Cifra Club"
       },
       "client": {
-        "pt": "Cifra Club e Letras · Studio Sol",
-        "en": "Cifra Club & Letras · Studio Sol"
+        "pt": "Cifra Club · Studio Sol",
+        "en": "Cifra Club · Studio Sol"
       },
       "role": {
-        "pt": "Direção de arte, campanhas e destaques",
-        "en": "Art direction, campaigns & homepage banners"
+        "pt": "Direção de arte, key visuals e desdobramentos",
+        "en": "Art direction, key visuals and rollouts"
       },
       "tags": {
-        "pt": "Campanha · Banner · Direção de arte",
-        "en": "Campaign · Banner · Art direction"
+        "pt": "Destaques · Campanhas · App · Social media",
+        "en": "Banners · Campaigns · App · Social media"
       },
       "summary": {
-        "pt": "Banners e campanhas para dois produtos com identidades diferentes, vistos por milhões de pessoas que tocam, cantam e escutam música.",
-        "en": "Banners and campaigns for two products with different identities, seen by millions of people who play, sing and listen to music."
+        "pt": "O trabalho contínuo no Cifra Club: banners de destaque do site, campanhas como a Semana do Gospel e Criar Minha Versão, mensagens dentro do app e carrosséis para o Instagram.",
+        "en": "Ongoing work on Cifra Club: site banners, campaigns such as Gospel Week and Criar Minha Versão, in-app messages and Instagram carousels."
       },
-      "tone": "#904C18",
-      "cover": "assets/img/projetos/destaques/letras-creep-desktop.jpg",
-      "coverRatio": "2000/604",
-      "thumb": "assets/img/thumbs/cifra-club-e-letras-creep.jpg",
+      "tone": "#FF7A00",
+      "cover": "assets/img/projetos/cifra-club/cmv-kv-1.jpg",
+      "coverRatio": "1920/1080",
+      "thumb": "assets/img/thumbs/cifra-club.jpg",
       "blocks": [
         {
           "type": "lead",
           "text": {
-            "pt": "Como Visual Designer na Studio Sol, crio para o Cifra Club e o Letras. Esta página reúne os banners de destaque dos dois sites e as campanhas de cada produto.",
-            "en": "As a Visual Designer at Studio Sol, I work on Cifra Club and Letras. This page brings together the homepage banners of both sites and each product's campaigns."
+            "pt": "Como Visual Designer na Studio Sol, cuido da comunicação do Cifra Club, o maior site de cifras do Brasil. A identidade é fixa; o que muda é o conteúdo, a campanha e o formato onde ela aparece.",
+            "en": "As a Visual Designer at Studio Sol, I look after Cifra Club's communication, Brazil's largest chord site. The identity is fixed; what changes is the content, the campaign and the format it appears in."
           }
         },
         {
           "type": "chapter",
+          "kicker": {
+            "pt": "Cifra Club · 2026",
+            "en": "Cifra Club · 2026"
+          },
           "title": {
             "pt": "Destaques do site",
-            "en": "Homepage banners"
-          },
-          "text": {
-            "pt": "O banner principal é a primeira coisa que milhões de pessoas veem ao abrir o Cifra Club e o Letras. São duas lógicas diferentes para o mesmo espaço, sempre em versão desktop e mobile.",
-            "en": "The hero banner is the first thing millions of people see when they open Cifra Club and Letras. Two different logics for the same slot, always in desktop and mobile versions."
-          },
-          "kicker": {
-            "pt": "Cifra Club e Letras · 2026",
-            "en": "Cifra Club and Letras · 2026"
-          }
-        },
-        {
-          "type": "text",
-          "title": {
-            "pt": "Cifra Club",
-            "en": "Cifra Club"
+            "en": "Site banners"
           },
           "text": {
             "pt": "Banner de artista em destaque para levar o usuário a cifras específicas. A identidade editorial é fixa e o conteúdo muda de forma recorrente.",
@@ -550,90 +540,6 @@
           }
         },
         {
-          "type": "text",
-          "title": {
-            "pt": "Letras",
-            "en": "Letras"
-          },
-          "text": {
-            "pt": "Banner de músicas em destaque para páginas de letras e traduções. A identidade parte da divulgação do artista e é reconstruída para a identidade do produto.",
-            "en": "Featured-song banners for lyrics and translation pages. Each starts from the artist's own campaign and is rebuilt into the product's identity."
-          }
-        },
-        {
-          "type": "rows",
-          "rows": [
-            {
-              "label": {
-                "pt": "Desktop · mobile",
-                "en": "Desktop · mobile"
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/destaques/letras-breach-desktop.jpg",
-                  "ratio": "2000/604"
-                },
-                {
-                  "img": "assets/img/projetos/destaques/letras-breach-mobile.jpg",
-                  "ratio": "1116/546"
-                }
-              ]
-            },
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/destaques/letras-creep-desktop.jpg",
-                  "ratio": "2000/604"
-                },
-                {
-                  "img": "assets/img/projetos/destaques/letras-creep-mobile.jpg",
-                  "ratio": "1116/546"
-                }
-              ]
-            },
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/destaques/letras-latina-desktop.jpg",
-                  "ratio": "2000/604"
-                },
-                {
-                  "img": "assets/img/projetos/destaques/letras-latina-mobile.jpg",
-                  "ratio": "1116/546"
-                }
-              ]
-            },
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/destaques/letras-misterio-desktop.jpg",
-                  "ratio": "2000/604"
-                },
-                {
-                  "img": "assets/img/projetos/destaques/letras-misterio-mobile.jpg",
-                  "ratio": "1116/546"
-                }
-              ]
-            }
-          ],
-          "caption": {
-            "pt": "",
-            "en": ""
-          }
-        },
-        {
           "type": "chapter",
           "kicker": {
             "pt": "Cifra Club · 2026",
@@ -642,10 +548,6 @@
           "title": {
             "pt": "Semana do Gospel",
             "en": "Gospel Week"
-          },
-          "text": {
-            "pt": "Campanha para incentivar o acesso de cifras gospel na plataforma durante a semana do dia da música gospel (9 de junho). A decisão veio da grande adesão do público religioso ao uso da plataforma para aprender músicas e planejar repertório.",
-            "en": "A campaign to drive gospel chord views on the platform during Gospel Music Day week (June 9). It came from the strong uptake among religious users, who rely on the platform to learn songs and plan setlists."
           }
         },
         {
@@ -763,16 +665,112 @@
         {
           "type": "chapter",
           "kicker": {
+            "pt": "Cifra Club · campanha",
+            "en": "Cifra Club · campaign"
+          },
+          "title": {
+            "pt": "Criar Minha Versão",
+            "en": "Criar Minha Versão"
+          },
+          "text": {
+            "pt": "Campanha dos planos Academy e PRO: o convite é tocar a música do seu jeito. Assinatura em selo com palheta e cifras em papel que voam pela cena.",
+            "en": "Campaign for the Academy and PRO plans: an invitation to play songs your own way. A sticker-style lettering with a pick, and chord sheets flying across the scene."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cifra-club/cmv-logo.jpg",
+                  "ratio": "1400/1206"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Assinatura da campanha",
+            "en": "Campaign lettering"
+          },
+          "span": "center"
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cifra-club/cmv-kv-1.jpg",
+                  "ratio": "1920/1080"
+                },
+                {
+                  "img": "assets/img/projetos/cifra-club/cmv-kv-2.jpg",
+                  "ratio": "1920/1080"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Key visuals com dois professores do Cifra Club",
+            "en": "Key visuals with two Cifra Club teachers"
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cifra-club/cmv-vertical.jpg",
+                  "ratio": "900/2028"
+                },
+                {
+                  "img": "assets/img/projetos/cifra-club/cmv-interstitial-mobile.jpg",
+                  "ratio": "800/1904"
+                },
+                {
+                  "img": "assets/img/projetos/cifra-club/cmv-planos.jpg",
+                  "ratio": "1200/945"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Interstitials no app e no site, com a escolha de plano",
+            "en": "Interstitials in the app and on the site, with the plan picker"
+          }
+        },
+        {
+          "type": "full",
+          "img": "assets/img/projetos/cifra-club/cmv-banner.jpg",
+          "ratio": "1600/615",
+          "caption": {
+            "pt": "Banner horizontal",
+            "en": "Horizontal banner"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
             "pt": "Cifra Club · 2025",
             "en": "Cifra Club · 2025"
           },
           "title": {
             "pt": "Campanha do app",
             "en": "App campaign"
-          },
-          "text": {
-            "pt": "Campanha de incentivo ao download do app via mídia interna, direcionada a quem já usava a plataforma web. Um conceito adaptado a mockups e banners de Android e iOS.",
-            "en": "A campaign encouraging app downloads through in-house media, aimed at people already using the web platform. One concept adapted to Android and iOS mockups and banners."
           }
         },
         {
@@ -830,16 +828,274 @@
         {
           "type": "chapter",
           "kicker": {
+            "pt": "Cifra Club · app",
+            "en": "Cifra Club · app"
+          },
+          "title": {
+            "pt": "Mensagens no app",
+            "en": "In-app messages"
+          },
+          "text": {
+            "pt": "Telas que aparecem dentro do app para apresentar ferramentas do PRO, como o metrônomo. Foto, uma frase curta e um botão.",
+            "en": "Screens shown inside the app to introduce PRO tools such as the metronome. A photo, one short line and a button."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/cifra-club/inapp-1.jpg",
+                  "ratio": "900/1342"
+                },
+                {
+                  "img": "assets/img/projetos/cifra-club/inapp-2.jpg",
+                  "ratio": "900/1458"
+                },
+                {
+                  "img": "assets/img/projetos/cifra-club/inapp-3.jpg",
+                  "ratio": "900/1338"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Três mensagens in-app",
+            "en": "Three in-app messages"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Cifra Club · Instagram · Tim Bernardes, “BB”",
+            "en": "Cifra Club · Instagram · Tim Bernardes, “BB”"
+          },
+          "title": {
+            "pt": "Social media",
+            "en": "Social media"
+          },
+          "text": {
+            "pt": "Fotografia de cena e títulos em caixa alta, com o laranja do Cifra Club como fio condutor. No meio do carrossel, o acorde da música aparece como diagrama.",
+            "en": "Staged photography and all-caps titles, with Cifra Club orange as the thread. Midway through, the song's chord shows up as a diagram."
+          }
+        },
+        {
+          "type": "deck",
+          "ratio": "4/5",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/carrosseis/tim-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-04.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-05.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-06.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-07.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-08.jpg"
+            },
+            {
+              "img": "assets/img/projetos/carrosseis/tim-09.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "Os 9 slides do carrossel",
+            "en": "The carousel's 9 slides"
+          }
+        },
+        {
+          "type": "specs",
+          "title": {
+            "pt": "Entregas",
+            "en": "Deliverables"
+          },
+          "items": [
+            {
+              "label": {
+                "pt": "Destaques",
+                "en": "Banners"
+              },
+              "value": {
+                "pt": "Desktop e mobile, atualização recorrente",
+                "en": "Desktop & mobile, recurring updates"
+              }
+            },
+            {
+              "label": {
+                "pt": "Campanhas",
+                "en": "Campaigns"
+              },
+              "value": {
+                "pt": "Identidade, key visuals, in-app, interstitials e house ads",
+                "en": "Identity, key visuals, in-app, interstitials & house ads"
+              }
+            },
+            {
+              "label": {
+                "pt": "Social",
+                "en": "Social"
+              },
+              "value": {
+                "pt": "Carrosséis editoriais para o Instagram",
+                "en": "Editorial Instagram carousels"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "letras",
+      "category": "campanhas",
+      "year": "2025–2026",
+      "showcase": true,
+      "title": {
+        "pt": "Letras",
+        "en": "Letras"
+      },
+      "client": {
+        "pt": "Letras · Studio Sol",
+        "en": "Letras · Studio Sol"
+      },
+      "role": {
+        "pt": "Direção de arte, colagem e layout",
+        "en": "Art direction, collage and layout"
+      },
+      "tags": {
+        "pt": "Destaques · Campanhas · Social media · Lojas de apps",
+        "en": "Banners · Campaigns · Social media · App stores"
+      },
+      "summary": {
+        "pt": "O trabalho contínuo no Letras: banners de destaque do site, a Semana do Coreano, carrosséis para o Instagram e as telas que apresentam o app nas lojas.",
+        "en": "Ongoing work on Letras: site banners, Korean Week, Instagram carousels and the screens that present the app in the stores."
+      },
+      "tone": "#7B3FF2",
+      "cover": "assets/img/projetos/destaques/letras-creep-desktop.jpg",
+      "coverRatio": "2000/604",
+      "thumb": "assets/img/thumbs/cifra-club-e-letras-creep.jpg",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": {
+            "pt": "O Letras reúne letras, traduções e o significado das músicas. A comunicação é mais colorida e editorial que a do Cifra Club, com colagem e muita foto de artista.",
+            "en": "Letras brings together lyrics, translations and song meanings. Its communication is more colourful and editorial than Cifra Club's, with collage and lots of artist photos."
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Letras · 2026",
+            "en": "Letras · 2026"
+          },
+          "title": {
+            "pt": "Destaques do site",
+            "en": "Site banners"
+          },
+          "text": {
+            "pt": "Banner de músicas em destaque para páginas de letras e traduções. A identidade parte da divulgação do artista e é reconstruída para a identidade do produto.",
+            "en": "Featured-song banners for lyrics and translation pages. Each starts from the artist's own campaign and is rebuilt into the product's identity."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "Desktop · mobile",
+                "en": "Desktop · mobile"
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/destaques/letras-breach-desktop.jpg",
+                  "ratio": "2000/604"
+                },
+                {
+                  "img": "assets/img/projetos/destaques/letras-breach-mobile.jpg",
+                  "ratio": "1116/546"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/destaques/letras-creep-desktop.jpg",
+                  "ratio": "2000/604"
+                },
+                {
+                  "img": "assets/img/projetos/destaques/letras-creep-mobile.jpg",
+                  "ratio": "1116/546"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/destaques/letras-latina-desktop.jpg",
+                  "ratio": "2000/604"
+                },
+                {
+                  "img": "assets/img/projetos/destaques/letras-latina-mobile.jpg",
+                  "ratio": "1116/546"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/destaques/letras-misterio-desktop.jpg",
+                  "ratio": "2000/604"
+                },
+                {
+                  "img": "assets/img/projetos/destaques/letras-misterio-mobile.jpg",
+                  "ratio": "1116/546"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "",
+            "en": ""
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
             "pt": "Letras · 2026",
             "en": "Letras · 2026"
           },
           "title": {
             "pt": "Semana do Coreano",
             "en": "Korean Week"
-          },
-          "text": {
-            "pt": "Campanha para incentivar o acesso ao curso de língua coreana da plataforma de ensino do Letras. A decisão veio do crescente acesso a letras de K-pop no site.",
-            "en": "A campaign driving sign-ups to the Korean language course on Letras' learning platform, prompted by the growing traffic to K-pop lyrics on the site."
           }
         },
         {
@@ -952,93 +1208,14 @@
           }
         },
         {
-          "type": "specs",
-          "title": {
-            "pt": "Entregas",
-            "en": "Deliverables"
-          },
-          "items": [
-            {
-              "label": {
-                "pt": "Destaques",
-                "en": "Banners"
-              },
-              "value": {
-                "pt": "Desktop e mobile, atualização recorrente",
-                "en": "Desktop & mobile, recurring updates"
-              }
-            },
-            {
-              "label": {
-                "pt": "Campanhas",
-                "en": "Campaigns"
-              },
-              "value": {
-                "pt": "Identidade, key visuals, in-app, interstitials e house ads",
-                "en": "Identity, key visuals, in-app, interstitials & house ads"
-              }
-            },
-            {
-              "label": {
-                "pt": "Ferramentas",
-                "en": "Tools"
-              },
-              "value": {
-                "pt": "ChatGPT, Magnific, Google Flow, Photoshop e Figma",
-                "en": "ChatGPT, Magnific, Google Flow, Photoshop & Figma"
-              }
-            }
-          ]
-        }
-      ],
-      "showcase": true
-    },
-    {
-      "slug": "carrosseis-editoriais",
-      "category": "campanhas",
-      "year": "",
-      "showcase": true,
-      "title": {
-        "pt": "Carrosséis editoriais",
-        "en": "Editorial carousels"
-      },
-      "client": {
-        "pt": "Letras e Cifra Club · Studio Sol",
-        "en": "Letras and Cifra Club · Studio Sol"
-      },
-      "role": {
-        "pt": "Roteiro visual, direção de arte e diagramação",
-        "en": "Visual script, art direction and layout"
-      },
-      "tags": {
-        "pt": "Social media · Editorial · Instagram",
-        "en": "Social media · Editorial · Instagram"
-      },
-      "summary": {
-        "pt": "Dois carrosséis para o Instagram. No Letras, a pergunta se a quinta geração matou ou salvou o K-pop. No Cifra Club, uma leitura de “BB (garupa de moto amarela)”, de Tim Bernardes. Cada slide puxa o próximo.",
-        "en": "Two Instagram carousels. On Letras, whether the fifth generation killed or saved K-pop. On Cifra Club, a reading of Tim Bernardes' “BB (garupa de moto amarela)”. Each slide pulls you to the next."
-      },
-      "tone": "#7B3FF2",
-      "cover": "assets/img/projetos/carrosseis/capa.jpg",
-      "coverRatio": "2400/1350",
-      "thumb": "assets/img/thumbs/carrosseis-editoriais.jpg",
-      "blocks": [
-        {
-          "type": "lead",
-          "text": {
-            "pt": "Carrossel é leitura em sequência: a capa precisa parar o polegar e cada slide tem que deixar uma pergunta para o seguinte. Os dois seguem a identidade de cada marca, mas com o tom de revista.",
-            "en": "A carousel is read in sequence: the cover has to stop the thumb and every slide leaves a question for the next. Both follow each brand's identity, with a magazine tone."
-          }
-        },
-        {
           "type": "chapter",
           "kicker": {
-            "pt": "Letras",
-            "en": "Letras"
+            "pt": "Letras · Instagram · A quinta geração do K-pop",
+            "en": "Letras · Instagram · K-pop's fifth generation"
           },
           "title": {
-            "pt": "A quinta geração do K-pop",
-            "en": "K-pop's fifth generation"
+            "pt": "Social media",
+            "en": "Social media"
           },
           "text": {
             "pt": "Colagem com recortes de papel, fita e estrelas sobre o roxo do Letras. As fotos dos grupos entram como polaroides, e o texto fica sempre em blocos curtos.",
@@ -1088,135 +1265,16 @@
         {
           "type": "chapter",
           "kicker": {
-            "pt": "Cifra Club",
-            "en": "Cifra Club"
+            "pt": "Letras · app",
+            "en": "Letras · app"
           },
           "title": {
-            "pt": "Tim Bernardes, “BB”",
-            "en": "Tim Bernardes, “BB”"
+            "pt": "Lojas de apps",
+            "en": "App stores"
           },
           "text": {
-            "pt": "Fotografia de cena e títulos em caixa alta, com o laranja do Cifra Club como fio condutor. No meio do carrossel, o acorde da música aparece como diagrama.",
-            "en": "Staged photography and all-caps titles, with Cifra Club orange as the thread. Midway through, the song's chord shows up as a diagram."
-          }
-        },
-        {
-          "type": "deck",
-          "ratio": "4/5",
-          "imgs": [
-            {
-              "img": "assets/img/projetos/carrosseis/tim-01.jpg"
-            },
-            {
-              "img": "assets/img/projetos/carrosseis/tim-02.jpg"
-            },
-            {
-              "img": "assets/img/projetos/carrosseis/tim-03.jpg"
-            },
-            {
-              "img": "assets/img/projetos/carrosseis/tim-04.jpg"
-            },
-            {
-              "img": "assets/img/projetos/carrosseis/tim-05.jpg"
-            },
-            {
-              "img": "assets/img/projetos/carrosseis/tim-06.jpg"
-            },
-            {
-              "img": "assets/img/projetos/carrosseis/tim-07.jpg"
-            },
-            {
-              "img": "assets/img/projetos/carrosseis/tim-08.jpg"
-            },
-            {
-              "img": "assets/img/projetos/carrosseis/tim-09.jpg"
-            }
-          ],
-          "caption": {
-            "pt": "Os 9 slides do carrossel",
-            "en": "The carousel's 9 slides"
-          }
-        },
-        {
-          "type": "specs",
-          "title": {
-            "pt": "Peças",
-            "en": "Pieces"
-          },
-          "items": [
-            {
-              "label": {
-                "pt": "Formato",
-                "en": "Format"
-              },
-              "value": {
-                "pt": "Carrossel 1080 × 1350",
-                "en": "Carousel 1080 × 1350"
-              }
-            },
-            {
-              "label": {
-                "pt": "Slides",
-                "en": "Slides"
-              },
-              "value": {
-                "pt": "10 (Letras) e 9 (Cifra Club)",
-                "en": "10 (Letras) and 9 (Cifra Club)"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "slug": "lojas-de-apps",
-      "category": "produto",
-      "year": "",
-      "title": {
-        "pt": "Telas para lojas de apps",
-        "en": "App store screens"
-      },
-      "client": {
-        "pt": "Letras e Songsift · Studio Sol",
-        "en": "Letras and Songsift · Studio Sol"
-      },
-      "role": {
-        "pt": "Direção de arte, layout e adaptação de idiomas",
-        "en": "Art direction, layout and language versions"
-      },
-      "tags": {
-        "pt": "Produto · App Store · Google Play",
-        "en": "Product · App Store · Google Play"
-      },
-      "summary": {
-        "pt": "As imagens que apresentam o Letras e o Songsift na App Store e no Google Play. Cada sequência é uma faixa contínua: a cor e os aparelhos passam de uma tela para a outra.",
-        "en": "The images that present Letras and Songsift on the App Store and Google Play. Each set is one continuous strip: colour and phones run from one screen into the next."
-      },
-      "tone": "#F2E600",
-      "cover": "assets/img/projetos/lojas-de-apps/capa.jpg",
-      "coverRatio": "2400/1350",
-      "thumb": "assets/img/thumbs/lojas-de-apps.jpg",
-      "blocks": [
-        {
-          "type": "lead",
-          "text": {
-            "pt": "Na loja, a pessoa decide em poucos segundos se baixa o app. As telas contam a função principal de cada produto em frases curtas, sempre com o aparelho mostrando a interface de verdade.",
-            "en": "In the store, people decide in seconds whether to download. The screens tell each product's main feature in short lines, always with the phone showing the real interface."
-          }
-        },
-        {
-          "type": "chapter",
-          "kicker": {
-            "pt": "Letras",
-            "en": "Letras"
-          },
-          "title": {
-            "pt": "Letras, iOS",
-            "en": "Letras, iOS"
-          },
-          "text": {
-            "pt": "Amarelo, laranja e roxo da marca em blocos que se emendam. Versões em português, inglês e espanhol, para iOS e Android.",
-            "en": "The brand's yellow, orange and purple in blocks that join up. Portuguese, English and Spanish versions for iOS and Android."
+            "pt": "As imagens que apresentam o app na App Store e no Google Play. Amarelo, laranja e roxo da marca em blocos que se emendam, em português, inglês e espanhol.",
+            "en": "The images that present the app on the App Store and Google Play. The brand's yellow, orange and purple in blocks that join up, in Portuguese, English and Spanish."
           }
         },
         {
@@ -1283,83 +1341,150 @@
           }
         },
         {
-          "type": "chapter",
-          "kicker": {
-            "pt": "Songsift",
-            "en": "Songsift"
-          },
+          "type": "specs",
           "title": {
-            "pt": "Songsift, iOS",
-            "en": "Songsift, iOS"
+            "pt": "Entregas",
+            "en": "Deliverables"
           },
-          "text": {
-            "pt": "Degradê quente e uma onda sonora que atravessa as telas. O app separa instrumentos e vozes, então a imagem mostra a música sendo dividida.",
-            "en": "A warm gradient and a sound wave that crosses the screens. The app separates instruments and vocals, so the image shows the song being split."
-          }
-        },
-        {
-          "type": "pan",
-          "ratio": "683/1484",
-          "caption": {
-            "pt": "Sequência completa para iOS, em português, rodando como na loja",
-            "en": "Full iOS set, in Portuguese, running as in the store"
-          },
-          "imgs": [
+          "items": [
             {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-01.jpg"
+              "label": {
+                "pt": "Destaques",
+                "en": "Banners"
+              },
+              "value": {
+                "pt": "Desktop e mobile, atualização recorrente",
+                "en": "Desktop & mobile, recurring updates"
+              }
             },
             {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-02.jpg"
+              "label": {
+                "pt": "Campanhas",
+                "en": "Campaigns"
+              },
+              "value": {
+                "pt": "Identidade, colagem e house ads",
+                "en": "Identity, collage & house ads"
+              }
             },
             {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-03.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-04.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-05.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-06.jpg"
+              "label": {
+                "pt": "App",
+                "en": "App"
+              },
+              "value": {
+                "pt": "Telas para App Store e Google Play em 3 idiomas",
+                "en": "App Store & Google Play screens in 3 languages"
+              }
             }
           ]
-        },
-        {
-          "type": "gallery",
-          "cols": 6,
-          "ratio": "683/1484",
-          "imgs": [
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-01.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-02.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-03.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-04.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-05.jpg"
-            },
-            {
-              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-06.jpg"
-            }
-          ],
-          "caption": {
-            "pt": "As 6 telas separadas",
-            "en": "The 6 screens on their own"
-          }
         }
       ]
     },
     {
+      "slug": "studio-sol",
+      "category": "interna",
+      "year": "2025–2026",
+      "title": {
+        "pt": "Studio Sol",
+        "en": "Studio Sol"
+      },
+      "client": {
+        "pt": "Studio Sol + Letras · Comunicação interna",
+        "en": "Studio Sol + Letras · Internal comms"
+      },
+      "role": {
+        "pt": "Identidade interna, ilustração e templates",
+        "en": "Internal identity, illustration and templates"
+      },
+      "tags": {
+        "pt": "Endomarketing · Impressos · Templates · Produto",
+        "en": "Internal comms · Print · Templates · Product"
+      },
+      "summary": {
+        "pt": "A comunicação para quem trabalha na Studio Sol e no Letras: talks internas, presentes de data comemorativa, cartão de Natal, slides, aniversários e vagas. No fim, as telas do Songsift nas lojas de apps.",
+        "en": "Communication for the people at Studio Sol and Letras: internal talks, gifts for special dates, a Christmas card, slides, work anniversaries and job posts. At the end, Songsift's app store screens."
+      },
+      "tone": "#FF8A00",
+      "cover": "assets/img/projetos/com-studio-sol-letras/banner.jpg",
+      "coverRatio": "2400/900",
+      "thumb": "assets/img/thumbs/com-studio-sol-letras.jpg",
       "blocks": [
         {
           "type": "lead",
+          "text": {
+            "pt": "A comunicação interna usa a mesma família visual em tudo: laranja e roxo, fotos da equipe e do escritório e uma tipografia simples. Assim um convite, um slide e um cartão parecem da mesma casa.",
+            "en": "Internal comms use the same visual family everywhere: orange and purple, photos of the team and the office, and simple type. That way an invitation, a slide and a card feel like they come from the same house."
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Talks internas · 2025",
+            "en": "Internal talks · 2025"
+          },
+          "title": {
+            "pt": "Com Studio Sol + Letras",
+            "en": "Com Studio Sol + Letras"
+          },
+          "text": {
+            "pt": "Identidade de uma série de talks internas, usada para divulgar tema, data e link nas plataformas da empresa.",
+            "en": "Identity for a series of internal talks, used to announce topic, date and link across the company's channels."
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "pt": "Sistema de cor",
+            "en": "Colour system"
+          },
+          "text": {
+            "pt": "Cada empresa tem uma cor, e as duas aparecem juntas quando o tema envolve todos os produtos. As linhas soltas se repetem em todos os formatos para identificar a série.",
+            "en": "Each company has its own colour, and both appear together when a topic involves every product. The loose lines repeat across all formats to identify the series."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/com-studio-sol-letras/post-talk.jpg",
+                  "ratio": "1600/1600",
+                  "frame": true
+                },
+                {
+                  "img": "assets/img/projetos/com-studio-sol-letras/post-inscricoes.jpg",
+                  "ratio": "1600/1600",
+                  "frame": true
+                },
+                {
+                  "img": "assets/img/projetos/com-studio-sol-letras/agradecimento.jpg",
+                  "ratio": "1270/1800",
+                  "frame": true
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Convite da talk, abertura de inscrições e agradecimento aos palestrantes",
+            "en": "Talk invite, sign-up call and thank-you note to speakers"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Data comemorativa · 2026",
+            "en": "Special date · 2026"
+          },
+          "title": {
+            "pt": "Dia da Liderança",
+            "en": "Leadership Day"
+          },
           "text": {
             "pt": "Peças impressas ilustradas para a data comemorativa: rótulos personalizados para os presentes selecionados (café e castanhas) e um cartão A6 com mensagem.",
             "en": "Illustrated printed pieces for the occasion: custom labels for the chosen gifts (coffee and nuts) and an A6 card with a message."
@@ -1426,214 +1551,15 @@
           }
         },
         {
-          "type": "specs",
-          "title": {
-            "pt": "Entregas",
-            "en": "Deliverables"
+          "type": "chapter",
+          "kicker": {
+            "pt": "Fim de ano · 2025",
+            "en": "Year end · 2025"
           },
-          "items": [
-            {
-              "label": {
-                "pt": "Impressos",
-                "en": "Print"
-              },
-              "value": {
-                "pt": "Rótulos de café e castanhas, cartão A6",
-                "en": "Coffee & nut labels, A6 card"
-              }
-            },
-            {
-              "label": {
-                "pt": "Ferramentas",
-                "en": "Tools"
-              },
-              "value": {
-                "pt": "Recraft (IA) e Figma",
-                "en": "Recraft (AI) & Figma"
-              }
-            }
-          ]
-        }
-      ],
-      "summary": {
-        "pt": "Um presente para líderes que parte de uma frase: liderança é como café, quanto mais se compartilha, melhor. Rótulos e cartão ilustrados.",
-        "en": "A gift for leaders built on one line: leadership is like coffee, the more it's shared, the better. Illustrated labels and card."
-      },
-      "slug": "dia-da-lideranca",
-      "client": {
-        "pt": "Studio Sol + Letras · Comunicação interna",
-        "en": "Studio Sol + Letras · Internal comms"
-      },
-      "tone": "#E9D3B4",
-      "coverRatio": "1472/704",
-      "role": {
-        "pt": "Conceito, ilustração e arte-final",
-        "en": "Concept, illustration & print artwork"
-      },
-      "thumb": "assets/img/thumbs/dia-da-lideranca.jpg",
-      "cover": "assets/img/projetos/dia-da-lideranca/ilustracao-vitrola.jpg",
-      "title": {
-        "pt": "Dia da Liderança",
-        "en": "Leadership Day"
-      },
-      "tags": {
-        "pt": "Impresso · Ilustração · Endomarketing",
-        "en": "Print · Illustration · Internal comms"
-      },
-      "year": 2026,
-      "category": "interna"
-    },
-    {
-      "blocks": [
-        {
-          "type": "lead",
-          "text": {
-            "pt": "Identidade de uma série de talks internas, usada para divulgar tema, data e link nas plataformas da empresa.",
-            "en": "Identity for a series of internal talks, used to announce topic, date and link across the company's channels."
-          }
-        },
-        {
-          "type": "text",
           "title": {
-            "pt": "Sistema de cor",
-            "en": "Colour system"
+            "pt": "Natal 2025",
+            "en": "Christmas 2025"
           },
-          "text": {
-            "pt": "Cada empresa tem uma cor, e as duas aparecem juntas quando o tema envolve todos os produtos. As linhas soltas se repetem em todos os formatos para identificar a série.",
-            "en": "Each company has its own colour, and both appear together when a topic involves every product. The loose lines repeat across all formats to identify the series."
-          }
-        },
-        {
-          "type": "rows",
-          "rows": [
-            {
-              "label": {
-                "pt": "",
-                "en": ""
-              },
-              "imgs": [
-                {
-                  "img": "assets/img/projetos/com-studio-sol-letras/post-talk.jpg",
-                  "ratio": "1600/1600",
-                  "frame": true
-                },
-                {
-                  "img": "assets/img/projetos/com-studio-sol-letras/post-inscricoes.jpg",
-                  "ratio": "1600/1600",
-                  "frame": true
-                },
-                {
-                  "img": "assets/img/projetos/com-studio-sol-letras/agradecimento.jpg",
-                  "ratio": "1270/1800",
-                  "frame": true
-                }
-              ]
-            }
-          ],
-          "caption": {
-            "pt": "Convite da talk, abertura de inscrições e agradecimento aos palestrantes",
-            "en": "Talk invite, sign-up call and thank-you note to speakers"
-          }
-        },
-        {
-          "type": "specs",
-          "title": {
-            "pt": "Entregas",
-            "en": "Deliverables"
-          },
-          "items": [
-            {
-              "label": {
-                "pt": "Sistema",
-                "en": "System"
-              },
-              "value": {
-                "pt": "Identidade visual e sistema de cor",
-                "en": "Visual identity & colour system"
-              }
-            },
-            {
-              "label": {
-                "pt": "Formatos",
-                "en": "Formats"
-              },
-              "value": {
-                "pt": "Convites, posts, agradecimentos",
-                "en": "Invites, posts, thank-you notes"
-              }
-            },
-            {
-              "label": {
-                "pt": "Ferramentas",
-                "en": "Tools"
-              },
-              "value": {
-                "pt": "Illustrator e Figma",
-                "en": "Illustrator & Figma"
-              }
-            }
-          ]
-        }
-      ],
-      "summary": {
-        "pt": "Uma série de talks entre duas empresas, com um sistema de cor que mostra quem participa de cada tema.",
-        "en": "A talk series shared by two companies, with a colour system that shows who takes part in each topic."
-      },
-      "slug": "com-studio-sol-letras",
-      "client": {
-        "pt": "Studio Sol + Letras · Comunicação interna",
-        "en": "Studio Sol + Letras · Internal comms"
-      },
-      "tone": "#F4F4F2",
-      "coverRatio": "2400/900",
-      "role": {
-        "pt": "Identidade visual e sistema de cor",
-        "en": "Visual identity & colour system"
-      },
-      "thumb": "assets/img/thumbs/com-studio-sol-letras.jpg",
-      "cover": "assets/img/projetos/com-studio-sol-letras/banner.jpg",
-      "title": {
-        "pt": "Com Studio Sol + Letras",
-        "en": "Com Studio Sol + Letras"
-      },
-      "tags": {
-        "pt": "Identidade visual · Sistema de cor · Multiformato",
-        "en": "Visual identity · Colour system · Multi-format"
-      },
-      "year": 2025,
-      "category": "interna"
-    },
-    {
-      "slug": "natal-2025",
-      "category": "interna",
-      "year": "2025",
-      "title": {
-        "pt": "Natal 2025",
-        "en": "Christmas 2025"
-      },
-      "client": {
-        "pt": "Studio Sol + Letras · Comunicação interna",
-        "en": "Studio Sol + Letras · Internal comms"
-      },
-      "role": {
-        "pt": "Conceito, ilustração e layout",
-        "en": "Concept, illustration and layout"
-      },
-      "tags": {
-        "pt": "Endomarketing · Ilustração · Cartão",
-        "en": "Internal comms · Illustration · Card"
-      },
-      "summary": {
-        "pt": "O cartão de fim de ano da Studio Sol e do Letras. Selos de carta, carimbos e um violão embrulhado como presente. A página mostra a versão final no meio das explorações que vieram antes.",
-        "en": "Studio Sol and Letras' end-of-year card. Postage stamps, postmarks and a guitar wrapped as a gift. The page shows the final version among the explorations that came before it."
-      },
-      "tone": "#7A1822",
-      "cover": "assets/img/projetos/natal-2025/capa.jpg",
-      "coverRatio": "2400/1350",
-      "thumb": "assets/img/thumbs/natal-2025.jpg",
-      "blocks": [
-        {
-          "type": "lead",
           "text": {
             "pt": "A ideia era um cartão que parecesse ter chegado pelo correio: papel creme, borda serrilhada de selo e uma letra cursiva para o “Feliz Natal!”.",
             "en": "The idea was a card that looked like it came in the post: cream paper, a stamp's perforated edge and a script for “Feliz Natal!”."
@@ -1674,6 +1600,256 @@
           "caption": {
             "pt": "No centro, a versão final. Em volta, as explorações de layout, selos e ilustração.",
             "en": "In the middle, the final version. Around it, layout, stamp and illustration explorations."
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Templates",
+            "en": "Templates"
+          },
+          "title": {
+            "pt": "Slides internos",
+            "en": "Internal slides"
+          },
+          "text": {
+            "pt": "Um modelo de apresentação com capas, divisórias e páginas de conteúdo, para qualquer pessoa da empresa montar a sua.",
+            "en": "A presentation template with covers, dividers and content pages, so anyone in the company can build their own."
+          }
+        },
+        {
+          "type": "pan",
+          "ratio": "1920/1080",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/studio-sol/slide-01.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/slide-02.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/slide-03.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/slide-04.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/slide-05.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/slide-06.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/slide-07.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/slide-08.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/slide-09.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/slide-10.jpg",
+              "ratio": "1920/1080"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/slide-11.jpg",
+              "ratio": "1920/1080"
+            }
+          ],
+          "caption": {
+            "pt": "Os 11 layouts do modelo",
+            "en": "The template's 11 layouts"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Templates",
+            "en": "Templates"
+          },
+          "title": {
+            "pt": "Aniversário de casa",
+            "en": "Work anniversaries"
+          },
+          "text": {
+            "pt": "Um e-mail para cada ano de empresa, com a foto da pessoa e o presente do ano, e um post para as datas redondas.",
+            "en": "An email for each year at the company, with the person's photo and that year's gift, plus a post for the round dates."
+          }
+        },
+        {
+          "type": "gallery",
+          "cols": 5,
+          "imgs": [
+            {
+              "img": "assets/img/projetos/studio-sol/aniversario-1-ano.jpg",
+              "ratio": "1080/1455"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/aniversario-2-ano.jpg",
+              "ratio": "1080/1426"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/aniversario-3-ano.jpg",
+              "ratio": "1080/1426"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/aniversario-4-ano.jpg",
+              "ratio": "1080/1463"
+            },
+            {
+              "img": "assets/img/projetos/studio-sol/aniversario-post.jpg",
+              "ratio": "1500/1500"
+            }
+          ],
+          "caption": {
+            "pt": "E-mails de 1 a 4 anos e o post de 5 anos",
+            "en": "Emails for years 1 to 4 and the 5-year post"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Templates",
+            "en": "Templates"
+          },
+          "title": {
+            "pt": "Vagas",
+            "en": "Job posts"
+          },
+          "text": {
+            "pt": "Divulgação de vagas para LinkedIn, Instagram e Gupy a partir de um mesmo layout.",
+            "en": "Job posts for LinkedIn, Instagram and Gupy from one layout."
+          }
+        },
+        {
+          "type": "rows",
+          "rows": [
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/studio-sol/vaga-feed.jpg",
+                  "ratio": "1080/1080"
+                },
+                {
+                  "img": "assets/img/projetos/studio-sol/vaga-stories.jpg",
+                  "ratio": "1080/1920"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/studio-sol/vaga-thumb.jpg",
+                  "ratio": "1890/931"
+                }
+              ]
+            },
+            {
+              "label": {
+                "pt": "",
+                "en": ""
+              },
+              "imgs": [
+                {
+                  "img": "assets/img/projetos/studio-sol/vaga-gupy.jpg",
+                  "ratio": "1980/600"
+                }
+              ]
+            }
+          ],
+          "caption": {
+            "pt": "Feed, stories, capa e banner da Gupy",
+            "en": "Feed, stories, cover and Gupy banner"
+          }
+        },
+        {
+          "type": "chapter",
+          "kicker": {
+            "pt": "Songsift · telas para lojas de apps",
+            "en": "Songsift · app store screens"
+          },
+          "title": {
+            "pt": "Songsift",
+            "en": "Songsift"
+          },
+          "text": {
+            "pt": "O Songsift separa vozes e instrumentos de uma música. Nas lojas, um degradê quente e uma onda sonora que atravessa as telas.",
+            "en": "Songsift splits a song into vocals and instruments. In the stores, a warm gradient and a sound wave that crosses the screens."
+          }
+        },
+        {
+          "type": "pan",
+          "ratio": "683/1484",
+          "caption": {
+            "pt": "Sequência completa para iOS, em português, rodando como na loja",
+            "en": "Full iOS set, in Portuguese, running as in the store"
+          },
+          "imgs": [
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-04.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-05.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-06.jpg"
+            }
+          ]
+        },
+        {
+          "type": "gallery",
+          "cols": 6,
+          "ratio": "683/1484",
+          "imgs": [
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-01.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-02.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-03.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-04.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-05.jpg"
+            },
+            {
+              "img": "assets/img/projetos/lojas-de-apps/songsift-ios-06.jpg"
+            }
+          ],
+          "caption": {
+            "pt": "As 6 telas separadas",
+            "en": "The 6 screens on their own"
           }
         }
       ]

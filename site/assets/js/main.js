@@ -497,7 +497,10 @@
     </li>`;
   function renderProject() {
     const el = document.querySelector("main");
-    const slug = new URLSearchParams(location.search).get("p");
+    // old project addresses now live inside the brand pages
+    const MOVED = { "cifra-club-e-letras": "cifra-club", "carrosseis-editoriais": "letras", "lojas-de-apps": "letras", "dia-da-lideranca": "studio-sol", "com-studio-sol-letras": "studio-sol", "natal-2025": "studio-sol" };
+    let slug = new URLSearchParams(location.search).get("p");
+    if (MOVED[slug]) { slug = MOVED[slug]; history.replaceState(null, "", `projeto.html?p=${slug}`); }
     const i = projects.findIndex((p) => p.slug === slug);
     const p = projects[i < 0 ? 0 : i], idx = i < 0 ? 0 : i;
     if (!p) { el.innerHTML = `<div class="wrap page-head"><p>${ui("notfound")}</p></div>`; return; }
