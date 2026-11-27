@@ -411,7 +411,8 @@
             }
           ]
         }
-      ]
+      ],
+      "showcase": true
     },
     {
       "slug": "cifra-club-e-letras",
@@ -989,7 +990,8 @@
             }
           ]
         }
-      ]
+      ],
+      "showcase": true
     },
     {
       "blocks": [
@@ -1523,7 +1525,8 @@
         "en": "Social media · Product imagery · Point of sale"
       },
       "year": 2026,
-      "category": "clientes"
+      "category": "clientes",
+      "showcase": true
     },
     {
       "blocks": [

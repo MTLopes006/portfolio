@@ -246,6 +246,14 @@
                   "required": false
                 },
                 {
+                  "name": "showcase",
+                  "label": "Mostrar na home com carrossel de rolagem",
+                  "hint": "As imagens do projeto deslizam na horizontal enquanto a página rola. Use em 2 ou 3 projetos.",
+                  "widget": "boolean",
+                  "required": false,
+                  "default": false
+                },
+                {
                   "name": "category",
                   "label": "Categoria",
                   "widget": "select",

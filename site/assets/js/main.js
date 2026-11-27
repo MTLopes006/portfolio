@@ -171,7 +171,7 @@
       </a>`;
     document.querySelector("main").innerHTML = `
       <section class="select-hero wrap" id="top">
-        <p class="eyebrow"><span class="live" aria-hidden="true"></span>${esc(t(P.available))}</p>
+        <p class="eyebrow">${esc(t(P.available))}</p>
         <h1 class="sel-name">${esc(P.name)}</h1>
         <div class="sel-intro">
           <p class="sel-hi">${ui("sel.hi")}</p>
@@ -232,6 +232,19 @@
     const hide = dup ? ' aria-hidden="true"' : "";
     return c ? `<span class="mq-logo" role="img" aria-label="${esc(name)}"${hide} style="--logo:url('${esc(c.logo)}');--ar:${esc(c.ratio || 3)}"></span>` : `<span class="mq-name"${hide}>${esc(name)}</span>`;
   };
+  // every image a project's blocks use, in page order, with its ratio
+  const projectImages = (p) => {
+    const out = [];
+    const walk = (o, ratio) => {
+      if (Array.isArray(o)) return o.forEach((x) => walk(x, ratio));
+      if (!o || typeof o !== "object") return;
+      if (typeof o.img === "string" && o.img) out.push({ src: o.img, ratio: o.ratio || ratio || "4/3" });
+      Object.values(o).forEach((v) => typeof v === "object" && walk(v, o.ratio || ratio));
+    };
+    walk(p.blocks || []);
+    return out.filter((x, i, a) => a.findIndex((y) => y.src === x.src) === i);
+  };
+
   function renderHome() {
     const el = document.querySelector("main");
     const clients = lines(P.clients);
@@ -239,15 +252,28 @@
     const heroImg = P.heroPhoto || (series[0] && coverOf(series[0])) || "";
     const heroSeries = series.find((s) => s.photos.some((f) => f.src === heroImg)) || series[0];
     const credit = heroSeries ? [heroSeries.band, heroSeries.venue].filter(Boolean).join(", ") : "";
-    const card = (p, i) => `
+    const shows = projects.filter((p) => p.showcase).slice(0, 4);
+    const card = (p) => `
       <article class="r-item pc">
         <a href="projeto.html?p=${esc(p.slug)}">
           ${media(p.thumb || p.cover, "4/3", t(p.title))}
-          <span class="pc-n">${pad(i + 1)}</span>
-          <span class="pc-info"><b>${esc(t(p.title))}</b><span>${esc(t(p.client))}${p.year ? ` · ${esc(p.year)}` : ""}</span></span>
-          <span class="pc-go" aria-hidden="true">↗</span>
+          <span class="pc-info"><b>${esc(t(p.title))}</b><span>${esc(t(p.client))}${p.year ? `, ${esc(p.year)}` : ""}</span></span>
         </a>
       </article>`;
+    const showcase = (p) => {
+      const imgs = projectImages(p).slice(0, 9);
+      return `
+      <section class="sc" data-showcase>
+        <div class="sc-sticky">
+          <div class="wrap sc-head">
+            <h2 class="sc-title"><a href="projeto.html?p=${esc(p.slug)}">${esc(t(p.title))}</a></h2>
+            <p class="sc-sum">${esc(t(p.summary))}</p>
+            <a class="link-arrow" href="projeto.html?p=${esc(p.slug)}">${ui("sc.open")} ${arr}</a>
+          </div>
+          <div class="sc-track">${imgs.map((x) => `<figure class="sc-item" style="--r:${esc(x.ratio)}"><img src="${esc(x.src)}" alt="" loading="lazy"></figure>`).join("")}</div>
+        </div>
+      </section>`;
+    };
     el.innerHTML = `
       <section class="hx" id="top">
         <div class="hx-bg" aria-hidden="true">
@@ -255,7 +281,7 @@
         </div>
         <div class="wrap hx-inner">
           <div class="hx-top">
-            <p class="eyebrow"><span class="live" aria-hidden="true"></span>${esc(t(P.available))}</p>
+            <p class="eyebrow">${esc(t(P.available))}</p>
             <p class="eyebrow">${ui("hero.kicker")}</p>
           </div>
           <h1 class="hx-name">
@@ -272,45 +298,41 @@
             <a class="hf-link" href="fotografia.html"><b>${pad(series.length)}</b><span>${ui("stat.series")} ${arr}</span></a>
             <a class="hf-link" href="sobre.html?m=design"><b>${esc(t(P.location))}</b><span>${ui("about.more")} ${arr}</span></a>
           </div>
-          ${credit ? `<p class="hx-credit">${ui("hx.photo")} ${esc(credit)}<span class="hx-hint"> · ${ui("hx.hint")}</span></p>` : ""}
+          ${credit ? `<p class="hx-credit">${ui("hx.photo")} ${esc(credit)}<span class="hx-hint">. ${ui("hx.hint")}</span></p>` : ""}
         </div>
       </section>
 
-      <section class="section" id="trabalho">
+      <div id="trabalho">${shows.map(showcase).join("")}</div>
+
+      <section class="section">
         <div class="wrap">
-          <div class="sec-head" data-reveal><h2 class="sec-title">${ui("home.selected")} <sup>(${pad(projects.length)})</sup></h2><a class="link-arrow" href="projetos.html">${ui("home.all")} ${arr}</a></div>
-          <div data-reveal>${rail(projects.map(card).join(""))}</div>
+          <div class="sec-head"><h2 class="sec-title" data-scale>${ui("home.selected")}</h2><a class="link-arrow" href="projetos.html">${ui("home.all")} ${arr}</a></div>
+          ${rail(projects.map(card).join(""))}
         </div>
       </section>
 
       ${clients.length ? `<section class="marquee" aria-label="${ui("home.clients")}"><div class="marquee-track">${[...clients, ...clients].map((c, k) => clientMark(c, k >= clients.length)).join("")}</div></section>` : ""}
 
-      <section class="section wrap approach">
-        <div class="sec-head" data-reveal><h2 class="sec-title">${ui("ap.title")}</h2></div>
-        <ol class="ap-list">${[1, 2, 3].map((n, k) => `<li data-reveal ${stagger(k, 0.08)}><span class="ap-n">${pad(n)}</span><h3>${ui("ap." + n)}</h3><p>${ui("ap." + n + ".d")}</p></li>`).join("")}</ol>
-      </section>
-
       <section class="section services">
-        <div class="wrap">
-          <div class="sec-head" data-reveal><h2 class="sec-title">${ui("home.services")}</h2></div>
-          <ol class="svc">${svc.map((n, k) => `<li data-reveal ${stagger(k)}><details${k ? "" : " open"}><summary><span class="svc-n">${pad(n)}</span><span class="svc-t">${ui("svc." + n)}</span><span class="svc-x" aria-hidden="true"></span></summary><p>${ui("svc." + n + ".d")}</p></details></li>`).join("")}</ol>
+        <div class="wrap svc-plain">
+          <h2 class="sec-title" data-scale>${ui("home.services")}</h2>
+          <ul>${svc.map((n) => `<li data-scale><b>${ui("svc." + n)}</b><span>${ui("svc." + n + ".d")}</span></li>`).join("")}</ul>
         </div>
       </section>
 
       <section class="section">
         <div class="wrap">
-          <a class="cross" href="fotografia.html" data-reveal>
+          <a class="cross" href="fotografia.html" data-scale>
             <div class="cross-imgs">${series.slice(1, 4).map((x) => media(coverOf(x), "3/4", x.band)).join("")}</div>
-            <div class="cross-copy"><p class="eyebrow">${ui("mode.photo")}</p><p class="cross-t">${ui("cross.photo")}</p><span class="link-arrow">${ui("cross.go.photo")} ${arr}</span></div>
+            <div class="cross-copy"><p class="cross-t">${ui("cross.photo")}</p><span class="link-arrow">${ui("cross.go.photo")} ${arr}</span></div>
           </a>
         </div>
       </section>
 
       <section class="section about-teaser">
         <div class="wrap at-grid">
-          <div class="at-photo" data-reveal>${media(P.photo, "4/5", P.name)}</div>
-          <div class="at-copy" data-reveal>
-            <p class="eyebrow">${ui("home.about")}</p>
+          <div class="at-photo" data-scale>${media(P.photo, "4/5", P.name)}</div>
+          <div class="at-copy">
             <p class="at-big">${ui("about.teaser2")}</p>
             <a class="link-arrow" href="sobre.html?m=design">${ui("about.more")} ${arr}</a>
           </div>
@@ -474,7 +496,7 @@
       <section class="ph-hero" id="top">
         <div class="ph-slides" aria-hidden="true">${heroes.map((src, k) => `<img src="${esc(src)}" alt="" class="${k ? "" : "on"}" loading="${k ? "lazy" : "eager"}">`).join("")}</div>
         <div class="wrap ph-hero-copy">
-          <p class="eyebrow"><span class="live" aria-hidden="true"></span>${esc(t(P.available))}</p>
+          <p class="eyebrow">${esc(t(P.available))}</p>
           <h1 class="page-title">${ui("photo.title")}</h1>
           <p class="page-lead">${esc(t(PH.intro))}</p>
           <div class="ph-actions"><a class="btn" href="#series">${ui("photo.seeSeries")} <span class="arr" aria-hidden="true">↓</span></a><a class="btn btn-ghost" href="contato.html?m=photo">${ui("photo.hire")}</a></div>
@@ -662,7 +684,7 @@
         <div class="sec-head" data-reveal><div><h2 class="sec-title">${ui("off.title")}</h2><p class="sec-lead">${ui("off.lead")}</p></div></div>
         <div class="off-grid">
           ${O.playlist && (O.playlist.tracks || []).length ? `<article class="tile tile-song" data-reveal><p class="eyebrow">${ui("off.song")}</p>${playerHTML(O.playlist)}</article>` : ""}
-          ${O.favoriteGame && O.favoriteGame.title ? `<article class="tile tile-fav" data-reveal><p class="eyebrow">${ui("off.fav")}</p>${boxArt(O.favoriteGame, "big")}<h3>${esc(O.favoriteGame.title)}</h3>${playing.title ? `<div class="now-game">${boxArt(playing, "mini")}<div><p class="eyebrow"><span class="live" aria-hidden="true"></span>${ui("off.playing")}</p><b>${esc(playing.title)}</b></div></div>` : ""}</article>` : ""}
+          ${O.favoriteGame && O.favoriteGame.title ? `<article class="tile tile-fav" data-reveal><p class="eyebrow">${ui("off.fav")}</p>${boxArt(O.favoriteGame, "big")}<h3>${esc(O.favoriteGame.title)}</h3>${playing.title ? `<div class="now-game">${boxArt(playing, "mini")}<div><p class="eyebrow">${ui("off.playing")}</p><b>${esc(playing.title)}</b></div></div>` : ""}</article>` : ""}
         </div>
         ${games.length ? `<div class="off-block" data-reveal><p class="eyebrow">${ui("off.games")}</p>${rail(games.map((g) => `<figure class="r-item game">${boxArt(g)}<figcaption>${esc(g.title)}</figcaption></figure>`).join(""))}</div>` : ""}
         ${(O.albums || []).length ? `<div class="off-block" data-reveal><p class="eyebrow">${ui("off.albums")}</p>${rail(O.albums.map((a) => `<figure class="r-item album">${a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener">` : ""}${a.cover ? `<img src="${esc(a.cover)}" alt="${esc(a.title)}" loading="lazy">` : `<div class="ph"><span>${esc(a.title)}</span></div>`}<figcaption><b>${esc(a.title)}</b><span>${esc(a.artist)}${a.year ? ` · ${esc(a.year)}` : ""}</span></figcaption>${a.link ? "</a>" : ""}</figure>`).join(""))}</div>` : ""}
@@ -754,6 +776,20 @@
     io?.disconnect();
     io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.08, rootMargin: "0px 0px -5% 0px" });
     document.querySelectorAll("[data-reveal]").forEach((n) => (reduce ? n.classList.add("in") : io.observe(n)));
+    scaleEls = reduce ? [] : [...document.querySelectorAll("[data-scale], .proj-body .media")];
+    showcases = [...document.querySelectorAll("[data-showcase]")];
+    showcases.forEach((sc) => sc.classList.toggle("sc-static", reduce));
+    sizeShowcases();
+    document.querySelectorAll("[data-showcase] img").forEach((im) => im.addEventListener("load", sizeShowcases, { once: true }));
+    tick();
+  }
+  let scaleEls = [], showcases = [];
+  const clamp01 = (x) => Math.max(0, Math.min(1, x));
+  const easeOut = (x) => 1 - Math.pow(1 - x, 3);
+  // pinned showcases: the section is as tall as the horizontal distance the track has to travel
+  function sizeShowcases() {
+    if (reduce) return;
+    showcases.forEach((sc) => { const tr = sc.querySelector(".sc-track"); const dist = Math.max(0, tr.scrollWidth - innerWidth); sc.style.height = `${innerHeight + dist}px`; sc._dist = dist; });
     tick();
   }
   let ticking = false;
@@ -766,12 +802,38 @@
       const prog = (r.top + r.height / 2 - vh / 2) / vh;
       el.firstElementChild.style.transform = `translate3d(0, ${(-prog * (parseFloat(el.dataset.parallax) || 0.08) * r.height).toFixed(1)}px, 0) scale(1.08)`;
     });
+    // scale on scroll: elements grow as they enter and shrink a little as they leave the top
+    scaleEls.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < -vh * 0.2 || r.top > vh * 1.2) return;
+      const enter = easeOut(clamp01((vh - r.top) / (vh * 0.75)));
+      const leave = easeOut(clamp01(r.bottom / (vh * 0.6)));
+      const k = Math.min(enter, leave);
+      el.style.transform = `scale(${(0.84 + 0.16 * k).toFixed(4)})`;
+      el.style.opacity = (0.35 + 0.65 * k).toFixed(3);
+    });
+    if (!reduce) showcases.forEach((sc) => {
+      const r = sc.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      const p = clamp01(-r.top / Math.max(1, sc.offsetHeight - vh));
+      const tr = sc.querySelector(".sc-track");
+      tr.style.transform = `translate3d(${(-p * (sc._dist || 0)).toFixed(1)}px, 0, 0)`;
+      const mid = innerWidth / 2;
+      tr.querySelectorAll(".sc-item").forEach((it) => {
+        const b = it.getBoundingClientRect();
+        const d = Math.min(1, Math.abs(b.left + b.width / 2 - mid) / innerWidth);
+        it.style.transform = `scale(${(1 - d * 0.28).toFixed(4)})`;
+        it.firstElementChild.style.transform = `scale(${(1.12 - (1 - d) * 0.12).toFixed(4)})`;
+        it.style.opacity = (1 - d * 0.55).toFixed(3);
+      });
+      sc.style.setProperty("--p", p.toFixed(4));
+    });
     document.querySelector(".site-header")?.classList.toggle("is-scrolled", scrollY > 24);
     const bar = document.querySelector(".progress span");
     if (bar) { const h = document.documentElement.scrollHeight - vh; bar.style.transform = `scaleX(${h > 0 ? Math.min(1, scrollY / h) : 0})`; }
   }
   addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(tick); } }, { passive: true });
-  addEventListener("resize", () => requestAnimationFrame(tick));
+  addEventListener("resize", () => requestAnimationFrame(sizeShowcases));
 
   /* ---------- page transitions ---------- */
   document.addEventListener("click", (e) => {
