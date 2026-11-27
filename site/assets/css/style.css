@@ -1057,3 +1057,13 @@ body.mode-photo { --bg: #0E0C0F; --fg: #F0E7D3; --card: #1A171B; --line: rgba(24
 .hire-sm { padding-top: clamp(48px, 6vw, 96px); }
 .hire-sm .hire-t { font-size: clamp(36px, 4.6vw, 76px); }
 @media (max-width: 860px) { .hire-in { grid-template-columns: 1fr; } }
+
+/* typewriter role sits in the empty space left of LOPES, wrapping to two lines when needed */
+.hx-role { left: 0; top: auto; bottom: 0; height: .8em; width: 46%; display: flex; align-items: center; transform: none; rotate: -3deg; }
+.hx-role em { white-space: normal; line-height: 1; font-size: .3em; }
+.tw { display: block; }
+.tw-caret { vertical-align: baseline; }
+@media (max-width: 640px) {
+  .hx-role { position: static; order: 3; width: auto; height: auto; margin-top: .15em; rotate: -3deg; }
+  .hx-role em { font-size: .4em; }
+}

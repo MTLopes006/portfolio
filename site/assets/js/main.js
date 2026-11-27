@@ -376,14 +376,14 @@
     const step = () => {
       const word = words[w];
       if (!del) {
-        if (n < word.length) { n++; out.textContent = word.slice(0, n); window._tw = setTimeout(step, 70 + Math.random() * 60); return; }
-        del = true; el.classList.remove("typing"); window._tw = setTimeout(step, 2200); return;
+        if (n < word.length) { n++; out.textContent = word.slice(0, n); window._tw = setTimeout(step, 55 + Math.random() * 45); return; }
+        del = true; el.classList.remove("typing"); window._tw = setTimeout(step, 1000); return;
       }
       el.classList.add("typing");
-      if (n > 0) { n--; out.textContent = word.slice(0, n); window._tw = setTimeout(step, 35); return; }
-      del = false; w = (w + 1) % words.length; window._tw = setTimeout(step, 350);
+      if (n > 0) { n--; out.textContent = word.slice(0, n); window._tw = setTimeout(step, 28); return; }
+      del = false; w = (w + 1) % words.length; window._tw = setTimeout(step, 250);
     };
-    window._tw = setTimeout(step, 2400);
+    window._tw = setTimeout(step, 1200);
   }
 
   // click-and-hold drag for the native horizontal scrollers (project rail, slide decks)
